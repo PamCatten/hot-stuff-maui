@@ -3,7 +3,21 @@
 <ResourceDictionary 
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:input="clr-namespace:InputKit.Shared.Controls;assembly=InputKit.Maui">
+    xmlns:input="clr-namespace:InputKit.Shared.Controls;assembly=InputKit.Maui"
+    xmlns:local="clr-namespace:HotStuffIcons">
+
+    <FontImage x:Key="IconOne"
+               FontFamily="FontAwesome"
+               Color="{StaticResource OnPrimary}"
+               Glyph="{x:Static local:IconFont.DiceOne}" />
+    <FontImage x:Key="IconTwo"
+               FontFamily="FontAwesome"
+               Color="{StaticResource OnPrimary}"
+               Glyph="{x:Static local:IconFont.DiceTwo}" />
+    <FontImage x:Key="IconThree"
+               FontFamily="FontAwesome"
+               Color="{StaticResource OnPrimary}"
+               Glyph="{x:Static local:IconFont.DiceThree}" />
 
     <Style TargetType="input:CheckBox">
         <Setter Property="Color" Value="{StaticResource Primary}" />

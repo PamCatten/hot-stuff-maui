@@ -6,9 +6,24 @@
     xmlns:local="clr-namespace:hot_stuff"
     Shell.FlyoutBehavior="Disabled">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-
+    <TabBar>
+        <Tab Title="One" Icon="{StaticResource IconOne}">
+            <ShellContent
+                Title="One"
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="OnePage" />
+        </Tab>
+        <Tab Title="Home" Icon="{StaticResource IconTwo}">
+            <ShellContent
+                Title="Home"
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="MainPage" />
+        </Tab>
+        <Tab Title="Three" Icon="{StaticResource IconThree}">
+            <ShellContent
+                Title="Three"
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="Three" />
+        </Tab>
+    </TabBar>
 </Shell>

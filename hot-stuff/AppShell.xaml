@@ -20,9 +20,9 @@
                 ContentTemplate="{DataTemplate local:MainPage}"
                 Route="MainPage" />
         </Tab>
-        <Tab Title="Learn" Icon="{StaticResource LearnIcon}">
+        <Tab Title="Learning Center" Icon="{StaticResource LearnIcon}">
             <ShellContent
-                Title="Learn"
+                Title="Learning Center"
                 ContentTemplate="{DataTemplate pages:LearnPage}"
                 Route="ThreePage" />
         </Tab>

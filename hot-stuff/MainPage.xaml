@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<uranium:UraniumContentPage 
-             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<uranium:UraniumContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:uranium="clr-namespace:UraniumUI.Pages;assembly=UraniumUI"
              xmlns:attachment="clr-namespace:UraniumUI.Material.Attachments;assembly=UraniumUI.Material"
@@ -11,13 +10,14 @@
              xmlns:local="clr-namespace:hot_stuff"
              x:Name="page"
 >
+   
     <uranium:UraniumContentPage.BindingContext>
         <local:MainPageViewModel />
     </uranium:UraniumContentPage.BindingContext>
     
-    <uranium:UraniumContentPage.Resources>
+ <uranium:UraniumContentPage.Resources>
         <Style TargetType="Frame">
-            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource SecondaryContainer}, Dark={StaticResource SecondaryContainer}}" />
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource SecondaryContainer}, Dark={StaticResource SecondaryContainerDark}}" />
         </Style>
     </uranium:UraniumContentPage.Resources>
 
@@ -25,7 +25,7 @@
 
         <VerticalStackLayout>
 
-            <Button Text="Delete" StyleClass="FilledTonalButton"  Command="{Binding RemoveSelectedItemsCommand}" HorizontalOptions="Center" />
+            <Button Text="Delete" StyleClass="FilledTonalButton"  Command="{Binding RemoveSelectedItemsCommand}" HorizontalOptions="Start" />
             <material:DataGrid ItemsSource="{Binding Items}" SelectedItems="{Binding SelectedItems}" HorizontalOptions="Center" VerticalOptions="Center">
                 <material:DataGrid.Columns>
                     <material:DataGridSelectionColumn/>
@@ -61,7 +61,7 @@
                     Type="Filled" 
                     TextColor="{StaticResource OnPrimary}" />
                 <input:SelectionView 
-                    Color="{StaticResource Secondary}" 
+                    Color="{StaticResource OnPrimary}" 
                     ItemsSource="{x:Static local:TodoItem.AvailableTypes}" 
                     SelectedItem="{Binding NewItem.Type}" 
                     ColumnSpacing="-2" 
@@ -84,7 +84,7 @@
                         <ImageCell Text="Report" ImageSource="{FontImageSource FontFamily=FASolid, Glyph={x:Static fa:Solid.Exclamation}, Color={StaticResource Primary}}"
                             Detail="Report this content." />
                         <ImageCell Text="Settings" ImageSource="{FontImageSource FontFamily=FASolid, Glyph={x:Static fa:Solid.Gear}, Color={StaticResource Primary}}" 
-                            Detail="Edit profile settings." />
+                            Detail="Edit profile settings."/>
                     </TableSection>
                 </TableRoot>
             </TableView>

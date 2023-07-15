@@ -9,13 +9,41 @@
              xmlns:input="clr-namespace:InputKit.Shared.Controls;assembly=InputKit.Maui"
              x:Class="hot_stuff.Pages.LearnPage"
              xmlns:local="clr-namespace:hot_stuff"
-             Title="Learn"
+             xmlns:pages="clr-namespace:hot_stuff.Pages"
+             Title="Learning Center"
 >
+
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Walkthroughs"
+            FontSize="Medium"
+            FontAttributes="Bold"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Start"
+            Margin="15, 10, 15, 5"
+        />
+        <Label 
+            Text="Quick guides to get you started"
+            FontSize="Small"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start"
+            Margin="15, 5, 15, 10"
+        />
+        <Label 
+            Text="Other Resources"
+            FontSize="Medium"
+            FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start"
+            Margin="15, 10, 15, 5"
+        />
+        <Label 
+            Text="Additional resources and perspectives"
+            FontSize="Small"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start"
+            Margin="15, 5, 15, 10"
+        />
     </VerticalStackLayout>
 
 </uranium:UraniumContentPage>

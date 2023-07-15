@@ -907,6 +907,9 @@
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\Pages\ItemsPage.xaml.cs">
+      <PackagePath>Pages\ItemsPage.xaml.cs</PackagePath>
+    </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
     <ResolvedSDKReference Include="C:\Users\campa\.nuget\packages\microsoft.windowsappsdk\1.2.221209.1\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.2.msix">

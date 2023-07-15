@@ -11,7 +11,7 @@
 
     <Color x:Key="Secondary">#B5FF7D</Color>
     <Color x:Key="OnSecondary">#2C3639</Color>
-    <Color x:Key="SecondaryContainer">#e1ffcb</Color>
+    <Color x:Key="SecondaryContainer">#FFFFFF</Color>
     <Color x:Key="OnSecondaryContainer">#3F4E4F</Color>
 
     <Color x:Key="Tertiary">#FEB1AC</Color> <!-- #FEC4C0 alternative pink color -->
@@ -48,7 +48,7 @@
     <Color x:Key="PrimaryContainerDark">#1a6c37</Color>
     <Color x:Key="OnPrimaryContainerDark">#baefcd</Color>
 
-    <Color x:Key="SecondaryDark">#daffbe</Color>
+    <Color x:Key="SecondaryDark">#FFFFFF</Color>
     <Color x:Key="OnSecondaryDark">#52be00</Color>
     <Color x:Key="SecondaryContainerDark">#193900</Color>
     <Color x:Key="OnSecondaryContainerDark">#e1ffcb</Color>

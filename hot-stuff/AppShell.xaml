@@ -11,7 +11,7 @@
         <Tab Title="Items" Icon="{StaticResource DatabaseIcon}">
             <ShellContent
                 Title="Items"
-                ContentTemplate="{DataTemplate local:MainPage}"
+                ContentTemplate="{DataTemplate pages:ItemsPage}"
                 Route="OnePage" />
         </Tab>
         <Tab Title="Home" Icon="{StaticResource HomeIcon}">

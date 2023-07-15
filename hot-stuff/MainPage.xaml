@@ -15,13 +15,13 @@
         <local:MainPageViewModel />
     </uranium:UraniumContentPage.BindingContext>
     
- <uranium:UraniumContentPage.Resources>
+    <uranium:UraniumContentPage.Resources>
         <Style TargetType="Frame">
-            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource SecondaryContainer}, Dark={StaticResource SecondaryContainerDark}}" />
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource SecondaryContainer}, Dark={StaticResource SecondaryContainer}}" />
         </Style>
     </uranium:UraniumContentPage.Resources>
 
-    <ScrollView>
+    <ScrollView Orientation="Both" HorizontalScrollBarVisibility="Always">
 
         <VerticalStackLayout>
 

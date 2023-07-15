@@ -14,7 +14,7 @@
     <Color x:Key="SecondaryContainer">#e1ffcb</Color>
     <Color x:Key="OnSecondaryContainer">#3F4E4F</Color>
 
-    <Color x:Key="Tertiary">#FDDB3A</Color>
+    <Color x:Key="Tertiary">#FEB1AC</Color> <!-- #FEC4C0 alternative pink color -->
     <Color x:Key="OnTertiary">#2C3639</Color>
     <Color x:Key="TertiaryContainer">#786301</Color>
     <Color x:Key="OnTertiaryContainer">#fef1b0</Color>

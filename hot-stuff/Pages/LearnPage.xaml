@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<uranium:UraniumContentPage 
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:uranium="clr-namespace:UraniumUI.Pages;assembly=UraniumUI"
+             xmlns:attachment="clr-namespace:UraniumUI.Material.Attachments;assembly=UraniumUI.Material"
+             xmlns:material="clr-namespace:UraniumUI.Material.Controls;assembly=UraniumUI.Material"
+             xmlns:fa="clr-namespace:UraniumUI.Icons.FontAwesome;assembly=UraniumUI.Icons.FontAwesome"
+             xmlns:input="clr-namespace:InputKit.Shared.Controls;assembly=InputKit.Maui"
+             x:Class="hot_stuff.Pages.LearnPage"
+             xmlns:local="clr-namespace:hot_stuff"
+             Title="Learn"
+>
+    <VerticalStackLayout>
+        <Label 
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+    </VerticalStackLayout>
+
+</uranium:UraniumContentPage>

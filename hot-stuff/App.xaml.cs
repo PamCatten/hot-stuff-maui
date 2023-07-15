@@ -1,14 +1,13 @@
 ﻿using UraniumUI.Material.Resources;
 
-namespace hot_stuff
-{
-    public partial class App : Application
-    {
-        public App()
-        {
-            InitializeComponent();
+namespace hot_stuff;
 
-            MainPage = new AppShell();
-        }
+public partial class App : Application
+{
+    public App()
+    {
+        InitializeComponent();
+
+        MainPage = new AppShell();
     }
 }

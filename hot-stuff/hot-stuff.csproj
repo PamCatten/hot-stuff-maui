@@ -54,4 +54,10 @@
 		<PackageReference Include="UraniumUI.Dialogs.Mopups" Version="2.5.1" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <MauiXaml Update="Pages\LearnPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>

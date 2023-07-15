@@ -3,27 +3,28 @@
     x:Class="hot_stuff.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:hot_stuff.Pages"
     xmlns:local="clr-namespace:hot_stuff"
     Shell.FlyoutBehavior="Disabled">
 
     <TabBar>
-        <Tab Title="One" Icon="{StaticResource IconOne}">
+        <Tab Title="Items" Icon="{StaticResource DatabaseIcon}">
             <ShellContent
-                Title="One"
+                Title="Items"
                 ContentTemplate="{DataTemplate local:MainPage}"
                 Route="OnePage" />
         </Tab>
-        <Tab Title="Home" Icon="{StaticResource IconTwo}">
+        <Tab Title="Home" Icon="{StaticResource HomeIcon}">
             <ShellContent
                 Title="Home"
                 ContentTemplate="{DataTemplate local:MainPage}"
                 Route="MainPage" />
         </Tab>
-        <Tab Title="Three" Icon="{StaticResource IconThree}">
+        <Tab Title="Learn" Icon="{StaticResource LearnIcon}">
             <ShellContent
-                Title="Three"
-                ContentTemplate="{DataTemplate local:MainPage}"
-                Route="Three" />
+                Title="Learn"
+                ContentTemplate="{DataTemplate pages:LearnPage}"
+                Route="ThreePage" />
         </Tab>
     </TabBar>
 </Shell>

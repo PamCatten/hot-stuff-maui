@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<uranium:UraniumContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<uranium:UraniumContentPage 
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:uranium="clr-namespace:UraniumUI.Pages;assembly=UraniumUI"
              xmlns:attachment="clr-namespace:UraniumUI.Material.Attachments;assembly=UraniumUI.Material"
@@ -8,7 +9,8 @@
              xmlns:input="clr-namespace:InputKit.Shared.Controls;assembly=InputKit.Maui"
              x:Class="hot_stuff.MainPage"
              xmlns:local="clr-namespace:hot_stuff"
-             x:Name="page">
+             x:Name="page"
+>
     <uranium:UraniumContentPage.BindingContext>
         <local:MainPageViewModel />
     </uranium:UraniumContentPage.BindingContext>
@@ -43,7 +45,7 @@
     <uranium:UraniumContentPage.Attachments>
         <attachment:BackdropView
                 Title="Add" 
-                IconImageSource="{FontImageSource FontFamily=FASolid, Glyph={x:Static fa:Solid.Plus}, Color={StaticResource OnPrimary}}"
+                IconImageSource="{StaticResource AddIcon}"
                 BackgroundColor="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Gray950}}">
             <VerticalStackLayout Spacing="10" Padding="25,30" HorizontalOptions="Center"  MaximumWidthRequest="400">
                 <material:TextField 
@@ -70,6 +72,7 @@
                     StyleClass="ElevatedButton"/>
             </VerticalStackLayout>
         </attachment:BackdropView>
+        
         <attachment:BottomSheetView x:Name="bottomSheet">
             <TableView Intent="Menu" Margin="0,0,0,40" BackgroundColor="Transparent">
                 <TableRoot>
@@ -80,6 +83,8 @@
                             Detail="Get link to this content" />
                         <ImageCell Text="Report" ImageSource="{FontImageSource FontFamily=FASolid, Glyph={x:Static fa:Solid.Exclamation}, Color={StaticResource Primary}}"
                             Detail="Report this content." />
+                        <ImageCell Text="Settings" ImageSource="{FontImageSource FontFamily=FASolid, Glyph={x:Static fa:Solid.Gear}, Color={StaticResource Primary}}" 
+                            Detail="Edit profile settings." />
                     </TableSection>
                 </TableRoot>
             </TableView>

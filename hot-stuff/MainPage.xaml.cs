@@ -14,11 +14,6 @@ namespace hot_stuff
             InitializeComponent();
         }
 
-        private void ShowBottomSheet(object sender, EventArgs e)
-        {
-            bottomSheet.IsPresented = true;
-        }
-
         async void OnProfilePageClicked(object sender, EventArgs e)
         {
             Debug.WriteLine("Profile page clicked");

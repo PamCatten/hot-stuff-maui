@@ -8,23 +8,23 @@
     Shell.FlyoutBehavior="Disabled">
 
     <TabBar>
-        <Tab Title="Items" Icon="{StaticResource DatabaseIcon}">
-            <ShellContent
-                Title="Items"
-                ContentTemplate="{DataTemplate pages:ItemsPage}"
-                Route="OnePage" />
-        </Tab>
         <Tab Title="Home" Icon="{StaticResource HomeIcon}">
             <ShellContent
                 Title="Home"
                 ContentTemplate="{DataTemplate local:MainPage}"
                 Route="MainPage" />
         </Tab>
+        <Tab Title="Items" Icon="{StaticResource DatabaseIcon}">
+            <ShellContent
+                Title="Items"
+                ContentTemplate="{DataTemplate pages:ItemsPage}"
+                Route="ItemsPage" />
+        </Tab>
         <Tab Title="Learning Center" Icon="{StaticResource LearnIcon}">
             <ShellContent
                 Title="Learning Center"
                 ContentTemplate="{DataTemplate pages:LearnPage}"
-                Route="ThreePage" />
+                Route="LearnPage" />
         </Tab>
     </TabBar>
 </Shell>

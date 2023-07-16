@@ -76,23 +76,6 @@
                     StyleClass="ElevatedButton"/>
             </VerticalStackLayout>
         </attachment:BackdropView>
-        
-        <attachment:BottomSheetView x:Name="bottomSheet">
-            <TableView Intent="Menu" Margin="0,0,0,40" BackgroundColor="Transparent">
-                <TableRoot>
-                    <TableSection Title="Actions">
-                        <ImageCell Text="Share" ImageSource="{FontImageSource FontFamily=FASolid, Glyph={x:Static fa:Solid.Share}, Color={StaticResource Primary}}"
-                            Detail="Share this content with friends." />
-                        <ImageCell Text="Link" ImageSource="{FontImageSource FontFamily=FASolid, Glyph={x:Static fa:Solid.Link}, Color={StaticResource Primary}}"
-                            Detail="Get link to this content" />
-                        <ImageCell Text="Report" ImageSource="{FontImageSource FontFamily=FASolid, Glyph={x:Static fa:Solid.Exclamation}, Color={StaticResource Primary}}"
-                            Detail="Report this content." />
-                        <ImageCell Text="Settings" ImageSource="{FontImageSource FontFamily=FASolid, Glyph={x:Static fa:Solid.Gear}, Color={StaticResource Primary}}" 
-                            Detail="Edit profile settings."/>
-                    </TableSection>
-                </TableRoot>
-            </TableView>
-        </attachment:BottomSheetView>
     </uranium:UraniumContentPage.Attachments>
 </uranium:UraniumContentPage>
 

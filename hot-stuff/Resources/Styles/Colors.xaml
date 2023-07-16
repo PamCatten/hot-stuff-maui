@@ -19,7 +19,7 @@
     <Color x:Key="TertiaryContainer">#786301</Color>
     <Color x:Key="OnTertiaryContainer">#fef1b0</Color>
 
-    <Color x:Key="Surface">#F6F4E6</Color>
+    <Color x:Key="Surface">#FFFFFF</Color>
     <Color x:Key="OnSurface">#3F4E4F</Color>
     <Color x:Key="SurfaceVariant">#E7E0EC</Color>
     <Color x:Key="OnSurfaceVariant">#49454E</Color>
@@ -59,7 +59,7 @@
     <Color x:Key="OnTertiaryContainerDark">#fef1b0</Color>
 
     <Color x:Key="SurfaceDark">#2C3639</Color>
-    <Color x:Key="OnSurfaceDark">#F6F4E6</Color>
+    <Color x:Key="OnSurfaceDark">#FFFFFF</Color>
     <Color x:Key="SurfaceVariantDark">#49454F</Color>
     <Color x:Key="OnSurfaceVariantDark">#DCD7C9</Color>
 

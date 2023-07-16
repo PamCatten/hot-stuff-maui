@@ -16,7 +16,7 @@ namespace hot_stuff
 
         async void OnProfilePageClicked(object sender, EventArgs e)
         {
-            Debug.WriteLine("Profile page clicked");
+            Debug.WriteLine("User clicked ProfilePage link.");
 
             await Shell.Current.GoToAsync(nameof(ProfilePage));
         }

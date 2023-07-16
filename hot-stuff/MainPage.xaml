@@ -21,6 +21,10 @@
         </Style>
     </uranium:UraniumContentPage.Resources>
 
+    <uranium:UraniumContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="{StaticResource ProfileIcon}" Clicked="OnProfilePageClicked"/>
+    </uranium:UraniumContentPage.ToolbarItems>
+    
     <ScrollView Orientation="Both" HorizontalScrollBarVisibility="Always">
 
         <VerticalStackLayout>

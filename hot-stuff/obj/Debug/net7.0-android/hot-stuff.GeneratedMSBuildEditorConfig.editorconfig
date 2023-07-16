@@ -44,6 +44,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = hot_stuff.Pages.LearnPage.
 build_metadata.AdditionalFiles.TargetPath = Pages\LearnPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\LearnPage.xaml
 
+[C:/Users/campa/hot-stuff/hot-stuff/Pages/ProfilePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = hot_stuff.Pages.ProfilePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\ProfilePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\ProfilePage.xaml
+
 [C:/Users/campa/hot-stuff/hot-stuff/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = hot_stuff.Resources.Styles.Colors.xaml

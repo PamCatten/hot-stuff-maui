@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<uranium:UraniumContentPage 
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:uranium="clr-namespace:UraniumUI.Pages;assembly=UraniumUI"
+             xmlns:attachment="clr-namespace:UraniumUI.Material.Attachments;assembly=UraniumUI.Material"
+             xmlns:material="clr-namespace:UraniumUI.Material.Controls;assembly=UraniumUI.Material"
+             xmlns:fa="clr-namespace:UraniumUI.Icons.FontAwesome;assembly=UraniumUI.Icons.FontAwesome"
+             xmlns:input="clr-namespace:InputKit.Shared.Controls;assembly=InputKit.Maui"
+             x:Class="hot_stuff.Pages.ProfilePage"
+             xmlns:local="clr-namespace:hot_stuff"
+             xmlns:pages="clr-namespace:hot_stuff.Pages"
+             Title="Profile Menu"
+>
+
+    <VerticalStackLayout>
+        <Label 
+            Text="Personal Info"
+            FontSize="Medium"
+            FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start"
+            Margin="15, 10, 15, 5"
+        />
+        <Label 
+            Text="Name, email, phone number, ..."
+            FontSize="Small"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start"
+            Margin="15, 5, 15, 10"
+        />
+        <Label 
+            Text="Settings"
+            FontSize="Medium"
+            FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start"
+            Margin="15, 10, 15, 5"
+        />
+        <Label 
+            Text="Notifications, Password, App Unlock, ..."
+            FontSize="Small"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start"
+            Margin="15, 5, 15, 10"
+        />
+
+        <Label 
+            Text="Support"
+            FontSize="Medium"
+            FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start"
+            Margin="15, 10, 15, 5"
+        />
+        <Label 
+            Text="Help Center, FAQ, Contact Us"
+            FontSize="Small"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start"
+            Margin="15, 5, 15, 10"
+        />
+
+        <Label 
+            Text="Legal"
+            FontSize="Medium"
+            FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start"
+            Margin="15, 10, 15, 5"
+        />
+        <Label 
+            Text="Terms of Use, Privacy Policies, ..."
+            FontSize="Small"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start"
+            Margin="15, 5, 15, 10"
+        />
+
+        <Label 
+            Text="Log Out"
+            FontSize="Medium"
+            FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start"
+            Margin="15, 10, 15, 5"
+        />
+
+    </VerticalStackLayout>
+    
+</uranium:UraniumContentPage>

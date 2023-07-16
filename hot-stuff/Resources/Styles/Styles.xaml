@@ -23,10 +23,10 @@
                FontFamily="FontAwesome"
                Color="{StaticResource OnPrimary}"
                Glyph="{x:Static local:IconFont.CirclePlus}" />
-    <FontImage x:Key="SettingsIcon"
+    <FontImage x:Key="ProfileIcon"
                FontFamily="FontAwesome"
                Color="{StaticResource OnPrimary}"
-               Glyph="{x:Static local:IconFont.Gear}" />
+               Glyph="{x:Static local:IconFont.User}" />
 
     <Style TargetType="input:CheckBox">
         <Setter Property="Color" Value="{StaticResource Primary}" />

@@ -1,4 +1,4 @@
-﻿namespace hot_stuff;
+﻿namespace HotStuff;
 
 public partial class AppShell : Shell
 {

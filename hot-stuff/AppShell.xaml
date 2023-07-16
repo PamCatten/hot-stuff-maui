@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Shell
-    x:Class="hot_stuff.AppShell"
+    x:Class="HotStuff.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:pages="clr-namespace:hot_stuff.Pages"
-    xmlns:local="clr-namespace:hot_stuff"
+    xmlns:pages="clr-namespace:HotStuff.Pages"
+    xmlns:local="clr-namespace:HotStuff"
     Shell.FlyoutBehavior="Disabled">
 
     <TabBar>

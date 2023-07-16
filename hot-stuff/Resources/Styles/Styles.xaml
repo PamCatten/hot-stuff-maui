@@ -4,7 +4,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:input="clr-namespace:InputKit.Shared.Controls;assembly=InputKit.Maui"
-    xmlns:local="clr-namespace:hot_stuff">
+    xmlns:local="clr-namespace:HotStuff">
 
     <FontImage x:Key="DatabaseIcon"
                FontFamily="FontAwesome"
@@ -26,7 +26,7 @@
     <FontImage x:Key="ProfileIcon"
                FontFamily="FontAwesome"
                Color="{StaticResource OnPrimary}"
-               Glyph="{x:Static local:IconFont.User}" />
+               Glyph="{x:Static local:IconFont.CircleUser}" />
 
     <Style TargetType="input:CheckBox">
         <Setter Property="Color" Value="{StaticResource Primary}" />

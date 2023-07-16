@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace hot_stuff
+namespace HotStuff
 {
     public class Program
     {

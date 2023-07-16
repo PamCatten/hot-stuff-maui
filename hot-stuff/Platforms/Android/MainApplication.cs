@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace hot_stuff
+namespace HotStuff
 {
     [Application]
     public class MainApplication : MauiApplication

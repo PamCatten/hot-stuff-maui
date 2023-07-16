@@ -7,53 +7,53 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = hot_stuff
+build_property.RootNamespace = HotStuff
 build_property.ProjectDir = C:\Users\campa\hot-stuff\hot-stuff\
 
 [C:/Users/campa/hot-stuff/hot-stuff/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = hot_stuff.App.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
 [C:/Users/campa/hot-stuff/hot-stuff/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = hot_stuff.AppShell.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
 [C:/Users/campa/hot-stuff/hot-stuff/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = hot_stuff.MainPage.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
 [C:/Users/campa/hot-stuff/hot-stuff/Pages/ItemsPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = hot_stuff.Pages.ItemsPage.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.Pages.ItemsPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\ItemsPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\ItemsPage.xaml
 
 [C:/Users/campa/hot-stuff/hot-stuff/Pages/LearnPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = hot_stuff.Pages.LearnPage.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.Pages.LearnPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\LearnPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\LearnPage.xaml
 
 [C:/Users/campa/hot-stuff/hot-stuff/Pages/ProfilePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = hot_stuff.Pages.ProfilePage.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.Pages.ProfilePage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\ProfilePage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\ProfilePage.xaml
 
 [C:/Users/campa/hot-stuff/hot-stuff/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = hot_stuff.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
 [C:/Users/campa/hot-stuff/hot-stuff/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = hot_stuff.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml

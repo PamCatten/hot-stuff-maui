@@ -1,11 +1,6 @@
 C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-android\hot-stuff.runtimeconfig.json
 C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-android\hot-stuff.dll
 C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-android\hot-stuff.pdb
-C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-android\com.companyname.hot_stuff.apk
-C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-android\com.companyname.hot_stuff.aab
-C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-android\com.companyname.hot_stuff-Signed.aab
-C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-android\com.companyname.hot_stuff-Signed.apk
-C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-android\com.companyname.hot_stuff-Signed.apk.idsig
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\.NETCoreApp,Version=v7.0.AssemblyAttributes.cs
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\build.props
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\adb.props
@@ -95,10 +90,7 @@ C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\hot-stuff.dll
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\hot-stuff.pdb
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\hot-stuff.genruntimeconfig.cache
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\hot-stuff.runtimeconfig.json.bin
-C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\bin\com.companyname.hot_stuff.apk
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\bin\base.zip
-C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\bin\com.companyname.hot_stuff.aab
-C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\bin\com.companyname.hot_stuff.apks
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\res\values\colors.xml
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\uploadflags.txt
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\resolvedassemblies.hash
@@ -989,3 +981,14 @@ C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\assets\Syste
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\assets\System.Runtime.Extensions.dll
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\assets\System.Runtime.Serialization.Formatters.dll
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\assets\System.Xml.dll
+C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-android\com.companyname.HotStuff.apk
+C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-android\com.companyname.HotStuff.aab
+C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-android\com.companyname.HotStuff-Signed.aab
+C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-android\com.companyname.HotStuff-Signed.apk
+C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-android\com.companyname.HotStuff-Signed.apk.idsig
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\bin\com.companyname.HotStuff.apk
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\bin\com.companyname.HotStuff.aab
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\bin\com.companyname.HotStuff.apks
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\src\crc640ddbd739a3af62ab\MainActivity.java
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\src\crc640ddbd739a3af62ab\MainApplication.java
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\src\com\companyname\hotstuff\R.java

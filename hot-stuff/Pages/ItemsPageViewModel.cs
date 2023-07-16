@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using UraniumUI;
 
-namespace hot_stuff.Pages
+namespace HotStuff.Pages
 {
     internal class ItemsPageViewModel : BindableObject
     {
@@ -46,7 +46,6 @@ namespace hot_stuff.Pages
     public class Item : UraniumBindableObject
     {
         public string Content { get; set; }
-
         public ItemCategory Category { get; set; }
         public static ItemCategory[] AvailableCategories => Enum.GetValues(typeof(ItemCategory)) as ItemCategory[];
         public enum ItemCategory
@@ -58,6 +57,78 @@ namespace hot_stuff.Pages
             Jewelry,
             Shoes,
         }
+        public LocationRoom Room { get; set; }
+        public static LocationRoom[] AvailableRooms => Enum.GetValues(typeof(LocationRoom)) as LocationRoom[];
+        public enum LocationRoom
+        {
+            Attic,
+            Barn,
+            Basement,
+            Bathroom,
+            Bedroom,
+            Closet,
+            Conservatory,
+            Crawlspace,
+            Den,
+            DiningRoom,
+            Entryway,
+            FamilyRoom,
+            Garage,
+            Greenhouse,
+            GuestBedroom,
+            GuestHouse,
+            Gym,
+            Hallway,
+            KidsBedroom,
+            Kitchen,
+            LaundryRoom,
+            Library,
+            LivingRoom,
+            Loft,
+            MasterBathroom,
+            MasterBedroom,
+            Mudroom,
+            Nursery,
+            Office,
+            Pantry,
+            Patio,
+            Playroom,
+            Porch,
+            Shed,
+            Storage,
+            Sunroom,
+            UtilityRoom,
+            WalkInCloset,
+            Workshop,
+        }
+        public string ItemVersion { get; set; }
+        public ItemColor Color { get; set; }
+        public static ItemColor[] AvailableColors => Enum.GetValues(typeof(ItemColor)) as ItemColor[];
+        public enum ItemColor // TODO: Ideally this is a dropdown menu
+        {
+            White,
+            Black,
+            Grey,
+            Brown,
+            Gold,
+            Silver,
+            Pink,
+            Red,
+            Orange,
+            Yellow,
+            Green,
+            Aqua,
+            Blue,
+            Purple,
+            Magenta,
+            Transparent,
+            MultiColor
+        }
+        public string PurchaseDate { get; set; } // TODO: finish functionality, needs to be in date format, should probabaly use a date picker here
+        public decimal AmountPaid { get; set; } // I don't know if this is necessary, but it would allow us to create all types of charts from it
+        public string PurchaseProof { get; set; } // TODO: finish functionality, should be an image, or a link to an image stored in the cloud
+        public string ItemDescription { get; set; }
+
     }
 
 }

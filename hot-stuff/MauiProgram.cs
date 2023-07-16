@@ -2,7 +2,7 @@
 using Mopups.Hosting;
 using UraniumUI;
 
-namespace hot_stuff;
+namespace HotStuff;
 
 public static class MauiProgram
 {

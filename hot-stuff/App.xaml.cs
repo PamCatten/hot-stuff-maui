@@ -1,6 +1,6 @@
 ﻿using UraniumUI.Material.Resources;
 
-namespace hot_stuff;
+namespace HotStuff;
 
 public partial class App : Application
 {

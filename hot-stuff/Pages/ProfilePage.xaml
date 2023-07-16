@@ -7,9 +7,9 @@
              xmlns:material="clr-namespace:UraniumUI.Material.Controls;assembly=UraniumUI.Material"
              xmlns:fa="clr-namespace:UraniumUI.Icons.FontAwesome;assembly=UraniumUI.Icons.FontAwesome"
              xmlns:input="clr-namespace:InputKit.Shared.Controls;assembly=InputKit.Maui"
-             x:Class="hot_stuff.Pages.ProfilePage"
-             xmlns:local="clr-namespace:hot_stuff"
-             xmlns:pages="clr-namespace:hot_stuff.Pages"
+             x:Class="HotStuff.Pages.ProfilePage"
+             xmlns:local="clr-namespace:HotStuff"
+             xmlns:pages="clr-namespace:HotStuff.Pages"
              Title="Profile Menu"
 >
 

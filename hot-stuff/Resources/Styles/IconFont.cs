@@ -1,6 +1,6 @@
 ﻿using Microsoft.Maui;
 
-namespace hot_stuff;
+namespace HotStuff;
 static class IconFont
 {
     // Font Awesome 6 Solid (Free Edition)

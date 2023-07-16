@@ -1,10 +1,10 @@
-﻿using hot_stuff.Pages;
+﻿using HotStuff.Pages;
 using InputKit.Shared.Controls;
 using System.Diagnostics;
 using UraniumUI.Material.Controls;
 using UraniumUI.Pages;
 
-namespace hot_stuff
+namespace HotStuff
 {
     public partial class MainPage : UraniumContentPage
     {

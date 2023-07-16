@@ -1,5 +1,5 @@
 ﻿using UraniumUI.Pages;
-namespace hot_stuff.Pages;
+namespace HotStuff.Pages;
 
 public partial class ProfilePage : UraniumContentPage
 {

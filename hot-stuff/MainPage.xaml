@@ -6,16 +6,12 @@
              xmlns:material="clr-namespace:UraniumUI.Material.Controls;assembly=UraniumUI.Material"
              xmlns:fa="clr-namespace:UraniumUI.Icons.FontAwesome;assembly=UraniumUI.Icons.FontAwesome"
              xmlns:input="clr-namespace:InputKit.Shared.Controls;assembly=InputKit.Maui"
-             x:Class="hot_stuff.MainPage"
-             xmlns:local="clr-namespace:hot_stuff"
+             x:Class="HotStuff.MainPage"
+             xmlns:local="clr-namespace:HotStuff"
              x:Name="page"
 >
-   
-    <uranium:UraniumContentPage.BindingContext>
-        <local:MainPageViewModel />
-    </uranium:UraniumContentPage.BindingContext>
-    
- <uranium:UraniumContentPage.Resources>
+
+    <uranium:UraniumContentPage.Resources>
         <Style TargetType="Frame">
             <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource SecondaryContainer}, Dark={StaticResource SecondaryContainerDark}}" />
         </Style>
@@ -27,56 +23,10 @@
     
     <ScrollView Orientation="Both" HorizontalScrollBarVisibility="Always">
 
-        <VerticalStackLayout>
-
-            <Button Text="Delete" StyleClass="FilledTonalButton"  Command="{Binding RemoveSelectedItemsCommand}" HorizontalOptions="Start" />
-            <material:DataGrid ItemsSource="{Binding Items}" SelectedItems="{Binding SelectedItems}" HorizontalOptions="Center" VerticalOptions="Center">
-                <material:DataGrid.Columns>
-                    <material:DataGridSelectionColumn/>
-
-                    <material:DataGridColumn PropertyName="Content" Title="Todo" />
-
-                    <material:DataGridColumn PropertyName="Type" Title="Type"/>
-
-                    <material:DataGridColumn PropertyName="Type" Title="Done"/>
-
-                </material:DataGrid.Columns>
-            </material:DataGrid>
-        </VerticalStackLayout>
+        <VerticalStackLayout />
 
     </ScrollView>
 
-    <uranium:UraniumContentPage.Attachments>
-        <attachment:BackdropView
-                Title="Add" 
-                IconImageSource="{StaticResource AddIcon}"
-                BackgroundColor="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Gray950}}">
-            <VerticalStackLayout Spacing="10" Padding="25,30" HorizontalOptions="Center"  MaximumWidthRequest="400">
-                <material:TextField 
-                    Title="What to do?"
-                    Text="{Binding NewItem.Content}"
-                    TextColor="{StaticResource OnPrimary}"
-                    AccentColor="{StaticResource OnPrimary}"
-                    Icon="{FontImageSource FontFamily=FASolid, Glyph={x:Static fa:Solid.Pencil}, Color={StaticResource Primary}}"/>
-                <input:CheckBox 
-                    IsChecked="{Binding NewItem.IsDone}" 
-                    Text="Is done" Color="{StaticResource Primary}" 
-                    BorderColor="{StaticResource OnPrimary}" 
-                    Type="Filled" 
-                    TextColor="{StaticResource OnPrimary}" />
-                <input:SelectionView 
-                    Color="{StaticResource OnPrimary}" 
-                    ItemsSource="{x:Static local:TodoItem.AvailableTypes}" 
-                    SelectedItem="{Binding NewItem.Type}" 
-                    ColumnSpacing="-2" 
-                    ColumnNumber="4"/>
-                <Button 
-                    Command="{Binding AddNewItemCommand}" 
-                    Text="Add"
-                    StyleClass="ElevatedButton"/>
-            </VerticalStackLayout>
-        </attachment:BackdropView>
-    </uranium:UraniumContentPage.Attachments>
 </uranium:UraniumContentPage>
 
 

@@ -1,5 +1,6 @@
+using System.Diagnostics;
 using UraniumUI.Pages;
-namespace hot_stuff.Pages;
+namespace HotStuff.Pages;
 
 public partial class LearnPage : UraniumContentPage
 {
@@ -7,4 +8,12 @@ public partial class LearnPage : UraniumContentPage
 	{
 		InitializeComponent();
 	}
+
+    async void OnProfilePageClicked(object sender, EventArgs e)
+    {
+        Debug.WriteLine("User clicked ProfilePage link.");
+
+        await Shell.Current.GoToAsync(nameof(ProfilePage));
+    }
+
 }

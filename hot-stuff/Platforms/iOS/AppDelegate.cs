@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace hot_stuff
+namespace HotStuff
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate

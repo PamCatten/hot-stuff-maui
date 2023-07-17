@@ -38,14 +38,14 @@
                     <material:DataGridSelectionColumn/>
                     <material:DataGridColumn PropertyName="Content" Title="Item Name" Width="Auto"/>
                     <material:DataGridColumn PropertyName="Category" Title="Item Category" Width="Auto"/>
-                    <material:DataGridColumn PropertyName="Category" Title="Brand / Manufacturer" Width="Auto"/>
-                    <material:DataGridColumn PropertyName="Category" Title="Location / Room" Width="Auto"/>
-                    <material:DataGridColumn PropertyName="Category" Title="Item Version" Width="Auto"/>
-                    <material:DataGridColumn PropertyName="Category" Title="Item Color" Width="Auto"/>
-                    <material:DataGridColumn PropertyName="Category" Title="Purchase Date" Width="Auto"/>
-                    <material:DataGridColumn PropertyName="Category" Title="Amount Paid" Width="Auto"/>
-                    <material:DataGridColumn PropertyName="Category" Title="Purchase Proof" Width="Auto"/>
-                    <material:DataGridColumn PropertyName="Category" Title="Item Description" Width="*"/>
+                    <material:DataGridColumn PropertyName="BrandManufacturer" Title="Brand / Manufacturer" Width="Auto"/>
+                    <material:DataGridColumn PropertyName="Room" Title="Room" Width="Auto"/>
+                    <material:DataGridColumn PropertyName="ItemVersion" Title="Version" Width="Auto"/>
+                    <material:DataGridColumn PropertyName="Color" Title="Color" Width="Auto"/>
+                    <material:DataGridColumn PropertyName="PurchaseDate" Title="Purchase Date" Width="Auto"/>
+                    <material:DataGridColumn PropertyName="AmountPaid" Title="Amount Paid" Width="Auto"/>
+                    <material:DataGridColumn PropertyName="PurchaseProof" Title="Purchase Proof" Width="Auto"/>
+                    <material:DataGridColumn PropertyName="ItemDescription" Title="Item Description" Width="*"/>
                 </material:DataGrid.Columns>
             </material:DataGrid>
             
@@ -57,25 +57,72 @@
         <attachment:BackdropView
                 Title="Add" 
                 IconImageSource="{StaticResource AddIcon}"
-                BackgroundColor="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Gray950}}">
-            <VerticalStackLayout Spacing="10" Padding="25,30" HorizontalOptions="Center"  MaximumWidthRequest="400">
-                <material:TextField 
-                    Title="What to do?"
+                BackgroundColor="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Primary}}">
+            <VerticalStackLayout Spacing="10" Padding="25,30" HorizontalOptions="Center" MinimumWidthRequest="400">
+                    <material:TextField 
+                    Title="Item Name"
                     Text="{Binding newItemPublic.Content}"
                     TextColor="{StaticResource OnPrimary}"
                     AccentColor="{StaticResource OnPrimary}"
-                    Icon="{FontImageSource FontFamily=FASolid, Glyph={x:Static fa:Solid.Pencil}, Color={StaticResource Primary}}"/>
-                <input:SelectionView 
-                    Color="{StaticResource OnPrimary}" 
-                    ItemsSource="{x:Static pages:Item.AvailableCategories}" 
-                    SelectedItem="{Binding newItemPublic.Category}" 
-                    ColumnSpacing="-2" 
-                    ColumnNumber="4"/>
-                <Button 
+                />
+                    <material:PickerField 
+                    Title="Item Category"
+                    ItemsSource="{x:Static pages:Item.AvailableCategories}"
+                    SelectedItem="{Binding newItemPublic.Category}"
+                    AllowClear="True"
+                    TextColor="{StaticResource OnPrimary}"
+                    AccentColor="{StaticResource OnPrimary}"
+                />
+                    <material:PickerField 
+                    Title="Room / Location"
+                    ItemsSource="{x:Static pages:Item.AvailableRooms}"
+                    SelectedItem="{Binding newItemPublic.Room}"
+                    AllowClear="True"
+                    TextColor="{StaticResource OnPrimary}"
+                    AccentColor="{StaticResource OnPrimary}"
+                />
+                    <material:TextField 
+                    Title="Brand / Manufacturer Name"
+                    Text="{Binding newItemPublic.BrandManufacturer}"
+                    TextColor="{StaticResource OnPrimary}"
+                    AllowClear="True"
+                    AccentColor="{StaticResource OnPrimary}"
+                />
+                    <material:TextField 
+                    Title="Item Version"
+                    Text="{Binding newItemPublic.ItemVersion}"
+                    TextColor="{StaticResource OnPrimary}"
+                    AllowClear="True"
+                    AccentColor="{StaticResource OnPrimary}"
+                />
+                    <material:PickerField 
+                    Title="Item Color"
+                    ItemsSource="{x:Static pages:Item.AvailableColors}"
+                    SelectedItem="{Binding newItemPublic.Color}"
+                    AllowClear="True"
+                    TextColor="{StaticResource OnPrimary}"
+                    AccentColor="{StaticResource OnPrimary}"
+                />
+                    <material:DatePickerField 
+                    Title="Purchase Date"
+                    AllowClear="True"
+                    TextColor="{StaticResource OnPrimary}"
+                    AccentColor="{StaticResource OnPrimary}"
+                />
+                    <material:TextField 
+                    Title="Item Description"
+                    Text="{Binding newItemPublic.ItemDescription}"
+                    TextColor="{StaticResource OnPrimary}"
+                    AccentColor="{StaticResource OnPrimary}"
+                    AllowClear="True"
+                />
+
+                    <Button 
                     Command="{Binding AddNewItemCommand}" 
                     Text="Add"
+                    input:FormView.IsSubmitButton="True"
                     StyleClass="ElevatedButton"/>
-            </VerticalStackLayout>
+                </VerticalStackLayout>
         </attachment:BackdropView>
     </uranium:UraniumContentPage.Attachments>
 

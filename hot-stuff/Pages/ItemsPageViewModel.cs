@@ -23,7 +23,21 @@ namespace HotStuff.Pages
         {
             if (Items.Count == 0)
             {
-                Items.Add(new Item { Content = "Cartier Bracelet", Category = Item.ItemCategory.Jewelry });
+                Items.Add(new Item 
+                { 
+                    Content = "Pride and Prejudice", 
+                    Category = Item.ItemCategory.BooksMagazines, 
+                    BrandManufacturer = "Bantam Classics", 
+                    Room = Item.LocationRoom.Library,
+                    ItemVersion = "Perma-Bound Hardcover",
+                    Color = Item.ItemColor.Black,
+                    PurchaseDate = "08/02/2017",
+                    AmountPaid = 12.99m,
+                    PurchaseProof = "https://www.aws.com/example/ghshund80dsfmmdae/",
+                    ItemDescription = "Pride and Prejudice, the novel written by Jane Austen",
+                    
+
+                });
             }
 
             AddNewItemCommand = new Command(() =>
@@ -46,7 +60,7 @@ namespace HotStuff.Pages
     public class Item : UraniumBindableObject
     {
         public string Content { get; set; }
-        public ItemCategory Category { get; set; }
+        public ItemCategory Category { get; set; } // TODO: another drop down menu here
         public static ItemCategory[] AvailableCategories => Enum.GetValues(typeof(ItemCategory)) as ItemCategory[];
         public enum ItemCategory
         {
@@ -54,12 +68,12 @@ namespace HotStuff.Pages
             Apparel,
             ApparelAccessories,
             ApparelBags,
-            AppraelJewelry,
+            ApparelJewelry,
             Appliances,
             Artwork,
             Baby,
             Beauty,
-            Books,
+            BooksMagazines,
             Collectibles,
             CraftSupplies,
             Electronics,
@@ -88,7 +102,7 @@ namespace HotStuff.Pages
             VehicleSupplies,
             Other,
         }
-        public LocationRoom Room { get; set; }
+        public LocationRoom Room { get; set; } // TODO: another drop down menu here
         public static LocationRoom[] AvailableRooms => Enum.GetValues(typeof(LocationRoom)) as LocationRoom[];
         public enum LocationRoom
         {
@@ -136,6 +150,7 @@ namespace HotStuff.Pages
             Workshop,
             Other,
         }
+        public string BrandManufacturer { get; set; }
         public string ItemVersion { get; set; }
         public ItemColor Color { get; set; }
         public static ItemColor[] AvailableColors => Enum.GetValues(typeof(ItemColor)) as ItemColor[];

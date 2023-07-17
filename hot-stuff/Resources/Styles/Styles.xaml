@@ -9,25 +9,38 @@
     <FontImage x:Key="DatabaseIcon"
                FontFamily="FontAwesome"
                Color="{StaticResource OnPrimary}"
-               Glyph="{x:Static local:IconFont.Database}" />
+               Glyph="{x:Static local:IconFont.Database}" 
+    />
     <FontImage x:Key="HomeIcon"
                FontFamily="FontAwesome"
                Color="{StaticResource OnPrimary}"
-               Glyph="{x:Static local:IconFont.House}" />
+               Glyph="{x:Static local:IconFont.House}" 
+    />
     <FontImage x:Key="LearnIcon"
                FontFamily="FontAwesome"
                Color="{StaticResource OnPrimary}"
-               Glyph="{x:Static local:IconFont.GraduationCap}" />
-
+               Glyph="{x:Static local:IconFont.GraduationCap}" 
+    />
     <FontImage x:Key="AddIcon"
                FontFamily="FontAwesome"
                Color="{StaticResource OnPrimary}"
-               Glyph="{x:Static local:IconFont.CirclePlus}" />
+               Glyph="{x:Static local:IconFont.CirclePlus}" 
+    />
     <FontImage x:Key="ProfileIcon"
                FontFamily="FontAwesome"
                Color="{StaticResource OnPrimary}"
-               Glyph="{x:Static local:IconFont.CircleUser}" />
-
+               Glyph="{x:Static local:IconFont.CircleUser}" 
+    />
+    <FontImage x:Key="CalendarIcon"
+               FontFamily="FontAwesome"
+               Color="{StaticResource OnPrimary}"
+               Glyph="{x:Static local:IconFont.CalendarDays}"
+    />
+    <FontImage x:Key="Pen"
+               FontFamily="FontAwesome"
+               Color="{StaticResource OnPrimary}"
+               Glyph="{x:Static local:IconFont.Pen}"
+    />
     <Style TargetType="input:CheckBox">
         <Setter Property="Color" Value="{StaticResource Primary}" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource White}}" />

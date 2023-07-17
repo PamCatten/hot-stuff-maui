@@ -50,12 +50,43 @@ namespace HotStuff.Pages
         public static ItemCategory[] AvailableCategories => Enum.GetValues(typeof(ItemCategory)) as ItemCategory[];
         public enum ItemCategory
         {
+            Antiques,
+            Apparel,
+            ApparelAccessories,
+            ApparelBags,
+            AppraelJewelry,
             Appliances,
+            Artwork,
+            Baby,
+            Beauty,
             Books,
-            Clothing,
+            Collectibles,
+            CraftSupplies,
             Electronics,
-            Jewelry,
+            Fixtures,
+            Furniture,
+            Games,
+            Garden,
+            Grocery,
+            Handmade,
+            HomeDecor,
+            HomeImprovementSupplies,
+            KitchenUtensils,
+            Lighting,
+            Linens,
+            MusicalInstruments,
+            OfficeSupplies,
+            PersonalCare,
+            PetSupplies,
+            PlumbingHVAC,
             Shoes,
+            SportsEquipment,
+            Storage,
+            Tools,
+            Toys,
+            Vehicles,
+            VehicleSupplies,
+            Other,
         }
         public LocationRoom Room { get; set; }
         public static LocationRoom[] AvailableRooms => Enum.GetValues(typeof(LocationRoom)) as LocationRoom[];
@@ -71,9 +102,11 @@ namespace HotStuff.Pages
             Crawlspace,
             Den,
             DiningRoom,
+            Driveway,
             Entryway,
             FamilyRoom,
             Garage,
+            Garden,
             Greenhouse,
             GuestBedroom,
             GuestHouse,
@@ -96,10 +129,12 @@ namespace HotStuff.Pages
             Porch,
             Shed,
             Storage,
+            Studio,
             Sunroom,
             UtilityRoom,
             WalkInCloset,
             Workshop,
+            Other,
         }
         public string ItemVersion { get; set; }
         public ItemColor Color { get; set; }
@@ -122,7 +157,7 @@ namespace HotStuff.Pages
             Purple,
             Magenta,
             Transparent,
-            MultiColor
+            Other,
         }
         public string PurchaseDate { get; set; } // TODO: finish functionality, needs to be in date format, should probabaly use a date picker here
         public decimal AmountPaid { get; set; } // I don't know if this is necessary, but it would allow us to create all types of charts from it

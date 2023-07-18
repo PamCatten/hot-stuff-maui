@@ -9,7 +9,7 @@
   -->
   <Identity Name="bb93a9a5-809a-48a4-8ac6-70af125c8945" Publisher="CN=User Name" Version="1.0.0.1" ProcessorArchitecture="x64" />
   <Properties>
-    <DisplayName>hot_stuff</DisplayName>
+    <DisplayName>Hot Stuff</DisplayName>
     <PublisherDisplayName>User Name</PublisherDisplayName>
     <Logo>appiconStoreLogo.png</Logo>
   </Properties>
@@ -23,8 +23,8 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="hot-stuff.exe" EntryPoint="Windows.FullTrustApplication">
-      <uap:VisualElements DisplayName="hot_stuff" Description="hot_stuff" Square150x150Logo="appiconMediumTile.png" Square44x44Logo="appiconLogo.png" BackgroundColor="transparent">
-        <uap:DefaultTile Square71x71Logo="appiconSmallTile.png" Wide310x150Logo="appiconWideTile.png" Square310x310Logo="appiconLargeTile.png" ShortName="hot_stuff">
+      <uap:VisualElements DisplayName="Hot Stuff" Description="Hot Stuff" Square150x150Logo="appiconMediumTile.png" Square44x44Logo="appiconLogo.png" BackgroundColor="transparent">
+        <uap:DefaultTile Square71x71Logo="appiconSmallTile.png" Wide310x150Logo="appiconWideTile.png" Square310x310Logo="appiconLargeTile.png" ShortName="Hot Stuff">
           <uap:ShowNameOnTiles>
             <uap:ShowOn Tile="square150x150Logo" />
             <uap:ShowOn Tile="wide310x150Logo" />

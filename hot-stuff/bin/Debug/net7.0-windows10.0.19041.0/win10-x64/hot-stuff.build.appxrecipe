@@ -607,6 +607,9 @@
     <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\asyncawaitbestpractices\6.0.4\lib\netstandard2.1\AsyncAwaitBestPractices.dll">
       <PackagePath>AsyncAwaitBestPractices.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\communitytoolkit.mvvm\8.2.1\lib\net6.0\CommunityToolkit.Mvvm.dll">
+      <PackagePath>CommunityToolkit.Mvvm.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\inputkit.maui\4.3.0\lib\net7.0-windows10.0.19041\InputKit.Maui.dll">
       <PackagePath>InputKit.Maui.dll</PackagePath>
     </AppxPackagedFile>

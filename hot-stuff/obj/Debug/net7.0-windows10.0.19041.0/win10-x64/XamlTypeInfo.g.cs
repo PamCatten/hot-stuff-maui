@@ -8,22 +8,22 @@
 //------------------------------------------------------------------------------
 
 
-namespace hot_stuff.WinUI
+namespace HotStuff.WinUI
 {
     public partial class App : global::Microsoft.UI.Xaml.Markup.IXamlMetadataProvider
     {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 1.0.0.0")]
-        private global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMetaDataProvider __appProvider;
+        private global::HotStuff.hot_stuff_XamlTypeInfo.XamlMetaDataProvider __appProvider;
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 1.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMetaDataProvider _AppProvider
+        private global::HotStuff.hot_stuff_XamlTypeInfo.XamlMetaDataProvider _AppProvider
         {
             get
             {
                 if (__appProvider == null)
                 {
-                    __appProvider = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMetaDataProvider();
+                    __appProvider = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMetaDataProvider();
                 }
                 return __appProvider;
             }
@@ -61,7 +61,7 @@ namespace hot_stuff.WinUI
     }
 }
 
-namespace hot_stuff.hot_stuff_XamlTypeInfo
+namespace HotStuff.hot_stuff_XamlTypeInfo
 {
     /// <summary>
     /// Main class for providing metadata for the app or library
@@ -70,15 +70,15 @@ namespace hot_stuff.hot_stuff_XamlTypeInfo
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     public sealed class XamlMetaDataProvider : global::Microsoft.UI.Xaml.Markup.IXamlMetadataProvider
     {
-        private global::hot_stuff.hot_stuff_XamlTypeInfo.XamlTypeInfoProvider _provider = null;
+        private global::HotStuff.hot_stuff_XamlTypeInfo.XamlTypeInfoProvider _provider = null;
 
-        private global::hot_stuff.hot_stuff_XamlTypeInfo.XamlTypeInfoProvider Provider
+        private global::HotStuff.hot_stuff_XamlTypeInfo.XamlTypeInfoProvider Provider
         {
             get
             {
                 if (_provider == null)
                 {
-                    _provider = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlTypeInfoProvider();
+                    _provider = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlTypeInfoProvider();
                 }
                 return _provider;
             }
@@ -128,7 +128,7 @@ namespace hot_stuff.hot_stuff_XamlTypeInfo
                 {
                     xamlType = CreateXamlType(typeIndex);
                 }
-                var userXamlType = xamlType as global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType;
+                var userXamlType = xamlType as global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType;
                 if(xamlType == null || (userXamlType != null && userXamlType.IsReturnTypeStub && !userXamlType.IsLocalType))
                 {
                     global::Microsoft.UI.Xaml.Markup.IXamlType libXamlType = CheckOtherMetadataProvidersForType(type);
@@ -167,7 +167,7 @@ namespace hot_stuff.hot_stuff_XamlTypeInfo
                 {
                     xamlType = CreateXamlType(typeIndex);
                 }
-                var userXamlType = xamlType as global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType;
+                var userXamlType = xamlType as global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType;
                 if(xamlType == null || (userXamlType != null && userXamlType.IsReturnTypeStub && !userXamlType.IsLocalType))
                 {
                     global::Microsoft.UI.Xaml.Markup.IXamlType libXamlType = CheckOtherMetadataProvidersForName(typeName);
@@ -339,8 +339,8 @@ namespace hot_stuff.hot_stuff_XamlTypeInfo
 
         private global::Microsoft.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
-            global::hot_stuff.hot_stuff_XamlTypeInfo.XamlSystemBaseType xamlType = null;
-            global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType userType;
+            global::HotStuff.hot_stuff_XamlTypeInfo.XamlSystemBaseType xamlType = null;
+            global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType userType;
             string typeName = _typeNameTable[typeIndex];
             global::System.Type type = _typeTable[typeIndex];
 
@@ -348,7 +348,7 @@ namespace hot_stuff.hot_stuff_XamlTypeInfo
             {
 
             case 0:   //  Microsoft.Maui.MauiWinUIApplication
-                userType = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Application"));
+                userType = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Application"));
                 userType.AddMemberName("LaunchActivatedEventArgs");
                 userType.AddMemberName("Services");
                 userType.AddMemberName("Application");
@@ -356,41 +356,41 @@ namespace hot_stuff.hot_stuff_XamlTypeInfo
                 break;
 
             case 1:   //  Microsoft.UI.Xaml.Application
-                xamlType = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 2:   //  Microsoft.UI.Xaml.LaunchActivatedEventArgs
-                xamlType = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 3:   //  System.IServiceProvider
-                userType = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 4:   //  Microsoft.Maui.IApplication
-                userType = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 5:   //  Microsoft.Maui.Controls.Platform.ShellView
-                userType = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.Maui.Platform.RootNavigationView"));
+                userType = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.Maui.Platform.RootNavigationView"));
                 userType.Activator = Activate_5_ShellView;
                 userType.SetIsBindable();
                 xamlType = userType;
                 break;
 
             case 6:   //  Microsoft.Maui.Platform.RootNavigationView
-                userType = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.Maui.Platform.MauiNavigationView"));
+                userType = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.Maui.Platform.MauiNavigationView"));
                 userType.Activator = Activate_6_RootNavigationView;
                 userType.SetIsBindable();
                 xamlType = userType;
                 break;
 
             case 7:   //  Microsoft.Maui.Platform.MauiNavigationView
-                userType = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView"));
+                userType = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView"));
                 userType.Activator = Activate_7_MauiNavigationView;
                 userType.AddMemberName("NavigationViewBackButtonMargin");
                 userType.SetIsBindable();
@@ -398,7 +398,7 @@ namespace hot_stuff.hot_stuff_XamlTypeInfo
                 break;
 
             case 8:   //  Microsoft.UI.Xaml.Controls.NavigationView
-                userType = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ContentControl"));
+                userType = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ContentControl"));
                 userType.Activator = Activate_8_NavigationView;
                 userType.AddMemberName("AlwaysShowHeader");
                 userType.AddMemberName("AutoSuggestBox");
@@ -441,42 +441,42 @@ namespace hot_stuff.hot_stuff_XamlTypeInfo
                 break;
 
             case 9:   //  Microsoft.UI.Xaml.Controls.ContentControl
-                xamlType = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 10:   //  Microsoft.UI.Xaml.Thickness
-                userType = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                userType = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 11:   //  System.ValueType
-                userType = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 xamlType = userType;
                 break;
 
             case 12:   //  Object
-                xamlType = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 13:   //  Boolean
-                xamlType = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 14:   //  Microsoft.UI.Xaml.Controls.AutoSuggestBox
-                xamlType = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 15:   //  Double
-                xamlType = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 16:   //  Microsoft.UI.Xaml.UIElement
-                xamlType = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 17:   //  Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode
-                userType = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Minimal", global::Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode.Minimal);
                 userType.AddEnumValue("Compact", global::Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode.Compact);
                 userType.AddEnumValue("Expanded", global::Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode.Expanded);
@@ -484,23 +484,23 @@ namespace hot_stuff.hot_stuff_XamlTypeInfo
                 break;
 
             case 18:   //  System.Enum
-                userType = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                userType = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 xamlType = userType;
                 break;
 
             case 19:   //  System.Collections.Generic.IList`1<Object>
-                userType = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.CollectionAdd = VectorAdd_19_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 20:   //  Microsoft.UI.Xaml.DataTemplate
-                xamlType = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 21:   //  Microsoft.UI.Xaml.Controls.NavigationViewBackButtonVisible
-                userType = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Collapsed", global::Microsoft.UI.Xaml.Controls.NavigationViewBackButtonVisible.Collapsed);
                 userType.AddEnumValue("Visible", global::Microsoft.UI.Xaml.Controls.NavigationViewBackButtonVisible.Visible);
                 userType.AddEnumValue("Auto", global::Microsoft.UI.Xaml.Controls.NavigationViewBackButtonVisible.Auto);
@@ -508,26 +508,26 @@ namespace hot_stuff.hot_stuff_XamlTypeInfo
                 break;
 
             case 22:   //  Microsoft.UI.Xaml.Style
-                xamlType = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 23:   //  Microsoft.UI.Xaml.Controls.StyleSelector
-                xamlType = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 24:   //  Microsoft.UI.Xaml.Controls.DataTemplateSelector
-                xamlType = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 25:   //  Microsoft.UI.Xaml.Controls.NavigationViewOverflowLabelMode
-                userType = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("MoreLabel", global::Microsoft.UI.Xaml.Controls.NavigationViewOverflowLabelMode.MoreLabel);
                 userType.AddEnumValue("NoLabel", global::Microsoft.UI.Xaml.Controls.NavigationViewOverflowLabelMode.NoLabel);
                 xamlType = userType;
                 break;
 
             case 26:   //  Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode
-                userType = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Auto", global::Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode.Auto);
                 userType.AddEnumValue("Left", global::Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode.Left);
                 userType.AddEnumValue("Top", global::Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode.Top);
@@ -537,18 +537,18 @@ namespace hot_stuff.hot_stuff_XamlTypeInfo
                 break;
 
             case 27:   //  String
-                xamlType = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 28:   //  Microsoft.UI.Xaml.Controls.NavigationViewSelectionFollowsFocus
-                userType = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Disabled", global::Microsoft.UI.Xaml.Controls.NavigationViewSelectionFollowsFocus.Disabled);
                 userType.AddEnumValue("Enabled", global::Microsoft.UI.Xaml.Controls.NavigationViewSelectionFollowsFocus.Enabled);
                 xamlType = userType;
                 break;
 
             case 29:   //  Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled
-                userType = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("WhenSelectionFollowsFocus", global::Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled.WhenSelectionFollowsFocus);
                 userType.AddEnumValue("Always", global::Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled.Always);
                 userType.AddEnumValue("Never", global::Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled.Never);
@@ -556,13 +556,13 @@ namespace hot_stuff.hot_stuff_XamlTypeInfo
                 break;
 
             case 30:   //  Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings
-                userType = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
+                userType = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 31:   //  Microsoft.UI.Xaml.DependencyObject
-                xamlType = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
             return xamlType;
@@ -1002,291 +1002,291 @@ namespace hot_stuff.hot_stuff_XamlTypeInfo
 
         private global::Microsoft.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
-            global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember xamlMember = null;
-            global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType userType;
+            global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember xamlMember = null;
+            global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType userType;
 
             switch (longMemberName)
             {
             case "Microsoft.Maui.MauiWinUIApplication.LaunchActivatedEventArgs":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Maui.MauiWinUIApplication");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "LaunchActivatedEventArgs", "Microsoft.UI.Xaml.LaunchActivatedEventArgs");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Maui.MauiWinUIApplication");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "LaunchActivatedEventArgs", "Microsoft.UI.Xaml.LaunchActivatedEventArgs");
                 xamlMember.Getter = get_0_MauiWinUIApplication_LaunchActivatedEventArgs;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Maui.MauiWinUIApplication.Services":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Maui.MauiWinUIApplication");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "Services", "System.IServiceProvider");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Maui.MauiWinUIApplication");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "Services", "System.IServiceProvider");
                 xamlMember.Getter = get_1_MauiWinUIApplication_Services;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Maui.MauiWinUIApplication.Application":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Maui.MauiWinUIApplication");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "Application", "Microsoft.Maui.IApplication");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Maui.MauiWinUIApplication");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "Application", "Microsoft.Maui.IApplication");
                 xamlMember.Getter = get_2_MauiWinUIApplication_Application;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Maui.Platform.MauiNavigationView.NavigationViewBackButtonMargin":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Maui.Platform.MauiNavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "NavigationViewBackButtonMargin", "Microsoft.UI.Xaml.Thickness");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Maui.Platform.MauiNavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "NavigationViewBackButtonMargin", "Microsoft.UI.Xaml.Thickness");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_3_MauiNavigationView_NavigationViewBackButtonMargin;
                 xamlMember.Setter = set_3_MauiNavigationView_NavigationViewBackButtonMargin;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.AlwaysShowHeader":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "AlwaysShowHeader", "Boolean");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "AlwaysShowHeader", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_4_NavigationView_AlwaysShowHeader;
                 xamlMember.Setter = set_4_NavigationView_AlwaysShowHeader;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.AutoSuggestBox":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "AutoSuggestBox", "Microsoft.UI.Xaml.Controls.AutoSuggestBox");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "AutoSuggestBox", "Microsoft.UI.Xaml.Controls.AutoSuggestBox");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_5_NavigationView_AutoSuggestBox;
                 xamlMember.Setter = set_5_NavigationView_AutoSuggestBox;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.CompactModeThresholdWidth":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "CompactModeThresholdWidth", "Double");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "CompactModeThresholdWidth", "Double");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_6_NavigationView_CompactModeThresholdWidth;
                 xamlMember.Setter = set_6_NavigationView_CompactModeThresholdWidth;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.CompactPaneLength":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "CompactPaneLength", "Double");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "CompactPaneLength", "Double");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_7_NavigationView_CompactPaneLength;
                 xamlMember.Setter = set_7_NavigationView_CompactPaneLength;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.ContentOverlay":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "ContentOverlay", "Microsoft.UI.Xaml.UIElement");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "ContentOverlay", "Microsoft.UI.Xaml.UIElement");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_8_NavigationView_ContentOverlay;
                 xamlMember.Setter = set_8_NavigationView_ContentOverlay;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.DisplayMode":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "DisplayMode", "Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "DisplayMode", "Microsoft.UI.Xaml.Controls.NavigationViewDisplayMode");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_9_NavigationView_DisplayMode;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.ExpandedModeThresholdWidth":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "ExpandedModeThresholdWidth", "Double");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "ExpandedModeThresholdWidth", "Double");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_10_NavigationView_ExpandedModeThresholdWidth;
                 xamlMember.Setter = set_10_NavigationView_ExpandedModeThresholdWidth;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.FooterMenuItems":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "FooterMenuItems", "System.Collections.Generic.IList`1<Object>");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "FooterMenuItems", "System.Collections.Generic.IList`1<Object>");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_11_NavigationView_FooterMenuItems;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.FooterMenuItemsSource":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "FooterMenuItemsSource", "Object");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "FooterMenuItemsSource", "Object");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_12_NavigationView_FooterMenuItemsSource;
                 xamlMember.Setter = set_12_NavigationView_FooterMenuItemsSource;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.Header":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "Header", "Object");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "Header", "Object");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_13_NavigationView_Header;
                 xamlMember.Setter = set_13_NavigationView_Header;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.HeaderTemplate":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "HeaderTemplate", "Microsoft.UI.Xaml.DataTemplate");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "HeaderTemplate", "Microsoft.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_14_NavigationView_HeaderTemplate;
                 xamlMember.Setter = set_14_NavigationView_HeaderTemplate;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.IsBackButtonVisible":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "IsBackButtonVisible", "Microsoft.UI.Xaml.Controls.NavigationViewBackButtonVisible");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "IsBackButtonVisible", "Microsoft.UI.Xaml.Controls.NavigationViewBackButtonVisible");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_15_NavigationView_IsBackButtonVisible;
                 xamlMember.Setter = set_15_NavigationView_IsBackButtonVisible;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.IsBackEnabled":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "IsBackEnabled", "Boolean");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "IsBackEnabled", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_16_NavigationView_IsBackEnabled;
                 xamlMember.Setter = set_16_NavigationView_IsBackEnabled;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.IsPaneOpen":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "IsPaneOpen", "Boolean");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "IsPaneOpen", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_17_NavigationView_IsPaneOpen;
                 xamlMember.Setter = set_17_NavigationView_IsPaneOpen;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.IsPaneToggleButtonVisible":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "IsPaneToggleButtonVisible", "Boolean");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "IsPaneToggleButtonVisible", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_18_NavigationView_IsPaneToggleButtonVisible;
                 xamlMember.Setter = set_18_NavigationView_IsPaneToggleButtonVisible;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.IsPaneVisible":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "IsPaneVisible", "Boolean");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "IsPaneVisible", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_19_NavigationView_IsPaneVisible;
                 xamlMember.Setter = set_19_NavigationView_IsPaneVisible;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.IsSettingsVisible":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "IsSettingsVisible", "Boolean");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "IsSettingsVisible", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_20_NavigationView_IsSettingsVisible;
                 xamlMember.Setter = set_20_NavigationView_IsSettingsVisible;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.IsTitleBarAutoPaddingEnabled":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "IsTitleBarAutoPaddingEnabled", "Boolean");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "IsTitleBarAutoPaddingEnabled", "Boolean");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_21_NavigationView_IsTitleBarAutoPaddingEnabled;
                 xamlMember.Setter = set_21_NavigationView_IsTitleBarAutoPaddingEnabled;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.MenuItemContainerStyle":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "MenuItemContainerStyle", "Microsoft.UI.Xaml.Style");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "MenuItemContainerStyle", "Microsoft.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_22_NavigationView_MenuItemContainerStyle;
                 xamlMember.Setter = set_22_NavigationView_MenuItemContainerStyle;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.MenuItemContainerStyleSelector":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "MenuItemContainerStyleSelector", "Microsoft.UI.Xaml.Controls.StyleSelector");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "MenuItemContainerStyleSelector", "Microsoft.UI.Xaml.Controls.StyleSelector");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_23_NavigationView_MenuItemContainerStyleSelector;
                 xamlMember.Setter = set_23_NavigationView_MenuItemContainerStyleSelector;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.MenuItemTemplate":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "MenuItemTemplate", "Microsoft.UI.Xaml.DataTemplate");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "MenuItemTemplate", "Microsoft.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_24_NavigationView_MenuItemTemplate;
                 xamlMember.Setter = set_24_NavigationView_MenuItemTemplate;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.MenuItemTemplateSelector":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "MenuItemTemplateSelector", "Microsoft.UI.Xaml.Controls.DataTemplateSelector");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "MenuItemTemplateSelector", "Microsoft.UI.Xaml.Controls.DataTemplateSelector");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_25_NavigationView_MenuItemTemplateSelector;
                 xamlMember.Setter = set_25_NavigationView_MenuItemTemplateSelector;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.MenuItems":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "MenuItems", "System.Collections.Generic.IList`1<Object>");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "MenuItems", "System.Collections.Generic.IList`1<Object>");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_26_NavigationView_MenuItems;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.MenuItemsSource":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "MenuItemsSource", "Object");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "MenuItemsSource", "Object");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_27_NavigationView_MenuItemsSource;
                 xamlMember.Setter = set_27_NavigationView_MenuItemsSource;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.OpenPaneLength":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "OpenPaneLength", "Double");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "OpenPaneLength", "Double");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_28_NavigationView_OpenPaneLength;
                 xamlMember.Setter = set_28_NavigationView_OpenPaneLength;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.OverflowLabelMode":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "OverflowLabelMode", "Microsoft.UI.Xaml.Controls.NavigationViewOverflowLabelMode");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "OverflowLabelMode", "Microsoft.UI.Xaml.Controls.NavigationViewOverflowLabelMode");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_29_NavigationView_OverflowLabelMode;
                 xamlMember.Setter = set_29_NavigationView_OverflowLabelMode;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.PaneCustomContent":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "PaneCustomContent", "Microsoft.UI.Xaml.UIElement");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "PaneCustomContent", "Microsoft.UI.Xaml.UIElement");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_30_NavigationView_PaneCustomContent;
                 xamlMember.Setter = set_30_NavigationView_PaneCustomContent;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.PaneDisplayMode":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "PaneDisplayMode", "Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "PaneDisplayMode", "Microsoft.UI.Xaml.Controls.NavigationViewPaneDisplayMode");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_31_NavigationView_PaneDisplayMode;
                 xamlMember.Setter = set_31_NavigationView_PaneDisplayMode;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.PaneFooter":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "PaneFooter", "Microsoft.UI.Xaml.UIElement");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "PaneFooter", "Microsoft.UI.Xaml.UIElement");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_32_NavigationView_PaneFooter;
                 xamlMember.Setter = set_32_NavigationView_PaneFooter;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.PaneHeader":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "PaneHeader", "Microsoft.UI.Xaml.UIElement");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "PaneHeader", "Microsoft.UI.Xaml.UIElement");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_33_NavigationView_PaneHeader;
                 xamlMember.Setter = set_33_NavigationView_PaneHeader;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.PaneTitle":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "PaneTitle", "String");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "PaneTitle", "String");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_34_NavigationView_PaneTitle;
                 xamlMember.Setter = set_34_NavigationView_PaneTitle;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.PaneToggleButtonStyle":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "PaneToggleButtonStyle", "Microsoft.UI.Xaml.Style");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "PaneToggleButtonStyle", "Microsoft.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_35_NavigationView_PaneToggleButtonStyle;
                 xamlMember.Setter = set_35_NavigationView_PaneToggleButtonStyle;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.SelectedItem":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "SelectedItem", "Object");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "SelectedItem", "Object");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_36_NavigationView_SelectedItem;
                 xamlMember.Setter = set_36_NavigationView_SelectedItem;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.SelectionFollowsFocus":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "SelectionFollowsFocus", "Microsoft.UI.Xaml.Controls.NavigationViewSelectionFollowsFocus");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "SelectionFollowsFocus", "Microsoft.UI.Xaml.Controls.NavigationViewSelectionFollowsFocus");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_37_NavigationView_SelectionFollowsFocus;
                 xamlMember.Setter = set_37_NavigationView_SelectionFollowsFocus;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.SettingsItem":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "SettingsItem", "Object");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "SettingsItem", "Object");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_38_NavigationView_SettingsItem;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.ShoulderNavigationEnabled":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "ShoulderNavigationEnabled", "Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "ShoulderNavigationEnabled", "Microsoft.UI.Xaml.Controls.NavigationViewShoulderNavigationEnabled");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_39_NavigationView_ShoulderNavigationEnabled;
                 xamlMember.Setter = set_39_NavigationView_ShoulderNavigationEnabled;
                 break;
             case "Microsoft.UI.Xaml.Controls.NavigationView.TemplateSettings":
-                userType = (global::hot_stuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
-                xamlMember = new global::hot_stuff.hot_stuff_XamlTypeInfo.XamlMember(this, "TemplateSettings", "Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings");
+                userType = (global::HotStuff.hot_stuff_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.NavigationView");
+                xamlMember = new global::HotStuff.hot_stuff_XamlTypeInfo.XamlMember(this, "TemplateSettings", "Microsoft.UI.Xaml.Controls.NavigationViewTemplateSettings");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_40_NavigationView_TemplateSettings;
                 xamlMember.SetIsReadOnly();
@@ -1348,10 +1348,10 @@ namespace hot_stuff.hot_stuff_XamlTypeInfo
 
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.UI.Xaml.Markup.Compiler"," 1.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    internal class XamlUserType : global::hot_stuff.hot_stuff_XamlTypeInfo.XamlSystemBaseType
+    internal class XamlUserType : global::HotStuff.hot_stuff_XamlTypeInfo.XamlSystemBaseType
         , global::Microsoft.UI.Xaml.Markup.IXamlType
     {
-        global::hot_stuff.hot_stuff_XamlTypeInfo.XamlTypeInfoProvider _provider;
+        global::HotStuff.hot_stuff_XamlTypeInfo.XamlTypeInfoProvider _provider;
         global::Microsoft.UI.Xaml.Markup.IXamlType _baseType;
         global::Microsoft.UI.Xaml.Markup.IXamlType _boxedType;
         bool _isArray;
@@ -1366,7 +1366,7 @@ namespace hot_stuff.hot_stuff_XamlTypeInfo
         global::System.Collections.Generic.Dictionary<string, string> _memberNames;
         global::System.Collections.Generic.Dictionary<string, object> _enumValues;
 
-        public XamlUserType(global::hot_stuff.hot_stuff_XamlTypeInfo.XamlTypeInfoProvider provider, string fullName, global::System.Type fullType, global::Microsoft.UI.Xaml.Markup.IXamlType baseType)
+        public XamlUserType(global::HotStuff.hot_stuff_XamlTypeInfo.XamlTypeInfoProvider provider, string fullName, global::System.Type fullType, global::Microsoft.UI.Xaml.Markup.IXamlType baseType)
             :base(fullName, fullType)
         {
             _provider = provider;
@@ -1581,7 +1581,7 @@ namespace hot_stuff.hot_stuff_XamlTypeInfo
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     internal class XamlMember : global::Microsoft.UI.Xaml.Markup.IXamlMember
     {
-        global::hot_stuff.hot_stuff_XamlTypeInfo.XamlTypeInfoProvider _provider;
+        global::HotStuff.hot_stuff_XamlTypeInfo.XamlTypeInfoProvider _provider;
         string _name;
         bool _isAttachable;
         bool _isDependencyProperty;
@@ -1590,7 +1590,7 @@ namespace hot_stuff.hot_stuff_XamlTypeInfo
         string _typeName;
         string _targetTypeName;
 
-        public XamlMember(global::hot_stuff.hot_stuff_XamlTypeInfo.XamlTypeInfoProvider provider, string name, string typeName)
+        public XamlMember(global::HotStuff.hot_stuff_XamlTypeInfo.XamlTypeInfoProvider provider, string name, string typeName)
         {
             _name = name;
             _typeName = typeName;

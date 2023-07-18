@@ -275,3 +275,4 @@ C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-ios\iossimulator-x64\XamlC.s
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-ios\iossimulator-x64\hot-stuff.csproj.CopyComplete
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-ios\iossimulator-x64\hot-stuff.genruntimeconfig.cache
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-ios\iossimulator-x64\ref\hot-stuff.dll
+C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-ios\iossimulator-x64\CommunityToolkit.Mvvm.dll

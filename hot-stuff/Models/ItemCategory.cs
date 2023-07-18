@@ -1,0 +1,43 @@
+namespace HotStuff.Models
+{
+    public enum ItemCategory
+    {
+        Antiques, 
+        Apparel, 
+        ApparelAccessories, 
+        ApparelBags, 
+        ApparelJewelry, 
+        Appliances, 
+        Artwork, 
+        Baby, 
+        Beauty, 
+        BooksMagazines,
+        Collectibles, 
+        CraftSupplies, 
+        Electronics, 
+        Fixtures, 
+        Furniture, 
+        Games, 
+        Garden, 
+        Grocery, 
+        Handmade, 
+        HomeDecor,
+        HomeImprovementSupplies, 
+        KitchenUtensils, 
+        Lighting, 
+        Linens, 
+        MusicalInstruments, 
+        OfficeSupplies, 
+        PersonalCare,
+        PetSupplies, 
+        PlumbingHVAC, 
+        Shoes, 
+        SportsEquipment, 
+        Storage, 
+        Tools, 
+        Toys, 
+        Vehicles, 
+        VehicleSupplies, 
+        Other
+    }
+}

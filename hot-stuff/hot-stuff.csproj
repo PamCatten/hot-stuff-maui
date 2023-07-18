@@ -49,6 +49,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
 		<PackageReference Include="UraniumUI.Material" Version="2.5.1" />
 		<PackageReference Include="UraniumUI.Icons.FontAwesome" Version="2.5.1" />
 		<PackageReference Include="UraniumUI.Dialogs.Mopups" Version="2.5.1" />
@@ -64,11 +65,6 @@
 	  <MauiXaml Update="Pages\ProfilePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="DataServices\" />
-	  <Folder Include="Models\" />
 	</ItemGroup>
 
 </Project>

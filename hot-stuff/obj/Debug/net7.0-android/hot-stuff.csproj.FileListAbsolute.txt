@@ -992,3 +992,5 @@ C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\bin\com.comp
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\src\crc640ddbd739a3af62ab\MainActivity.java
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\src\crc640ddbd739a3af62ab\MainApplication.java
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\src\com\companyname\hotstuff\R.java
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\assets\CommunityToolkit.Mvvm.dll
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\assets\CommunityToolkit.Mvvm.pdb

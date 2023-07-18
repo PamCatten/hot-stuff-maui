@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "P8QmtSIV8mqNR6SEoTdOX2+tgpifgZLkpq+P877exsFGeobAt4Vz6fCiXTuZYgOPCuJTG/Kg78+vZ4zXCG6cXQ==",
+  "dgSpecHash": "WJBRZZUrvdUdltCsTcpodP3KPP5PyHJLfDUSdfE869GHJRD3iMaWXQFilUevcrkdqCwDqj5AOpydSQViZ/lcGA==",
   "success": true,
   "projectFilePath": "C:\\Users\\campa\\hot-stuff\\hot-stuff\\hot-stuff.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\campa\\.nuget\\packages\\asyncawaitbestpractices\\6.0.4\\asyncawaitbestpractices.6.0.4.nupkg.sha512",
+    "C:\\Users\\campa\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.1\\communitytoolkit.mvvm.8.2.1.nupkg.sha512",
     "C:\\Users\\campa\\.nuget\\packages\\googlegson\\2.9.1.1\\googlegson.2.9.1.1.nupkg.sha512",
     "C:\\Users\\campa\\.nuget\\packages\\inputkit.maui\\4.3.0\\inputkit.maui.4.3.0.nupkg.sha512",
     "C:\\Users\\campa\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",

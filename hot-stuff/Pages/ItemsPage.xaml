@@ -33,20 +33,20 @@
 
         <VerticalStackLayout>
 
-            <Button Text="Delete" StyleClass="FilledTonalButton"  Command="{Binding RemoveSelectedItemsCommand}" HorizontalOptions="Start" />
+            <Button Text="Delete" StyleClass="FilledTonalButton"  Command="{Binding RemoveSelectedItemCommand}" HorizontalOptions="Start" />
             <material:DataGrid ItemsSource="{Binding Items}" SelectedItems="{Binding SelectedItems}" HorizontalOptions="Center" VerticalOptions="Center">
                 <material:DataGrid.Columns>
                     <material:DataGridSelectionColumn/>
-                    <material:DataGridColumn PropertyName="ItemName"  Title="Item Name" Width="Auto"/>
-                    <material:DataGridColumn PropertyName="Category" Title="Item Category" Width="Auto"/>
-                    <material:DataGridColumn PropertyName="BrandManufacturer" Title="Brand / Manufacturer" Width="Auto"/>
-                    <material:DataGridColumn PropertyName="Room" Title="Room" Width="Auto"/>
-                    <material:DataGridColumn PropertyName="ItemVersion" Title="Version" Width="Auto"/>
-                    <material:DataGridColumn PropertyName="Color" Title="Color" Width="Auto"/>
-                    <material:DataGridColumn PropertyName="PurchaseDate" Title="Purchase Date" Width="Auto"/>
-                    <material:DataGridColumn PropertyName="AmountPaid" Title="Amount Paid" Width="Auto"/>
-                    <material:DataGridColumn PropertyName="PurchaseProof" Title="Purchase Proof" Width="Auto"/>
-                    <material:DataGridColumn PropertyName="ItemDescription" Title="Item Description" Width="*"/>
+                    <material:DataGridColumn PropertyName="ItemName" Title="Item Name" Width="Auto"/>
+                    <material:DataGridColumn Binding="{Binding Item.Category}" Title="Item Category" Width="Auto"/>
+                    <material:DataGridColumn Binding="{Binding Item.BrandManufacturer}" Title="Brand / Manufacturer" Width="Auto"/>
+                    <material:DataGridColumn Binding="{Binding Item.Room}" Title="Room" Width="Auto"/>
+                    <material:DataGridColumn Binding="{Binding Item.ItemVersion}" Title="Version" Width="Auto"/>
+                    <material:DataGridColumn Binding="{Binding Item.Color}" Title="Color" Width="Auto"/>
+                    <material:DataGridColumn Binding="{Binding Item.PurchaseDate}" Title="Purchase Date" Width="Auto"/>
+                    <material:DataGridColumn Binding="{Binding Item.AmountPaid}" Title="Amount Paid" Width="Auto"/>
+                    <material:DataGridColumn Binding="{Binding Item.PurchaseProof}" Title="Purchase Proof" Width="Auto"/>
+                    <material:DataGridColumn Binding="{Binding Item.ItemDescription}" Title="Item Description" Width="*"/>
                 </material:DataGrid.Columns>
             </material:DataGrid>
             

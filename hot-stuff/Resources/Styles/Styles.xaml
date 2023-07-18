@@ -36,6 +36,10 @@
                Color="{StaticResource OnPrimary}"
                Glyph="{x:Static local:IconFont.CalendarDays}"
     />
+    <FontImage x:Key="DropdownIcon"
+               FontFamily="FontAwesome"
+               Glyph="{x:Static local:IconFont.CircleChevronDown}"
+    />
     <FontImage x:Key="Pen"
                FontFamily="FontAwesome"
                Color="{StaticResource OnPrimary}"

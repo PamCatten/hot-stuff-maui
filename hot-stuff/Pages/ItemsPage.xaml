@@ -10,6 +10,8 @@
              x:Class="HotStuff.Pages.ItemsPage"
              xmlns:local="clr-namespace:HotStuff"
              xmlns:pages="clr-namespace:HotStuff.Pages"
+             x:DataType="pages:ItemsPageViewModel"
+             xmlns:validation="clr-namespace:InputKit.Shared.Validations;assembly=InputKit.Maui"
              Title="Items"
     >
 
@@ -36,7 +38,7 @@
             <material:DataGrid ItemsSource="{Binding Items}" SelectedItems="{Binding SelectedItems}" HorizontalOptions="Center" VerticalOptions="Center">
                 <material:DataGrid.Columns>
                     <material:DataGridSelectionColumn/>
-                    <material:DataGridColumn PropertyName="Content" Title="Item Name" Width="Auto"/>
+                    <material:DataGridColumn Binding="{Binding Items}" Title="Item Name" Width="Auto"/>
                     <material:DataGridColumn PropertyName="Category" Title="Item Category" Width="Auto"/>
                     <material:DataGridColumn PropertyName="BrandManufacturer" Title="Brand / Manufacturer" Width="Auto"/>
                     <material:DataGridColumn PropertyName="Room" Title="Room" Width="Auto"/>
@@ -59,70 +61,52 @@
                 IconImageSource="{StaticResource AddIcon}"
                 BackgroundColor="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Primary}}">
             <VerticalStackLayout Spacing="10" Padding="25,30" HorizontalOptions="Center" MinimumWidthRequest="400">
-                    <material:TextField 
-                    Title="Item Name"
-                    Text="{Binding newItemPublic.Content}"
-                    TextColor="{StaticResource OnPrimary}"
+                <material:TextField 
+                    Title="Item Name (Required)"
+                    Text="{Binding newItemPublic.ItemName}"
                     AccentColor="{StaticResource OnPrimary}"
                 />
-                    <material:PickerField 
-                    Title="Item Category"
+                <material:PickerField 
+                    Title="Item Category (Required)"
                     ItemsSource="{x:Static pages:Item.AvailableCategories}"
                     SelectedItem="{Binding newItemPublic.Category}"
                     AllowClear="True"
-                    TextColor="{StaticResource OnPrimary}"
                     AccentColor="{StaticResource OnPrimary}"
+                    Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CircleChevronDown}}"
                 />
-                    <material:PickerField 
-                    Title="Room / Location"
+                <material:PickerField 
+                    Title="Item Room (Required)"
                     ItemsSource="{x:Static pages:Item.AvailableRooms}"
                     SelectedItem="{Binding newItemPublic.Room}"
                     AllowClear="True"
-                    TextColor="{StaticResource OnPrimary}"
                     AccentColor="{StaticResource OnPrimary}"
+                    Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CircleChevronDown}}"
                 />
-                    <material:TextField 
-                    Title="Brand / Manufacturer Name"
+                <material:TextField 
+                    Title="Brand / Manufacturer Name (Optional)"
                     Text="{Binding newItemPublic.BrandManufacturer}"
-                    TextColor="{StaticResource OnPrimary}"
                     AllowClear="True"
                     AccentColor="{StaticResource OnPrimary}"
                 />
-                    <material:TextField 
-                    Title="Item Version"
+                <material:TextField 
+                    Title="Item Version (Optional)"
                     Text="{Binding newItemPublic.ItemVersion}"
-                    TextColor="{StaticResource OnPrimary}"
                     AllowClear="True"
                     AccentColor="{StaticResource OnPrimary}"
                 />
-                    <material:PickerField 
-                    Title="Item Color"
-                    ItemsSource="{x:Static pages:Item.AvailableColors}"
-                    SelectedItem="{Binding newItemPublic.Color}"
-                    AllowClear="True"
-                    TextColor="{StaticResource OnPrimary}"
-                    AccentColor="{StaticResource OnPrimary}"
-                />
-                    <material:DatePickerField 
-                    Title="Purchase Date"
-                    AllowClear="True"
-                    TextColor="{StaticResource OnPrimary}"
-                    AccentColor="{StaticResource OnPrimary}"
-                />
-                    <material:TextField 
-                    Title="Item Description"
+                <material:TextField 
+                    Title="Item Description (Optional)"
                     Text="{Binding newItemPublic.ItemDescription}"
-                    TextColor="{StaticResource OnPrimary}"
-                    AccentColor="{StaticResource OnPrimary}"
                     AllowClear="True"
+                    AccentColor="{StaticResource OnPrimary}"
                 />
-
-                    <Button 
+                <Button 
                     Command="{Binding AddNewItemCommand}" 
-                    Text="Add"
+                    Text="Add Item"
                     input:FormView.IsSubmitButton="True"
-                    StyleClass="ElevatedButton"/>
-                </VerticalStackLayout>
+                    StyleClass="ElevatedButton"
+                />
+            </VerticalStackLayout>
         </attachment:BackdropView>
     </uranium:UraniumContentPage.Attachments>
 

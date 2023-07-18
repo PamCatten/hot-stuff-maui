@@ -15,7 +15,7 @@ namespace HotStuff.Pages
         public ObservableCollection<Item> SelectedItems { get; set; } = new ObservableCollection<Item>();
 
         private Item newItemPrivate = new();
-        public Item newItemPublic { get => newItemPrivate; set { newItemPublic = value; OnPropertyChanged(); } }
+        public Item newItemPublic { get => newItemPrivate; set { newItemPrivate = value; OnPropertyChanged(); } }
 
         public ICommand AddNewItemCommand { get; set; }
         public ICommand RemoveSelectedItemCommand { get; protected set; }
@@ -25,7 +25,7 @@ namespace HotStuff.Pages
             {
                 Items.Add(new Item 
                 { 
-                    Content = "Pride and Prejudice", 
+                    ItemName = "Pride and Prejudice", 
                     Category = Item.ItemCategory.BooksMagazines, 
                     BrandManufacturer = "Bantam Classics", 
                     Room = Item.LocationRoom.Library,
@@ -35,8 +35,6 @@ namespace HotStuff.Pages
                     AmountPaid = 12.99m,
                     PurchaseProof = "https://www.aws.com/example/ghshund80dsfmmdae/",
                     ItemDescription = "Pride and Prejudice, the novel written by Jane Austen",
-                    
-
                 });
             }
 
@@ -59,7 +57,7 @@ namespace HotStuff.Pages
 
     public class Item : UraniumBindableObject
     {
-        public string Content { get; set; }
+        public string ItemName { get; set; }
         public ItemCategory Category { get; set; } // TODO: another drop down menu here
         public static ItemCategory[] AvailableCategories => Enum.GetValues(typeof(ItemCategory)) as ItemCategory[];
         public enum ItemCategory

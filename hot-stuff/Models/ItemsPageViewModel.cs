@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using HotStuff.Services;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows.Input;
@@ -9,14 +10,21 @@ namespace HotStuff.Models;
 
 public partial class ItemsPageViewModel : UraniumBindableObject
 {
-    public ObservableCollection<Item> Items { get; set; } = new ObservableCollection<Item>();
+    public ObservableCollection<Item> Items { get; set; }
     public ObservableCollection<Item> SelectedItems { get; set; } = new ObservableCollection<Item>();
 
     private Item newItem = new();
     public Item NewItem { get => newItem; set { newItem = value; OnPropertyChanged(); } }
+    public AsyncRelayCommand RefreshCommand { get; }
+    public AsyncRelayCommand AddCommand { get; }
+    public AsyncRelayCommand RemoveCommand { get; }
 
     public ItemsPageViewModel()
     {
+        RefreshCommand = new AsyncRelayCommand(Refresh);
+        AddCommand = new AsyncRelayCommand(Add);
+        RemoveCommand = new AsyncRelayCommand(Remove);
+
         foreach (var item in Items)
         {
             Items.Add(new Item 
@@ -57,6 +65,22 @@ public partial class ItemsPageViewModel : UraniumBindableObject
             ItemDescription = "August 2023 Issue, Olivia Rodrigo cover-model",
             PurchaseProof = "https://www.aws.com/exampleurl/"
         });
+    }
+
+    async Task Add()
+    {
+    }
+    async Task Refresh()
+    {
+
+    }
+    async Task Remove(ObservableCollection<Item> SelectedItems)
+    {
+        foreach (var item in SelectedItems) 
+        {
+            await ItemService.RemoveItem(item.ItemID);
+            await Refresh();
+        }
     }
 
     [RelayCommand]

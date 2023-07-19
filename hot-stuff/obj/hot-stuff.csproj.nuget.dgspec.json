@@ -92,15 +92,15 @@
             },
             "UraniumUI.Dialogs.Mopups": {
               "target": "Package",
-              "version": "[2.5.1, )"
+              "version": "[2.5.3, )"
             },
             "UraniumUI.Icons.FontAwesome": {
               "target": "Package",
-              "version": "[2.5.1, )"
+              "version": "[2.5.3, )"
             },
             "UraniumUI.Material": {
               "target": "Package",
-              "version": "[2.5.1, )"
+              "version": "[2.5.3, )"
             },
             "Xamarin.Android.Glide": {
               "target": "Package",
@@ -156,6 +156,10 @@
               "target": "Package",
               "version": "[1.7.0.1, )",
               "autoReferenced": true
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.9.141-beta, )"
             }
           },
           "imports": [
@@ -222,15 +226,19 @@
             },
             "UraniumUI.Dialogs.Mopups": {
               "target": "Package",
-              "version": "[2.5.1, )"
+              "version": "[2.5.3, )"
             },
             "UraniumUI.Icons.FontAwesome": {
               "target": "Package",
-              "version": "[2.5.1, )"
+              "version": "[2.5.3, )"
             },
             "UraniumUI.Material": {
               "target": "Package",
-              "version": "[2.5.1, )"
+              "version": "[2.5.3, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.9.141-beta, )"
             }
           },
           "imports": [
@@ -297,15 +305,19 @@
             },
             "UraniumUI.Dialogs.Mopups": {
               "target": "Package",
-              "version": "[2.5.1, )"
+              "version": "[2.5.3, )"
             },
             "UraniumUI.Icons.FontAwesome": {
               "target": "Package",
-              "version": "[2.5.1, )"
+              "version": "[2.5.3, )"
             },
             "UraniumUI.Material": {
               "target": "Package",
-              "version": "[2.5.1, )"
+              "version": "[2.5.3, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.9.141-beta, )"
             }
           },
           "imports": [
@@ -389,15 +401,19 @@
             },
             "UraniumUI.Dialogs.Mopups": {
               "target": "Package",
-              "version": "[2.5.1, )"
+              "version": "[2.5.3, )"
             },
             "UraniumUI.Icons.FontAwesome": {
               "target": "Package",
-              "version": "[2.5.1, )"
+              "version": "[2.5.3, )"
             },
             "UraniumUI.Material": {
               "target": "Package",
-              "version": "[2.5.1, )"
+              "version": "[2.5.3, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.9.141-beta, )"
             }
           },
           "imports": [

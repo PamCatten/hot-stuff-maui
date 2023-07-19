@@ -169,3 +169,6 @@ UraniumUI.aar
 UraniumUI.Icons.FontAwesome.aar
 UraniumUI.Material.aar
 Xamarin.Google.Crypto.Tink.Android.aar
+SQLitePCLRaw.batteries_v2.dll
+SQLitePCLRaw.lib.e_sqlite3.android.dll
+SQLitePCLRaw.lib.e_sqlite3.android.aar

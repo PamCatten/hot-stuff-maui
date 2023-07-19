@@ -994,3 +994,8 @@ C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\src\crc640dd
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\src\com\companyname\hotstuff\R.java
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\assets\CommunityToolkit.Mvvm.dll
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\assets\CommunityToolkit.Mvvm.pdb
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\assets\SQLite-net.dll
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\assets\SQLitePCLRaw.batteries_v2.dll
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\assets\SQLitePCLRaw.core.dll
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\assets\SQLitePCLRaw.lib.e_sqlite3.android.dll
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\assets\SQLitePCLRaw.provider.e_sqlite3.dll

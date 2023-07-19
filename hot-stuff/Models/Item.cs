@@ -1,11 +1,16 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using SQLite;
 using System.ComponentModel;
 using UraniumUI;
+using static Android.Content.ClipData;
 
 namespace HotStuff.Models;
 
 public partial class Item : ObservableObject
 {
+    [PrimaryKey, AutoIncrement]
+    public int ItemID { get; set; }
+
     [ObservableProperty]
     string itemName;
 

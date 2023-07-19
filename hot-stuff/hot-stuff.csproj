@@ -50,9 +50,10 @@
 
 	<ItemGroup>
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
-		<PackageReference Include="UraniumUI.Material" Version="2.5.1" />
-		<PackageReference Include="UraniumUI.Icons.FontAwesome" Version="2.5.1" />
-		<PackageReference Include="UraniumUI.Dialogs.Mopups" Version="2.5.1" />
+		<PackageReference Include="sqlite-net-pcl" Version="1.9.141-beta" />
+		<PackageReference Include="UraniumUI.Material" Version="2.5.3" />
+		<PackageReference Include="UraniumUI.Icons.FontAwesome" Version="2.5.3" />
+		<PackageReference Include="UraniumUI.Dialogs.Mopups" Version="2.5.3" />
 	</ItemGroup>
 
 	<ItemGroup>

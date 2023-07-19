@@ -1,7 +1,8 @@
 namespace HotStuff.Models
 {
     public enum ItemCategory
-    {
+    {   
+        Category,
         Antiques, 
         Apparel, 
         ApparelAccessories, 

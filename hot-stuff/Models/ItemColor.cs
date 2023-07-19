@@ -2,6 +2,7 @@
 {
     public enum ItemColor
     {
+        Color,
         White, 
         Black, 
         Grey, 
@@ -16,8 +17,10 @@
         Aqua, 
         Blue, 
         Purple, 
-        Magenta, 
-        Transparent, 
+        Magenta,
+        Reflective,
+        Transparent,
+        Multicolor,
         Other
     }
 }

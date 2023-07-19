@@ -16,9 +16,6 @@ public partial class Item : ObservableObject
     string itemDescription;
 
     [ObservableProperty]
-    string itemVersion;
-
-    [ObservableProperty]
     string purchaseDate;
 
     [ObservableProperty]

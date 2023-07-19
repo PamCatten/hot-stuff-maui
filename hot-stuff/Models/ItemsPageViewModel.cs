@@ -7,7 +7,7 @@ using UraniumUI;
 
 namespace HotStuff.Models;
 
-public partial class ItemsPageViewModel : BindableObject
+public partial class ItemsPageViewModel : UraniumBindableObject
 {
     public ObservableCollection<Item> Items { get; set; } = new ObservableCollection<Item>();
     public ObservableCollection<Item> SelectedItems { get; set; } = new ObservableCollection<Item>();
@@ -24,7 +24,6 @@ public partial class ItemsPageViewModel : BindableObject
                 ItemName = item.ItemName,
                 Category = item.Category,
                 Room = item.Room,
-                ItemVersion = item.ItemVersion,
                 ItemDescription = item.ItemDescription,
                 Color = item.Color,
                 AmountPaid = item.AmountPaid,
@@ -39,11 +38,10 @@ public partial class ItemsPageViewModel : BindableObject
             Category = ItemCategory.BooksMagazines,
             BrandManufacturer = "Bantam Classics",
             Room = ItemRoom.Library,
-            ItemVersion = "Perma-Bound Hardcover",
             Color = ItemColor.Black,
             PurchaseDate = "09/02/2017",
             AmountPaid = 12.99m,
-            ItemDescription = "Written by Jane Austen",
+            ItemDescription = "Perma-Bound Hardcover",
             PurchaseProof = "https://www.aws.com/exampleurl/"
         });
 
@@ -53,7 +51,6 @@ public partial class ItemsPageViewModel : BindableObject
             Category = ItemCategory.BooksMagazines,
             BrandManufacturer = "Vogue",
             Room = ItemRoom.Library,
-            ItemVersion = "Aug 2023 Issue",
             Color = ItemColor.White,
             PurchaseDate = "07/17/2023",
             AmountPaid = 3.99m,

@@ -12,6 +12,7 @@
     xmlns:models="clr-namespace:HotStuff.Models"
     xmlns:validation="clr-namespace:InputKit.Shared.Validations;assembly=InputKit.Maui"
     Title="Items"
+    x:DataType="models:ItemsPageViewModel"
 >
 
 
@@ -37,16 +38,15 @@
             <material:DataGrid ItemsSource="{Binding Items}" SelectedItems="{Binding SelectedItems}" HorizontalOptions="Center" VerticalOptions="Center">
                 <material:DataGrid.Columns>
                     <material:DataGridSelectionColumn/>
-                    <material:DataGridColumn PropertyName="ItemName" Title="Item Name" Width="Auto"/>
-                    <material:DataGridColumn Binding="{Binding Item.Category}" Title="Item Category" Width="Auto"/>
-                    <material:DataGridColumn Binding="{Binding Item.BrandManufacturer}" Title="Brand / Manufacturer" Width="Auto"/>
-                    <material:DataGridColumn Binding="{Binding Item.Room}" Title="Room" Width="Auto"/>
-                    <material:DataGridColumn Binding="{Binding Item.ItemVersion}" Title="Version" Width="Auto"/>
-                    <material:DataGridColumn Binding="{Binding Item.Color}" Title="Color" Width="Auto"/>
-                    <material:DataGridColumn Binding="{Binding Item.PurchaseDate}" Title="Purchase Date" Width="Auto"/>
-                    <material:DataGridColumn Binding="{Binding Item.AmountPaid}" Title="Amount Paid" Width="Auto"/>
-                    <material:DataGridColumn Binding="{Binding Item.PurchaseProof}" Title="Purchase Proof" Width="Auto"/>
-                    <material:DataGridColumn Binding="{Binding Item.ItemDescription}" Title="Item Description" Width="*"/>
+                    <material:DataGridColumn Binding="{Binding ItemName}"  Title="Item Name" Width="Auto"/>
+                    <material:DataGridColumn Binding="{Binding Category}" Title="Item Category" Width="Auto"/>
+                    <material:DataGridColumn Binding="{Binding BrandManufacturer}" Title="Brand / Manufacturer" Width="Auto"/>
+                    <material:DataGridColumn Binding="{Binding Room}" Title="Room" Width="Auto"/>
+                    <material:DataGridColumn Binding="{Binding Color}" Title="Color" Width="Auto"/>
+                    <material:DataGridColumn Binding="{Binding PurchaseDate}" Title="Purchase Date" Width="Auto"/>
+                    <material:DataGridColumn Binding="{Binding AmountPaid}" Title="Amount Paid" Width="Auto"/>
+                    <material:DataGridColumn Binding="{Binding PurchaseProof}" Title="Purchase Proof" Width="Auto"/>
+                    <material:DataGridColumn Binding="{Binding ItemDescription}" Title="Item Description" Width="*"/>
                 </material:DataGrid.Columns>
             </material:DataGrid>
             
@@ -62,13 +62,13 @@
             <VerticalStackLayout Spacing="10" Padding="25,30" HorizontalOptions="Center" MinimumWidthRequest="400">
                 <material:TextField 
                     Title="Item Name (Required)"
-                    Text="{Binding}"
+                    Text="{Binding NewItem.ItemName}"
                     AccentColor="{StaticResource OnPrimary}"
                 />
                 <material:PickerField 
                     Title="Item Category (Required)"
                     ItemsSource="{x:Static models:Item.AvailableCategories}"
-                    SelectedItem="{Binding newItemPublic.Category}"
+                    SelectedItem="{Binding NewItem.Category}"
                     AllowClear="True"
                     AccentColor="{StaticResource OnPrimary}"
                     Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CircleChevronDown}}"
@@ -76,26 +76,47 @@
                 <material:PickerField 
                     Title="Item Room (Required)"
                     ItemsSource="{x:Static models:Item.AvailableRooms}"
-                    SelectedItem="{Binding newItemPublic.Room}"
+                    SelectedItem="{Binding NewItem.Room}"
                     AllowClear="True"
                     AccentColor="{StaticResource OnPrimary}"
                     Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CircleChevronDown}}"
                 />
                 <material:TextField 
                     Title="Brand / Manufacturer Name (Optional)"
-                    Text="{Binding newItemPublic.BrandManufacturer}"
+                    Text="{Binding NewItem.BrandManufacturer}"
                     AllowClear="True"
                     AccentColor="{StaticResource OnPrimary}"
                 />
+                <material:PickerField 
+                    Title="Item Color (Optional)"
+                    ItemsSource="{x:Static models:Item.AvailableColors}"
+                    SelectedItem="{Binding NewItem.Color}"
+                    AllowClear="True"
+                    AccentColor="{StaticResource OnPrimary}"
+                    Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CircleChevronDown}}"
+                />
                 <material:TextField 
-                    Title="Item Version (Optional)"
-                    Text="{Binding newItemPublic.ItemVersion}"
+                    Title="Amount Paid (Optional)"
+                    Text="{Binding NewItem.AmountPaid}"
+                    AllowClear="True"
+                    AccentColor="{StaticResource OnPrimary}"
+                />
+                <material:DatePickerField
+                    Title="Purchase Date (Optional)"
+                    AllowClear="True"
+                    AccentColor="{StaticResource OnPrimary}"
+                    Date="{Binding NewItem.PurchaseDate}"
+                    Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CalendarDays}}"
+                />
+                <material:TextField 
+                    Title="Purchase Proof (Optional)"
+                    Text="{Binding NewItem.PurchaseProof}"
                     AllowClear="True"
                     AccentColor="{StaticResource OnPrimary}"
                 />
                 <material:TextField 
                     Title="Item Description (Optional)"
-                    Text="{Binding newItemPublic.ItemDescription}"
+                    Text="{Binding NewItem.ItemDescription}"
                     AllowClear="True"
                     AccentColor="{StaticResource OnPrimary}"
                 />

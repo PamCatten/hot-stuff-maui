@@ -1,4 +1,7 @@
-﻿using InputKit.Shared.Controls;
+﻿using HotStuff.Models;
+using HotStuff.Pages;
+using InputKit.Shared.Controls;
+using Microsoft.Extensions.DependencyInjection;
 using Mopups.Hosting;
 using UraniumUI;
 
@@ -20,9 +23,11 @@ public static class MauiProgram
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 fonts.AddFontAwesomeIconFonts();
                 fonts.AddFont("fa_solid.otf", "FontAwesome");
-
-
             });
+
+        builder.Services.AddSingleton<MainPage>();
+        builder.Services.AddTransient<ItemsPage>();
+        builder.Services.AddTransient<ItemsPageViewModel>();
 
         builder.Services.AddMopupsDialogs();
         return builder.Build();

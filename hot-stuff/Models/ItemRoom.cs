@@ -2,6 +2,7 @@
 {
     public enum ItemRoom
     {
+        Room,
         Attic, 
         Barn, 
         Basement, 

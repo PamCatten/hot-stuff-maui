@@ -42,11 +42,11 @@ namespace HotStuff.Services
 
                 await Database.InsertAsync(item);
 
-                Debug.WriteLine($"Record saved. Added: {item.ItemName}");
+                Debug.WriteLine($"Record saved. Added: {item.ItemID}, {item.ItemName}");
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"Failed to add {item.ItemName}. Error: {ex.Message}");
+                Debug.WriteLine($"Failed to add {item.ItemID}, {item.ItemName}. Error: {ex.Message}");
             }
         }
 
@@ -69,7 +69,9 @@ namespace HotStuff.Services
         public async Task RemoveItem(Item item)
         {
             await Init();
-            await Database.DeleteAsync<Item>(item.ItemID);
+            Debug.WriteLine($"ItemID: {item.ItemID} ItemName: {item.ItemName} prepped for removal.");
+            await Database.DeleteAsync<Item>(item);
+            Debug.WriteLine("Item removed.");
         }
 
     }

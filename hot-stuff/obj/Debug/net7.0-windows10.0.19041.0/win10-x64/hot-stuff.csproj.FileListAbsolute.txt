@@ -338,3 +338,4 @@ C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-windows10.0.19041.0\win10-x6
 C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.core.dll
 C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.provider.e_sqlite3.dll
 C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\e_sqlite3.dll
+C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.provider.dynamic_cdecl.dll

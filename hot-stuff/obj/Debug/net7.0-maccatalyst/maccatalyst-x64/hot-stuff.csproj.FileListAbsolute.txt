@@ -271,3 +271,4 @@ C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\
 C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\SQLitePCLRaw.core.dll
 C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\SQLitePCLRaw.provider.e_sqlite3.dll
 C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\libe_sqlite3.dylib
+C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\SQLitePCLRaw.provider.dynamic_cdecl.dll

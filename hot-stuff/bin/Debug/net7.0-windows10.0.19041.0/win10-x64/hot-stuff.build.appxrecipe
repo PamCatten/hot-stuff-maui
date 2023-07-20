@@ -700,8 +700,11 @@
     <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\sqlitepclraw.bundle_green\2.1.2\lib\netstandard2.0\SQLitePCLRaw.batteries_v2.dll">
       <PackagePath>SQLitePCLRaw.batteries_v2.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\sqlitepclraw.core\2.1.2\lib\netstandard2.0\SQLitePCLRaw.core.dll">
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\sqlitepclraw.core\2.1.5\lib\netstandard2.0\SQLitePCLRaw.core.dll">
       <PackagePath>SQLitePCLRaw.core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\sqlitepclraw.provider.dynamic_cdecl\2.1.5\lib\netstandard2.0\SQLitePCLRaw.provider.dynamic_cdecl.dll">
+      <PackagePath>SQLitePCLRaw.provider.dynamic_cdecl.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\sqlitepclraw.provider.e_sqlite3\2.1.2\lib\net6.0-windows7.0\SQLitePCLRaw.provider.e_sqlite3.dll">
       <PackagePath>SQLitePCLRaw.provider.e_sqlite3.dll</PackagePath>

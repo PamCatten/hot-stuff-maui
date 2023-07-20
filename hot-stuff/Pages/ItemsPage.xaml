@@ -34,7 +34,9 @@
 
         <VerticalStackLayout>
 
-            <Button Text="Delete" StyleClass="FilledTonalButton"  Command="{Binding RemoveSelectedItemCommand}" HorizontalOptions="Start" />
+            <Button Text="Get Items" StyleClass="FilledTonalButton"  Clicked="{Binding OnGetItems}" HorizontalOptions="Start" />
+            <Button Text="Delete" StyleClass="FilledTonalButton"  Command="{Binding RemoveSelectedItemsCommand}" HorizontalOptions="Start" />
+            
             <material:DataGrid ItemsSource="{Binding Items}" SelectedItems="{Binding SelectedItems}" HorizontalOptions="Center" VerticalOptions="Center">
                 <material:DataGrid.Columns>
                     <material:DataGridSelectionColumn/>

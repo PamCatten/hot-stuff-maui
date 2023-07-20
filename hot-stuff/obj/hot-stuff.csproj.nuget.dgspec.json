@@ -90,6 +90,10 @@
               "version": "[7.0.86, )",
               "autoReferenced": true
             },
+            "SQLitePCLRaw.provider.dynamic_cdecl": {
+              "target": "Package",
+              "version": "[2.1.5, )"
+            },
             "UraniumUI.Dialogs.Mopups": {
               "target": "Package",
               "version": "[2.5.3, )"
@@ -224,6 +228,10 @@
               "version": "[7.0.86, )",
               "autoReferenced": true
             },
+            "SQLitePCLRaw.provider.dynamic_cdecl": {
+              "target": "Package",
+              "version": "[2.1.5, )"
+            },
             "UraniumUI.Dialogs.Mopups": {
               "target": "Package",
               "version": "[2.5.3, )"
@@ -302,6 +310,10 @@
               "target": "Package",
               "version": "[7.0.86, )",
               "autoReferenced": true
+            },
+            "SQLitePCLRaw.provider.dynamic_cdecl": {
+              "target": "Package",
+              "version": "[2.1.5, )"
             },
             "UraniumUI.Dialogs.Mopups": {
               "target": "Package",
@@ -398,6 +410,10 @@
               "target": "Package",
               "version": "[1.2.221209.1, )",
               "autoReferenced": true
+            },
+            "SQLitePCLRaw.provider.dynamic_cdecl": {
+              "target": "Package",
+              "version": "[2.1.5, )"
             },
             "UraniumUI.Dialogs.Mopups": {
               "target": "Package",

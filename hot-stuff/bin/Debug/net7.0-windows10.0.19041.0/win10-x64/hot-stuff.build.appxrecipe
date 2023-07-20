@@ -610,7 +610,7 @@
     <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\communitytoolkit.mvvm\8.2.1\lib\net6.0\CommunityToolkit.Mvvm.dll">
       <PackagePath>CommunityToolkit.Mvvm.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\inputkit.maui\4.3.0\lib\net7.0-windows10.0.19041\InputKit.Maui.dll">
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\inputkit.maui\4.3.2\lib\net7.0-windows10.0.19041\InputKit.Maui.dll">
       <PackagePath>InputKit.Maui.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\microsoft.extensions.configuration\7.0.0\lib\net7.0\Microsoft.Extensions.Configuration.dll">
@@ -694,16 +694,28 @@
     <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\plainer.maui\1.6.3\lib\net7.0\Plainer.Maui.dll">
       <PackagePath>Plainer.Maui.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\uraniumui\2.5.1\lib\net7.0-windows10.0.19041\UraniumUI.dll">
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\sqlite-net-pcl\1.9.141-beta\lib\netstandard2.0\SQLite-net.dll">
+      <PackagePath>SQLite-net.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\sqlitepclraw.bundle_green\2.1.2\lib\netstandard2.0\SQLitePCLRaw.batteries_v2.dll">
+      <PackagePath>SQLitePCLRaw.batteries_v2.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\sqlitepclraw.core\2.1.2\lib\netstandard2.0\SQLitePCLRaw.core.dll">
+      <PackagePath>SQLitePCLRaw.core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\sqlitepclraw.provider.e_sqlite3\2.1.2\lib\net6.0-windows7.0\SQLitePCLRaw.provider.e_sqlite3.dll">
+      <PackagePath>SQLitePCLRaw.provider.e_sqlite3.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\uraniumui\2.5.3\lib\net7.0-windows10.0.19041\UraniumUI.dll">
       <PackagePath>UraniumUI.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\uraniumui.dialogs.mopups\2.5.1\lib\net7.0-windows10.0.19041\UraniumUI.Dialogs.Mopups.dll">
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\uraniumui.dialogs.mopups\2.5.3\lib\net7.0-windows10.0.19041\UraniumUI.Dialogs.Mopups.dll">
       <PackagePath>UraniumUI.Dialogs.Mopups.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\uraniumui.icons.fontawesome\2.5.1\lib\net7.0-windows10.0.19041\UraniumUI.Icons.FontAwesome.dll">
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\uraniumui.icons.fontawesome\2.5.3\lib\net7.0-windows10.0.19041\UraniumUI.Icons.FontAwesome.dll">
       <PackagePath>UraniumUI.Icons.FontAwesome.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\uraniumui.material\2.5.1\lib\net7.0-windows10.0.19041\UraniumUI.Material.dll">
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\uraniumui.material\2.5.3\lib\net7.0-windows10.0.19041\UraniumUI.Material.dll">
       <PackagePath>UraniumUI.Material.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\microsoft.graphics.win2d\1.0.4\runtimes\win10-x64\native\Microsoft.Graphics.Canvas.dll">
@@ -711,6 +723,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\microsoft.windowsappsdk\1.2.221209.1\runtimes\win10-x64\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\sqlitepclraw.lib.e_sqlite3\2.1.2\runtimes\win-x64\native\e_sqlite3.dll">
+      <PackagePath>e_sqlite3.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\hot-stuff.deps.json">
       <PackagePath>hot-stuff.deps.json</PackagePath>

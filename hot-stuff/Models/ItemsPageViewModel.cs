@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using HotStuff.Services;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Windows.Input;
 using UraniumUI;
 
@@ -15,88 +16,65 @@ public partial class ItemsPageViewModel : UraniumBindableObject
 
     private Item newItem = new();
     public Item NewItem { get => newItem; set { newItem = value; OnPropertyChanged(); } }
-    public AsyncRelayCommand RefreshCommand { get; }
-    public AsyncRelayCommand AddCommand { get; }
-    public AsyncRelayCommand RemoveCommand { get; }
+    public ICommand AddNewItemCommand { get; protected set; }
+    public ICommand GetCommand { get; protected set; }
+    public ICommand RemoveSelectedItemsCommand { get; protected set; }
 
     public ItemsPageViewModel()
     {
-        RefreshCommand = new AsyncRelayCommand(Refresh);
-        AddCommand = new AsyncRelayCommand(Add);
-        RemoveCommand = new AsyncRelayCommand(Remove);
-
-        foreach (var item in Items)
+        if (Items.Count == 0)
         {
-            Items.Add(new Item 
+            Items.Add(new Item
             {
-                ItemName = item.ItemName,
-                Category = item.Category,
-                Room = item.Room,
-                ItemDescription = item.ItemDescription,
-                Color = item.Color,
-                AmountPaid = item.AmountPaid,
-                BrandManufacturer = item.BrandManufacturer,
-                PurchaseDate = item.PurchaseDate,
-                PurchaseProof = item.PurchaseProof,
+                ItemName = "Pride and Prejudice",
+                Category = ItemCategory.BooksMagazines,
+                BrandManufacturer = "Bantam Classics",
+                Room = ItemRoom.Library,
+                Color = ItemColor.Black,
+                PurchaseDate = "09/02/2017",
+                AmountPaid = 12.99m,
+                ItemDescription = "Perma-Bound Hardcover",
+                PurchaseProof = "https://www.aws.com/exampleurl/"
+            });
+
+            Items.Add(new Item
+            {
+                ItemName = "Aug 2023 VOGUE Magazine",
+                Category = ItemCategory.BooksMagazines,
+                BrandManufacturer = "Vogue",
+                Room = ItemRoom.Library,
+                Color = ItemColor.White,
+                PurchaseDate = "07/17/2023",
+                AmountPaid = 3.99m,
+                ItemDescription = "August 2023 Issue, Olivia Rodrigo cover-model",
+                PurchaseProof = "https://www.aws.com/exampleurl/"
             });
         }
-        Items.Add(new Item
+
+        async void AddItemToDatabase(object sender, EventArgs args)
         {
-            ItemName = "Pride and Prejudice",
-            Category = ItemCategory.BooksMagazines,
-            BrandManufacturer = "Bantam Classics",
-            Room = ItemRoom.Library,
-            Color = ItemColor.Black,
-            PurchaseDate = "09/02/2017",
-            AmountPaid = 12.99m,
-            ItemDescription = "Perma-Bound Hardcover",
-            PurchaseProof = "https://www.aws.com/exampleurl/"
+            App.ItemServ.AddItem(NewItem);
+        }
+
+        async void OnGetItems(object sender, EventArgs args)
+        {
+            Items = await App.ItemServ.GetItems();
+        }
+
+        AddNewItemCommand = new Command(() =>
+        {
+            Items.Insert(0, NewItem);
+            NewItem = new();
         });
 
-        Items.Add(new Item
+        RemoveSelectedItemsCommand = new Command(() =>
         {
-            ItemName = "Aug 2023 VOGUE Magazine",
-            Category = ItemCategory.BooksMagazines,
-            BrandManufacturer = "Vogue",
-            Room = ItemRoom.Library,
-            Color = ItemColor.White,
-            PurchaseDate = "07/17/2023",
-            AmountPaid = 3.99m,
-            ItemDescription = "August 2023 Issue, Olivia Rodrigo cover-model",
-            PurchaseProof = "https://www.aws.com/exampleurl/"
+            foreach (var item in SelectedItems)
+            {
+                Items.Remove(item);
+            }
         });
-    }
 
-    async Task Add()
-    {
-    }
-    async Task Refresh()
-    {
-
-    }
-    async Task Remove(ObservableCollection<Item> SelectedItems)
-    {
-        foreach (var item in SelectedItems) 
-        {
-            await ItemService.RemoveItem(item.ItemID);
-            await Refresh();
-        }
-    }
-
-    [RelayCommand]
-    async Task AddNewItem()
-    {
-        Items.Insert(0, NewItem);
-        NewItem = new Item();
-    }
-
-    [RelayCommand]
-    async Task RemoveSelectedItem()
-    {
-        foreach (var item in SelectedItems)
-        {
-            Items.Remove(item);
-        }
     }
 }
 

@@ -18,7 +18,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
-    <RegisteredManifestChecksum>7A1959E365DDBE1F132E16CC5F6E438FE1DAA70904C6C799A6AD6D8FFA09E589</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>16D74A92844C6617AC86FE19FCB35AFF25F7449405DC133C938157881E30E6C1</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>bb93a9a5-809a-48a4-8ac6-70af125c8945_1.0.0.1_x64__9zz4h110yvjzm</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>bb93a9a5-809a-48a4-8ac6-70af125c8945_9zz4h110yvjzm!App</RegisteredUserModeAppID>
     <RegisteredPackageID>bb93a9a5-809a-48a4-8ac6-70af125c8945</RegisteredPackageID>
@@ -29,25 +29,25 @@
     <AppXManifest Include="C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-07-15T18:14:50.008</Modified>
+      <Modified>2023-07-20T15:05:21.142</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-07-15T16:49:39.763</Modified>
+      <Modified>2023-07-20T15:05:20.819</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\hot-stuff.runtimeconfig.json">
       <PackagePath>hot-stuff.runtimeconfig.json</PackagePath>
-      <Modified>2023-07-15T16:33:40.509</Modified>
+      <Modified>2023-07-20T01:56:55.489</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\hot-stuff.dll">
       <PackagePath>hot-stuff.dll</PackagePath>
-      <Modified>2023-07-15T18:14:47.682</Modified>
+      <Modified>2023-07-20T15:05:19.103</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>hot-stuff.exe</PackagePath>
-      <Modified>2023-07-15T18:14:47.698</Modified>
+      <Modified>2023-07-20T15:05:19.113</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.9\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -809,9 +809,13 @@
       <PackagePath>AsyncAwaitBestPractices.dll</PackagePath>
       <Modified>2021-11-23T14:08:38.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\inputkit.maui\4.3.0\lib\net7.0-windows10.0.19041\InputKit.Maui.dll">
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\communitytoolkit.mvvm\8.2.1\lib\net6.0\CommunityToolkit.Mvvm.dll">
+      <PackagePath>CommunityToolkit.Mvvm.dll</PackagePath>
+      <Modified>2023-07-05T18:52:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\inputkit.maui\4.3.2\lib\net7.0-windows10.0.19041\InputKit.Maui.dll">
       <PackagePath>InputKit.Maui.dll</PackagePath>
-      <Modified>2023-05-11T21:18:26.000</Modified>
+      <Modified>2023-07-13T09:00:26.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\microsoft.extensions.configuration\7.0.0\lib\net7.0\Microsoft.Extensions.Configuration.dll">
       <PackagePath>Microsoft.Extensions.Configuration.dll</PackagePath>
@@ -921,21 +925,37 @@
       <PackagePath>Plainer.Maui.dll</PackagePath>
       <Modified>2023-04-18T09:52:34.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\uraniumui\2.5.1\lib\net7.0-windows10.0.19041\UraniumUI.dll">
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\sqlite-net-pcl\1.9.141-beta\lib\netstandard2.0\SQLite-net.dll">
+      <PackagePath>SQLite-net.dll</PackagePath>
+      <Modified>2022-11-28T01:05:48.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\sqlitepclraw.bundle_green\2.1.2\lib\netstandard2.0\SQLitePCLRaw.batteries_v2.dll">
+      <PackagePath>SQLitePCLRaw.batteries_v2.dll</PackagePath>
+      <Modified>2022-09-18T19:28:44.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\sqlitepclraw.core\2.1.2\lib\netstandard2.0\SQLitePCLRaw.core.dll">
+      <PackagePath>SQLitePCLRaw.core.dll</PackagePath>
+      <Modified>2022-09-18T19:26:48.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\sqlitepclraw.provider.e_sqlite3\2.1.2\lib\net6.0-windows7.0\SQLitePCLRaw.provider.e_sqlite3.dll">
+      <PackagePath>SQLitePCLRaw.provider.e_sqlite3.dll</PackagePath>
+      <Modified>2022-09-18T19:27:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\uraniumui\2.5.3\lib\net7.0-windows10.0.19041\UraniumUI.dll">
       <PackagePath>UraniumUI.dll</PackagePath>
-      <Modified>2023-07-06T13:12:14.000</Modified>
+      <Modified>2023-07-13T09:35:22.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\uraniumui.dialogs.mopups\2.5.1\lib\net7.0-windows10.0.19041\UraniumUI.Dialogs.Mopups.dll">
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\uraniumui.dialogs.mopups\2.5.3\lib\net7.0-windows10.0.19041\UraniumUI.Dialogs.Mopups.dll">
       <PackagePath>UraniumUI.Dialogs.Mopups.dll</PackagePath>
-      <Modified>2023-07-06T13:12:44.000</Modified>
+      <Modified>2023-07-13T09:35:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\uraniumui.icons.fontawesome\2.5.1\lib\net7.0-windows10.0.19041\UraniumUI.Icons.FontAwesome.dll">
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\uraniumui.icons.fontawesome\2.5.3\lib\net7.0-windows10.0.19041\UraniumUI.Icons.FontAwesome.dll">
       <PackagePath>UraniumUI.Icons.FontAwesome.dll</PackagePath>
-      <Modified>2023-07-06T13:12:04.000</Modified>
+      <Modified>2023-07-13T09:35:16.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\uraniumui.material\2.5.1\lib\net7.0-windows10.0.19041\UraniumUI.Material.dll">
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\uraniumui.material\2.5.3\lib\net7.0-windows10.0.19041\UraniumUI.Material.dll">
       <PackagePath>UraniumUI.Material.dll</PackagePath>
-      <Modified>2023-07-06T13:12:28.000</Modified>
+      <Modified>2023-07-13T09:35:34.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\microsoft.graphics.win2d\1.0.4\runtimes\win10-x64\native\Microsoft.Graphics.Canvas.dll">
       <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
@@ -945,9 +965,13 @@
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
       <Modified>2022-11-08T19:31:24.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\sqlitepclraw.lib.e_sqlite3\2.1.2\runtimes\win-x64\native\e_sqlite3.dll">
+      <PackagePath>e_sqlite3.dll</PackagePath>
+      <Modified>2022-09-18T19:20:44.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\hot-stuff.deps.json">
       <PackagePath>hot-stuff.deps.json</PackagePath>
-      <Modified>2023-07-15T18:14:49.779</Modified>
+      <Modified>2023-07-20T15:05:21.002</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\dotnet\packs\Microsoft.Maui.Controls.Ref.win\7.0.86\ref\net7.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
@@ -967,23 +991,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2023-07-13T23:51:59.107</Modified>
+      <Modified>2023-07-16T19:31:19.569</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2023-07-13T23:51:59.124</Modified>
+      <Modified>2023-07-16T19:31:19.586</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2023-07-13T23:51:59.148</Modified>
+      <Modified>2023-07-16T19:31:19.607</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2023-07-13T23:51:59.182</Modified>
+      <Modified>2023-07-16T19:31:19.640</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2023-07-13T23:51:59.323</Modified>
+      <Modified>2023-07-16T19:31:19.768</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\fa_solid.otf">
       <PackagePath>fa_solid.otf</PackagePath>
@@ -1007,207 +1031,207 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2023-07-13T23:51:59.592</Modified>
+      <Modified>2023-07-16T19:31:19.961</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2023-07-13T23:52:01.228</Modified>
+      <Modified>2023-07-16T19:31:21.607</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2023-07-13T23:52:01.276</Modified>
+      <Modified>2023-07-16T19:31:21.659</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2023-07-13T23:52:01.336</Modified>
+      <Modified>2023-07-16T19:31:21.711</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2023-07-13T23:52:01.395</Modified>
+      <Modified>2023-07-16T19:31:21.762</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2023-07-13T23:52:01.526</Modified>
+      <Modified>2023-07-16T19:31:21.889</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2023-07-13T23:52:00.195</Modified>
+      <Modified>2023-07-16T19:31:20.644</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2023-07-13T23:52:00.226</Modified>
+      <Modified>2023-07-16T19:31:20.677</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2023-07-13T23:52:00.334</Modified>
+      <Modified>2023-07-16T19:31:20.780</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2023-07-13T23:52:00.264</Modified>
+      <Modified>2023-07-16T19:31:20.710</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2023-07-13T23:52:00.297</Modified>
+      <Modified>2023-07-16T19:31:20.743</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2023-07-13T23:52:00.023</Modified>
+      <Modified>2023-07-16T19:31:20.473</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2023-07-13T23:52:00.056</Modified>
+      <Modified>2023-07-16T19:31:20.505</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2023-07-13T23:52:00.161</Modified>
+      <Modified>2023-07-16T19:31:20.609</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2023-07-13T23:52:00.090</Modified>
+      <Modified>2023-07-16T19:31:20.538</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2023-07-13T23:52:00.122</Modified>
+      <Modified>2023-07-16T19:31:20.570</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2023-07-13T23:51:59.683</Modified>
+      <Modified>2023-07-16T19:31:20.035</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2023-07-13T23:51:59.714</Modified>
+      <Modified>2023-07-16T19:31:20.070</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2023-07-13T23:51:59.747</Modified>
+      <Modified>2023-07-16T19:31:20.105</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2023-07-13T23:51:59.780</Modified>
+      <Modified>2023-07-16T19:31:20.152</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2023-07-13T23:51:59.815</Modified>
+      <Modified>2023-07-16T19:31:20.201</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2023-07-13T23:51:59.847</Modified>
+      <Modified>2023-07-16T19:31:20.249</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2023-07-13T23:51:59.880</Modified>
+      <Modified>2023-07-16T19:31:20.294</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2023-07-13T23:51:59.988</Modified>
+      <Modified>2023-07-16T19:31:20.434</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2023-07-13T23:51:59.913</Modified>
+      <Modified>2023-07-16T19:31:20.339</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2023-07-13T23:51:59.947</Modified>
+      <Modified>2023-07-16T19:31:20.383</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2023-07-13T23:52:00.736</Modified>
+      <Modified>2023-07-16T19:31:21.168</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2023-07-13T23:52:00.775</Modified>
+      <Modified>2023-07-16T19:31:21.204</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2023-07-13T23:52:00.815</Modified>
+      <Modified>2023-07-16T19:31:21.240</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2023-07-13T23:52:00.859</Modified>
+      <Modified>2023-07-16T19:31:21.283</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2023-07-13T23:52:00.916</Modified>
+      <Modified>2023-07-16T19:31:21.337</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2023-07-13T23:52:00.542</Modified>
+      <Modified>2023-07-16T19:31:20.989</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2023-07-13T23:52:00.580</Modified>
+      <Modified>2023-07-16T19:31:21.022</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2023-07-13T23:52:00.618</Modified>
+      <Modified>2023-07-16T19:31:21.057</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2023-07-13T23:52:00.656</Modified>
+      <Modified>2023-07-16T19:31:21.093</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2023-07-13T23:52:00.698</Modified>
+      <Modified>2023-07-16T19:31:21.131</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2023-07-13T23:52:00.368</Modified>
+      <Modified>2023-07-16T19:31:20.815</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2023-07-13T23:52:00.402</Modified>
+      <Modified>2023-07-16T19:31:20.849</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2023-07-13T23:52:00.436</Modified>
+      <Modified>2023-07-16T19:31:20.882</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2023-07-13T23:52:00.470</Modified>
+      <Modified>2023-07-16T19:31:20.916</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2023-07-13T23:52:00.508</Modified>
+      <Modified>2023-07-16T19:31:20.955</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2023-07-13T23:52:00.956</Modified>
+      <Modified>2023-07-16T19:31:21.373</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2023-07-13T23:52:00.997</Modified>
+      <Modified>2023-07-16T19:31:21.410</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2023-07-13T23:52:01.045</Modified>
+      <Modified>2023-07-16T19:31:21.450</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2023-07-13T23:52:01.103</Modified>
+      <Modified>2023-07-16T19:31:21.494</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2023-07-13T23:52:01.185</Modified>
+      <Modified>2023-07-16T19:31:21.563</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2023-07-13T23:51:59.471</Modified>
+      <Modified>2023-07-16T19:31:19.853</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2023-07-13T23:51:59.490</Modified>
+      <Modified>2023-07-16T19:31:19.865</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2023-07-13T23:51:59.510</Modified>
+      <Modified>2023-07-16T19:31:19.879</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2023-07-13T23:51:59.537</Modified>
+      <Modified>2023-07-16T19:31:19.898</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2023-07-13T23:51:59.581</Modified>
+      <Modified>2023-07-16T19:31:19.944</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

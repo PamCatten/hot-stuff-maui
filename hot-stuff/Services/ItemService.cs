@@ -1,49 +1,76 @@
 ﻿using HotStuff.Models;
+using HotStuff.Services;
 using SQLite;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace HotStuff.Services
 {
-    public static class ItemService
+    public class ItemService
     {
-        static SQLiteAsyncConnection DB;
-        static async Task Init()
+        private string databasePath;
+        public string StatusMessage { get; set; }
+        private SQLiteAsyncConnection Database;
+
+        async Task Init()
         {
-            if (DB != null)
+            if (Database is not null)
                 return;
 
-            // get an absolute path to the database file
-            var DatabasePath = Path.Combine(FileSystem.AppDataDirectory, "ItemsData.db");
+            Database = new SQLiteAsyncConnection(databasePath);
 
-            var DB = new SQLiteAsyncConnection(DatabasePath);
-
-            await DB.CreateTableAsync<Item>();
+            await Database.CreateTableAsync<Item>();
 
         }
-        public static async Task AddItem(ItemRoom Room, ItemCategory Category, ItemColor Color)
+
+        public ItemService(string DatabasePath)
         {
-            await Init();
-            var item = new Item
+            databasePath = DatabasePath;
+        }
+
+        public async Task AddItem(Item item)
+        {
+            try
             {
-            };
-            var ItemID = await DB.InsertAsync(item);
-        }
-        public static async Task RemoveItem(int ItemID)
-        {
-            await Init();
-            await DB.DeleteAsync<Item>(ItemID);
+                await Init();
+
+                await Database.InsertAsync(item);
+
+                Debug.WriteLine($"Record saved. Added: {item.ItemName}");
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Failed to add {item.ItemName}. Error: {ex.Message}");
+            }
         }
 
-        public static async Task<IEnumerable<Item>>GetItems()
+        public async Task<ObservableCollection<Item>> GetItems()
+        {
+            try 
+            {
+                await Init();
+                ObservableCollection<Item> items = new(await Database.Table<Item>().ToListAsync());
+                return items;
+            }
+            catch (Exception ex) 
+            {
+                Debug.WriteLine($"Failed to retrieve data. {ex.Message}");
+            }
+
+            return new ObservableCollection<Item>();
+        }
+
+        public async Task RemoveItem(Item item)
         {
             await Init();
-
-            var item = await DB.Table<Item>().ToListAsync();
-            return item;
+            await Database.DeleteAsync<Item>(item.ItemID);
         }
+
     }
 }

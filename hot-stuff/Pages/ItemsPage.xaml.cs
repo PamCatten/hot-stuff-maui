@@ -19,4 +19,5 @@ public partial class ItemsPage : UraniumContentPage
 
         await Shell.Current.GoToAsync(nameof(ProfilePage));
     }
+
 }

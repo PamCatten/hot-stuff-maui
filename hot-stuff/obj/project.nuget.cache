@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "UovNrJes9cMikXl7R1+hJm1TUXTqJEuGtXLwPOmEcD3/Qjw35eFUO+COIXkE8FMx7dHAOzEjSL2t7fbwtlLRfw==",
+  "dgSpecHash": "O9vf0Aj/HOGaThOkY16Rvsi2mkKHk5F6dfNdzjwO7NJ0foOma9xjSrkOWSHP3Htm3Kx7+7BD5XNH/4AoZOFPxA==",
   "success": true,
   "projectFilePath": "C:\\Users\\campa\\hot-stuff\\hot-stuff\\hot-stuff.csproj",
   "expectedPackageFiles": [
@@ -25,9 +25,10 @@
     "C:\\Users\\campa\\.nuget\\packages\\plainer.maui\\1.6.3\\plainer.maui.1.6.3.nupkg.sha512",
     "C:\\Users\\campa\\.nuget\\packages\\sqlite-net-pcl\\1.9.141-beta\\sqlite-net-pcl.1.9.141-beta.nupkg.sha512",
     "C:\\Users\\campa\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.1.2\\sqlitepclraw.bundle_green.2.1.2.nupkg.sha512",
-    "C:\\Users\\campa\\.nuget\\packages\\sqlitepclraw.core\\2.1.2\\sqlitepclraw.core.2.1.2.nupkg.sha512",
+    "C:\\Users\\campa\\.nuget\\packages\\sqlitepclraw.core\\2.1.5\\sqlitepclraw.core.2.1.5.nupkg.sha512",
     "C:\\Users\\campa\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.2\\sqlitepclraw.lib.e_sqlite3.2.1.2.nupkg.sha512",
     "C:\\Users\\campa\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3.android\\2.1.2\\sqlitepclraw.lib.e_sqlite3.android.2.1.2.nupkg.sha512",
+    "C:\\Users\\campa\\.nuget\\packages\\sqlitepclraw.provider.dynamic_cdecl\\2.1.5\\sqlitepclraw.provider.dynamic_cdecl.2.1.5.nupkg.sha512",
     "C:\\Users\\campa\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.2\\sqlitepclraw.provider.e_sqlite3.2.1.2.nupkg.sha512",
     "C:\\Users\\campa\\.nuget\\packages\\sqlitepclraw.provider.sqlite3\\2.1.2\\sqlitepclraw.provider.sqlite3.2.1.2.nupkg.sha512",
     "C:\\Users\\campa\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",

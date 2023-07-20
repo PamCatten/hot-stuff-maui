@@ -287,7 +287,7 @@
           }
         }
       },
-      "SQLitePCLRaw.core/2.1.2": {
+      "SQLitePCLRaw.core/2.1.5": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -310,6 +310,18 @@
           "lib/net6.0-android31.0/SQLitePCLRaw.lib.e_sqlite3.android.dll": {
             "related": ".aar;.xml"
           }
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.1.5": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3/2.1.2": {
@@ -2437,7 +2449,7 @@
           }
         }
       },
-      "SQLitePCLRaw.core/2.1.2": {
+      "SQLitePCLRaw.core/2.1.5": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -2460,6 +2472,18 @@
           "lib/net6.0-android31.0/SQLitePCLRaw.lib.e_sqlite3.android.dll": {
             "related": ".aar;.xml"
           }
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.1.5": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3/2.1.2": {
@@ -4587,7 +4611,7 @@
           }
         }
       },
-      "SQLitePCLRaw.core/2.1.2": {
+      "SQLitePCLRaw.core/2.1.5": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -4610,6 +4634,18 @@
           "lib/net6.0-android31.0/SQLitePCLRaw.lib.e_sqlite3.android.dll": {
             "related": ".aar;.xml"
           }
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.1.5": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3/2.1.2": {
@@ -6737,7 +6773,7 @@
           }
         }
       },
-      "SQLitePCLRaw.core/2.1.2": {
+      "SQLitePCLRaw.core/2.1.5": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -6760,6 +6796,18 @@
           "lib/net6.0-android31.0/SQLitePCLRaw.lib.e_sqlite3.android.dll": {
             "related": ".aar;.xml"
           }
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.1.5": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3/2.1.2": {
@@ -8887,7 +8935,7 @@
           }
         }
       },
-      "SQLitePCLRaw.core/2.1.2": {
+      "SQLitePCLRaw.core/2.1.5": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -8910,6 +8958,18 @@
           "lib/net6.0-android31.0/SQLitePCLRaw.lib.e_sqlite3.android.dll": {
             "related": ".aar;.xml"
           }
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.1.5": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3/2.1.2": {
@@ -11037,7 +11097,7 @@
           }
         }
       },
-      "SQLitePCLRaw.core/2.1.2": {
+      "SQLitePCLRaw.core/2.1.5": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -11060,6 +11120,18 @@
           "lib/net6.0-android31.0/SQLitePCLRaw.lib.e_sqlite3.android.dll": {
             "related": ".aar;.xml"
           }
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.1.5": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3/2.1.2": {
@@ -13187,7 +13259,7 @@
           }
         }
       },
-      "SQLitePCLRaw.core/2.1.2": {
+      "SQLitePCLRaw.core/2.1.5": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -13210,6 +13282,18 @@
           "lib/net6.0-android31.0/SQLitePCLRaw.lib.e_sqlite3.android.dll": {
             "related": ".aar;.xml"
           }
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.1.5": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3/2.1.2": {
@@ -15337,7 +15421,7 @@
           }
         }
       },
-      "SQLitePCLRaw.core/2.1.2": {
+      "SQLitePCLRaw.core/2.1.5": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -15360,6 +15444,18 @@
           "lib/net6.0-android31.0/SQLitePCLRaw.lib.e_sqlite3.android.dll": {
             "related": ".aar;.xml"
           }
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.1.5": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3/2.1.2": {
@@ -17470,7 +17566,7 @@
           "lib/net6.0-ios14.2/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.1.2": {
+      "SQLitePCLRaw.core/2.1.5": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -17480,6 +17576,18 @@
         },
         "runtime": {
           "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.1.5": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
       "SQLitePCLRaw.provider.sqlite3/2.1.2": {
@@ -17844,7 +17952,7 @@
           "lib/net6.0-ios14.2/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.1.2": {
+      "SQLitePCLRaw.core/2.1.5": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -17854,6 +17962,18 @@
         },
         "runtime": {
           "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.1.5": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
       "SQLitePCLRaw.provider.sqlite3/2.1.2": {
@@ -18218,7 +18338,7 @@
           "lib/net6.0-ios14.2/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.1.2": {
+      "SQLitePCLRaw.core/2.1.5": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -18228,6 +18348,18 @@
         },
         "runtime": {
           "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.1.5": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
       "SQLitePCLRaw.provider.sqlite3/2.1.2": {
@@ -18592,7 +18724,7 @@
           "lib/net6.0-ios14.2/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.1.2": {
+      "SQLitePCLRaw.core/2.1.5": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -18602,6 +18734,18 @@
         },
         "runtime": {
           "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.1.5": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
       "SQLitePCLRaw.provider.sqlite3/2.1.2": {
@@ -18966,7 +19110,7 @@
           "lib/net6.0-ios14.2/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.1.2": {
+      "SQLitePCLRaw.core/2.1.5": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -18976,6 +19120,18 @@
         },
         "runtime": {
           "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.1.5": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
       "SQLitePCLRaw.provider.sqlite3/2.1.2": {
@@ -19340,7 +19496,7 @@
           "lib/net6.0-ios14.2/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.1.2": {
+      "SQLitePCLRaw.core/2.1.5": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -19350,6 +19506,18 @@
         },
         "runtime": {
           "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.1.5": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
       "SQLitePCLRaw.provider.sqlite3/2.1.2": {
@@ -19714,7 +19882,7 @@
           "lib/net6.0-ios14.2/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.1.2": {
+      "SQLitePCLRaw.core/2.1.5": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -19724,6 +19892,18 @@
         },
         "runtime": {
           "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.1.5": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
       "SQLitePCLRaw.provider.sqlite3/2.1.2": {
@@ -20088,7 +20268,7 @@
           "lib/net6.0-ios14.2/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.1.2": {
+      "SQLitePCLRaw.core/2.1.5": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -20098,6 +20278,18 @@
         },
         "runtime": {
           "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.1.5": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
       "SQLitePCLRaw.provider.sqlite3/2.1.2": {
@@ -20462,7 +20654,7 @@
           "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.1.2": {
+      "SQLitePCLRaw.core/2.1.5": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -20574,6 +20766,18 @@
             "assetType": "native",
             "rid": "win-x86"
           }
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.1.5": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3/2.1.2": {
@@ -20930,7 +21134,7 @@
           "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.1.2": {
+      "SQLitePCLRaw.core/2.1.5": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -20955,6 +21159,18 @@
         },
         "build": {
           "buildTransitive/net7.0/SQLitePCLRaw.lib.e_sqlite3.targets": {}
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.1.5": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3/2.1.2": {
@@ -21311,7 +21527,7 @@
           "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.1.2": {
+      "SQLitePCLRaw.core/2.1.5": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -21336,6 +21552,18 @@
         },
         "build": {
           "buildTransitive/net7.0/SQLitePCLRaw.lib.e_sqlite3.targets": {}
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.1.5": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3/2.1.2": {
@@ -21692,7 +21920,7 @@
           "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.1.2": {
+      "SQLitePCLRaw.core/2.1.5": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -21717,6 +21945,18 @@
         },
         "build": {
           "buildTransitive/net7.0/SQLitePCLRaw.lib.e_sqlite3.targets": {}
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.1.5": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3/2.1.2": {
@@ -22073,7 +22313,7 @@
           "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.1.2": {
+      "SQLitePCLRaw.core/2.1.5": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -22098,6 +22338,18 @@
         },
         "build": {
           "buildTransitive/net7.0/SQLitePCLRaw.lib.e_sqlite3.targets": {}
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.1.5": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3/2.1.2": {
@@ -22454,7 +22706,7 @@
           "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.1.2": {
+      "SQLitePCLRaw.core/2.1.5": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -22476,6 +22728,18 @@
         },
         "build": {
           "buildTransitive/net7.0/SQLitePCLRaw.lib.e_sqlite3.targets": {}
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.1.5": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3/2.1.2": {
@@ -22832,7 +23096,7 @@
           "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.1.2": {
+      "SQLitePCLRaw.core/2.1.5": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -22857,6 +23121,18 @@
         },
         "build": {
           "buildTransitive/net7.0/SQLitePCLRaw.lib.e_sqlite3.targets": {}
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.1.5": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3/2.1.2": {
@@ -23213,7 +23489,7 @@
           "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.1.2": {
+      "SQLitePCLRaw.core/2.1.5": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -23238,6 +23514,18 @@
         },
         "build": {
           "buildTransitive/net7.0/SQLitePCLRaw.lib.e_sqlite3.targets": {}
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.1.5": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3/2.1.2": {
@@ -23732,7 +24020,7 @@
           "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.1.2": {
+      "SQLitePCLRaw.core/2.1.5": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -23844,6 +24132,18 @@
             "assetType": "native",
             "rid": "win-x86"
           }
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.1.5": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3/2.1.2": {
@@ -24310,7 +24610,7 @@
           "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.1.2": {
+      "SQLitePCLRaw.core/2.1.5": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -24335,6 +24635,18 @@
         },
         "build": {
           "buildTransitive/net7.0/SQLitePCLRaw.lib.e_sqlite3.targets": {}
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.1.5": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3/2.1.2": {
@@ -24801,7 +25113,7 @@
           "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.1.2": {
+      "SQLitePCLRaw.core/2.1.5": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -24826,6 +25138,18 @@
         },
         "build": {
           "buildTransitive/net7.0/SQLitePCLRaw.lib.e_sqlite3.targets": {}
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.1.5": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3/2.1.2": {
@@ -25292,7 +25616,7 @@
           "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.1.2": {
+      "SQLitePCLRaw.core/2.1.5": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -25317,6 +25641,18 @@
         },
         "build": {
           "buildTransitive/net7.0/SQLitePCLRaw.lib.e_sqlite3.targets": {}
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.1.5": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3/2.1.2": {
@@ -25783,7 +26119,7 @@
           "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.1.2": {
+      "SQLitePCLRaw.core/2.1.5": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -25808,6 +26144,18 @@
         },
         "build": {
           "buildTransitive/net7.0/SQLitePCLRaw.lib.e_sqlite3.targets": {}
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.1.5": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3/2.1.2": {
@@ -26274,7 +26622,7 @@
           "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.1.2": {
+      "SQLitePCLRaw.core/2.1.5": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -26296,6 +26644,18 @@
         },
         "build": {
           "buildTransitive/net7.0/SQLitePCLRaw.lib.e_sqlite3.targets": {}
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.1.5": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3/2.1.2": {
@@ -26762,7 +27122,7 @@
           "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.1.2": {
+      "SQLitePCLRaw.core/2.1.5": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -26787,6 +27147,18 @@
         },
         "build": {
           "buildTransitive/net7.0/SQLitePCLRaw.lib.e_sqlite3.targets": {}
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.1.5": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3/2.1.2": {
@@ -27259,7 +27631,7 @@
           "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.1.2": {
+      "SQLitePCLRaw.core/2.1.5": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -27284,6 +27656,18 @@
         },
         "build": {
           "buildTransitive/net7.0/SQLitePCLRaw.lib.e_sqlite3.targets": {}
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.1.5": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.5"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
         }
       },
       "SQLitePCLRaw.provider.e_sqlite3/2.1.2": {
@@ -28741,15 +29125,15 @@
         "sqlitepclraw.bundle_green.nuspec"
       ]
     },
-    "SQLitePCLRaw.core/2.1.2": {
-      "sha512": "A8EBepVqY2lnAp3a8jnhbgzF2tlj2S3HcJQGANTYg/TbYbKa8Z5cM1h74An/vy0svhfzT7tVY0sFmUglLgv+2g==",
+    "SQLitePCLRaw.core/2.1.5": {
+      "sha512": "gZQMpefwszRkDjnNGxVmykOIaVAzBsR082ODO2myRFcyeSGiv4B1E4Ol+lijqD/SXK/ofyO2/U7dOwVfnzaVdg==",
       "type": "package",
-      "path": "sqlitepclraw.core/2.1.2",
+      "path": "sqlitepclraw.core/2.1.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/SQLitePCLRaw.core.dll",
-        "sqlitepclraw.core.2.1.2.nupkg.sha512",
+        "sqlitepclraw.core.2.1.5.nupkg.sha512",
         "sqlitepclraw.core.nuspec"
       ]
     },
@@ -28809,6 +29193,18 @@
         "lib/net6.0-android31.0/SQLitePCLRaw.lib.e_sqlite3.android.xml",
         "sqlitepclraw.lib.e_sqlite3.android.2.1.2.nupkg.sha512",
         "sqlitepclraw.lib.e_sqlite3.android.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.provider.dynamic_cdecl/2.1.5": {
+      "sha512": "s+ikuSPW2tVsjEJcJSm0NLXjTZhfILyCsM5ldkNuTlIgKX3E3x1sBnJEojxWVB8FHtvfR3xLaLzYdoxHJDAC+A==",
+      "type": "package",
+      "path": "sqlitepclraw.provider.dynamic_cdecl/2.1.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll",
+        "sqlitepclraw.provider.dynamic_cdecl.2.1.5.nupkg.sha512",
+        "sqlitepclraw.provider.dynamic_cdecl.nuspec"
       ]
     },
     "SQLitePCLRaw.provider.e_sqlite3/2.1.2": {
@@ -31073,6 +31469,7 @@
       "Microsoft.Extensions.Logging >= 7.0.0",
       "Microsoft.Extensions.Logging.Abstractions >= 7.0.0",
       "Microsoft.Maui.Graphics >= 7.0.86",
+      "SQLitePCLRaw.provider.dynamic_cdecl >= 2.1.5",
       "UraniumUI.Dialogs.Mopups >= 2.5.3",
       "UraniumUI.Icons.FontAwesome >= 2.5.3",
       "UraniumUI.Material >= 2.5.3",
@@ -31096,6 +31493,7 @@
       "Microsoft.Extensions.Logging >= 7.0.0",
       "Microsoft.Extensions.Logging.Abstractions >= 7.0.0",
       "Microsoft.Maui.Graphics >= 7.0.86",
+      "SQLitePCLRaw.provider.dynamic_cdecl >= 2.1.5",
       "UraniumUI.Dialogs.Mopups >= 2.5.3",
       "UraniumUI.Icons.FontAwesome >= 2.5.3",
       "UraniumUI.Material >= 2.5.3",
@@ -31108,6 +31506,7 @@
       "Microsoft.Extensions.Logging >= 7.0.0",
       "Microsoft.Extensions.Logging.Abstractions >= 7.0.0",
       "Microsoft.Maui.Graphics >= 7.0.86",
+      "SQLitePCLRaw.provider.dynamic_cdecl >= 2.1.5",
       "UraniumUI.Dialogs.Mopups >= 2.5.3",
       "UraniumUI.Icons.FontAwesome >= 2.5.3",
       "UraniumUI.Material >= 2.5.3",
@@ -31123,6 +31522,7 @@
       "Microsoft.Maui.Graphics.Win2D.WinUI.Desktop >= 7.0.86",
       "Microsoft.Windows.SDK.BuildTools >= 10.0.22621.755",
       "Microsoft.WindowsAppSDK >= 1.2.221209.1",
+      "SQLitePCLRaw.provider.dynamic_cdecl >= 2.1.5",
       "UraniumUI.Dialogs.Mopups >= 2.5.3",
       "UraniumUI.Icons.FontAwesome >= 2.5.3",
       "UraniumUI.Material >= 2.5.3",
@@ -31218,6 +31618,10 @@
             "target": "Package",
             "version": "[7.0.86, )",
             "autoReferenced": true
+          },
+          "SQLitePCLRaw.provider.dynamic_cdecl": {
+            "target": "Package",
+            "version": "[2.1.5, )"
           },
           "UraniumUI.Dialogs.Mopups": {
             "target": "Package",
@@ -31353,6 +31757,10 @@
             "version": "[7.0.86, )",
             "autoReferenced": true
           },
+          "SQLitePCLRaw.provider.dynamic_cdecl": {
+            "target": "Package",
+            "version": "[2.1.5, )"
+          },
           "UraniumUI.Dialogs.Mopups": {
             "target": "Package",
             "version": "[2.5.3, )"
@@ -31431,6 +31839,10 @@
             "target": "Package",
             "version": "[7.0.86, )",
             "autoReferenced": true
+          },
+          "SQLitePCLRaw.provider.dynamic_cdecl": {
+            "target": "Package",
+            "version": "[2.1.5, )"
           },
           "UraniumUI.Dialogs.Mopups": {
             "target": "Package",
@@ -31527,6 +31939,10 @@
             "target": "Package",
             "version": "[1.2.221209.1, )",
             "autoReferenced": true
+          },
+          "SQLitePCLRaw.provider.dynamic_cdecl": {
+            "target": "Package",
+            "version": "[2.1.5, )"
           },
           "UraniumUI.Dialogs.Mopups": {
             "target": "Package",

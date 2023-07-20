@@ -266,3 +266,8 @@ C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\hot-stuff.genruntimeconfig.cache
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\ref\hot-stuff.dll
 C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\CommunityToolkit.Mvvm.dll
+C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\SQLite-net.dll
+C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\SQLitePCLRaw.batteries_v2.dll
+C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\SQLitePCLRaw.core.dll
+C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\libe_sqlite3.dylib

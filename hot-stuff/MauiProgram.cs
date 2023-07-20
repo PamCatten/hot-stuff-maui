@@ -1,5 +1,6 @@
 ﻿using HotStuff.Models;
 using HotStuff.Pages;
+using HotStuff.Services;
 using InputKit.Shared.Controls;
 using Microsoft.Extensions.DependencyInjection;
 using Mopups.Hosting;
@@ -28,6 +29,9 @@ public static class MauiProgram
         builder.Services.AddSingleton<MainPage>();
         builder.Services.AddTransient<ItemsPage>();
         builder.Services.AddTransient<ItemsPageViewModel>();
+
+        string DatabasePath = Path.Combine(FileSystem.AppDataDirectory, "ItemData.db3");
+        builder.Services.AddSingleton<ItemService>(s => ActivatorUtilities.CreateInstance<ItemService>(s, DatabasePath));
 
         builder.Services.AddMopupsDialogs();
         return builder.Build();

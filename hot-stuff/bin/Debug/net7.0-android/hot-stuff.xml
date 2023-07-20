@@ -25,22 +25,6 @@
         <member name="P:HotStuff.Models.Item.AmountPaid">
             <inheritdoc cref="F:HotStuff.Models.Item.amountPaid"/>
         </member>
-        <member name="T:HotStuff.Models.ItemsPageViewModel">
-            <inheritdoc/>
-            <inheritdoc/>
-        </member>
-        <member name="F:HotStuff.Models.ItemsPageViewModel.addNewItemCommand">
-            <summary>The backing field for <see cref="P:HotStuff.Models.ItemsPageViewModel.AddNewItemCommand"/>.</summary>
-        </member>
-        <member name="P:HotStuff.Models.ItemsPageViewModel.AddNewItemCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:HotStuff.Models.ItemsPageViewModel.AddNewItem"/>.</summary>
-        </member>
-        <member name="F:HotStuff.Models.ItemsPageViewModel.removeSelectedItemCommand">
-            <summary>The backing field for <see cref="P:HotStuff.Models.ItemsPageViewModel.RemoveSelectedItemCommand"/>.</summary>
-        </member>
-        <member name="P:HotStuff.Models.ItemsPageViewModel.RemoveSelectedItemCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:HotStuff.Models.ItemsPageViewModel.RemoveSelectedItem"/>.</summary>
-        </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
             <summary>
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances

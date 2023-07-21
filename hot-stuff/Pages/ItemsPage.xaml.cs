@@ -1,7 +1,9 @@
 ﻿using HotStuff.Models;
+using HotStuff.Services;
 using InputKit.Shared.Controls;
 using System.Diagnostics;
 using UraniumUI.Pages;
+
 namespace HotStuff.Pages;
 
 public partial class ItemsPage : UraniumContentPage
@@ -11,6 +13,12 @@ public partial class ItemsPage : UraniumContentPage
         SelectionView.GlobalSetting.CornerRadius = 0;
         InitializeComponent();
         BindingContext = vm;
+    }
+    protected async override void OnAppearing()
+    {
+        base.OnAppearing();
+
+        UraniumGrid.ItemsSource = await App.ItemServ.GetItems();
     }
 
     async void OnProfilePageClicked(object sender, EventArgs e)

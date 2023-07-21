@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace HotStuff.Services
 {
-    public class ItemService
+    public class ItemService : IItemService
     {
         private string databasePath;
         public string StatusMessage { get; set; }
@@ -50,24 +50,23 @@ namespace HotStuff.Services
             }
         }
 
-        public async Task<ObservableCollection<Item>> GetItems()
+        public async Task<List<Item>> GetItems()
         {
             try 
             {
                 await Init();
-                ObservableCollection<Item> items = new(await Database.Table<Item>().ToListAsync());
-                Debug.WriteLine("Sucessfully retrieved data.");
-                return items;
+                Debug.WriteLine("Data retrieval attempted.");
+                return new(await Database.Table<Item>().ToListAsync());
             }
             catch (Exception ex) 
             {
                 Debug.WriteLine($"Failed to retrieve data. {ex.Message}");
             }
 
-            return new ObservableCollection<Item>();
+            return new List<Item>();
         }
 
-        public async Task RemoveItem(Item item)
+        public async Task DeleteItems(Item item)
         {
             await Init();
             Debug.WriteLine($"ItemID: {item.ItemID} ItemName: {item.ItemName} prepped for removal.");
@@ -75,5 +74,9 @@ namespace HotStuff.Services
             Debug.WriteLine("Item removed.");
         }
 
+        Task IItemService.UpdateItem(Item item)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

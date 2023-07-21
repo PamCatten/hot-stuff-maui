@@ -33,13 +33,12 @@
     <ScrollView Orientation="Both" HorizontalScrollBarVisibility="Always">
 
         <VerticalStackLayout>
-            <Button Text="Get Items" StyleClass="FilledTonalButton" Command="{Binding GetItemsCommand}" HorizontalOptions="Start" />
             <Button Text="Delete" StyleClass="FilledTonalButton"  Command="{Binding RemoveSelectedItemsCommand}" HorizontalOptions="Start" />
-            
-            <material:DataGrid ItemsSource="{Binding Items}" SelectedItems="{Binding SelectedItems}" HorizontalOptions="Center" VerticalOptions="Center">
+
+            <material:DataGrid ItemsSource="{Binding Items}" SelectedItems="{Binding SelectedItems}" HorizontalOptions="Center" VerticalOptions="Center" x:Name="UraniumGrid">
                 <material:DataGrid.Columns>
                     <material:DataGridSelectionColumn/>
-                    <material:DataGridColumn Binding="{Binding ItemName}"  Title="Item Name" Width="Auto"/>
+                    <material:DataGridColumn Binding="{Binding ItemName}" Title="Item Name" Width="Auto"/>
                     <material:DataGridColumn Binding="{Binding Category}" Title="Item Category" Width="Auto"/>
                     <material:DataGridColumn Binding="{Binding BrandManufacturer}" Title="Brand / Manufacturer" Width="Auto"/>
                     <material:DataGridColumn Binding="{Binding Room}" Title="Room" Width="Auto"/>

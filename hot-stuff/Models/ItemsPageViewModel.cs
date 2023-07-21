@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using HotStuff.Services;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -12,7 +13,8 @@ namespace HotStuff.Models;
 
 public partial class ItemsPageViewModel : UraniumBindableObject
 {
-    public ObservableCollection<Item> Items { get; set; } = new ObservableCollection<Item>();
+    // public ObservableCollection<Item> Items { get; set; } = new ObservableCollection<Item>();
+    public List<Item> Items { get; set; } = new List<Item>();
     public ObservableCollection<Item> SelectedItems { get; set; } = new ObservableCollection<Item>();
 
     private Item newItem = new();
@@ -38,24 +40,24 @@ public partial class ItemsPageViewModel : UraniumBindableObject
         });
 
 
-        async Task<ObservableCollection<Item>> GetItemsFromDB()
+        async Task<List<Item>> GetItemsFromDB()
         {
             Debug.WriteLine("Get items called.");
             return await App.ItemServ.GetItems();
         }
 
-        GetItemsCommand = new Command(() =>
-        {
-            ObservableCollection<Item> items = new ObservableCollection<Item>();
-            Debug.WriteLine($"User clicked get items.");
-            items = GetItemsFromDB;
-            return new ObservableCollection<Item>(items);
-        });
+        //GetItemsCommand = new Command(() =>
+        //{
+            //ObservableCollection<Item> items = new ObservableCollection<Item>();
+            //Debug.WriteLine($"User clicked get items.");
+            //items = GetItemsFromDB();
+            //return new ObservableCollection<Item>(items);
+        //});
 
          async void DeleteItemsFromDB(Item item)
         {
             Debug.WriteLine("Delete items called.");
-            await App.ItemServ.RemoveItem(item);
+            await App.ItemServ.DeleteItems(item);
         }
 
         RemoveSelectedItemsCommand = new Command(() =>

@@ -23,8 +23,10 @@ public partial class ItemsPageViewModel : UraniumBindableObject
 
     public ItemsPageViewModel()
     {
+
         async void AddItemFromDB()
         {
+            Debug.WriteLine("Add items called.");
             await App.ItemServ.AddItem(NewItem);
         }
 
@@ -35,32 +37,36 @@ public partial class ItemsPageViewModel : UraniumBindableObject
             NewItem = new();
         });
 
+
+        async Task<ObservableCollection<Item>> GetItemsFromDB()
+        {
+            Debug.WriteLine("Get items called.");
+            return await App.ItemServ.GetItems();
+        }
+
         GetItemsCommand = new Command(() =>
         {
-            Debug.WriteLine($"Get items called.");
-            GetItemsFromDB();
+            ObservableCollection<Item> items = new ObservableCollection<Item>();
+            Debug.WriteLine($"User clicked get items.");
+            items = GetItemsFromDB;
+            return new ObservableCollection<Item>(items);
         });
 
-        async void GetItemsFromDB()
+         async void DeleteItemsFromDB(Item item)
         {
-            Items = await App.ItemServ.GetItems();
+            Debug.WriteLine("Delete items called.");
+            await App.ItemServ.RemoveItem(item);
         }
 
         RemoveSelectedItemsCommand = new Command(() =>
         {
-            Debug.WriteLine("Delete items called.");
+            Debug.WriteLine("User clicked delete items.");
             foreach (var item in SelectedItems)
             {
                 Items.Remove(item);
                 DeleteItemsFromDB(item);
             }
         });
-
-        async void DeleteItemsFromDB(Item item) 
-        {
-            
-            await App.ItemServ.RemoveItem(item);
-        }
 
     }
 }

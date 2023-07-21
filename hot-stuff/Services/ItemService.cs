@@ -56,6 +56,7 @@ namespace HotStuff.Services
             {
                 await Init();
                 ObservableCollection<Item> items = new(await Database.Table<Item>().ToListAsync());
+                Debug.WriteLine("Sucessfully retrieved data.");
                 return items;
             }
             catch (Exception ex) 

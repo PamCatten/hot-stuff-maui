@@ -70,7 +70,7 @@ namespace HotStuff.Services
         {
             await Init();
             Debug.WriteLine($"ItemID: {item.ItemID} ItemName: {item.ItemName} prepped for removal.");
-            await Database.DeleteAsync<Item>(item);
+            await Database.DeleteAsync<Item>(item.ItemID);
             Debug.WriteLine("Item removed.");
         }
 

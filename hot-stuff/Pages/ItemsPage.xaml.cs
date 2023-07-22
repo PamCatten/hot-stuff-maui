@@ -16,9 +16,8 @@ public partial class ItemsPage : UraniumContentPage
     }
     protected async override void OnAppearing()
     {
-        base.OnAppearing();
-
         UraniumGrid.ItemsSource = await App.ItemServ.GetItems();
+        base.OnAppearing();
     }
 
     async void OnProfilePageClicked(object sender, EventArgs e)

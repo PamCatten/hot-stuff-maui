@@ -66,12 +66,15 @@ namespace HotStuff.Services
             return new List<Item>();
         }
 
-        public async Task DeleteItems(Item item)
+        public async Task DeleteItems(List<Item> SelectedItems)
         {
             await Init();
-            Debug.WriteLine($"ItemID: {item.ItemID} ItemName: {item.ItemName} prepped for removal.");
-            await Database.DeleteAsync<Item>(item.ItemID);
-            Debug.WriteLine("Item removed.");
+            foreach (var item in SelectedItems)
+            {
+                Debug.WriteLine($"ItemID: {item.ItemID} ItemName: {item.ItemName} prepped for removal.");
+                await Database.DeleteAsync<Item>(item.ItemID);
+                Debug.WriteLine("Item removed.");
+            }
         }
 
         Task IItemService.UpdateItem(Item item)

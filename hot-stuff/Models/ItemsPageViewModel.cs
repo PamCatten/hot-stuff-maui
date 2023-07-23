@@ -15,6 +15,7 @@ public partial class ItemsPageViewModel : UraniumBindableObject
 {
     // public ObservableCollection<Item> Items { get; set; } = new ObservableCollection<Item>();
     public List<Item> Items { get; set; } = new List<Item>();
+    public ObservableCollection<Item> DisplayedItems { get; set; } = new ObservableCollection<Item>();
     public List<Item> SelectedItems { get; set; } = new List<Item>();
 
     private Item newItem = new();
@@ -36,20 +37,20 @@ public partial class ItemsPageViewModel : UraniumBindableObject
         {
             Debug.WriteLine("User clicked add item.");
             AddItemFromDB();
+            DisplayedItems.Insert(0, NewItem);
             NewItem = new();
+            
         });
-
-        //GetItemsCommand = new Command(() =>
-        //{
-            //ObservableCollection<Item> items = new ObservableCollection<Item>();
-            //Debug.WriteLine($"User clicked get items.");
-            //items = GetItemsFromDB();
-            //return new ObservableCollection<Item>(items);
-        //});
 
          async void DeleteItemsFromDB(List<Item> Items)
         {
             Debug.WriteLine("Delete items called.");
+
+            foreach (var item in SelectedItems)
+            {
+                DisplayedItems.Remove(item);
+            }
+
             await App.ItemServ.DeleteItems(Items);
         }
 

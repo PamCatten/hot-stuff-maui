@@ -27,6 +27,9 @@ public partial class Item : ObservableObject
     [ObservableProperty]
     decimal amountPaid;
 
+    [ObservableProperty]
+    int quantity;
+
     public ItemCategory Category { get; set; }
 
     public ItemRoom Room { get; set; }

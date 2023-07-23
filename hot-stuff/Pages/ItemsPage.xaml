@@ -22,6 +22,7 @@
 
     <uranium:UraniumContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="{StaticResource ProfileIcon}" Clicked="OnProfilePageClicked"/>
+        <ToolbarItem IconImageSource="{StaticResource AddIcon}" Clicked="OnAddItemsPageClicked" />
     </uranium:UraniumContentPage.ToolbarItems>
 
     <uranium:UraniumContentPage.Resources>

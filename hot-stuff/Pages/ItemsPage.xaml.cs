@@ -19,6 +19,12 @@ public partial class ItemsPage : UraniumContentPage
         UraniumGrid.ItemsSource = await App.ItemServ.GetItems();
         base.OnAppearing();
     }
+    async void OnAddItemsPageClicked(object sender, EventArgs e)
+    {
+        Debug.WriteLine("User clicked add item.");
+
+        await Shell.Current.GoToAsync(nameof(AddItemsPage));
+    }
 
     async void OnProfilePageClicked(object sender, EventArgs e)
     {

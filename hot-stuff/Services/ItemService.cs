@@ -1,20 +1,12 @@
 ﻿using HotStuff.Models;
-using HotStuff.Services;
 using SQLite;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Diagnostics;
-using System.Dynamic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HotStuff.Services
 {
     public class ItemService : IItemService
     {
-        private string databasePath;
+        private readonly string databasePath;
         public string StatusMessage { get; set; }
         private SQLiteAsyncConnection Database;
 

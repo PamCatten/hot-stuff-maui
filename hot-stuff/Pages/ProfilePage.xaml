@@ -29,6 +29,7 @@
             HorizontalOptions="Start"
             Margin="15, 5, 15, 10"
         />
+        <BoxView StyleClass="Divider" />
         <Label 
             Text="Settings"
             FontSize="Medium"
@@ -44,23 +45,7 @@
             HorizontalOptions="Start"
             Margin="15, 5, 15, 10"
         />
-
-        <Label 
-            Text="Support"
-            FontSize="Medium"
-            FontAttributes="Bold"
-            VerticalOptions="Center" 
-            HorizontalOptions="Start"
-            Margin="15, 10, 15, 5"
-        />
-        <Label 
-            Text="Help Center, FAQ, Contact Us"
-            FontSize="Small"
-            VerticalOptions="Center" 
-            HorizontalOptions="Start"
-            Margin="15, 5, 15, 10"
-        />
-
+        <BoxView StyleClass="Divider" />
         <Label 
             Text="Legal"
             FontSize="Medium"
@@ -76,9 +61,10 @@
             HorizontalOptions="Start"
             Margin="15, 5, 15, 10"
         />
-
+        <BoxView StyleClass="Divider" />
         <Label 
             Text="Log Out"
+            TextColor="{StaticResource Primary}"
             FontSize="Medium"
             FontAttributes="Bold"
             VerticalOptions="Center" 

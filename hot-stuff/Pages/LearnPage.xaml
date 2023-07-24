@@ -33,6 +33,7 @@
             HorizontalOptions="Start"
             Margin="15, 5, 15, 10"
         />
+        <BoxView StyleClass="Divider" />
         <Label 
             Text="Other Resources"
             FontSize="Medium"
@@ -43,6 +44,22 @@
         />
         <Label 
             Text="Additional resources and perspectives"
+            FontSize="Small"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start"
+            Margin="15, 5, 15, 10"
+        />
+        <BoxView StyleClass="Divider" />
+        <Label 
+            Text="Support"
+            FontSize="Medium"
+            FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start"
+            Margin="15, 10, 15, 5"
+        />
+        <Label 
+            Text="Help Center, FAQ, Contact Us"
             FontSize="Small"
             VerticalOptions="Center" 
             HorizontalOptions="Start"

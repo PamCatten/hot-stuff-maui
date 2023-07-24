@@ -104,7 +104,7 @@
                         Command="{Binding AddNewItemCommand}" 
                         Text="Add Item"
                         input:FormView.IsSubmitButton="True"
-                        StyleClass="ElevatedButton"
+                        StyleClass="FilledButton"
                     />
         </VerticalStackLayout>
     </input:FormView>

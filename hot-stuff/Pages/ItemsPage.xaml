@@ -34,9 +34,17 @@
     <ScrollView Orientation="Both" HorizontalScrollBarVisibility="Always" VerticalScrollBarVisibility="Always">
 
         <VerticalStackLayout>
-            <Button Text="Delete" StyleClass="FilledTonalButton"  Command="{Binding RemoveSelectedItemsCommand}" HorizontalOptions="Start" />
-
+            <StackLayout Padding="10" Orientation="Horizontal" Spacing="10">
+                <Button Text="Update" StyleClass ="FilledButton" HorizontalOptions="Start"/>
+                <Button Text="Delete" StyleClass="FilledButton" Command="{Binding RemoveSelectedItemsCommand}" HorizontalOptions="Start"/>
+            </StackLayout>
+            
             <material:DataGrid ItemsSource="{Binding DisplayedItems}" SelectedItems="{Binding SelectedItems}" HorizontalOptions="Center" VerticalOptions="Center" x:Name="UraniumGrid">
+
+                <material:DataGrid.EmptyView >
+                    <Label Text="No items saved. Click the add icon to get started!" MinimumWidthRequest="380" HorizontalTextAlignment="Center"/>
+                </material:DataGrid.EmptyView>
+                               
                 <material:DataGrid.Columns>
                     <material:DataGridSelectionColumn/>
                     <material:DataGridColumn Binding="{Binding ItemName}" Title="Item Name" Width="Auto"/>
@@ -95,20 +103,6 @@
                         </material:PickerField.Validations>
                     </material:PickerField>
                     <material:TextField 
-                        Title="Brand / Manufacturer Name (Optional)"
-                        Text="{Binding NewItem.BrandManufacturer}"
-                        AllowClear="True"
-                        AccentColor="{StaticResource OnPrimary}"
-                    />
-                    <material:PickerField 
-                        Title="Item Color (Optional)"
-                        ItemsSource="{x:Static models:Item.AvailableColors}"
-                        SelectedItem="{Binding NewItem.Color}"
-                        AllowClear="True"
-                        AccentColor="{StaticResource OnPrimary}"
-                        Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CircleChevronDown}}"
-                    />
-                    <material:TextField 
                         Title="Quantity (Required)"
                         Text="{Binding NewItem.AmountPaid}"
                         AllowClear="True"
@@ -120,32 +114,6 @@
                             <validation:MinValueValidation MinValue="1" />
                         </material:TextField.Validations>
                     </material:TextField>
-                    <material:TextField 
-                        Title="Amount Paid (Optional)"
-                        Text="{Binding NewItem.AmountPaid}"
-                        AllowClear="True"
-                        AccentColor="{StaticResource OnPrimary}"
-                    />
-                    <material:DatePickerField
-                        Title="Purchase Date (Optional)"
-                        AllowClear="True"
-                        AccentColor="{StaticResource OnPrimary}"
-                        Date="{Binding NewItem.PurchaseDate}"
-                        Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CalendarDays}}"
-                    />
-                    <material:TextField 
-                        Title="Purchase Proof (Optional)"
-                        Text="{Binding NewItem.PurchaseProof}"
-                        AllowClear="True"
-                        AccentColor="{StaticResource OnPrimary}"
-                    />
-                    <material:TextField 
-                        Title="Item Description (Optional)"
-                        Text="{Binding NewItem.ItemDescription}"
-                        AllowClear="True"
-                        AccentColor="{StaticResource OnPrimary}"
-                    />
-
                     <Button 
                         Command="{Binding AddNewItemCommand}" 
                         Text="Add Item"

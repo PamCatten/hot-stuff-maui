@@ -21,8 +21,9 @@
     </uranium:UraniumContentPage.BindingContext>
 
     <uranium:UraniumContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="{StaticResource ProfileIcon}" Clicked="OnProfilePageClicked"/>
         <ToolbarItem IconImageSource="{StaticResource AddIcon}" Clicked="OnAddItemsPageClicked" />
+        <ToolbarItem IconImageSource="{StaticResource DownloadIcon}" Clicked="OnAddItemsPageClicked" />
+        <ToolbarItem IconImageSource="{StaticResource ProfileIcon}" Clicked="OnProfilePageClicked"/>
     </uranium:UraniumContentPage.ToolbarItems>
 
     <uranium:UraniumContentPage.Resources>

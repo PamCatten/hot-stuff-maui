@@ -31,19 +31,14 @@
                Color="{StaticResource OnPrimary}"
                Glyph="{x:Static local:IconFont.CircleUser}" 
     />
-    <FontImage x:Key="CalendarIcon"
-               FontFamily="FontAwesome"
-               Color="{StaticResource OnPrimary}"
-               Glyph="{x:Static local:IconFont.CalendarDays}"
-    />
     <FontImage x:Key="DropdownIcon"
                FontFamily="FontAwesome"
                Glyph="{x:Static local:IconFont.CircleChevronDown}"
     />
-    <FontImage x:Key="Pen"
+    <FontImage x:Key="DownloadIcon"
                FontFamily="FontAwesome"
                Color="{StaticResource OnPrimary}"
-               Glyph="{x:Static local:IconFont.Pen}"
+               Glyph="{x:Static local:IconFont.Download}"
     />
     <Style TargetType="input:CheckBox">
         <Setter Property="Color" Value="{StaticResource Primary}" />

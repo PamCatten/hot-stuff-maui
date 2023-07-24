@@ -8,9 +8,10 @@
     xmlns:validation="clr-namespace:InputKit.Shared.Validations;assembly=InputKit.Maui"
     xmlns:pages="clr-namespace:HotStuff.Pages"
     xmlns:input="clr-namespace:InputKit.Shared.Controls;assembly=InputKit.Maui"
+    xmlns:attachment="clr-namespace:UraniumUI.Material.Attachments;assembly=UraniumUI.Material"
     xmlns:models="clr-namespace:HotStuff.Models"
     xmlns:local="clr-namespace:HotStuff"
-    
+    Title="Add Item"
 >
     <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">   
     <input:FormView>
@@ -18,7 +19,8 @@
             <material:TextField 
                         Title="Item Name (Required)"
                         Text="{Binding NewItem.ItemName}"
-                        AccentColor="{StaticResource OnPrimary}"
+                        AccentColor="{StaticResource Primary}"
+                        Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Pen}}"
                     >
                 <material:TextField.Validations>
                     <validation:RequiredValidation />
@@ -29,7 +31,7 @@
                         ItemsSource="{x:Static models:Item.AvailableCategories}"
                         SelectedItem="{Binding NewItem.Category}"
                         AllowClear="True"
-                        AccentColor="{StaticResource OnPrimary}"
+                        AccentColor="{StaticResource Primary}"
                         Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CircleChevronDown}}"
                     >
                 <material:PickerField.Validations>
@@ -41,7 +43,7 @@
                         ItemsSource="{x:Static models:Item.AvailableRooms}"
                         SelectedItem="{Binding NewItem.Room}"
                         AllowClear="True"
-                        AccentColor="{StaticResource OnPrimary}"
+                        AccentColor="{StaticResource Primary}"
                         Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CircleChevronDown}}"
                     >
                 <material:PickerField.Validations>
@@ -52,21 +54,23 @@
                         Title="Brand / Manufacturer Name (Optional)"
                         Text="{Binding NewItem.BrandManufacturer}"
                         AllowClear="True"
-                        AccentColor="{StaticResource OnPrimary}"
+                        AccentColor="{StaticResource Primary}"
+                        Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Pen}}"
                     />
             <material:PickerField 
                         Title="Item Color (Optional)"
                         ItemsSource="{x:Static models:Item.AvailableColors}"
                         SelectedItem="{Binding NewItem.Color}"
                         AllowClear="True"
-                        AccentColor="{StaticResource OnPrimary}"
+                        AccentColor="{StaticResource Primary}"
                         Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CircleChevronDown}}"
                     />
             <material:TextField 
                         Title="Quantity (Required)"
-                        Text="{Binding NewItem.AmountPaid}"
+                        Text="{Binding NewItem.Quantity}"
                         AllowClear="True"
-                        AccentColor="{StaticResource OnPrimary}"
+                        AccentColor="{StaticResource Primary}"
+                        Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Hashtag}}"
                     >
                 <material:TextField.Validations>
                     <validation:RequiredValidation/>
@@ -78,29 +82,37 @@
                         Title="Amount Paid (Optional)"
                         Text="{Binding NewItem.AmountPaid}"
                         AllowClear="True"
-                        AccentColor="{StaticResource OnPrimary}"
+                        AccentColor="{StaticResource Primary}"
+                        Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.DollarSign}}"
                     />
             <material:DatePickerField
                         Title="Purchase Date (Optional)"
                         AllowClear="True"
-                        AccentColor="{StaticResource OnPrimary}"
+                        AccentColor="{StaticResource Primary}"
                         Date="{Binding NewItem.PurchaseDate}"
                         Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CalendarDays}}"
                     />
-            <material:TextField 
+                <material:TextField 
                         Title="Purchase Proof (Optional)"
                         Text="{Binding NewItem.PurchaseProof}"
                         AllowClear="True"
-                        AccentColor="{StaticResource OnPrimary}"
-                    />
-            <material:TextField 
+                        AccentColor="{StaticResource Primary}"
+                        Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Camera}}"
+                >
+                    <material:TextField.Attachments>
+                        <Button Text="Gallery" />
+                    </material:TextField.Attachments>
+                </material:TextField>
+                <material:TextField 
                         Title="Item Description (Optional)"
                         Text="{Binding NewItem.ItemDescription}"
                         AllowClear="True"
-                        AccentColor="{StaticResource OnPrimary}"
-                    />
+                        AccentColor="{StaticResource Primary}"
+                        Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Pen}}"
+                />
 
-            <Button 
+
+                <Button 
                         Command="{Binding AddNewItemCommand}" 
                         Text="Add Item"
                         input:FormView.IsSubmitButton="True"
@@ -109,4 +121,8 @@
         </VerticalStackLayout>
     </input:FormView>
     </ScrollView>
+
+    <uranium:UraniumContentPage.Attachments>
+    </uranium:UraniumContentPage.Attachments>
+
 </uranium:UraniumContentPage>

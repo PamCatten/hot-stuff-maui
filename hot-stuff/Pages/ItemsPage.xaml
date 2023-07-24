@@ -42,6 +42,7 @@
             <material:DataGrid ItemsSource="{Binding DisplayedItems}" SelectedItems="{Binding SelectedItems}" HorizontalOptions="Center" VerticalOptions="Center" x:Name="UraniumGrid">
 
                 <material:DataGrid.EmptyView >
+                    <!-- TODO: Fix this Minimum width request, would really prefer not to hardcode here, preferably to the device's view model width -->
                     <Label Text="No items saved. Click the add icon to get started!" MinimumWidthRequest="380" HorizontalTextAlignment="Center"/>
                 </material:DataGrid.EmptyView>
                                

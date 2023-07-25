@@ -44114,7 +44114,8 @@ public final class R {
     public static final int include_constraintSet=0;
   }
   public static final class xml {
-    public static final int image_share_filepaths=0x7f120000;
-    public static final int microsoft_maui_essentials_fileprovider_file_paths=0x7f120001;
+    public static final int file_paths=0x7f120000;
+    public static final int image_share_filepaths=0x7f120001;
+    public static final int microsoft_maui_essentials_fileprovider_file_paths=0x7f120002;
   }
 }

@@ -106,6 +106,10 @@
               "target": "Package",
               "version": "[2.5.3, )"
             },
+            "Xam.Plugin.Media": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
             "Xamarin.Android.Glide": {
               "target": "Package",
               "version": "[4.13.2.2, )",
@@ -244,6 +248,10 @@
               "target": "Package",
               "version": "[2.5.3, )"
             },
+            "Xam.Plugin.Media": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
             "sqlite-net-pcl": {
               "target": "Package",
               "version": "[1.9.141-beta, )"
@@ -326,6 +334,10 @@
             "UraniumUI.Material": {
               "target": "Package",
               "version": "[2.5.3, )"
+            },
+            "Xam.Plugin.Media": {
+              "target": "Package",
+              "version": "[6.0.2, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",
@@ -426,6 +438,10 @@
             "UraniumUI.Material": {
               "target": "Package",
               "version": "[2.5.3, )"
+            },
+            "Xam.Plugin.Media": {
+              "target": "Package",
+              "version": "[6.0.2, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",

@@ -22,6 +22,7 @@
           "UraniumUI.Dialogs.Mopups": "2.5.3",
           "UraniumUI.Icons.FontAwesome": "2.5.3",
           "UraniumUI.Material": "2.5.3",
+          "Xam.Plugin.Media": "6.0.2",
           "sqlite-net-pcl": "1.9.141-beta",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x64": "7.0.9",
           "runtimepack.Microsoft.Maui.Core.Runtime.win": "7.0.86",
@@ -1136,6 +1137,14 @@
             "fileVersion": "2.5.3.0"
           }
         }
+      },
+      "Xam.Plugin.Media/6.0.2": {
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/Plugin.Media.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -1372,6 +1381,13 @@
       "sha512": "sha512-llJ26xcW0KVa9JgNQM17V6o1PafoRXNFE/r/3DuZQhHgU+ZtQPMN3LCzEjt0raioRkmbjMyYFCuJ7XtDZyLNZA==",
       "path": "uraniumui.material/2.5.3",
       "hashPath": "uraniumui.material.2.5.3.nupkg.sha512"
+    },
+    "Xam.Plugin.Media/6.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QLl5CXxSDF92+E154djfDKOoPSjvGkQSxYmLY0Fitnb6P4B103JQDU7lZlH0ez67GtzZDa8kWvS0Go0Yv1w9og==",
+      "path": "xam.plugin.media/6.0.2",
+      "hashPath": "xam.plugin.media.6.0.2.nupkg.sha512"
     }
   },
   "runtimes": {

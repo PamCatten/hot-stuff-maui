@@ -55,6 +55,7 @@
 		<PackageReference Include="UraniumUI.Material" Version="2.5.3" />
 		<PackageReference Include="UraniumUI.Icons.FontAwesome" Version="2.5.3" />
 		<PackageReference Include="UraniumUI.Dialogs.Mopups" Version="2.5.3" />
+		<PackageReference Include="Xam.Plugin.Media" Version="6.0.2" />
 	</ItemGroup>
 
 	<ItemGroup>

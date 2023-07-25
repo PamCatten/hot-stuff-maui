@@ -1000,3 +1000,7 @@ C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\assets\SQLit
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\assets\SQLitePCLRaw.lib.e_sqlite3.android.dll
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\assets\SQLitePCLRaw.provider.e_sqlite3.dll
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\assets\SQLitePCLRaw.provider.dynamic_cdecl.dll
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\assets\Plugin.Media.dll
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\assets\Plugin.Media.pdb
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\src\crc646957603ea1820544\MediaPickerActivity.java
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\res\xml\file_paths.xml

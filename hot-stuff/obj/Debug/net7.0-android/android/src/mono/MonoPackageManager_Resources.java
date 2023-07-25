@@ -33,6 +33,7 @@ public class MonoPackageManager_Resources {
 		"UraniumUI.Dialogs.Mopups.dll",
 		"UraniumUI.Icons.FontAwesome.dll",
 		"UraniumUI.Material.dll",
+		"Plugin.Media.dll",
 		"Xamarin.Android.Glide.dll",
 		"Xamarin.Android.Glide.Annotations.dll",
 		"Xamarin.Android.Glide.DiskLruCache.dll",

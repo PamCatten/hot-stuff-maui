@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "O9vf0Aj/HOGaThOkY16Rvsi2mkKHk5F6dfNdzjwO7NJ0foOma9xjSrkOWSHP3Htm3Kx7+7BD5XNH/4AoZOFPxA==",
+  "dgSpecHash": "V20BmapDlvRovXCZa5ZvHzXwRiRSYrRtQMD+mYupfxAl7StSLorOjGhblhsTj3u7HPJliGTb/2QExHgrafb1Xw==",
   "success": true,
   "projectFilePath": "C:\\Users\\campa\\hot-stuff\\hot-stuff\\hot-stuff.csproj",
   "expectedPackageFiles": [
@@ -39,6 +39,7 @@
     "C:\\Users\\campa\\.nuget\\packages\\uraniumui.dialogs.mopups\\2.5.3\\uraniumui.dialogs.mopups.2.5.3.nupkg.sha512",
     "C:\\Users\\campa\\.nuget\\packages\\uraniumui.icons.fontawesome\\2.5.3\\uraniumui.icons.fontawesome.2.5.3.nupkg.sha512",
     "C:\\Users\\campa\\.nuget\\packages\\uraniumui.material\\2.5.3\\uraniumui.material.2.5.3.nupkg.sha512",
+    "C:\\Users\\campa\\.nuget\\packages\\xam.plugin.media\\6.0.2\\xam.plugin.media.6.0.2.nupkg.sha512",
     "C:\\Users\\campa\\.nuget\\packages\\xamarin.android.glide\\4.13.2.2\\xamarin.android.glide.4.13.2.2.nupkg.sha512",
     "C:\\Users\\campa\\.nuget\\packages\\xamarin.android.glide.annotations\\4.13.2.2\\xamarin.android.glide.annotations.4.13.2.2.nupkg.sha512",
     "C:\\Users\\campa\\.nuget\\packages\\xamarin.android.glide.disklrucache\\4.13.2.2\\xamarin.android.glide.disklrucache.4.13.2.2.nupkg.sha512",

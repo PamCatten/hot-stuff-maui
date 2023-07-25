@@ -434,6 +434,22 @@
           }
         }
       },
+      "Xam.Plugin.Media/6.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Core": "1.8.0.1"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Xamarin.Android.Glide/4.13.2.2": {
         "type": "package",
         "dependencies": {
@@ -2593,6 +2609,22 @@
         "runtime": {
           "lib/net7.0-android33.0/UraniumUI.Material.dll": {
             "related": ".aar;.pdb;.xml"
+          }
+        }
+      },
+      "Xam.Plugin.Media/6.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Core": "1.8.0.1"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
           }
         }
       },
@@ -4758,6 +4790,22 @@
           }
         }
       },
+      "Xam.Plugin.Media/6.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Core": "1.8.0.1"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Xamarin.Android.Glide/4.13.2.2": {
         "type": "package",
         "dependencies": {
@@ -6917,6 +6965,22 @@
         "runtime": {
           "lib/net7.0-android33.0/UraniumUI.Material.dll": {
             "related": ".aar;.pdb;.xml"
+          }
+        }
+      },
+      "Xam.Plugin.Media/6.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Core": "1.8.0.1"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
           }
         }
       },
@@ -9082,6 +9146,22 @@
           }
         }
       },
+      "Xam.Plugin.Media/6.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Core": "1.8.0.1"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Xamarin.Android.Glide/4.13.2.2": {
         "type": "package",
         "dependencies": {
@@ -11241,6 +11321,22 @@
         "runtime": {
           "lib/net7.0-android33.0/UraniumUI.Material.dll": {
             "related": ".aar;.pdb;.xml"
+          }
+        }
+      },
+      "Xam.Plugin.Media/6.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Core": "1.8.0.1"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
           }
         }
       },
@@ -13406,6 +13502,22 @@
           }
         }
       },
+      "Xam.Plugin.Media/6.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Core": "1.8.0.1"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Xamarin.Android.Glide/4.13.2.2": {
         "type": "package",
         "dependencies": {
@@ -15568,6 +15680,22 @@
           }
         }
       },
+      "Xam.Plugin.Media/6.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Core": "1.8.0.1"
+        },
+        "compile": {
+          "lib/net6.0-android31.0/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-android31.0/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Xamarin.Android.Glide/4.13.2.2": {
         "type": "package",
         "dependencies": {
@@ -17681,6 +17809,22 @@
             "related": ".pdb"
           }
         }
+      },
+      "Xam.Plugin.Media/6.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-ios16.1/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-ios16.1/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
       }
     },
     "net7.0-ios16.1/android-arm": {
@@ -18065,6 +18209,22 @@
         "runtime": {
           "lib/net7.0-ios16.1/UraniumUI.Material.dll": {
             "related": ".pdb"
+          }
+        }
+      },
+      "Xam.Plugin.Media/6.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-ios16.1/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-ios16.1/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
           }
         }
       }
@@ -18453,6 +18613,22 @@
             "related": ".pdb"
           }
         }
+      },
+      "Xam.Plugin.Media/6.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-ios16.1/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-ios16.1/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
       }
     },
     "net7.0-ios16.1/android-x64": {
@@ -18837,6 +19013,22 @@
         "runtime": {
           "lib/net7.0-ios16.1/UraniumUI.Material.dll": {
             "related": ".pdb"
+          }
+        }
+      },
+      "Xam.Plugin.Media/6.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-ios16.1/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-ios16.1/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
           }
         }
       }
@@ -19225,6 +19417,22 @@
             "related": ".pdb"
           }
         }
+      },
+      "Xam.Plugin.Media/6.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-ios16.1/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-ios16.1/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
       }
     },
     "net7.0-ios16.1/iossimulator-x64": {
@@ -19609,6 +19817,22 @@
         "runtime": {
           "lib/net7.0-ios16.1/UraniumUI.Material.dll": {
             "related": ".pdb"
+          }
+        }
+      },
+      "Xam.Plugin.Media/6.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-ios16.1/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-ios16.1/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
           }
         }
       }
@@ -19997,6 +20221,22 @@
             "related": ".pdb"
           }
         }
+      },
+      "Xam.Plugin.Media/6.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-ios16.1/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-ios16.1/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
       }
     },
     "net7.0-ios16.1/win10-x64": {
@@ -20381,6 +20621,22 @@
         "runtime": {
           "lib/net7.0-ios16.1/UraniumUI.Material.dll": {
             "related": ".pdb"
+          }
+        }
+      },
+      "Xam.Plugin.Media/6.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-ios16.1/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-ios16.1/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
           }
         }
       }
@@ -20801,6 +21057,14 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
+      "System.Runtime.InteropServices.NFloat.Internal/6.0.1": {
+        "type": "package",
+        "compile": {
+          "ref/net6.0/System.Runtime.InteropServices.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "UraniumUI/2.5.3": {
         "type": "package",
         "dependencies": {
@@ -20861,6 +21125,22 @@
         "runtime": {
           "lib/net7.0-maccatalyst16.1/UraniumUI.Material.dll": {
             "related": ".pdb"
+          }
+        }
+      },
+      "Xam.Plugin.Media/6.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-maccatalyst16.1/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-maccatalyst16.1/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
           }
         }
       }
@@ -21194,6 +21474,14 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
+      "System.Runtime.InteropServices.NFloat.Internal/6.0.1": {
+        "type": "package",
+        "compile": {
+          "ref/net6.0/System.Runtime.InteropServices.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "UraniumUI/2.5.3": {
         "type": "package",
         "dependencies": {
@@ -21254,6 +21542,22 @@
         "runtime": {
           "lib/net7.0-maccatalyst16.1/UraniumUI.Material.dll": {
             "related": ".pdb"
+          }
+        }
+      },
+      "Xam.Plugin.Media/6.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-maccatalyst16.1/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-maccatalyst16.1/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
           }
         }
       }
@@ -21587,6 +21891,14 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
+      "System.Runtime.InteropServices.NFloat.Internal/6.0.1": {
+        "type": "package",
+        "compile": {
+          "ref/net6.0/System.Runtime.InteropServices.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "UraniumUI/2.5.3": {
         "type": "package",
         "dependencies": {
@@ -21647,6 +21959,22 @@
         "runtime": {
           "lib/net7.0-maccatalyst16.1/UraniumUI.Material.dll": {
             "related": ".pdb"
+          }
+        }
+      },
+      "Xam.Plugin.Media/6.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-maccatalyst16.1/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-maccatalyst16.1/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
           }
         }
       }
@@ -21980,6 +22308,14 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
+      "System.Runtime.InteropServices.NFloat.Internal/6.0.1": {
+        "type": "package",
+        "compile": {
+          "ref/net6.0/System.Runtime.InteropServices.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "UraniumUI/2.5.3": {
         "type": "package",
         "dependencies": {
@@ -22040,6 +22376,22 @@
         "runtime": {
           "lib/net7.0-maccatalyst16.1/UraniumUI.Material.dll": {
             "related": ".pdb"
+          }
+        }
+      },
+      "Xam.Plugin.Media/6.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-maccatalyst16.1/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-maccatalyst16.1/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
           }
         }
       }
@@ -22373,6 +22725,14 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
+      "System.Runtime.InteropServices.NFloat.Internal/6.0.1": {
+        "type": "package",
+        "compile": {
+          "ref/net6.0/System.Runtime.InteropServices.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "UraniumUI/2.5.3": {
         "type": "package",
         "dependencies": {
@@ -22433,6 +22793,22 @@
         "runtime": {
           "lib/net7.0-maccatalyst16.1/UraniumUI.Material.dll": {
             "related": ".pdb"
+          }
+        }
+      },
+      "Xam.Plugin.Media/6.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-maccatalyst16.1/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-maccatalyst16.1/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
           }
         }
       }
@@ -22763,6 +23139,14 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
+      "System.Runtime.InteropServices.NFloat.Internal/6.0.1": {
+        "type": "package",
+        "compile": {
+          "ref/net6.0/System.Runtime.InteropServices.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "UraniumUI/2.5.3": {
         "type": "package",
         "dependencies": {
@@ -22823,6 +23207,22 @@
         "runtime": {
           "lib/net7.0-maccatalyst16.1/UraniumUI.Material.dll": {
             "related": ".pdb"
+          }
+        }
+      },
+      "Xam.Plugin.Media/6.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-maccatalyst16.1/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-maccatalyst16.1/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
           }
         }
       }
@@ -23156,6 +23556,14 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
+      "System.Runtime.InteropServices.NFloat.Internal/6.0.1": {
+        "type": "package",
+        "compile": {
+          "ref/net6.0/System.Runtime.InteropServices.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "UraniumUI/2.5.3": {
         "type": "package",
         "dependencies": {
@@ -23216,6 +23624,22 @@
         "runtime": {
           "lib/net7.0-maccatalyst16.1/UraniumUI.Material.dll": {
             "related": ".pdb"
+          }
+        }
+      },
+      "Xam.Plugin.Media/6.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-maccatalyst16.1/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-maccatalyst16.1/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
           }
         }
       }
@@ -23549,6 +23973,14 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
+      "System.Runtime.InteropServices.NFloat.Internal/6.0.1": {
+        "type": "package",
+        "compile": {
+          "ref/net6.0/System.Runtime.InteropServices.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "UraniumUI/2.5.3": {
         "type": "package",
         "dependencies": {
@@ -23609,6 +24041,22 @@
         "runtime": {
           "lib/net7.0-maccatalyst16.1/UraniumUI.Material.dll": {
             "related": ".pdb"
+          }
+        }
+      },
+      "Xam.Plugin.Media/6.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.NFloat.Internal": "6.0.1"
+        },
+        "compile": {
+          "lib/net6.0-maccatalyst16.1/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-maccatalyst16.1/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
           }
         }
       }
@@ -24229,6 +24677,19 @@
             "related": ".pdb"
           }
         }
+      },
+      "Xam.Plugin.Media/6.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows10.0.19041/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
       }
     },
     "net7.0-windows10.0.19041/android-arm": {
@@ -24730,6 +25191,19 @@
         "runtime": {
           "lib/net7.0-windows10.0.19041/UraniumUI.Material.dll": {
             "related": ".pdb"
+          }
+        }
+      },
+      "Xam.Plugin.Media/6.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows10.0.19041/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
           }
         }
       }
@@ -25235,6 +25709,19 @@
             "related": ".pdb"
           }
         }
+      },
+      "Xam.Plugin.Media/6.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows10.0.19041/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
       }
     },
     "net7.0-windows10.0.19041/android-x64": {
@@ -25736,6 +26223,19 @@
         "runtime": {
           "lib/net7.0-windows10.0.19041/UraniumUI.Material.dll": {
             "related": ".pdb"
+          }
+        }
+      },
+      "Xam.Plugin.Media/6.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows10.0.19041/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
           }
         }
       }
@@ -26241,6 +26741,19 @@
             "related": ".pdb"
           }
         }
+      },
+      "Xam.Plugin.Media/6.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows10.0.19041/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
       }
     },
     "net7.0-windows10.0.19041/iossimulator-x64": {
@@ -26739,6 +27252,19 @@
         "runtime": {
           "lib/net7.0-windows10.0.19041/UraniumUI.Material.dll": {
             "related": ".pdb"
+          }
+        }
+      },
+      "Xam.Plugin.Media/6.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows10.0.19041/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
           }
         }
       }
@@ -27242,6 +27768,19 @@
         "runtime": {
           "lib/net7.0-windows10.0.19041/UraniumUI.Material.dll": {
             "related": ".pdb"
+          }
+        }
+      },
+      "Xam.Plugin.Media/6.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows10.0.19041/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
           }
         }
       }
@@ -27751,6 +28290,19 @@
         "runtime": {
           "lib/net7.0-windows10.0.19041/UraniumUI.Material.dll": {
             "related": ".pdb"
+          }
+        }
+      },
+      "Xam.Plugin.Media/6.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows10.0.19041/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows10.0.19041/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
           }
         }
       }
@@ -29461,6 +30013,46 @@
         "logo_128.png",
         "uraniumui.material.2.5.3.nupkg.sha512",
         "uraniumui.material.nuspec"
+      ]
+    },
+    "Xam.Plugin.Media/6.0.2": {
+      "sha512": "QLl5CXxSDF92+E154djfDKOoPSjvGkQSxYmLY0Fitnb6P4B103JQDU7lZlH0ez67GtzZDa8kWvS0Go0Yv1w9og==",
+      "type": "package",
+      "path": "xam.plugin.media/6.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid10.0/Plugin.Media.dll",
+        "lib/monoandroid10.0/Plugin.Media.pdb",
+        "lib/monoandroid10.0/Plugin.Media.xml",
+        "lib/net6.0-android31.0/Plugin.Media.dll",
+        "lib/net6.0-android31.0/Plugin.Media.pdb",
+        "lib/net6.0-android31.0/Plugin.Media.xml",
+        "lib/net6.0-ios16.1/Plugin.Media.dll",
+        "lib/net6.0-ios16.1/Plugin.Media.pdb",
+        "lib/net6.0-ios16.1/Plugin.Media.xml",
+        "lib/net6.0-maccatalyst16.1/Plugin.Media.dll",
+        "lib/net6.0-maccatalyst16.1/Plugin.Media.pdb",
+        "lib/net6.0-maccatalyst16.1/Plugin.Media.xml",
+        "lib/net6.0-windows10.0.19041/Plugin.Media.dll",
+        "lib/net6.0-windows10.0.19041/Plugin.Media.pdb",
+        "lib/net6.0-windows10.0.19041/Plugin.Media.xml",
+        "lib/netstandard2.0/Plugin.Media.dll",
+        "lib/netstandard2.0/Plugin.Media.pdb",
+        "lib/netstandard2.0/Plugin.Media.xml",
+        "lib/tizen40/Plugin.Media.dll",
+        "lib/tizen40/Plugin.Media.pdb",
+        "lib/tizen40/Plugin.Media.xml",
+        "lib/uap10.0.17763/Plugin.Media.dll",
+        "lib/uap10.0.17763/Plugin.Media.pdb",
+        "lib/uap10.0.17763/Plugin.Media.pri",
+        "lib/uap10.0.17763/Plugin.Media.xml",
+        "lib/xamarinios10/Plugin.Media.dll",
+        "lib/xamarinios10/Plugin.Media.pdb",
+        "lib/xamarinios10/Plugin.Media.xml",
+        "readme.txt",
+        "xam.plugin.media.6.0.2.nupkg.sha512",
+        "xam.plugin.media.nuspec"
       ]
     },
     "Xamarin.Android.Glide/4.13.2.2": {
@@ -31473,6 +32065,7 @@
       "UraniumUI.Dialogs.Mopups >= 2.5.3",
       "UraniumUI.Icons.FontAwesome >= 2.5.3",
       "UraniumUI.Material >= 2.5.3",
+      "Xam.Plugin.Media >= 6.0.2",
       "Xamarin.Android.Glide >= 4.13.2.2",
       "Xamarin.AndroidX.Browser >= 1.4.0.3",
       "Xamarin.AndroidX.Legacy.Support.V4 >= 1.0.0.15",
@@ -31497,6 +32090,7 @@
       "UraniumUI.Dialogs.Mopups >= 2.5.3",
       "UraniumUI.Icons.FontAwesome >= 2.5.3",
       "UraniumUI.Material >= 2.5.3",
+      "Xam.Plugin.Media >= 6.0.2",
       "sqlite-net-pcl >= 1.9.141-beta"
     ],
     "net7.0-maccatalyst16.1": [
@@ -31510,6 +32104,7 @@
       "UraniumUI.Dialogs.Mopups >= 2.5.3",
       "UraniumUI.Icons.FontAwesome >= 2.5.3",
       "UraniumUI.Material >= 2.5.3",
+      "Xam.Plugin.Media >= 6.0.2",
       "sqlite-net-pcl >= 1.9.141-beta"
     ],
     "net7.0-windows10.0.19041": [
@@ -31526,6 +32121,7 @@
       "UraniumUI.Dialogs.Mopups >= 2.5.3",
       "UraniumUI.Icons.FontAwesome >= 2.5.3",
       "UraniumUI.Material >= 2.5.3",
+      "Xam.Plugin.Media >= 6.0.2",
       "sqlite-net-pcl >= 1.9.141-beta"
     ]
   },
@@ -31634,6 +32230,10 @@
           "UraniumUI.Material": {
             "target": "Package",
             "version": "[2.5.3, )"
+          },
+          "Xam.Plugin.Media": {
+            "target": "Package",
+            "version": "[6.0.2, )"
           },
           "Xamarin.Android.Glide": {
             "target": "Package",
@@ -31773,6 +32373,10 @@
             "target": "Package",
             "version": "[2.5.3, )"
           },
+          "Xam.Plugin.Media": {
+            "target": "Package",
+            "version": "[6.0.2, )"
+          },
           "sqlite-net-pcl": {
             "target": "Package",
             "version": "[1.9.141-beta, )"
@@ -31855,6 +32459,10 @@
           "UraniumUI.Material": {
             "target": "Package",
             "version": "[2.5.3, )"
+          },
+          "Xam.Plugin.Media": {
+            "target": "Package",
+            "version": "[6.0.2, )"
           },
           "sqlite-net-pcl": {
             "target": "Package",
@@ -31955,6 +32563,10 @@
           "UraniumUI.Material": {
             "target": "Package",
             "version": "[2.5.3, )"
+          },
+          "Xam.Plugin.Media": {
+            "target": "Package",
+            "version": "[6.0.2, )"
           },
           "sqlite-net-pcl": {
             "target": "Package",

@@ -13,8 +13,9 @@
     xmlns:local="clr-namespace:HotStuff"
     Title="Add Item"
 >
-    <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">   
-    <input:FormView>
+    <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">
+
+        <input:FormView>
         <VerticalStackLayout Spacing="10" Padding="25,30" HorizontalOptions="Center" MinimumWidthRequest="400">
             <material:TextField 
                         Title="Item Name (Required)"
@@ -78,29 +79,45 @@
                     <validation:MinValueValidation MinValue="1" />
                 </material:TextField.Validations>
             </material:TextField>
-            <material:TextField 
+                <material:TextField 
+                        x:Name="AmountPaidEntry"
                         Title="Amount Paid (Optional)"
                         Text="{Binding NewItem.AmountPaid}"
                         AllowClear="True"
                         AccentColor="{StaticResource Primary}"
                         Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.DollarSign}}"
-                    />
-            <material:DatePickerField
+                >
+                    <material:TextField.Validations>
+                        <validation:NumericValidation />
+                    </material:TextField.Validations>
+                </material:TextField>
+                <material:DatePickerField
                         Title="Purchase Date (Optional)"
                         AllowClear="True"
                         AccentColor="{StaticResource Primary}"
                         Date="{Binding NewItem.PurchaseDate}"
                         Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CalendarDays}}"
-                    />
+                />
                 <material:TextField 
+                        x:Name="PurchaseProof"
                         Title="Purchase Proof (Optional)"
                         Text="{Binding NewItem.PurchaseProof}"
                         AllowClear="True"
                         AccentColor="{StaticResource Primary}"
                         Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Camera}}"
                 >
+                <!-- <Image x:Name="ItemImage" HorizontalOptions="Center" Source="dotnet_bot.png" /> -->
+
                     <material:TextField.Attachments>
-                        <Button Text="Gallery" />
+                        <!-- <Button Text="Take Photo" Clicked="OnTakePhotoClicked"/> -->
+                        <Button 
+                            Text="Select Photo"
+                            TextColor="{StaticResource Shadow}"
+                            BackgroundColor="{StaticResource OnPrimary}"
+                            Margin="5"
+                            StyleClass="FilledButton" 
+                            Clicked="OnPickPhotoClicked"
+                        />
                     </material:TextField.Attachments>
                 </material:TextField>
                 <material:TextField 
@@ -110,7 +127,6 @@
                         AccentColor="{StaticResource Primary}"
                         Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Pen}}"
                 />
-
 
                 <Button 
                         Command="{Binding AddNewItemCommand}" 

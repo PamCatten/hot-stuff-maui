@@ -1060,6 +1060,9 @@ mopups.droid.gestures.MopupGestureDetectorListener;crc645f71566477e2fdd5.MopupGe
 UraniumUI.Handlers.BoxArrayAdapter, UraniumUI;crc642ad154684404f6e1.BoxArrayAdapter
 UraniumUI.Handlers.BoxArrayAdapter;crc642ad154684404f6e1.BoxArrayAdapter
 uraniumui.handlers.BoxArrayAdapter;crc642ad154684404f6e1.BoxArrayAdapter
+Plugin.Media.MediaPickerActivity, Plugin.Media;crc646957603ea1820544.MediaPickerActivity
+Plugin.Media.MediaPickerActivity;crc646957603ea1820544.MediaPickerActivity
+plugin.media.MediaPickerActivity;crc646957603ea1820544.MediaPickerActivity
 Bumptech.Glide.Glide+IRequestOptionsFactory, Xamarin.Android.Glide;com.bumptech.glide.Glide$RequestOptionsFactory
 Bumptech.Glide.Glide.IRequestOptionsFactory;com.bumptech.glide.Glide$RequestOptionsFactory
 com.bumptech.glide.Glide$RequestOptionsFactory;com.bumptech.glide.Glide$RequestOptionsFactory

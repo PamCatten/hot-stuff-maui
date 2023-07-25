@@ -721,6 +721,9 @@
     <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\uraniumui.material\2.5.3\lib\net7.0-windows10.0.19041\UraniumUI.Material.dll">
       <PackagePath>UraniumUI.Material.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\xam.plugin.media\6.0.2\lib\net6.0-windows10.0.19041\Plugin.Media.dll">
+      <PackagePath>Plugin.Media.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\microsoft.graphics.win2d\1.0.4\runtimes\win10-x64\native\Microsoft.Graphics.Canvas.dll">
       <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
     </AppxPackagedFile>

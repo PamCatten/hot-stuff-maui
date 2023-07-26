@@ -17,7 +17,7 @@
   <uses-permission android:name="android.permission.INTERNET" />
   <permission android:name="com.companyname.HotStuff.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature" />
   <uses-permission android:name="com.companyname.HotStuff.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-  <application android:name="crc640ddbd739a3af62ab.MainApplication" android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:debuggable="true" android:extractNativeLibs="true" android:icon="@mipmap/appicon" android:label="Hot Stuff" android:roundIcon="@mipmap/appicon_round" android:supportsRtl="true">
+  <application android:name="crc640ddbd739a3af62ab.MainApplication" android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:debuggable="true" android:enableOnBackInvokedCallback="true" android:extractNativeLibs="true" android:icon="@mipmap/appicon" android:label="Hot Stuff" android:supportsRtl="true">
     <provider android:name="androidx.core.content.FileProvider" android:authorities="com.companyname.HotStuff.fileprovider" android:exported="false" android:grantUriPermissions="true">
       <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths" />
     </provider>

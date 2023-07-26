@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using SQLite;
+using System.Collections.ObjectModel;
 
 namespace HotStuff.Models;
 

@@ -1,5 +1,4 @@
 ﻿using HotStuff.Models;
-using HotStuff.Services;
 using InputKit.Shared.Controls;
 using System.Diagnostics;
 using UraniumUI.Pages;
@@ -21,14 +20,13 @@ public partial class ItemsPage : UraniumContentPage
     }
     async void OnAddItemsPageClicked(object sender, EventArgs e)
     {
-        Debug.WriteLine("User clicked add item.");
-
+        Debug.WriteLine("----User clicked add item.");
         await Shell.Current.GoToAsync(nameof(AddItemsPage));
     }
 
     async void OnProfilePageClicked(object sender, EventArgs e)
     {
-        Debug.WriteLine("User clicked ProfilePage link.");
+        Debug.WriteLine("----User clicked ProfilePage link.");
 
         await Shell.Current.GoToAsync(nameof(ProfilePage));
     }

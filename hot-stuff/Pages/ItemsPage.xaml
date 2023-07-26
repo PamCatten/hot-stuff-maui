@@ -14,8 +14,6 @@
     Title="Items"
     x:DataType="models:ItemsPageViewModel"
 >
-
-
     <uranium:UraniumContentPage.BindingContext>
         <models:ItemsPageViewModel />
     </uranium:UraniumContentPage.BindingContext>
@@ -39,14 +37,14 @@
                 <Button Text="Update" StyleClass ="FilledButton" HorizontalOptions="Start"/>
                 <Button Text="Delete" StyleClass="FilledButton" Command="{Binding RemoveSelectedItemsCommand}" HorizontalOptions="Start"/>
             </StackLayout>
-            
+
             <material:DataGrid ItemsSource="{Binding DisplayedItems}" SelectedItems="{Binding SelectedItems}" HorizontalOptions="Center" VerticalOptions="Center" x:Name="UraniumGrid">
 
                 <material:DataGrid.EmptyView >
                     <!-- TODO: Fix this Minimum width request, would really prefer not to hardcode here, preferably to the device's view model width -->
                     <Label Text="No items saved. Click the add icon to get started!" MinimumWidthRequest="380" HorizontalTextAlignment="Center"/>
                 </material:DataGrid.EmptyView>
-                               
+
                 <material:DataGrid.Columns>
                     <material:DataGridSelectionColumn/>
                     <material:DataGridColumn Binding="{Binding ItemName}" Title="Item Name" Width="Auto"/>
@@ -64,66 +62,4 @@
 
         </VerticalStackLayout>
     </ScrollView>
-    <uranium:UraniumContentPage.Attachments>
-        <attachment:BackdropView
-                Title="Add" 
-                IconImageSource="{StaticResource AddIcon}"
-                BackgroundColor="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Primary}}">
-            <input:FormView>
-                <VerticalStackLayout Spacing="10" Padding="25,30" HorizontalOptions="Center" MinimumWidthRequest="400">
-                    <material:TextField 
-                        Title="Item Name (Required)"
-                        Text="{Binding NewItem.ItemName}"
-                        AccentColor="{StaticResource OnPrimary}"
-                    >
-                        <material:TextField.Validations>
-                            <validation:RequiredValidation />
-                        </material:TextField.Validations>
-                    </material:TextField>
-                    <material:PickerField 
-                        Title="Item Category (Required)"
-                        ItemsSource="{x:Static models:Item.AvailableCategories}"
-                        SelectedItem="{Binding NewItem.Category}"
-                        AllowClear="True"
-                        AccentColor="{StaticResource OnPrimary}"
-                        Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CircleChevronDown}}"
-                    >
-                        <material:PickerField.Validations>
-                            <validation:RequiredValidation />
-                        </material:PickerField.Validations>
-                    </material:PickerField>
-                    <material:PickerField 
-                        Title="Item Room (Required)"
-                        ItemsSource="{x:Static models:Item.AvailableRooms}"
-                        SelectedItem="{Binding NewItem.Room}"
-                        AllowClear="True"
-                        AccentColor="{StaticResource OnPrimary}"
-                        Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CircleChevronDown}}"
-                    >
-                        <material:PickerField.Validations>
-                            <validation:RequiredValidation />
-                        </material:PickerField.Validations>
-                    </material:PickerField>
-                    <material:TextField 
-                        Title="Quantity (Required)"
-                        Text="{Binding NewItem.AmountPaid}"
-                        AllowClear="True"
-                        AccentColor="{StaticResource OnPrimary}"
-                    >
-                        <material:TextField.Validations>
-                            <validation:RequiredValidation/>
-                            <validation:DigitsOnlyValidation />
-                            <validation:MinValueValidation MinValue="1" />
-                        </material:TextField.Validations>
-                    </material:TextField>
-                    <Button 
-                        Command="{Binding AddNewItemCommand}" 
-                        Text="Add Item"
-                        input:FormView.IsSubmitButton="True"
-                        StyleClass="ElevatedButton"
-                    />
-                </VerticalStackLayout>
-            </input:FormView>
-        </attachment:BackdropView>
-    </uranium:UraniumContentPage.Attachments>
 </uranium:UraniumContentPage>

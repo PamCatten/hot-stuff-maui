@@ -1,8 +1,7 @@
-﻿using HotStuff.Services;
-using UraniumUI.Pages;
+﻿using UraniumUI.Pages;
 using Plugin.Media;
 using Plugin.Media.Abstractions;
-using InputKit.Shared.Validations;
+using HotStuff.Models;
 
 namespace HotStuff.Pages;
 
@@ -10,7 +9,6 @@ public partial class AddItemsPage : UraniumContentPage
 {
     public AddItemsPage()
     {
-        
         InitializeComponent();
         BindingContext = this;
     }

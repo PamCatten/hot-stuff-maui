@@ -19,9 +19,9 @@
           "Microsoft.Windows.SDK.BuildTools": "10.0.22621.755",
           "Microsoft.WindowsAppSDK": "1.2.221209.1",
           "SQLitePCLRaw.provider.dynamic_cdecl": "2.1.5",
-          "UraniumUI.Dialogs.Mopups": "2.5.3",
-          "UraniumUI.Icons.FontAwesome": "2.5.3",
-          "UraniumUI.Material": "2.5.3",
+          "UraniumUI.Dialogs.Mopups": "2.5.4",
+          "UraniumUI.Icons.FontAwesome": "2.5.4",
+          "UraniumUI.Material": "2.5.4",
           "Xam.Plugin.Media": "6.0.2",
           "sqlite-net-pcl": "1.9.141-beta",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x64": "7.0.9",
@@ -814,11 +814,11 @@
           }
         }
       },
-      "InputKit.Maui/4.3.2": {
+      "InputKit.Maui/4.3.4": {
         "runtime": {
           "lib/net7.0-windows10.0.19041/InputKit.Maui.dll": {
-            "assemblyVersion": "4.3.2.0",
-            "fileVersion": "4.3.2.0"
+            "assemblyVersion": "4.3.4.0",
+            "fileVersion": "4.3.4.0"
           }
         }
       },
@@ -1023,9 +1023,9 @@
           }
         }
       },
-      "Plainer.Maui/1.6.3": {
+      "Plainer.Maui/1.6.4": {
         "runtime": {
-          "lib/net7.0/Plainer.Maui.dll": {
+          "lib/net7.0-windows10.0.19041/Plainer.Maui.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -1095,46 +1095,46 @@
         }
       },
       "System.Memory/4.5.3": {},
-      "UraniumUI/2.5.3": {
+      "UraniumUI/2.5.4": {
         "dependencies": {
-          "InputKit.Maui": "4.3.2",
-          "Plainer.Maui": "1.6.3"
+          "InputKit.Maui": "4.3.4",
+          "Plainer.Maui": "1.6.4"
         },
         "runtime": {
           "lib/net7.0-windows10.0.19041/UraniumUI.dll": {
-            "assemblyVersion": "2.5.3.0",
-            "fileVersion": "2.5.3.0"
+            "assemblyVersion": "2.5.4.0",
+            "fileVersion": "2.5.4.0"
           }
         }
       },
-      "UraniumUI.Dialogs.Mopups/2.5.3": {
+      "UraniumUI.Dialogs.Mopups/2.5.4": {
         "dependencies": {
           "Mopups": "1.1.0",
-          "UraniumUI": "2.5.3"
+          "UraniumUI": "2.5.4"
         },
         "runtime": {
           "lib/net7.0-windows10.0.19041/UraniumUI.Dialogs.Mopups.dll": {
-            "assemblyVersion": "2.5.3.0",
-            "fileVersion": "2.5.3.0"
+            "assemblyVersion": "2.5.4.0",
+            "fileVersion": "2.5.4.0"
           }
         }
       },
-      "UraniumUI.Icons.FontAwesome/2.5.3": {
+      "UraniumUI.Icons.FontAwesome/2.5.4": {
         "runtime": {
           "lib/net7.0-windows10.0.19041/UraniumUI.Icons.FontAwesome.dll": {
-            "assemblyVersion": "2.5.3.0",
-            "fileVersion": "2.5.3.0"
+            "assemblyVersion": "2.5.4.0",
+            "fileVersion": "2.5.4.0"
           }
         }
       },
-      "UraniumUI.Material/2.5.3": {
+      "UraniumUI.Material/2.5.4": {
         "dependencies": {
-          "UraniumUI": "2.5.3"
+          "UraniumUI": "2.5.4"
         },
         "runtime": {
           "lib/net7.0-windows10.0.19041/UraniumUI.Material.dll": {
-            "assemblyVersion": "2.5.3.0",
-            "fileVersion": "2.5.3.0"
+            "assemblyVersion": "2.5.4.0",
+            "fileVersion": "2.5.4.0"
           }
         }
       },
@@ -1193,12 +1193,12 @@
       "path": "communitytoolkit.mvvm/8.2.1",
       "hashPath": "communitytoolkit.mvvm.8.2.1.nupkg.sha512"
     },
-    "InputKit.Maui/4.3.2": {
+    "InputKit.Maui/4.3.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-jQZzA8ki0gRX8yPWow+sgs9dhtW3+/pdwYsjUw/SrTFL2mtiM8wzewNY4wmtL5eL87L8PDP3l+X8iQK85gwI6g==",
-      "path": "inputkit.maui/4.3.2",
-      "hashPath": "inputkit.maui.4.3.2.nupkg.sha512"
+      "sha512": "sha512-ZEjYHWr9P6RUX1ZOydUeVTFTC1PpibsYun2MdoGRzMi2v62Xexu1WSsVcnmqO16gHcMl5q9H457bPhCRqgAOEQ==",
+      "path": "inputkit.maui/4.3.4",
+      "hashPath": "inputkit.maui.4.3.4.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/7.0.0": {
       "type": "package",
@@ -1298,12 +1298,12 @@
       "path": "mopups/1.1.0",
       "hashPath": "mopups.1.1.0.nupkg.sha512"
     },
-    "Plainer.Maui/1.6.3": {
+    "Plainer.Maui/1.6.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-EqkDHAyLU88DGi28yh4wDZaRXd2aA4c9DSSQjb7zwb5e9HapNkL7L4vzIj88iaeGE71VfZPeEFKm2C62d3FL3A==",
-      "path": "plainer.maui/1.6.3",
-      "hashPath": "plainer.maui.1.6.3.nupkg.sha512"
+      "sha512": "sha512-KnhR6iMFGqD1aI3o4LXpXQ1B0YnjR+sMf2Ce2bASdXIlV7PbSpOI43enEVvTE4MyFB7v+r0dQvfhqd/cyF5Ucw==",
+      "path": "plainer.maui/1.6.4",
+      "hashPath": "plainer.maui.1.6.4.nupkg.sha512"
     },
     "sqlite-net-pcl/1.9.141-beta": {
       "type": "package",
@@ -1354,33 +1354,33 @@
       "path": "system.memory/4.5.3",
       "hashPath": "system.memory.4.5.3.nupkg.sha512"
     },
-    "UraniumUI/2.5.3": {
+    "UraniumUI/2.5.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-f5snE8FWS+TN8cHiPq0YPq/bnTM0JETVp3B7l6jArZYs6NbVZTIogpnHvE/TnuIpVm8UciqbqUCYZkxlWlEiLA==",
-      "path": "uraniumui/2.5.3",
-      "hashPath": "uraniumui.2.5.3.nupkg.sha512"
+      "sha512": "sha512-nJybMDpapKsINjMqIih2pyzPtDvmHvttzeACkmCnBrVOS9kAldpimoSMsOVyN4wNexlw7rgjAfLCbQXTyulHRw==",
+      "path": "uraniumui/2.5.4",
+      "hashPath": "uraniumui.2.5.4.nupkg.sha512"
     },
-    "UraniumUI.Dialogs.Mopups/2.5.3": {
+    "UraniumUI.Dialogs.Mopups/2.5.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-GIo2ZgvKzVs77FkYffDOETXBohLcSm2lvcpP+M68ElagaN/kQANf9dT5mqLc5q7n/x72+gbYCGfbu7qwMA3i2g==",
-      "path": "uraniumui.dialogs.mopups/2.5.3",
-      "hashPath": "uraniumui.dialogs.mopups.2.5.3.nupkg.sha512"
+      "sha512": "sha512-jwLd0bGSMclloM/dg/OjHEpUJY6AweJCymyQknp258UDRol/g5Xm4gxDaVp33BO0w7R2ga7rw8hIGH0zmQZScQ==",
+      "path": "uraniumui.dialogs.mopups/2.5.4",
+      "hashPath": "uraniumui.dialogs.mopups.2.5.4.nupkg.sha512"
     },
-    "UraniumUI.Icons.FontAwesome/2.5.3": {
+    "UraniumUI.Icons.FontAwesome/2.5.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-3Xw7sVezjLTe7RsAHeLaM5Z54FkYAU/NOWKmq+DqCWeiLaUVW2YnPv64VJ0v0xzT8/9hidWELoZC62piLyR2wA==",
-      "path": "uraniumui.icons.fontawesome/2.5.3",
-      "hashPath": "uraniumui.icons.fontawesome.2.5.3.nupkg.sha512"
+      "sha512": "sha512-IZlATHJDkT8ipIWFTMi5RMXTqjH/WTcbLJZ6zKNekiG1O9S82DcYt3poLbJ2tDrCovaZRDmMlyH39m6gplDsBQ==",
+      "path": "uraniumui.icons.fontawesome/2.5.4",
+      "hashPath": "uraniumui.icons.fontawesome.2.5.4.nupkg.sha512"
     },
-    "UraniumUI.Material/2.5.3": {
+    "UraniumUI.Material/2.5.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-llJ26xcW0KVa9JgNQM17V6o1PafoRXNFE/r/3DuZQhHgU+ZtQPMN3LCzEjt0raioRkmbjMyYFCuJ7XtDZyLNZA==",
-      "path": "uraniumui.material/2.5.3",
-      "hashPath": "uraniumui.material.2.5.3.nupkg.sha512"
+      "sha512": "sha512-dq0NBfCtOcqiNiQ7F2YIzj0xKcff298eMUmMfOCZ27c9fJghQEhZHq2ov3rLqCOi2oyrNN7B+//VJFvkn2AYrw==",
+      "path": "uraniumui.material/2.5.4",
+      "hashPath": "uraniumui.material.2.5.4.nupkg.sha512"
     },
     "Xam.Plugin.Media/6.0.2": {
       "type": "package",

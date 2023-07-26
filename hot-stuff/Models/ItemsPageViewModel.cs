@@ -17,31 +17,11 @@ public partial class ItemsPageViewModel : UraniumBindableObject
     public List<Item> Items { get; set; } = new List<Item>();
     public ObservableCollection<Item> DisplayedItems { get; set; } = new ObservableCollection<Item>();
     public List<Item> SelectedItems { get; set; } = new List<Item>();
-
-    private Item newItem = new();
-    public Item NewItem { get => newItem; set { newItem = value; OnPropertyChanged(); } }
-    public ICommand AddNewItemCommand { get; protected set; }
     public ICommand GetItemsCommand { get; protected set; }
     public ICommand RemoveSelectedItemsCommand { get; protected set; }
 
     public ItemsPageViewModel()
     {
-
-        async void AddItemFromDB()
-        {
-            Debug.WriteLine("Add items called.");
-            await App.ItemServ.AddItem(NewItem);
-        }
-
-        AddNewItemCommand = new Command(() =>
-        {
-            Debug.WriteLine("User clicked add item.");
-            AddItemFromDB();
-            DisplayedItems.Insert(0, NewItem);
-            NewItem = new();
-            
-        });
-
          async void DeleteItemsFromDB(List<Item> Items)
         {
             Debug.WriteLine("Delete items called.");
@@ -59,7 +39,6 @@ public partial class ItemsPageViewModel : UraniumBindableObject
             Debug.WriteLine("User clicked delete items.");
             DeleteItemsFromDB(SelectedItems);
         });
-
     }
 }
 

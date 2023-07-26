@@ -31,6 +31,7 @@ com.google.android.material.tabs.TabLayout;C:\Users\campa\hot-stuff\hot-stuff\ob
 declare-styleable;C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\lp\160\jl\res\values\attrs.xml
 declare-styleable;C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\lp\162\jl\res\values\attr.xml
 external-cache-path;C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\lp\163\jl\res\xml\microsoft_maui_essentials_fileprovider_file_paths.xml
+external-files-path;obj\Debug\net7.0-android\res\xml\file_paths.xml
 external-path;C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\lp\163\jl\res\xml\microsoft_maui_essentials_fileprovider_file_paths.xml
 foreground;obj\Debug\net7.0-android\resizetizer\r\mipmap-anydpi-v26\appicon.xml
 foreground;obj\Debug\net7.0-android\resizetizer\r\mipmap-anydpi-v26\appicon_round.xml
@@ -45,6 +46,7 @@ layer-list;obj\Debug\net7.0-android\resizetizer\sp\drawable\maui_splash_image.xm
 layer-list;obj\Debug\net7.0-android\resizetizer\sp\drawable-v31\maui_splash_image.xml
 microsoft.maui.controls.platform.compatibility.ShellFlyoutLayout;C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\lp\159\jl\res\layout\flyoutcontent.xml
 paths;C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\lp\163\jl\res\xml\microsoft_maui_essentials_fileprovider_file_paths.xml
+paths;obj\Debug\net7.0-android\res\xml\file_paths.xml
 resources;C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\lp\159\jl\res\values\strings.xml
 resources;C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\lp\160\jl\res\values\attrs.xml
 resources;C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\lp\160\jl\res\values\styles.xml

@@ -15,7 +15,7 @@
   <uses-feature android:name="android.hardware.camera.autofocus" android:required="true" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <uses-permission android:name="android.permission.INTERNET" />
-  <application android:allowBackup="true" android:icon="@mipmap/appicon" android:roundIcon="@mipmap/appicon_round" android:supportsRtl="true" android:name="crc640ddbd739a3af62ab.MainApplication" android:label="Hot Stuff" android:debuggable="true" android:extractNativeLibs="true">
+  <application android:allowBackup="true" android:icon="@mipmap/appicon" android:supportsRtl="true" android:label="Hot Stuff" android:enableOnBackInvokedCallback="true" android:name="crc640ddbd739a3af62ab.MainApplication" android:debuggable="true" android:extractNativeLibs="true">
     <provider android:name="androidx.core.content.FileProvider" android:authorities="com.companyname.HotStuff.fileprovider" android:exported="false" android:grantUriPermissions="true">
       <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"></meta-data>
     </provider>

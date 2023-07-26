@@ -1,17 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
-	<application 
-		android:allowBackup="true" 
-		android:icon="@mipmap/appicon" 
-		android:roundIcon="@mipmap/appicon_round" 
-		android:supportsRtl="true"
-	>
-		<provider android:name="androidx.core.content.FileProvider"
-          android:authorities="${applicationId}.fileprovider"
-          android:exported="false"
-          android:grantUriPermissions="true">
-
-			<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"> </meta-data>
+	<application android:allowBackup="true" android:icon="@mipmap/appicon" android:supportsRtl="true" android:label="Hot Stuff" android:enableOnBackInvokedCallback="true">
+		<provider android:name="androidx.core.content.FileProvider" android:authorities="${applicationId}.fileprovider" android:exported="false" android:grantUriPermissions="true">
+			<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"></meta-data>
 		</provider>
 	</application>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />

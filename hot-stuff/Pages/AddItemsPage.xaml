@@ -13,13 +13,18 @@
     xmlns:local="clr-namespace:HotStuff"
     Title="Add Item"
 >
+
+    <uranium:UraniumContentPage.BindingContext>
+        <models:AddItemsPageViewModel />
+    </uranium:UraniumContentPage.BindingContext>
+
     <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">
 
         <input:FormView>
         <VerticalStackLayout Spacing="10" Padding="25,30" HorizontalOptions="Center" MinimumWidthRequest="400">
             <material:TextField 
                         Title="Item Name (Required)"
-                        Text="{Binding NewItem.ItemName}"
+                        Text="{Binding Source={RelativeSource AncestorType={x:Type models:Item}}, Path=ItemName}"
                         AccentColor="{StaticResource Primary}"
                         Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Pen}}"
                     >
@@ -30,7 +35,7 @@
             <material:PickerField 
                         Title="Item Category (Required)"
                         ItemsSource="{x:Static models:Item.AvailableCategories}"
-                        SelectedItem="{Binding NewItem.Category}"
+                        SelectedItem="{Binding Source={RelativeSource AncestorType={x:Type models:Item}}, Path=Category}"
                         AllowClear="True"
                         AccentColor="{StaticResource Primary}"
                         Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CircleChevronDown}}"
@@ -42,7 +47,7 @@
             <material:PickerField 
                         Title="Item Room (Required)"
                         ItemsSource="{x:Static models:Item.AvailableRooms}"
-                        SelectedItem="{Binding NewItem.Room}"
+                        SelectedItem="{Binding Source={RelativeSource AncestorType={x:Type models:Item}}, Path=Room}"
                         AllowClear="True"
                         AccentColor="{StaticResource Primary}"
                         Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CircleChevronDown}}"
@@ -53,7 +58,7 @@
             </material:PickerField>
             <material:TextField 
                         Title="Brand / Manufacturer Name (Optional)"
-                        Text="{Binding NewItem.BrandManufacturer}"
+                        Text="{Binding Source={RelativeSource AncestorType={x:Type models:Item}}, Path=BrandManufacturer}"
                         AllowClear="True"
                         AccentColor="{StaticResource Primary}"
                         Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Pen}}"
@@ -61,14 +66,14 @@
             <material:PickerField 
                         Title="Item Color (Optional)"
                         ItemsSource="{x:Static models:Item.AvailableColors}"
-                        SelectedItem="{Binding NewItem.Color}"
+                        SelectedItem="{Binding Source={RelativeSource AncestorType={x:Type models:Item}}, Path=Color}"
                         AllowClear="True"
                         AccentColor="{StaticResource Primary}"
                         Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CircleChevronDown}}"
                     />
             <material:TextField 
                         Title="Quantity (Required)"
-                        Text="{Binding NewItem.Quantity}"
+                        Text="{Binding Source={RelativeSource AncestorType={x:Type models:Item}}, Path=Quantity}"
                         AllowClear="True"
                         AccentColor="{StaticResource Primary}"
                         Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Hashtag}}"
@@ -82,7 +87,7 @@
                 <material:TextField 
                         x:Name="AmountPaidEntry"
                         Title="Amount Paid (Optional)"
-                        Text="{Binding NewItem.AmountPaid}"
+                        Text="{Binding Source={RelativeSource AncestorType={x:Type models:Item}}, Path=AmountPaid}"
                         AllowClear="True"
                         AccentColor="{StaticResource Primary}"
                         Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.DollarSign}}"
@@ -95,13 +100,13 @@
                         Title="Purchase Date (Optional)"
                         AllowClear="True"
                         AccentColor="{StaticResource Primary}"
-                        Date="{Binding NewItem.PurchaseDate}"
+                        Date="{Binding Source={RelativeSource AncestorType={x:Type models:Item}}, Path=PurchaseDate}"
                         Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CalendarDays}}"
                 />
                 <material:TextField 
                         x:Name="PurchaseProof"
                         Title="Purchase Proof (Optional)"
-                        Text="{Binding NewItem.PurchaseProof}"
+                        Text="{Binding Source={RelativeSource AncestorType={x:Type models:Item}}, Path=PurchaseProof}"
                         AllowClear="True"
                         AccentColor="{StaticResource Primary}"
                         Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Camera}}"
@@ -122,19 +127,19 @@
                 </material:TextField>
                 <material:TextField 
                         Title="Item Description (Optional)"
-                        Text="{Binding NewItem.ItemDescription}"
+                        Text="{Binding Source={RelativeSource AncestorType={x:Type models:Item}}, Path=ItemDescription}"
                         AllowClear="True"
                         AccentColor="{StaticResource Primary}"
                         Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Pen}}"
                 />
 
                 <Button 
-                        Command="{Binding AddNewItemCommand}" 
+                        Command="{Binding AddItemCommand, Source={x:Reference AddItemsPage.BindingContext}}" 
                         Text="Add Item"
                         input:FormView.IsSubmitButton="True"
                         StyleClass="FilledButton"
                     />
-        </VerticalStackLayout>
+            </VerticalStackLayout>
     </input:FormView>
     </ScrollView>
 

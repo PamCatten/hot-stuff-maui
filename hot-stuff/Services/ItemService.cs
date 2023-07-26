@@ -30,15 +30,16 @@ namespace HotStuff.Services
         {
             try
             {
+                Debug.WriteLine("----Awaiting Init");
                 await Init();
 
                 await Database.InsertAsync(item);
 
-                Debug.WriteLine($"Record saved. Added: {item.ItemID}, {item.ItemName}");
+                Debug.WriteLine($"----Record saved. Added: {item.ItemID}, {item.ItemName}");
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"Failed to add {item.ItemID}, {item.ItemName}. Error: {ex.Message}");
+                Debug.WriteLine($"----Failed to add {item.ItemID}, {item.ItemName}. Error: {ex.Message}");
             }
         }
 

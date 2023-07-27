@@ -26,16 +26,16 @@ public partial class Item : ObservableObject
     string purchaseProof;
 
     [ObservableProperty]
-    decimal amountPaid;
+    decimal? amountPaid;
 
     [ObservableProperty]
     int quantity;
 
-    public ItemCategory Category { get; set; }
+    public ItemCategory? Category { get; set; }
 
-    public ItemRoom Room { get; set; }
+    public ItemRoom? Room { get; set; }
 
-    public ItemColor Color { get; set; }
+    public ItemColor? Color { get; set; }
 
     public static ItemCategory[] AvailableCategories => Enum.GetValues(typeof(ItemCategory)) as ItemCategory[];
     public static ItemRoom[] AvailableRooms => Enum.GetValues(typeof(ItemRoom)) as ItemRoom[];

@@ -19,12 +19,10 @@
     </uranium:UraniumContentPage.BindingContext>
 
     <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">
-
-        <input:FormView>
         <VerticalStackLayout Spacing="10" Padding="25,30" HorizontalOptions="Center" MinimumWidthRequest="400">
             <material:TextField 
                         Title="Item Name (Required)"
-                        Text="{Binding Source={RelativeSource AncestorType={x:Type models:Item}}, Path=ItemName}"
+                        Text="{Binding NewItem.ItemName}"
                         AccentColor="{StaticResource Primary}"
                         Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Pen}}"
                     >
@@ -35,7 +33,7 @@
             <material:PickerField 
                         Title="Item Category (Required)"
                         ItemsSource="{x:Static models:Item.AvailableCategories}"
-                        SelectedItem="{Binding Source={RelativeSource AncestorType={x:Type models:Item}}, Path=Category}"
+                        SelectedItem="{Binding NewItem.Category}"
                         AllowClear="True"
                         AccentColor="{StaticResource Primary}"
                         Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CircleChevronDown}}"
@@ -47,7 +45,7 @@
             <material:PickerField 
                         Title="Item Room (Required)"
                         ItemsSource="{x:Static models:Item.AvailableRooms}"
-                        SelectedItem="{Binding Source={RelativeSource AncestorType={x:Type models:Item}}, Path=Room}"
+                        SelectedItem="{Binding NewItem.Room}"
                         AllowClear="True"
                         AccentColor="{StaticResource Primary}"
                         Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CircleChevronDown}}"
@@ -58,7 +56,7 @@
             </material:PickerField>
             <material:TextField 
                         Title="Brand / Manufacturer Name (Optional)"
-                        Text="{Binding Source={RelativeSource AncestorType={x:Type models:Item}}, Path=BrandManufacturer}"
+                        Text="{Binding NewItem.BrandManufacturer}"
                         AllowClear="True"
                         AccentColor="{StaticResource Primary}"
                         Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Pen}}"
@@ -66,14 +64,14 @@
             <material:PickerField 
                         Title="Item Color (Optional)"
                         ItemsSource="{x:Static models:Item.AvailableColors}"
-                        SelectedItem="{Binding Source={RelativeSource AncestorType={x:Type models:Item}}, Path=Color}"
+                        SelectedItem="{Binding NewItem.Color}"
                         AllowClear="True"
                         AccentColor="{StaticResource Primary}"
                         Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CircleChevronDown}}"
                     />
             <material:TextField 
                         Title="Quantity (Required)"
-                        Text="{Binding Source={RelativeSource AncestorType={x:Type models:Item}}, Path=Quantity}"
+                        Text="{Binding NewItem.Quantity}"
                         AllowClear="True"
                         AccentColor="{StaticResource Primary}"
                         Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Hashtag}}"
@@ -84,38 +82,36 @@
                     <validation:MinValueValidation MinValue="1" />
                 </material:TextField.Validations>
             </material:TextField>
-                <material:TextField 
+            <material:TextField 
                         x:Name="AmountPaidEntry"
                         Title="Amount Paid (Optional)"
-                        Text="{Binding Source={RelativeSource AncestorType={x:Type models:Item}}, Path=AmountPaid}"
+                        Text="{Binding NewItem.AmountPaid}"
                         AllowClear="True"
                         AccentColor="{StaticResource Primary}"
                         Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.DollarSign}}"
                 >
-                    <material:TextField.Validations>
-                        <validation:NumericValidation />
-                    </material:TextField.Validations>
-                </material:TextField>
-                <material:DatePickerField
+                <material:TextField.Validations>
+                    <validation:NumericValidation />
+                </material:TextField.Validations>
+            </material:TextField>
+            <material:DatePickerField
                         Title="Purchase Date (Optional)"
                         AllowClear="True"
                         AccentColor="{StaticResource Primary}"
-                        Date="{Binding Source={RelativeSource AncestorType={x:Type models:Item}}, Path=PurchaseDate}"
+                        Date="{Binding NewItem.PurchaseDate}"
                         Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CalendarDays}}"
                 />
-                <material:TextField 
+            <material:TextField 
                         x:Name="PurchaseProof"
                         Title="Purchase Proof (Optional)"
-                        Text="{Binding Source={RelativeSource AncestorType={x:Type models:Item}}, Path=PurchaseProof}"
+                        Text="{Binding NewItem.PurchaseProof}"
                         AllowClear="True"
                         AccentColor="{StaticResource Primary}"
                         Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Camera}}"
                 >
-                <!-- <Image x:Name="ItemImage" HorizontalOptions="Center" Source="dotnet_bot.png" /> -->
-
-                    <material:TextField.Attachments>
-                        <!-- <Button Text="Take Photo" Clicked="OnTakePhotoClicked"/> -->
-                        <Button 
+                <material:TextField.Attachments>
+                    <!-- <Button Text="Take Photo" Clicked="OnTakePhotoClicked"/> -->
+                    <Button 
                             Text="Select Photo"
                             TextColor="{StaticResource Shadow}"
                             BackgroundColor="{StaticResource OnPrimary}"
@@ -123,24 +119,22 @@
                             StyleClass="FilledButton" 
                             Clicked="OnPickPhotoClicked"
                         />
-                    </material:TextField.Attachments>
-                </material:TextField>
-                <material:TextField 
+                </material:TextField.Attachments>
+            </material:TextField>
+            <material:TextField 
                         Title="Item Description (Optional)"
-                        Text="{Binding Source={RelativeSource AncestorType={x:Type models:Item}}, Path=ItemDescription}"
+                        Text="{Binding NewItem.ItemDescription}"
                         AllowClear="True"
                         AccentColor="{StaticResource Primary}"
                         Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Pen}}"
                 />
 
-                <Button 
-                        Command="{Binding AddItemCommand, Source={x:Reference AddItemsPage.BindingContext}}" 
-                        Text="Add Item"
-                        input:FormView.IsSubmitButton="True"
-                        StyleClass="FilledButton"
-                    />
-            </VerticalStackLayout>
-    </input:FormView>
+            <Button 
+                    Command="{Binding AddItemCommand}" 
+                    Text="Add Item"
+                    StyleClass="FilledButton"
+                />
+        </VerticalStackLayout>
     </ScrollView>
 
     <uranium:UraniumContentPage.Attachments>

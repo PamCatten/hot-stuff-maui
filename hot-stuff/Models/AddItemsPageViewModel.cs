@@ -16,7 +16,16 @@ namespace HotStuff.Models
             async void CreateItem(Item NewItem)
             {
                 Debug.WriteLine("----User called CreateItem.");
-                Debug.WriteLine($"----NewItem: ID {NewItem.ItemID}, Name {NewItem.ItemName}, Category {NewItem.Category}");
+                Debug.WriteLine($"----NewItem: ID {NewItem.ItemID}, " +
+                    $"Name {NewItem.ItemName}, " +
+                    $"Category {NewItem.Category}, " +
+                    $"Room: {NewItem.Room}, " +
+                    $"Quantity: {NewItem.Quantity}, " +
+                    $"AmountPaid: {NewItem.AmountPaid}" +
+                    $"Color: {NewItem.Color}" +
+                    $"Brand: {NewItem.BrandManufacturer}" +
+                    $"Date: {NewItem.PurchaseDate}" +
+                    $"Description: {NewItem.ItemDescription}");
                 await App.ItemServ.AddItem(NewItem);
                 await Shell.Current.GoToAsync("..");
             }

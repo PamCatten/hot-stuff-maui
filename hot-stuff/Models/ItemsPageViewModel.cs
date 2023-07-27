@@ -1,22 +1,18 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-using HotStuff.Services;
+﻿using HotStuff.Services;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics;
-using System.Security.Cryptography.X509Certificates;
 using System.Windows.Input;
 using UraniumUI;
 
 namespace HotStuff.Models;
 
+[QueryProperty(nameof(Item), "Item")]
 public partial class ItemsPageViewModel : UraniumBindableObject
 {
     // public ObservableCollection<Item> Items { get; set; } = new ObservableCollection<Item>();
     public List<Item> Items { get; set; } = new List<Item>();
-    public ObservableCollection<Item> DisplayedItems { get; } = new();
+    public ObservableCollection<Item> DisplayedItems { get; } = new ObservableCollection<Item>();
     public List<Item> SelectedItems { get; set; } = new List<Item>();
 
     ItemService itemService;
@@ -26,12 +22,19 @@ public partial class ItemsPageViewModel : UraniumBindableObject
 
     public ItemsPageViewModel(ItemService itemService)
     {
+
         this.itemService = itemService;
 
         RemoveSelectedItemsCommand = new Command(async () =>
         {
             Debug.WriteLine("User clicked delete items.");
-            DeleteItemsFromDB(SelectedItems);
+            DeleteAsync(SelectedItems);
+        });
+
+        GetItemsCommand = new Command(async () =>
+        {
+            Debug.WriteLine("User clicked get items.");
+            await GetItemsAsync();
         });
 
         async Task GetItemsAsync() 
@@ -40,11 +43,32 @@ public partial class ItemsPageViewModel : UraniumBindableObject
             {
                 var displayedItems = await itemService.GetItems();
 
+                Debug.WriteLine($"Items stored in DisplayedItems: {DisplayedItems.Count}");
                 if (DisplayedItems.Count != 0)
                     DisplayedItems.Clear();
-
-                foreach (var item in displayedItems)
-                    DisplayedItems.Add(item);
+                Debug.WriteLine($"Items saved in database: {displayedItems.Count}");
+                try
+                {
+                    if (DisplayedItems is not null)
+                    {
+                        foreach (Item item in displayedItems)
+                        {
+                            Debug.WriteLine($"ID: {item.ItemID}, Name: {item.ItemName}");
+                            DisplayedItems.Add(item);
+                            Debug.WriteLine($"Added {item.ItemID}, {item.ItemName} to DisplayedItems");
+                        }
+                        Debug.WriteLine("Completed loop.");
+                    }
+                    else
+                    {
+                        Debug.WriteLine($"DisplayedItems is null.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine($"Issue with DisplayedItems");
+                    await Application.Current.MainPage.DisplayAlert("Error", ex.Message, "OK");
+                }
             }
             catch (Exception ex)
             {
@@ -54,8 +78,7 @@ public partial class ItemsPageViewModel : UraniumBindableObject
 
         }
 
-    }
-         async void DeleteItemsFromDB(List<Item> Items)
+        async void DeleteAsync(List<Item> Items)
         {
             Debug.WriteLine("Delete items called.");
 
@@ -66,6 +89,13 @@ public partial class ItemsPageViewModel : UraniumBindableObject
 
             await App.ItemServ.DeleteItems(Items);
         }
+
+        async void DeleteAllAsync()
+        {
+            await App.ItemServ.FlushItems();
+        }
+
+    }
 }
 
 

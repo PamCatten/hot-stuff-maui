@@ -74,5 +74,13 @@ namespace HotStuff.Services
         {
             throw new NotImplementedException();
         }
+
+        public async Task FlushItems()
+        {
+            await Init();
+            Debug.WriteLine("Emergency flush started.");
+            await Database.DeleteAllAsync<Item>();
+            Debug.WriteLine("Emergency flush finished.");
+        }
     }
 }

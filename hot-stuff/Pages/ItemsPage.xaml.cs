@@ -15,18 +15,19 @@ public partial class ItemsPage : UraniumContentPage
     }
     protected async override void OnAppearing()
     {
-        UraniumGrid.ItemsSource = await App.ItemServ.GetItems();
+        /* IN CASE OF EMERGENCY */ // await App.ItemServ.FlushItems();
+        // UraniumGrid.ItemsSource = await App.ItemServ.GetItems();
         base.OnAppearing();
     }
     async void OnAddItemsPageClicked(object sender, EventArgs e)
     {
-        Debug.WriteLine("----User clicked add item.");
+        Debug.WriteLine("----User clicked add icon");
         await Shell.Current.GoToAsync(nameof(AddItemsPage));
     }
 
     async void OnProfilePageClicked(object sender, EventArgs e)
     {
-        Debug.WriteLine("----User clicked ProfilePage link.");
+        Debug.WriteLine("----User clicked profile Page.");
 
         await Shell.Current.GoToAsync(nameof(ProfilePage));
     }

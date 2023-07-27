@@ -29,6 +29,8 @@ public static class MauiProgram
         builder.Services.AddSingleton<MainPage>();
         builder.Services.AddTransient<ItemsPage>();
         builder.Services.AddTransient<ItemsPageViewModel>();
+        builder.Services.AddTransient<AddItemsPage>();
+        builder.Services.AddTransient<AddItemsPageViewModel>();
 
         string DatabasePath = Path.Combine(FileSystem.AppDataDirectory, "ItemData.db3");
         builder.Services.AddSingleton(s => ActivatorUtilities.CreateInstance<ItemService>(s, DatabasePath));

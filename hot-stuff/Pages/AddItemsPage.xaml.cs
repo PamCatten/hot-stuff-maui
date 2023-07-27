@@ -2,15 +2,16 @@
 using Plugin.Media;
 using Plugin.Media.Abstractions;
 using HotStuff.Models;
+using HotStuff.Services;
 
 namespace HotStuff.Pages;
 
 public partial class AddItemsPage : UraniumContentPage
 {
-    public AddItemsPage()
+    public AddItemsPage(AddItemsPageViewModel addItemsPageViewModel)
     {
         InitializeComponent();
-        BindingContext = this;
+        BindingContext = addItemsPageViewModel;
     }
 
     private async void OnPickPhotoClicked(object sender, EventArgs e)

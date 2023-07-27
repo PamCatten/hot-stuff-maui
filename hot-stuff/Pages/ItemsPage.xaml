@@ -11,12 +11,9 @@
     xmlns:local="clr-namespace:HotStuff"
     xmlns:models="clr-namespace:HotStuff.Models"
     xmlns:validation="clr-namespace:InputKit.Shared.Validations;assembly=InputKit.Maui"
-    Title="Items"
     x:DataType="models:ItemsPageViewModel"
+    Title="Items"
 >
-    <uranium:UraniumContentPage.BindingContext>
-        <models:ItemsPageViewModel />
-    </uranium:UraniumContentPage.BindingContext>
 
     <uranium:UraniumContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="{StaticResource AddIcon}" Clicked="OnAddItemsPageClicked" />
@@ -31,20 +28,22 @@
     </uranium:UraniumContentPage.Resources>
 
     <ScrollView Orientation="Both" HorizontalScrollBarVisibility="Always" VerticalScrollBarVisibility="Always">
-
         <VerticalStackLayout>
             <StackLayout Padding="10" Orientation="Horizontal" Spacing="10">
                 <Button Text="Update" StyleClass ="FilledButton" HorizontalOptions="Start"/>
                 <Button Text="Delete" StyleClass="FilledButton" Command="{Binding RemoveSelectedItemsCommand}" HorizontalOptions="Start"/>
             </StackLayout>
-
             <material:DataGrid ItemsSource="{Binding DisplayedItems}" SelectedItems="{Binding SelectedItems}" HorizontalOptions="Center" VerticalOptions="Center" x:Name="UraniumGrid">
-
+                
+                <material:DataGrid.CellItemTemplate>
+                    <DataTemplate x:DataType="models:Item" />
+                </material:DataGrid.CellItemTemplate>
+                
                 <material:DataGrid.EmptyView >
                     <!-- TODO: Fix this Minimum width request, would really prefer not to hardcode here, preferably to the device's view model width -->
                     <Label Text="No items saved. Click the add icon to get started!" MinimumWidthRequest="380" HorizontalTextAlignment="Center"/>
                 </material:DataGrid.EmptyView>
-
+                
                 <material:DataGrid.Columns>
                     <material:DataGridSelectionColumn/>
                     <material:DataGridColumn Binding="{Binding ItemName}" Title="Item Name" Width="Auto"/>
@@ -58,6 +57,7 @@
                     <material:DataGridColumn Binding="{Binding PurchaseProof}" Title="Purchase Proof" Width="Auto"/>
                     <material:DataGridColumn Binding="{Binding ItemDescription}" Title="Item Description" Width="*"/>
                 </material:DataGrid.Columns>
+
             </material:DataGrid>
 
         </VerticalStackLayout>

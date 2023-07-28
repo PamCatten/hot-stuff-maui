@@ -34,7 +34,7 @@
                 <Button Text="Delete" StyleClass="FilledButton" Command="{Binding RemoveSelectedItemsCommand}" HorizontalOptions="Start"/>
                 <Button Text="Get" StyleClass="FilledButton" Command="{Binding GetItemsCommand}" HorizontalOptions="Start"/>
             </StackLayout>
-            <material:DataGrid ItemsSource="{Binding DisplayedItems}" SelectedItems="{Binding SelectedItems}" HorizontalOptions="Center" VerticalOptions="Center" x:Name="UraniumGrid">
+            <material:DataGrid ItemsSource="{Binding Items}" SelectedItems="{Binding SelectedItems}" HorizontalOptions="Center" VerticalOptions="Center" x:Name="UraniumGrid">
 
                 <material:DataGrid.CellItemTemplate>
                     <DataTemplate x:DataType="models:Item" />
@@ -42,7 +42,12 @@
 
                 <material:DataGrid.EmptyView >
                     <!-- TODO: Fix this Minimum width request, would really prefer not to hardcode here, preferably to the device's view model width -->
-                    <Label Text="No items saved. Click the add icon to get started!" MinimumWidthRequest="380" HorizontalTextAlignment="Center"/>
+                    <StackLayout Padding="40">
+                        <Label Text="No items saved. Click the add icon to get started!" 
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                        />
+                    </StackLayout>
                 </material:DataGrid.EmptyView>
 
                 <material:DataGrid.Columns>

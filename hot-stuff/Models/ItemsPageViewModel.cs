@@ -1,21 +1,28 @@
-﻿using HotStuff.Services;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using HotStuff.Services;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Diagnostics;
+using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using UraniumUI;
 
 namespace HotStuff.Models;
 
 [QueryProperty(nameof(Item), "Item")]
-public partial class ItemsPageViewModel : UraniumBindableObject
+public partial class ItemsPageViewModel : ObservableObject
 {
-    // public ObservableCollection<Item> Items { get; set; } = new ObservableCollection<Item>();
-    public List<Item> Items { get; set; } = new List<Item>();
-    public ObservableCollection<Item> DisplayedItems { get; } = new ObservableCollection<Item>();
+    public ObservableCollection<Item> Items { get; } = new();
+    ItemService itemService;
     public List<Item> SelectedItems { get; set; } = new List<Item>();
 
-    ItemService itemService;
+    [ObservableProperty]
+    [NotifyPropertyChangedFor(nameof(IsNotBusy))]
+    bool isBusy;
+
+    public bool IsNotBusy => !IsBusy;
 
     public ICommand GetItemsCommand { get; protected set; }
     public ICommand RemoveSelectedItemsCommand { get; protected set; }
@@ -34,39 +41,58 @@ public partial class ItemsPageViewModel : UraniumBindableObject
         GetItemsCommand = new Command(async () =>
         {
             Debug.WriteLine("User clicked get items.");
-            await GetItemsAsync();
+            await GetItemsAsync_2();
         });
+
+        async Task GetItemsAsync_2()
+        {
+            if (IsBusy)
+                return;
+
+            try
+            {
+                IsBusy = true;
+                var items = await itemService.GetItemsAsync();
+                if (Items.Count != 0)
+                    Items.Clear();
+                foreach (var item in items)
+                    Items.Add(item);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Unable to get items: {ex.Message}");
+                await Shell.Current.DisplayAlert("Data Retrieval Error", ex.Message, "OK");
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+        }
 
         async Task GetItemsAsync() 
         {
+            //Debug.WriteLine("Arrived at Test Item.");
+            //DisplayedItems.Add(new Item { ItemID = 0, AmountPaid = 10.00m, Quantity = 1, BrandManufacturer = "ACME Inc.", Category = ItemCategory.PlumbingHVAC, Color = ItemColor.Magenta, ItemDescription = "Test item description.", ItemName = "Test Item", PurchaseProof = "Test Item Purchase Proof", Room = ItemRoom.Basement });
+            //Debug.WriteLine("Added Test Item.");
             try
             {
-                var displayedItems = await itemService.GetItems();
+                List<Item> displayedItems = await itemService.GetItems();
 
-                Debug.WriteLine($"Items stored in DisplayedItems: {DisplayedItems.Count}");
-                if (DisplayedItems.Count != 0)
-                    DisplayedItems.Clear();
+                Debug.WriteLine($"Items stored in DisplayedItems: {Items.Count}");
+                if (Items.Count != 0)
+                    Items.Clear();
                 Debug.WriteLine($"Items saved in database: {displayedItems.Count}");
                 try
                 {
-                    if (DisplayedItems is not null)
+                    foreach (var item in displayedItems)
                     {
-                        foreach (Item item in displayedItems)
-                        {
-                            Debug.WriteLine($"ID: {item.ItemID}, Name: {item.ItemName}");
-                            DisplayedItems.Add(item);
-                            Debug.WriteLine($"Added {item.ItemID}, {item.ItemName} to DisplayedItems");
-                        }
-                        Debug.WriteLine("Completed loop.");
-                    }
-                    else
-                    {
-                        Debug.WriteLine($"DisplayedItems is null.");
+                        Debug.WriteLine($"ID: {item.ItemID}, Name: {item.ItemName}, Category: {item.Category}");
+                        Items.Add(item);
                     }
                 }
                 catch (Exception ex)
                 {
-                    Debug.WriteLine($"Issue with DisplayedItems");
+                    Debug.WriteLine($"Issue within TempDisplay");
                     await Application.Current.MainPage.DisplayAlert("Error", ex.Message, "OK");
                 }
             }
@@ -75,7 +101,7 @@ public partial class ItemsPageViewModel : UraniumBindableObject
                 Debug.WriteLine($"Something went wrong when retrieving items: {ex.Message}");
                 await Application.Current.MainPage.DisplayAlert("Error!", ex.Message, "OK");
             }
-
+            Debug.WriteLine($"Items stored in DisplayedItems: {Items.Count}");
         }
 
         async void DeleteAsync(List<Item> Items)
@@ -84,7 +110,7 @@ public partial class ItemsPageViewModel : UraniumBindableObject
 
             foreach (var item in SelectedItems)
             {
-                DisplayedItems.Remove(item);
+                Items.Remove(item);
             }
 
             await App.ItemServ.DeleteItems(Items);

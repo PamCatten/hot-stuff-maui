@@ -6,11 +6,9 @@ namespace HotStuff.Models
 { 
     public partial class AddItemsPageViewModel : UraniumBindableObject
     {
-
         private Item newItem = new();
         public Item NewItem { get => newItem; set { newItem = value; OnPropertyChanged(); } }
         public ICommand AddItemCommand { get; protected set; }
-
         public AddItemsPageViewModel() 
         {
             async void CreateItem(Item NewItem)
@@ -37,6 +35,5 @@ namespace HotStuff.Models
                 NewItem = new();
             });
         }
-
     }
 }

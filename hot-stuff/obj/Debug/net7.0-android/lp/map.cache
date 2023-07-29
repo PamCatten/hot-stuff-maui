@@ -173,3 +173,7 @@ SQLitePCLRaw.batteries_v2.dll
 SQLitePCLRaw.lib.e_sqlite3.android.dll
 SQLitePCLRaw.lib.e_sqlite3.android.aar
 Plugin.Media.dll
+CommunityToolkit.Maui.Core.dll
+CommunityToolkit.Maui.dll
+CommunityToolkit.Maui.Core.aar
+CommunityToolkit.Maui.aar

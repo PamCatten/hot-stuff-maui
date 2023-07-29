@@ -12,6 +12,7 @@
     xmlns:models="clr-namespace:HotStuff.Models"
     xmlns:validation="clr-namespace:InputKit.Shared.Validations;assembly=InputKit.Maui"
     x:DataType="models:ItemsPageViewModel"
+    xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     Title="Items"
 >
 
@@ -27,6 +28,11 @@
         </Style>
     </uranium:UraniumContentPage.Resources>
 
+    <uranium:UraniumContentPage.Behaviors>
+        <mct:EventToCommandBehavior Command="{Binding AppearingCommand}" EventName="Appearing" />
+    </uranium:UraniumContentPage.Behaviors>
+    
+    
     <ScrollView Orientation="Both" HorizontalScrollBarVisibility="Always" VerticalScrollBarVisibility="Always">
         <VerticalStackLayout>
             <StackLayout Padding="10" Orientation="Horizontal" Spacing="10">
@@ -34,7 +40,7 @@
                 <Button Text="Delete" StyleClass="FilledButton" Command="{Binding RemoveSelectedItemsCommand}" HorizontalOptions="Start"/>
                 <Button Text="Get" StyleClass="FilledButton" Command="{Binding GetItemsCommand}" HorizontalOptions="Start"/>
             </StackLayout>
-            <material:DataGrid ItemsSource="{Binding Items}" SelectedItems="{Binding SelectedItems}" HorizontalOptions="Center" VerticalOptions="Center" x:Name="UraniumGrid">
+            <material:DataGrid ItemsSource="{Binding ItemList}" SelectedItems="{Binding SelectedItems}" HorizontalOptions="Center" VerticalOptions="Center" x:Name="UraniumGrid">
 
                 <material:DataGrid.CellItemTemplate>
                     <DataTemplate x:DataType="models:Item" />

@@ -15,6 +15,35 @@
           }
         }
       },
+      "CommunityToolkit.Maui/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "5.2.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -2190,6 +2219,35 @@
         "runtime": {
           "lib/netstandard2.1/AsyncAwaitBestPractices.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "5.2.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".aar;.xml"
           }
         }
       },
@@ -4371,6 +4429,35 @@
           }
         }
       },
+      "CommunityToolkit.Maui/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "5.2.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -6546,6 +6633,35 @@
         "runtime": {
           "lib/netstandard2.1/AsyncAwaitBestPractices.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "5.2.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".aar;.xml"
           }
         }
       },
@@ -8727,6 +8843,35 @@
           }
         }
       },
+      "CommunityToolkit.Maui/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "5.2.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -10902,6 +11047,35 @@
         "runtime": {
           "lib/netstandard2.1/AsyncAwaitBestPractices.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "5.2.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".aar;.xml"
           }
         }
       },
@@ -13083,6 +13257,35 @@
           }
         }
       },
+      "CommunityToolkit.Maui/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "5.2.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -15258,6 +15461,35 @@
         "runtime": {
           "lib/netstandard2.1/AsyncAwaitBestPractices.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "5.2.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll": {
+            "related": ".aar;.xml"
           }
         }
       },
@@ -17439,6 +17671,35 @@
           }
         }
       },
+      "CommunityToolkit.Maui/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "5.2.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -17837,6 +18098,35 @@
         },
         "runtime": {
           "lib/netstandard2.1/AsyncAwaitBestPractices.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "5.2.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
           }
         }
@@ -18243,6 +18533,35 @@
           }
         }
       },
+      "CommunityToolkit.Maui/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "5.2.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -18641,6 +18960,35 @@
         },
         "runtime": {
           "lib/netstandard2.1/AsyncAwaitBestPractices.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "5.2.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
           }
         }
@@ -19047,6 +19395,35 @@
           }
         }
       },
+      "CommunityToolkit.Maui/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "5.2.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -19445,6 +19822,35 @@
         },
         "runtime": {
           "lib/netstandard2.1/AsyncAwaitBestPractices.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "5.2.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
           }
         }
@@ -19851,6 +20257,35 @@
           }
         }
       },
+      "CommunityToolkit.Maui/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "5.2.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -20253,6 +20688,35 @@
           }
         }
       },
+      "CommunityToolkit.Maui/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "5.2.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -20651,6 +21115,35 @@
         },
         "runtime": {
           "lib/netstandard2.1/AsyncAwaitBestPractices.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "5.2.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
           }
         }
@@ -21159,6 +21652,35 @@
           }
         }
       },
+      "CommunityToolkit.Maui/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "5.2.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -21572,6 +22094,35 @@
         },
         "runtime": {
           "lib/netstandard2.1/AsyncAwaitBestPractices.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "5.2.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
           }
         }
@@ -21993,6 +22544,35 @@
           }
         }
       },
+      "CommunityToolkit.Maui/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "5.2.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -22406,6 +22986,35 @@
         },
         "runtime": {
           "lib/netstandard2.1/AsyncAwaitBestPractices.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "5.2.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
           }
         }
@@ -22827,6 +23436,35 @@
           }
         }
       },
+      "CommunityToolkit.Maui/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "5.2.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -23237,6 +23875,35 @@
         },
         "runtime": {
           "lib/netstandard2.1/AsyncAwaitBestPractices.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "5.2.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
           }
         }
@@ -23658,6 +24325,35 @@
           }
         }
       },
+      "CommunityToolkit.Maui/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "5.2.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/5.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -24071,6 +24767,38 @@
         },
         "runtime": {
           "lib/netstandard2.1/AsyncAwaitBestPractices.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "5.2.0"
+        },
+        "compile": {
+          "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Speech": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
           }
         }
@@ -24615,6 +25343,28 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
+      "System.Speech/7.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/System.Speech.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/System.Speech.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net7.0/System.Speech.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "UraniumUI/2.5.4": {
         "type": "package",
         "dependencies": {
@@ -24702,6 +25452,38 @@
         },
         "runtime": {
           "lib/netstandard2.1/AsyncAwaitBestPractices.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "5.2.0"
+        },
+        "compile": {
+          "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Speech": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
           }
         }
@@ -25131,6 +25913,22 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
+      "System.Speech/7.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/System.Speech.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/System.Speech.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
       "UraniumUI/2.5.4": {
         "type": "package",
         "dependencies": {
@@ -25218,6 +26016,38 @@
         },
         "runtime": {
           "lib/netstandard2.1/AsyncAwaitBestPractices.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "5.2.0"
+        },
+        "compile": {
+          "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Speech": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
           }
         }
@@ -25647,6 +26477,22 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
+      "System.Speech/7.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/System.Speech.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/System.Speech.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
       "UraniumUI/2.5.4": {
         "type": "package",
         "dependencies": {
@@ -25734,6 +26580,38 @@
         },
         "runtime": {
           "lib/netstandard2.1/AsyncAwaitBestPractices.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "5.2.0"
+        },
+        "compile": {
+          "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Speech": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
           }
         }
@@ -26163,6 +27041,22 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
+      "System.Speech/7.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/System.Speech.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/System.Speech.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
       "UraniumUI/2.5.4": {
         "type": "package",
         "dependencies": {
@@ -26250,6 +27144,38 @@
         },
         "runtime": {
           "lib/netstandard2.1/AsyncAwaitBestPractices.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "5.2.0"
+        },
+        "compile": {
+          "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Speech": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
           }
         }
@@ -26679,6 +27605,22 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
+      "System.Speech/7.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/System.Speech.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/System.Speech.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
       "UraniumUI/2.5.4": {
         "type": "package",
         "dependencies": {
@@ -26766,6 +27708,38 @@
         },
         "runtime": {
           "lib/netstandard2.1/AsyncAwaitBestPractices.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "5.2.0"
+        },
+        "compile": {
+          "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Speech": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
           }
         }
@@ -27192,6 +28166,22 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
+      "System.Speech/7.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/System.Speech.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/System.Speech.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
       "UraniumUI/2.5.4": {
         "type": "package",
         "dependencies": {
@@ -27279,6 +28269,38 @@
         },
         "runtime": {
           "lib/netstandard2.1/AsyncAwaitBestPractices.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "5.2.0"
+        },
+        "compile": {
+          "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Speech": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
           }
         }
@@ -27708,6 +28730,22 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
+      "System.Speech/7.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/System.Speech.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/System.Speech.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
       "UraniumUI/2.5.4": {
         "type": "package",
         "dependencies": {
@@ -27795,6 +28833,38 @@
         },
         "runtime": {
           "lib/netstandard2.1/AsyncAwaitBestPractices.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "5.2.0"
+        },
+        "compile": {
+          "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/5.2.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Speech": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll": {
             "related": ".xml"
           }
         }
@@ -28230,6 +29300,22 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
+      "System.Speech/7.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/System.Speech.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "runtimes/win/lib/net7.0/System.Speech.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
       "UraniumUI/2.5.4": {
         "type": "package",
         "dependencies": {
@@ -28325,6 +29411,61 @@
         "lib/netstandard2.0/AsyncAwaitBestPractices.xml",
         "lib/netstandard2.1/AsyncAwaitBestPractices.dll",
         "lib/netstandard2.1/AsyncAwaitBestPractices.xml"
+      ]
+    },
+    "CommunityToolkit.Maui/5.2.0": {
+      "sha512": "sxnvz+lFqTAzc+3u4j7JuEDiDxybMqbjCRD/OcMyln6YJ09OPwXoCJ8qxFG98C9ph9ZSChE3/fsVG+jlnkMOHA==",
+      "type": "package",
+      "path": "communitytoolkit.maui/5.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ReadMe.txt",
+        "analyzers/dotnet/cs/CommunityToolkit.Maui.Analyzers.CodeFixes.dll",
+        "analyzers/dotnet/cs/CommunityToolkit.Maui.Analyzers.dll",
+        "analyzers/dotnet/cs/CommunityToolkit.Maui.SourceGenerators.dll",
+        "communitytoolkit.maui.5.2.0.nupkg.sha512",
+        "communitytoolkit.maui.nuspec",
+        "icon.png",
+        "lib/net7.0-android33.0/CommunityToolkit.Maui.aar",
+        "lib/net7.0-android33.0/CommunityToolkit.Maui.dll",
+        "lib/net7.0-android33.0/CommunityToolkit.Maui.xml",
+        "lib/net7.0-ios16.1/CommunityToolkit.Maui.dll",
+        "lib/net7.0-ios16.1/CommunityToolkit.Maui.xml",
+        "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.dll",
+        "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.xml",
+        "lib/net7.0-tizen7.0/CommunityToolkit.Maui.dll",
+        "lib/net7.0-tizen7.0/CommunityToolkit.Maui.xml",
+        "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.dll",
+        "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.xml",
+        "lib/net7.0/CommunityToolkit.Maui.dll",
+        "lib/net7.0/CommunityToolkit.Maui.xml"
+      ]
+    },
+    "CommunityToolkit.Maui.Core/5.2.0": {
+      "sha512": "lWJJgyJSDF81Wz40IvoQhOPGsFa7WAUG0rKtu0NnnFT0AF2PtPkzBX6kzpm3zZfg91UKXPRhZpXhEVs/QisCiA==",
+      "type": "package",
+      "path": "communitytoolkit.maui.core/5.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ReadMe.txt",
+        "communitytoolkit.maui.core.5.2.0.nupkg.sha512",
+        "communitytoolkit.maui.core.nuspec",
+        "icon.png",
+        "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.aar",
+        "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.dll",
+        "lib/net7.0-android33.0/CommunityToolkit.Maui.Core.xml",
+        "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.dll",
+        "lib/net7.0-ios16.1/CommunityToolkit.Maui.Core.xml",
+        "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.dll",
+        "lib/net7.0-maccatalyst16.1/CommunityToolkit.Maui.Core.xml",
+        "lib/net7.0-tizen7.0/CommunityToolkit.Maui.Core.dll",
+        "lib/net7.0-tizen7.0/CommunityToolkit.Maui.Core.xml",
+        "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll",
+        "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.Core.xml",
+        "lib/net7.0/CommunityToolkit.Maui.Core.dll",
+        "lib/net7.0/CommunityToolkit.Maui.Core.xml"
       ]
     },
     "CommunityToolkit.Mvvm/8.2.1": {
@@ -29874,6 +31015,34 @@
         "ref/net6.0/System.Runtime.InteropServices.xml",
         "system.runtime.interopservices.nfloat.internal.6.0.1.nupkg.sha512",
         "system.runtime.interopservices.nfloat.internal.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Speech/7.0.0": {
+      "sha512": "7E0uB92Cx2sXR67HW9rMKJqDACdLuz9t3I3OwZUFDzAgwKXWuY6CYeRT/NiypHcyZO2be9+0H0w0M6fn7HQtgQ==",
+      "type": "package",
+      "path": "system.speech/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Speech.targets",
+        "lib/net462/_._",
+        "lib/net6.0/System.Speech.dll",
+        "lib/net6.0/System.Speech.xml",
+        "lib/net7.0/System.Speech.dll",
+        "lib/net7.0/System.Speech.xml",
+        "lib/netstandard2.0/System.Speech.dll",
+        "lib/netstandard2.0/System.Speech.xml",
+        "runtimes/win/lib/net6.0/System.Speech.dll",
+        "runtimes/win/lib/net6.0/System.Speech.xml",
+        "runtimes/win/lib/net7.0/System.Speech.dll",
+        "runtimes/win/lib/net7.0/System.Speech.xml",
+        "system.speech.7.0.0.nupkg.sha512",
+        "system.speech.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
@@ -32057,6 +33226,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0-android33.0": [
+      "CommunityToolkit.Maui >= 5.2.0",
       "CommunityToolkit.Mvvm >= 8.2.1",
       "Microsoft.Extensions.Configuration >= 7.0.0",
       "Microsoft.Extensions.DependencyInjection >= 7.0.0",
@@ -32082,6 +33252,7 @@
       "sqlite-net-pcl >= 1.9.141-beta"
     ],
     "net7.0-ios16.1": [
+      "CommunityToolkit.Maui >= 5.2.0",
       "CommunityToolkit.Mvvm >= 8.2.1",
       "Microsoft.Extensions.Configuration >= 7.0.0",
       "Microsoft.Extensions.DependencyInjection >= 7.0.0",
@@ -32096,6 +33267,7 @@
       "sqlite-net-pcl >= 1.9.141-beta"
     ],
     "net7.0-maccatalyst16.1": [
+      "CommunityToolkit.Maui >= 5.2.0",
       "CommunityToolkit.Mvvm >= 8.2.1",
       "Microsoft.Extensions.Configuration >= 7.0.0",
       "Microsoft.Extensions.DependencyInjection >= 7.0.0",
@@ -32110,6 +33282,7 @@
       "sqlite-net-pcl >= 1.9.141-beta"
     ],
     "net7.0-windows10.0.19041": [
+      "CommunityToolkit.Maui >= 5.2.0",
       "CommunityToolkit.Mvvm >= 8.2.1",
       "Microsoft.Extensions.Configuration >= 7.0.0",
       "Microsoft.Extensions.DependencyInjection >= 7.0.0",
@@ -32188,6 +33361,10 @@
       "net7.0-android33.0": {
         "targetAlias": "net7.0-android",
         "dependencies": {
+          "CommunityToolkit.Maui": {
+            "target": "Package",
+            "version": "[5.2.0, )"
+          },
           "CommunityToolkit.Mvvm": {
             "target": "Package",
             "version": "[8.2.1, )"
@@ -32330,6 +33507,10 @@
       "net7.0-ios16.1": {
         "targetAlias": "net7.0-ios",
         "dependencies": {
+          "CommunityToolkit.Maui": {
+            "target": "Package",
+            "version": "[5.2.0, )"
+          },
           "CommunityToolkit.Mvvm": {
             "target": "Package",
             "version": "[8.2.1, )"
@@ -32417,6 +33598,10 @@
       "net7.0-maccatalyst16.1": {
         "targetAlias": "net7.0-maccatalyst",
         "dependencies": {
+          "CommunityToolkit.Maui": {
+            "target": "Package",
+            "version": "[5.2.0, )"
+          },
           "CommunityToolkit.Mvvm": {
             "target": "Package",
             "version": "[8.2.1, )"
@@ -32505,6 +33690,10 @@
       "net7.0-windows10.0.19041": {
         "targetAlias": "net7.0-windows10.0.19041.0",
         "dependencies": {
+          "CommunityToolkit.Maui": {
+            "target": "Package",
+            "version": "[5.2.0, )"
+          },
           "CommunityToolkit.Mvvm": {
             "target": "Package",
             "version": "[8.2.1, )"

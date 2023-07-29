@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "QFlhsMi6syJ+BJqJzJbdpo8lOfs3qXNdPyPOKS+yuE0eB/6yb/zQaojRGNn8Ldf62G2N8vP6KBbR+oH9PYytgw==",
+  "dgSpecHash": "i+83HAhAfOWPSJDhXrRpLGXPcLmOdH0kXvSEruWAFVgk7kATEdIpoC5rq8uGovaAVF+nhEVgSwoq2B0ilH/QAA==",
   "success": true,
   "projectFilePath": "C:\\Users\\campa\\hot-stuff\\hot-stuff\\hot-stuff.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\campa\\.nuget\\packages\\asyncawaitbestpractices\\6.0.4\\asyncawaitbestpractices.6.0.4.nupkg.sha512",
+    "C:\\Users\\campa\\.nuget\\packages\\communitytoolkit.maui\\5.2.0\\communitytoolkit.maui.5.2.0.nupkg.sha512",
+    "C:\\Users\\campa\\.nuget\\packages\\communitytoolkit.maui.core\\5.2.0\\communitytoolkit.maui.core.5.2.0.nupkg.sha512",
     "C:\\Users\\campa\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.1\\communitytoolkit.mvvm.8.2.1.nupkg.sha512",
     "C:\\Users\\campa\\.nuget\\packages\\googlegson\\2.9.1.1\\googlegson.2.9.1.1.nupkg.sha512",
     "C:\\Users\\campa\\.nuget\\packages\\inputkit.maui\\4.3.4\\inputkit.maui.4.3.4.nupkg.sha512",
@@ -35,6 +37,7 @@
     "C:\\Users\\campa\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\campa\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
     "C:\\Users\\campa\\.nuget\\packages\\system.runtime.interopservices.nfloat.internal\\6.0.1\\system.runtime.interopservices.nfloat.internal.6.0.1.nupkg.sha512",
+    "C:\\Users\\campa\\.nuget\\packages\\system.speech\\7.0.0\\system.speech.7.0.0.nupkg.sha512",
     "C:\\Users\\campa\\.nuget\\packages\\uraniumui\\2.5.4\\uraniumui.2.5.4.nupkg.sha512",
     "C:\\Users\\campa\\.nuget\\packages\\uraniumui.dialogs.mopups\\2.5.4\\uraniumui.dialogs.mopups.2.5.4.nupkg.sha512",
     "C:\\Users\\campa\\.nuget\\packages\\uraniumui.icons.fontawesome\\2.5.4\\uraniumui.icons.fontawesome.2.5.4.nupkg.sha512",

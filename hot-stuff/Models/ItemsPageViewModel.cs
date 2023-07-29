@@ -14,7 +14,8 @@ namespace HotStuff.Models;
 [QueryProperty(nameof(Item), "Item")]
 public partial class ItemsPageViewModel : ObservableObject
 {
-    public ObservableCollection<Item> Items { get; } = new();
+    public ObservableCollection<Item> Items { get; set; } = new();
+    public ObservableCollection<Item> ItemList { get; set; } = new();
     ItemService itemService;
     public List<Item> SelectedItems { get; set; } = new List<Item>();
 
@@ -25,6 +26,7 @@ public partial class ItemsPageViewModel : ObservableObject
     public bool IsNotBusy => !IsBusy;
 
     public ICommand GetItemsCommand { get; protected set; }
+    public ICommand AppearingCommand { get; set; }
     public ICommand RemoveSelectedItemsCommand { get; protected set; }
 
     public ItemsPageViewModel(ItemService itemService)
@@ -44,6 +46,44 @@ public partial class ItemsPageViewModel : ObservableObject
             await GetItemsAsync_2();
         });
 
+        AppearingCommand = new Command(async () =>
+        {
+            Debug.WriteLine("AppearingCommand run.");
+            Appearing();
+        });
+
+        async void Appearing()
+        {
+            Debug.WriteLine("Appearing() start.");
+            var items = await App.ItemServ.GetItems();
+            Debug.WriteLine("Retrieved items.");
+            
+            if (ItemList.Count == 0)
+            {
+                ItemList.Clear();
+                Debug.WriteLine("Cleared ItemList.");
+            }
+            try
+            {
+                foreach (var item in items)
+                {
+                    ItemList.Add(item);
+                    Debug.WriteLine($"Added {item.ItemID}, {item.ItemName}");
+                }
+                Debug.WriteLine("Completed loop.");
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Unable to get items: {ex.Message}");
+                await Shell.Current.DisplayAlert("Data Retrieval Error", ex.Message, "OK");
+            }
+            finally
+            {
+                Debug.WriteLine("Appearing() end.");
+            }
+        }
+
+
         async Task GetItemsAsync_2()
         {
             if (IsBusy)
@@ -52,11 +92,19 @@ public partial class ItemsPageViewModel : ObservableObject
             try
             {
                 IsBusy = true;
-                var items = await itemService.GetItemsAsync();
+                var items = await itemService.GetItems();
+                foreach (var item in items)
+                    Debug.WriteLine($"{item.ItemID} {item.ItemName}");
+                Debug.WriteLine($"End of stored items list.");
                 if (Items.Count != 0)
                     Items.Clear();
                 foreach (var item in items)
+                {
                     Items.Add(item);
+                    Debug.WriteLine($"Added {item.ItemID}, {item.ItemName}");
+                }
+                    
+                    
             }
             catch (Exception ex)
             {

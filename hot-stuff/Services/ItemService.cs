@@ -26,17 +26,6 @@ namespace HotStuff.Services
             databasePath = DatabasePath;
         }
 
-        List<Item> itemList = new();
-        public async Task<List<Item>> GetItemsAsync()
-        {
-            itemList = await Database.Table<Item>().ToListAsync();
-            if (itemList?.Count > 0)
-                return itemList;
-            else
-                Debug.WriteLine("Error retrieving from database, returning empty itemList.");
-                return itemList;
-        }
-
         public async Task AddItem(Item item)
         {
             try

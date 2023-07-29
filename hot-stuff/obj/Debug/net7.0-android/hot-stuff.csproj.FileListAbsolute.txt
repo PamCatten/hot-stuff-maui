@@ -1004,3 +1004,10 @@ C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\assets\Plugi
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\assets\Plugin.Media.pdb
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\src\crc646957603ea1820544\MediaPickerActivity.java
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\res\xml\file_paths.xml
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\assets\CommunityToolkit.Maui.Core.dll
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\assets\CommunityToolkit.Maui.dll
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\src\crc64159f3caeb1269279\MauiDrawingView.java
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\src\crc64159f3caeb1269279\MauiPopup.java
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\src\crc64159f3caeb1269279\MauiSemanticOrderView.java
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\src\crc648fc34c62be8fbbff\Snackbar_SnackbarCallback.java
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\src\crc64d6358e7bf64fbac4\SpeechToTextImplementation_SpeechRecognitionListener.java

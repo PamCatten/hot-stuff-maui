@@ -1,18 +1,11 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-using HotStuff.Services;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
+﻿using HotStuff.Services;
 using System.Windows.Input;
 using UraniumUI;
 
-namespace HotStuff.Models;
+namespace HotStuff.Model;
 
 [QueryProperty(nameof(Item), "Item")]
-public partial class ItemsPageViewModel : ObservableObject
+public partial class ItemsPageViewModel : BaseViewModel
 {
     private ObservableCollection<Item> itemManifest { get; set; } = new();
     public ObservableCollection<Item> ItemManifest { get => itemManifest; set { itemManifest = value; OnPropertyChanged(); } }
@@ -130,50 +123,6 @@ public partial class ItemsPageViewModel : ObservableObject
             {
                 IsBusy = false;
             }
-        }
-
-        async Task GetItemsAsync_2() 
-        {
-            Debug.WriteLine("Arrived at Test Item.");
-            SelectedItems.Add(new Item { ItemID = 0, PurchaseDate="6/15/2019", AmountPaid = 10.00m, Quantity = 1, BrandManufacturer = "ACME Inc.", Category = ItemCategory.PlumbingHVAC, Color = ItemColor.Magenta, ItemDescription = "Test item description.", ItemName = "Test Item", PurchaseProof = "Test Item Purchase Proof", Room = ItemRoom.Basement });
-            Debug.WriteLine("Added Test Item.");
-            foreach (var item in SelectedItems)
-                Debug.WriteLine($"ID: {item.ItemID}, Name: {item.ItemName}, Category: {item.Category}");
-            SelectedItems.Clear();
-            try
-            {
-                List<Item> itemList = await itemService.GetItems();
-
-                Debug.WriteLine($"Items stored in ItemManifest: {ItemManifest.Count}");
-                if (ItemManifest.Count != 0)
-                    ItemManifest.Clear();
-                Debug.WriteLine($"Items stored in ItemManifest after clear: {ItemManifest.Count}");
-                Debug.WriteLine($"Items saved in database: {itemList.Count}");
-                try
-                {
-                    foreach (var item in itemList)
-                    {
-                        Debug.WriteLine($"ID: {item.ItemID}, Name: {item.ItemName}, Category: {item.Category}");
-                        ItemManifest.Add(item);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Debug.WriteLine($"Issue adding to ItemManifest");
-                    await Application.Current.MainPage.DisplayAlert("Error", ex.Message, "OK");
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Something went wrong when retrieving items: {ex.Message}");
-                await Application.Current.MainPage.DisplayAlert("Error!", ex.Message, "OK");
-            }
-            Debug.WriteLine($"Items stored in ItemManifest: {ItemManifest.Count}");
-            foreach (var item in ItemManifest)
-                Debug.WriteLine($"Items stored in ItemManifest: {item.ItemName}");
-            ObservableCollection<Item> DumpList = new(ItemManifest);
-            foreach (var item in DumpList)
-                Debug.WriteLine($"Item stored in DumpList: {item.ItemName}, {item.Category}");
         }
 
         async void DeleteAsync(List<Item> Items)

@@ -1,6 +1,6 @@
-using System.Diagnostics;
 using UraniumUI.Pages;
-namespace HotStuff.Pages;
+
+namespace HotStuff.View;
 
 public partial class LearnPage : UraniumContentPage
 {

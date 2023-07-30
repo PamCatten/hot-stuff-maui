@@ -4,35 +4,41 @@
         <name>hot-stuff</name>
     </assembly>
     <members>
-        <member name="T:HotStuff.Models.Item">
+        <member name="T:HotStuff.Model.Item">
             <inheritdoc/>
         </member>
-        <member name="P:HotStuff.Models.Item.ItemName">
-            <inheritdoc cref="F:HotStuff.Models.Item.itemName"/>
+        <member name="P:HotStuff.Model.Item.ItemName">
+            <inheritdoc cref="F:HotStuff.Model.Item.itemName"/>
         </member>
-        <member name="P:HotStuff.Models.Item.BrandManufacturer">
-            <inheritdoc cref="F:HotStuff.Models.Item.brandManufacturer"/>
+        <member name="P:HotStuff.Model.Item.BrandManufacturer">
+            <inheritdoc cref="F:HotStuff.Model.Item.brandManufacturer"/>
         </member>
-        <member name="P:HotStuff.Models.Item.ItemDescription">
-            <inheritdoc cref="F:HotStuff.Models.Item.itemDescription"/>
+        <member name="P:HotStuff.Model.Item.ItemDescription">
+            <inheritdoc cref="F:HotStuff.Model.Item.itemDescription"/>
         </member>
-        <member name="P:HotStuff.Models.Item.PurchaseDate">
-            <inheritdoc cref="F:HotStuff.Models.Item.purchaseDate"/>
+        <member name="P:HotStuff.Model.Item.PurchaseDate">
+            <inheritdoc cref="F:HotStuff.Model.Item.purchaseDate"/>
         </member>
-        <member name="P:HotStuff.Models.Item.PurchaseProof">
-            <inheritdoc cref="F:HotStuff.Models.Item.purchaseProof"/>
+        <member name="P:HotStuff.Model.Item.PurchaseProof">
+            <inheritdoc cref="F:HotStuff.Model.Item.purchaseProof"/>
         </member>
-        <member name="P:HotStuff.Models.Item.AmountPaid">
-            <inheritdoc cref="F:HotStuff.Models.Item.amountPaid"/>
+        <member name="P:HotStuff.Model.Item.AmountPaid">
+            <inheritdoc cref="F:HotStuff.Model.Item.amountPaid"/>
         </member>
-        <member name="P:HotStuff.Models.Item.Quantity">
-            <inheritdoc cref="F:HotStuff.Models.Item.quantity"/>
+        <member name="P:HotStuff.Model.Item.Quantity">
+            <inheritdoc cref="F:HotStuff.Model.Item.quantity"/>
         </member>
-        <member name="T:HotStuff.Models.ItemsPageViewModel">
+        <member name="T:HotStuff.Model.ItemsPageViewModel">
             <inheritdoc/>
         </member>
-        <member name="P:HotStuff.Models.ItemsPageViewModel.IsBusy">
-            <inheritdoc cref="F:HotStuff.Models.ItemsPageViewModel.isBusy"/>
+        <member name="P:HotStuff.Model.ItemsPageViewModel.IsBusy">
+            <inheritdoc cref="F:HotStuff.Model.ItemsPageViewModel.isBusy"/>
+        </member>
+        <member name="T:HotStuff.ViewModel.BaseViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:HotStuff.ViewModel.BaseViewModel.IsBusy">
+            <inheritdoc cref="F:HotStuff.ViewModel.BaseViewModel.isBusy"/>
         </member>
         <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
             <summary>

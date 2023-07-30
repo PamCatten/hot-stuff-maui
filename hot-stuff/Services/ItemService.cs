@@ -1,7 +1,4 @@
-﻿using HotStuff.Models;
-using SQLite;
-using System.Diagnostics;
-
+﻿using SQLite;
 namespace HotStuff.Services
 {
     public class ItemService : IItemService

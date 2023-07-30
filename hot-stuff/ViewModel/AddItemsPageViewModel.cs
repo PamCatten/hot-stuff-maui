@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-using System.Windows.Input;
-using HotStuff.Models;
+﻿using System.Windows.Input;
 using UraniumUI;
 
 namespace HotStuff.ViewModel

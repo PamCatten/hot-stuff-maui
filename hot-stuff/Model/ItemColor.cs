@@ -1,4 +1,4 @@
-﻿namespace HotStuff.Models
+﻿namespace HotStuff.Model
 {
     public enum ItemColor
     {

@@ -1,10 +1,7 @@
-﻿using HotStuff.Models;
-using InputKit.Shared.Controls;
-using System.Collections.ObjectModel;
-using System.Diagnostics;
+﻿using InputKit.Shared.Controls;
 using UraniumUI.Pages;
 
-namespace HotStuff.Pages;
+namespace HotStuff.View;
 
 public partial class ItemsPage : UraniumContentPage
 {

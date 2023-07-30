@@ -1,5 +1,5 @@
-﻿using HotStuff.Models;
-using HotStuff.Pages;
+﻿using HotStuff.Model;
+using HotStuff.View;
 using HotStuff.Services;
 using InputKit.Shared.Controls;
 using Microsoft.Extensions.DependencyInjection;

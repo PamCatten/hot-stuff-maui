@@ -2,9 +2,8 @@
 using Plugin.Media;
 using Plugin.Media.Abstractions;
 using HotStuff.Services;
-using HotStuff.ViewModel;
 
-namespace HotStuff.Pages;
+namespace HotStuff.View;
 
 public partial class AddItemsPage : UraniumContentPage
 {

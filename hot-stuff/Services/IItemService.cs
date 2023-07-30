@@ -1,6 +1,4 @@
-﻿using HotStuff.Models;
-
-namespace HotStuff.Services
+﻿namespace HotStuff.Services
 {
     public interface IItemService
     {

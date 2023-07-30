@@ -1,8 +1,5 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using SQLite;
-using System.Collections.ObjectModel;
-
-namespace HotStuff.Models;
+﻿using SQLite;
+namespace HotStuff.Model;
 
 [Table("Items")]
 public partial class Item : ObservableObject

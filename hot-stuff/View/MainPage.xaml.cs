@@ -1,7 +1,4 @@
-﻿using HotStuff.Pages;
-using InputKit.Shared.Controls;
-using System.Diagnostics;
-using UraniumUI.Material.Controls;
+﻿using InputKit.Shared.Controls;
 using UraniumUI.Pages;
 
 namespace HotStuff

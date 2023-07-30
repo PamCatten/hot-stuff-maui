@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <uranium:UraniumContentPage 
-    x:Class="HotStuff.Pages.AddItemsPage"
+    x:Class="HotStuff.View.AddItemsPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:uranium="clr-namespace:UraniumUI.Pages;assembly=UraniumUI"
     xmlns:material="clr-namespace:UraniumUI.Material.Controls;assembly=UraniumUI.Material"
     xmlns:validation="clr-namespace:InputKit.Shared.Validations;assembly=InputKit.Maui"
-    xmlns:pages="clr-namespace:HotStuff.Pages"
+    xmlns:pages="clr-namespace:HotStuff.View"
     xmlns:input="clr-namespace:InputKit.Shared.Controls;assembly=InputKit.Maui"
     xmlns:attachment="clr-namespace:UraniumUI.Material.Attachments;assembly=UraniumUI.Material"
     xmlns:viewmodel="clr-namespace:HotStuff.ViewModel"
     xmlns:local="clr-namespace:HotStuff"
-    xmlns:models="clr-namespace:HotStuff.Models"
+    xmlns:models="clr-namespace:HotStuff.Model"
     Title="Add Item"
 >
 

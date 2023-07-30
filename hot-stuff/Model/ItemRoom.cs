@@ -2,7 +2,6 @@
 {
     public enum ItemRoom
     {
-        Room,
         Attic, 
         Barn, 
         Basement, 
@@ -45,6 +44,6 @@
         UtilityRoom, 
         WalkInCloset, 
         Workshop, 
-        Other
+        Unspecified,
     }
 }

@@ -13,22 +13,21 @@ public partial class Item : ObservableObject
     [ObservableProperty]
     string itemName;
 
-#nullable enable
     [ObservableProperty]
-    string? brandManufacturer;
+    string brandManufacturer;
 
     [ObservableProperty]
-    string? itemDescription;
+    string itemDescription;
 
     [ObservableProperty]
-    string? purchaseDate;
+    string purchaseDate;
 
     [ObservableProperty]
-    string? purchaseProof;
+    string purchaseProof;
 
     [ObservableProperty]
-    decimal? amountPaid;
-#nullable disable
+    decimal amountPaid;
+
     [ObservableProperty]
     int quantity;
 

@@ -48,10 +48,13 @@
 
                 <material:DataGrid.EmptyView >
                     <!-- TODO: Fix this Minimum width request, would really prefer not to hardcode here, preferably to the device's view model width -->
-                    <StackLayout Padding="40">
-                        <Label Text="No items saved. Click the add icon to get started!" 
-                               HorizontalOptions="Center"
-                               VerticalOptions="Center"
+                    <StackLayout Padding="100">
+                        <Image 
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Source="noitemdata.png"
+                            HeightRequest="160"
+                            WidthRequest="160"
                         />
                     </StackLayout>
                 </material:DataGrid.EmptyView>

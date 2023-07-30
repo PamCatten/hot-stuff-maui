@@ -1008,3 +1008,4 @@ C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\assets\Syste
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\assets\System.Runtime.Extensions.dll
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\assets\System.Runtime.Serialization.Formatters.dll
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\assets\System.Xml.dll
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\resizetizer\r\drawable\noitemdata.png

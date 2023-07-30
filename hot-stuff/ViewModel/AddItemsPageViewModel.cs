@@ -1,15 +1,16 @@
 ﻿using System.Diagnostics;
 using System.Windows.Input;
+using HotStuff.Models;
 using UraniumUI;
 
-namespace HotStuff.Models
-{ 
+namespace HotStuff.ViewModel
+{
     public partial class AddItemsPageViewModel : UraniumBindableObject
     {
         private Item newItem = new();
         public Item NewItem { get => newItem; set { newItem = value; OnPropertyChanged(); } }
         public ICommand AddItemCommand { get; protected set; }
-        public AddItemsPageViewModel() 
+        public AddItemsPageViewModel()
         {
             async void CreateItem(Item NewItem)
             {

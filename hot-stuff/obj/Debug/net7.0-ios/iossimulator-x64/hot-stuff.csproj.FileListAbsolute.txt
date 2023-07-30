@@ -284,3 +284,4 @@ C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-ios\iossimulator-x64\SQLiteP
 C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-ios\iossimulator-x64\Plugin.Media.dll
 C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-ios\iossimulator-x64\CommunityToolkit.Maui.dll
 C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-ios\iossimulator-x64\CommunityToolkit.Maui.Core.dll
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\r\Resources\noitemdata.png

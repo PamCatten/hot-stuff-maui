@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Mopups.Hosting;
 using UraniumUI;
 using CommunityToolkit.Maui;
+using HotStuff.ViewModel;
 
 namespace HotStuff;
 public static class MauiProgram

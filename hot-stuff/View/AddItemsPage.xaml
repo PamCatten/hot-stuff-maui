@@ -9,13 +9,14 @@
     xmlns:pages="clr-namespace:HotStuff.Pages"
     xmlns:input="clr-namespace:InputKit.Shared.Controls;assembly=InputKit.Maui"
     xmlns:attachment="clr-namespace:UraniumUI.Material.Attachments;assembly=UraniumUI.Material"
-    xmlns:models="clr-namespace:HotStuff.Models"
+    xmlns:viewmodel="clr-namespace:HotStuff.ViewModel"
     xmlns:local="clr-namespace:HotStuff"
+    xmlns:models="clr-namespace:HotStuff.Models"
     Title="Add Item"
 >
 
     <uranium:UraniumContentPage.BindingContext>
-        <models:AddItemsPageViewModel />
+        <viewmodel:AddItemsPageViewModel />
     </uranium:UraniumContentPage.BindingContext>
 
     <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">

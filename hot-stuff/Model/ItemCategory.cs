@@ -2,7 +2,6 @@ namespace HotStuff.Models
 {
     public enum ItemCategory
     {   
-        Category,
         Antiques, 
         Apparel, 
         ApparelAccessories, 
@@ -39,6 +38,6 @@ namespace HotStuff.Models
         Toys, 
         Vehicles, 
         VehicleSupplies, 
-        Other
+        Unspecified,
     }
 }

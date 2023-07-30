@@ -1,8 +1,8 @@
 ﻿using UraniumUI.Pages;
 using Plugin.Media;
 using Plugin.Media.Abstractions;
-using HotStuff.Models;
 using HotStuff.Services;
+using HotStuff.ViewModel;
 
 namespace HotStuff.Pages;
 

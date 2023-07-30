@@ -16,8 +16,10 @@ public partial class ItemsPageViewModel : ObservableObject
 {
     private ObservableCollection<Item> itemManifest { get; set; } = new();
     public ObservableCollection<Item> ItemManifest { get => itemManifest; set { itemManifest = value; OnPropertyChanged(); } }
+
+    public ObservableCollection<Item> DumpList { get; private set; }
+
     ItemService itemService;
-    public ObservableCollection<Item> DumpList { get; set; } = new();
     public List<Item> SelectedItems { get; set; } = new List<Item>();
 
     [ObservableProperty]
@@ -29,10 +31,9 @@ public partial class ItemsPageViewModel : ObservableObject
     public ICommand GetItemsCommand { get; protected set; }
     public ICommand AppearingCommand { get; set; }
     public ICommand RemoveSelectedItemsCommand { get; protected set; }
-
     public ItemsPageViewModel(ItemService itemService)
     {
-
+        ItemManifest = new ObservableCollection<Item>();
         this.itemService = itemService;
 
         RemoveSelectedItemsCommand = new Command(async () =>

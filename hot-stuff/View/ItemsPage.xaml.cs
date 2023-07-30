@@ -14,10 +14,10 @@ public partial class ItemsPage : UraniumContentPage
     }
     protected async override void OnAppearing()
     {
-        /* IN CASE OF EMERGENCY */ // await App.ItemServ.FlushItems();
-        // UraniumGrid.ItemsSource = await App.ItemServ.GetItems();
+        /* IN CASE OF EMERGENCY */ // await App.ItemService.FlushItems();
+        // UraniumGrid.ItemsSource = await App.ItemService.GetItems();
         base.OnAppearing();
-        //var items = await App.ItemServ.GetItems();
+        //var items = await App.ItemService.GetItems();
         //MainThread.BeginInvokeOnMainThread(async () =>
         //{
             //ItemManifest.Clear();

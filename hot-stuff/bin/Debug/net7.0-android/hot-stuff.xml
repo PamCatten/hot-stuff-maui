@@ -28,17 +28,17 @@
         <member name="P:HotStuff.Model.Item.Quantity">
             <inheritdoc cref="F:HotStuff.Model.Item.quantity"/>
         </member>
-        <member name="T:HotStuff.Model.ItemsPageViewModel">
-            <inheritdoc/>
-        </member>
-        <member name="P:HotStuff.Model.ItemsPageViewModel.IsBusy">
-            <inheritdoc cref="F:HotStuff.Model.ItemsPageViewModel.isBusy"/>
-        </member>
         <member name="T:HotStuff.ViewModel.BaseViewModel">
             <inheritdoc/>
         </member>
         <member name="P:HotStuff.ViewModel.BaseViewModel.IsBusy">
             <inheritdoc cref="F:HotStuff.ViewModel.BaseViewModel.isBusy"/>
+        </member>
+        <member name="T:HotStuff.ViewModel.ItemsPageViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:HotStuff.ViewModel.ItemsPageViewModel.IsBusy">
+            <inheritdoc cref="F:HotStuff.ViewModel.ItemsPageViewModel.isBusy"/>
         </member>
         <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
             <summary>

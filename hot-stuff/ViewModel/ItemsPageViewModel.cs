@@ -2,7 +2,7 @@
 using System.Windows.Input;
 using UraniumUI;
 
-namespace HotStuff.Model;
+namespace HotStuff.ViewModel;
 
 [QueryProperty(nameof(Item), "Item")]
 public partial class ItemsPageViewModel : BaseViewModel
@@ -50,7 +50,7 @@ public partial class ItemsPageViewModel : BaseViewModel
         async void Appearing()
         {
             Debug.WriteLine("Appearing() start.");
-            var items = await App.ItemServ.GetItems();
+            var items = await App.ItemService.GetItems();
             Debug.WriteLine("Retrieved items.");
             
             if (ItemManifest.Count == 0)
@@ -134,12 +134,12 @@ public partial class ItemsPageViewModel : BaseViewModel
                 ItemManifest.Remove(item);
             }
 
-            await App.ItemServ.DeleteItems(Items);
+            await App.ItemService.DeleteItems(Items);
         }
 
         async void DeleteAllAsync()
         {
-            await App.ItemServ.FlushItems();
+            await App.ItemService.FlushItems();
         }
 
     }

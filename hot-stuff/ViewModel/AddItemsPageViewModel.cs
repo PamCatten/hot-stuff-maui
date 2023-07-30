@@ -23,7 +23,7 @@ namespace HotStuff.ViewModel
                     $"Brand: {NewItem.BrandManufacturer}" +
                     $"Date: {NewItem.PurchaseDate}" +
                     $"Description: {NewItem.ItemDescription}");
-                await App.ItemServ.AddItem(NewItem);
+                await App.ItemService.AddItem(NewItem);
                 await Shell.Current.GoToAsync("..");
             }
 

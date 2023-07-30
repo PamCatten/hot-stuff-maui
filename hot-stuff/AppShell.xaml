@@ -3,7 +3,7 @@
     x:Class="HotStuff.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:pages="clr-namespace:HotStuff.View"
+    xmlns:view="clr-namespace:HotStuff.View"
     xmlns:local="clr-namespace:HotStuff"
     Shell.FlyoutBehavior="Disabled">
 
@@ -12,19 +12,22 @@
             <ShellContent
                 Title="Home"
                 ContentTemplate="{DataTemplate local:MainPage}"
-                Route="MainPage" />
+                Route="MainPage" 
+            />
         </Tab>
         <Tab Title="Items" Icon="{StaticResource DatabaseIcon}">
             <ShellContent
                 Title="Items"
-                ContentTemplate="{DataTemplate pages:ItemsPage}"
-                Route="ItemsPage" />
+                ContentTemplate="{DataTemplate view:ItemsPage}"
+                Route="ItemsPage" 
+            />
         </Tab>
         <Tab Title="Learning Center" Icon="{StaticResource LearnIcon}">
             <ShellContent
                 Title="Learning Center"
-                ContentTemplate="{DataTemplate pages:LearnPage}"
-                Route="LearnPage" />
+                ContentTemplate="{DataTemplate view:LearnPage}"
+                Route="LearnPage" 
+            />
         </Tab>
     </TabBar>
 </Shell>

@@ -282,3 +282,5 @@ C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-ios\iossimulator-x64\SQLiteP
 C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-ios\iossimulator-x64\SQLitePCLRaw.provider.sqlite3.dll
 C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-ios\iossimulator-x64\SQLitePCLRaw.provider.dynamic_cdecl.dll
 C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-ios\iossimulator-x64\Plugin.Media.dll
+C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-ios\iossimulator-x64\CommunityToolkit.Maui.dll
+C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-ios\iossimulator-x64\CommunityToolkit.Maui.Core.dll

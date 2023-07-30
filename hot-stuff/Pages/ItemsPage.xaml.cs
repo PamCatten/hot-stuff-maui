@@ -8,7 +8,7 @@ namespace HotStuff.Pages;
 
 public partial class ItemsPage : UraniumContentPage
 {
-    //public ObservableCollection<Item> ItemList { get; set; } = new();
+    //public ObservableCollection<Item> ItemManifest { get; set; } = new();
     public ItemsPage(ItemsPageViewModel vm)
     {
         SelectionView.GlobalSetting.CornerRadius = 0;
@@ -23,11 +23,11 @@ public partial class ItemsPage : UraniumContentPage
         //var items = await App.ItemServ.GetItems();
         //MainThread.BeginInvokeOnMainThread(async () =>
         //{
-            //ItemList.Clear();
+            //ItemManifest.Clear();
             //Debug.WriteLine("Cleared items.");
             //foreach (var item in items)
             //{
-                //ItemList.Add(item);
+                //ItemManifest.Add(item);
                 //Debug.WriteLine($"Added {item.ItemID}, {item.ItemName}");
             //}
             //Debug.WriteLine("Completed loop.");

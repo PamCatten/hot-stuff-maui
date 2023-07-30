@@ -29,7 +29,7 @@
     </uranium:UraniumContentPage.Resources>
 
     <uranium:UraniumContentPage.Behaviors>
-        <mct:EventToCommandBehavior Command="{Binding AppearingCommand}" EventName="Appearing" />
+        <!-- <mct:EventToCommandBehavior Command="{Binding AppearingCommand}" EventName="Appearing" /> -->
     </uranium:UraniumContentPage.Behaviors>
     
     
@@ -40,7 +40,7 @@
                 <Button Text="Delete" StyleClass="FilledButton" Command="{Binding RemoveSelectedItemsCommand}" HorizontalOptions="Start"/>
                 <Button Text="Get" StyleClass="FilledButton" Command="{Binding GetItemsCommand}" HorizontalOptions="Start"/>
             </StackLayout>
-            <material:DataGrid ItemsSource="{Binding ItemList}" SelectedItems="{Binding SelectedItems}" HorizontalOptions="Center" VerticalOptions="Center" x:Name="UraniumGrid">
+            <material:DataGrid ItemsSource="{Binding ItemManifest}" SelectedItems="{Binding SelectedItems}" HorizontalOptions="Center" VerticalOptions="Center" x:Name="UraniumGrid">
 
                 <material:DataGrid.CellItemTemplate>
                     <DataTemplate x:DataType="models:Item" />

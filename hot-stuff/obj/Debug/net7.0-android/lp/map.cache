@@ -1,3 +1,5 @@
+CommunityToolkit.Maui.Core.dll
+CommunityToolkit.Maui.dll
 GoogleGson.dll
 InputKit.Maui.dll
 Microsoft.Maui.Controls.Compatibility.dll
@@ -8,6 +10,9 @@ Microsoft.Maui.Essentials.dll
 Microsoft.Maui.Graphics.dll
 Mopups.dll
 Plainer.Maui.dll
+Plugin.Media.dll
+SQLitePCLRaw.batteries_v2.dll
+SQLitePCLRaw.lib.e_sqlite3.android.dll
 UraniumUI.Dialogs.Mopups.dll
 UraniumUI.dll
 UraniumUI.Icons.FontAwesome.dll
@@ -155,6 +160,8 @@ androidx.exifinterface.exifinterface.aar
 androidx.browser.browser.aar
 gifdecoder.aar
 glide.aar
+CommunityToolkit.Maui.Core.aar
+CommunityToolkit.Maui.aar
 GoogleGson.aar
 InputKit.Maui.aar
 Microsoft.Maui.Controls.aar
@@ -164,16 +171,9 @@ Microsoft.Maui.aar
 Microsoft.Maui.Essentials.aar
 Mopups.aar
 Plainer.Maui.aar
+SQLitePCLRaw.lib.e_sqlite3.android.aar
 UraniumUI.Dialogs.Mopups.aar
 UraniumUI.aar
 UraniumUI.Icons.FontAwesome.aar
 UraniumUI.Material.aar
 Xamarin.Google.Crypto.Tink.Android.aar
-SQLitePCLRaw.batteries_v2.dll
-SQLitePCLRaw.lib.e_sqlite3.android.dll
-SQLitePCLRaw.lib.e_sqlite3.android.aar
-Plugin.Media.dll
-CommunityToolkit.Maui.Core.dll
-CommunityToolkit.Maui.dll
-CommunityToolkit.Maui.Core.aar
-CommunityToolkit.Maui.aar

@@ -13,25 +13,26 @@ public partial class Item : ObservableObject
     [ObservableProperty]
     string itemName;
 
+#nullable enable
     [ObservableProperty]
-    string brandManufacturer;
+    string? brandManufacturer;
 
     [ObservableProperty]
-    string itemDescription;
+    string? itemDescription;
 
     [ObservableProperty]
-    string purchaseDate;
+    string? purchaseDate;
 
     [ObservableProperty]
-    string purchaseProof;
+    string? purchaseProof;
 
     [ObservableProperty]
     decimal? amountPaid;
-
+#nullable disable
     [ObservableProperty]
     int quantity;
 
-    public ItemCategory? Category { get; set; }
+    public ItemCategory Category { get; set; }
 
     public ItemRoom? Room { get; set; }
 

@@ -340,3 +340,6 @@ C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-windows10.0.19041.0\win10-x6
 C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\e_sqlite3.dll
 C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.provider.dynamic_cdecl.dll
 C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Plugin.Media.dll
+C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Maui.dll
+C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\CommunityToolkit.Maui.Core.dll
+C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\System.Speech.dll

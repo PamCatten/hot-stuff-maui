@@ -273,3 +273,5 @@ C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\
 C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\libe_sqlite3.dylib
 C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\SQLitePCLRaw.provider.dynamic_cdecl.dll
 C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\Plugin.Media.dll
+C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\CommunityToolkit.Maui.dll
+C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\CommunityToolkit.Maui.Core.dll

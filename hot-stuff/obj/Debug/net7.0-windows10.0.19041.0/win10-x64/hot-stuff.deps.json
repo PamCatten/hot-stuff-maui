@@ -9,6 +9,7 @@
     ".NETCoreApp,Version=v7.0/win10-x64": {
       "hot-stuff/1.0": {
         "dependencies": {
+          "CommunityToolkit.Maui": "5.2.0",
           "CommunityToolkit.Mvvm": "8.2.1",
           "Microsoft.Extensions.Configuration": "7.0.0",
           "Microsoft.Extensions.DependencyInjection": "7.0.0",
@@ -806,6 +807,28 @@
           }
         }
       },
+      "CommunityToolkit.Maui/5.2.0": {
+        "dependencies": {
+          "CommunityToolkit.Maui.Core": "5.2.0"
+        },
+        "runtime": {
+          "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "CommunityToolkit.Maui.Core/5.2.0": {
+        "dependencies": {
+          "System.Speech": "7.0.0"
+        },
+        "runtime": {
+          "lib/net7.0-windows10.0.19041/CommunityToolkit.Maui.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "runtime": {
           "lib/net6.0/CommunityToolkit.Mvvm.dll": {
@@ -1095,6 +1118,14 @@
         }
       },
       "System.Memory/4.5.3": {},
+      "System.Speech/7.0.0": {
+        "runtime": {
+          "runtimes/win/lib/net7.0/System.Speech.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "7.0.22.51805"
+          }
+        }
+      },
       "UraniumUI/2.5.4": {
         "dependencies": {
           "InputKit.Maui": "4.3.4",
@@ -1185,6 +1216,20 @@
       "sha512": "sha512-dO/ZfaT+5DMMnYUCmxAk2s1jEXUTDcgethroMj1kcmedO0MAu6WgvPP4gPYem/0kJASrnBcem+kr5ju3LaNdMw==",
       "path": "asyncawaitbestpractices/6.0.4",
       "hashPath": "asyncawaitbestpractices.6.0.4.nupkg.sha512"
+    },
+    "CommunityToolkit.Maui/5.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sxnvz+lFqTAzc+3u4j7JuEDiDxybMqbjCRD/OcMyln6YJ09OPwXoCJ8qxFG98C9ph9ZSChE3/fsVG+jlnkMOHA==",
+      "path": "communitytoolkit.maui/5.2.0",
+      "hashPath": "communitytoolkit.maui.5.2.0.nupkg.sha512"
+    },
+    "CommunityToolkit.Maui.Core/5.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lWJJgyJSDF81Wz40IvoQhOPGsFa7WAUG0rKtu0NnnFT0AF2PtPkzBX6kzpm3zZfg91UKXPRhZpXhEVs/QisCiA==",
+      "path": "communitytoolkit.maui.core/5.2.0",
+      "hashPath": "communitytoolkit.maui.core.5.2.0.nupkg.sha512"
     },
     "CommunityToolkit.Mvvm/8.2.1": {
       "type": "package",
@@ -1353,6 +1398,13 @@
       "sha512": "sha512-3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
       "path": "system.memory/4.5.3",
       "hashPath": "system.memory.4.5.3.nupkg.sha512"
+    },
+    "System.Speech/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7E0uB92Cx2sXR67HW9rMKJqDACdLuz9t3I3OwZUFDzAgwKXWuY6CYeRT/NiypHcyZO2be9+0H0w0M6fn7HQtgQ==",
+      "path": "system.speech/7.0.0",
+      "hashPath": "system.speech.7.0.0.nupkg.sha512"
     },
     "UraniumUI/2.5.4": {
       "type": "package",

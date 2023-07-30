@@ -14,9 +14,10 @@ namespace HotStuff.Models;
 [QueryProperty(nameof(Item), "Item")]
 public partial class ItemsPageViewModel : ObservableObject
 {
-    public ObservableCollection<Item> Items { get; set; } = new();
-    public ObservableCollection<Item> ItemList { get; set; } = new();
+    private ObservableCollection<Item> itemManifest { get; set; } = new();
+    public ObservableCollection<Item> ItemManifest { get => itemManifest; set { itemManifest = value; OnPropertyChanged(); } }
     ItemService itemService;
+    public ObservableCollection<Item> DumpList { get; set; } = new();
     public List<Item> SelectedItems { get; set; } = new List<Item>();
 
     [ObservableProperty]
@@ -43,7 +44,7 @@ public partial class ItemsPageViewModel : ObservableObject
         GetItemsCommand = new Command(async () =>
         {
             Debug.WriteLine("User clicked get items.");
-            await GetItemsAsync_2();
+            await GetItemsAsync();
         });
 
         AppearingCommand = new Command(async () =>
@@ -58,16 +59,16 @@ public partial class ItemsPageViewModel : ObservableObject
             var items = await App.ItemServ.GetItems();
             Debug.WriteLine("Retrieved items.");
             
-            if (ItemList.Count == 0)
+            if (ItemManifest.Count == 0)
             {
-                ItemList.Clear();
+                ItemManifest.Clear();
                 Debug.WriteLine("Cleared ItemList.");
             }
             try
             {
                 foreach (var item in items)
                 {
-                    ItemList.Add(item);
+                    ItemManifest.Add(item);
                     Debug.WriteLine($"Added {item.ItemID}, {item.ItemName}");
                 }
                 Debug.WriteLine("Completed loop.");
@@ -84,32 +85,45 @@ public partial class ItemsPageViewModel : ObservableObject
         }
 
 
-        async Task GetItemsAsync_2()
+        async Task GetItemsAsync()
         {
+            ObservableCollection<Item> DumpList = new();
+
             if (IsBusy)
                 return;
 
             try
             {
                 IsBusy = true;
-                var items = await itemService.GetItems();
-                foreach (var item in items)
-                    Debug.WriteLine($"{item.ItemID} {item.ItemName}");
-                Debug.WriteLine($"End of stored items list.");
-                if (Items.Count != 0)
-                    Items.Clear();
-                foreach (var item in items)
+
+                List<Item> itemList = await itemService.GetItems();
+
+                // DEBUG ITEM MANIFEST
+                Debug.WriteLine($"Items stored in ItemManifest: {ItemManifest.Count}");
+                if (ItemManifest.Count != 0)
+                    ItemManifest.Clear();
+                Debug.WriteLine($"Items stored in ItemManifest after clear: {ItemManifest.Count}");
+
+                // DEBUG DATABASE ITEMLIST
+                Debug.WriteLine($"Items saved in database: {itemList.Count}");
+
+                // ADD ITEMLIST TO DUMPLIST
+                foreach (var item in itemList)
                 {
-                    Items.Add(item);
-                    Debug.WriteLine($"Added {item.ItemID}, {item.ItemName}");
+                    DumpList.Add(item);
+                    Debug.WriteLine($"Added {item.ItemID}, {item.ItemName} to DumpList");
                 }
-                    
-                    
+
+                ItemManifest = new(DumpList);
+                Debug.WriteLine("Transferred DumpList to ItemManifest");
+
+                foreach (var item in ItemManifest)
+                    Debug.WriteLine($"Item stored in ItemManifest: {item.ItemName}, {item.Category}");
             }
-            catch (Exception ex)
+            catch (Exception ex) 
             {
-                Debug.WriteLine($"Unable to get items: {ex.Message}");
-                await Shell.Current.DisplayAlert("Data Retrieval Error", ex.Message, "OK");
+                Debug.WriteLine($"Something went wrong: {ex.Message}");
+                await Application.Current.MainPage.DisplayAlert("Transfer Error", ex.Message, "OK");
             }
             finally
             {
@@ -117,30 +131,34 @@ public partial class ItemsPageViewModel : ObservableObject
             }
         }
 
-        async Task GetItemsAsync() 
+        async Task GetItemsAsync_2() 
         {
-            //Debug.WriteLine("Arrived at Test Item.");
-            //DisplayedItems.Add(new Item { ItemID = 0, AmountPaid = 10.00m, Quantity = 1, BrandManufacturer = "ACME Inc.", Category = ItemCategory.PlumbingHVAC, Color = ItemColor.Magenta, ItemDescription = "Test item description.", ItemName = "Test Item", PurchaseProof = "Test Item Purchase Proof", Room = ItemRoom.Basement });
-            //Debug.WriteLine("Added Test Item.");
+            Debug.WriteLine("Arrived at Test Item.");
+            SelectedItems.Add(new Item { ItemID = 0, PurchaseDate="6/15/2019", AmountPaid = 10.00m, Quantity = 1, BrandManufacturer = "ACME Inc.", Category = ItemCategory.PlumbingHVAC, Color = ItemColor.Magenta, ItemDescription = "Test item description.", ItemName = "Test Item", PurchaseProof = "Test Item Purchase Proof", Room = ItemRoom.Basement });
+            Debug.WriteLine("Added Test Item.");
+            foreach (var item in SelectedItems)
+                Debug.WriteLine($"ID: {item.ItemID}, Name: {item.ItemName}, Category: {item.Category}");
+            SelectedItems.Clear();
             try
             {
-                List<Item> displayedItems = await itemService.GetItems();
+                List<Item> itemList = await itemService.GetItems();
 
-                Debug.WriteLine($"Items stored in DisplayedItems: {Items.Count}");
-                if (Items.Count != 0)
-                    Items.Clear();
-                Debug.WriteLine($"Items saved in database: {displayedItems.Count}");
+                Debug.WriteLine($"Items stored in ItemManifest: {ItemManifest.Count}");
+                if (ItemManifest.Count != 0)
+                    ItemManifest.Clear();
+                Debug.WriteLine($"Items stored in ItemManifest after clear: {ItemManifest.Count}");
+                Debug.WriteLine($"Items saved in database: {itemList.Count}");
                 try
                 {
-                    foreach (var item in displayedItems)
+                    foreach (var item in itemList)
                     {
                         Debug.WriteLine($"ID: {item.ItemID}, Name: {item.ItemName}, Category: {item.Category}");
-                        Items.Add(item);
+                        ItemManifest.Add(item);
                     }
                 }
                 catch (Exception ex)
                 {
-                    Debug.WriteLine($"Issue within TempDisplay");
+                    Debug.WriteLine($"Issue adding to ItemManifest");
                     await Application.Current.MainPage.DisplayAlert("Error", ex.Message, "OK");
                 }
             }
@@ -149,7 +167,12 @@ public partial class ItemsPageViewModel : ObservableObject
                 Debug.WriteLine($"Something went wrong when retrieving items: {ex.Message}");
                 await Application.Current.MainPage.DisplayAlert("Error!", ex.Message, "OK");
             }
-            Debug.WriteLine($"Items stored in DisplayedItems: {Items.Count}");
+            Debug.WriteLine($"Items stored in ItemManifest: {ItemManifest.Count}");
+            foreach (var item in ItemManifest)
+                Debug.WriteLine($"Items stored in ItemManifest: {item.ItemName}");
+            ObservableCollection<Item> DumpList = new(ItemManifest);
+            foreach (var item in DumpList)
+                Debug.WriteLine($"Item stored in DumpList: {item.ItemName}, {item.Category}");
         }
 
         async void DeleteAsync(List<Item> Items)
@@ -158,7 +181,7 @@ public partial class ItemsPageViewModel : ObservableObject
 
             foreach (var item in SelectedItems)
             {
-                Items.Remove(item);
+                ItemManifest.Remove(item);
             }
 
             await App.ItemServ.DeleteItems(Items);

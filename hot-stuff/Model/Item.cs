@@ -1,4 +1,5 @@
 ﻿using SQLite;
+
 namespace HotStuff.Model;
 
 [Table("Items")]

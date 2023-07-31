@@ -5,13 +5,8 @@ using UraniumUI;
 namespace HotStuff.ViewModel;
 
 [QueryProperty(nameof(Item), "Item")]
-public partial class ItemsPageViewModel : BaseViewModel
+public partial class ItemsPageViewModel : BaseViewModel 
 {
-    private ObservableCollection<Item> itemManifest { get; set; } = new();
-    public ObservableCollection<Item> ItemManifest { get => itemManifest; set { itemManifest = value; OnPropertyChanged(); } }
-
-    public ObservableCollection<Item> DumpList { get; private set; }
-
     ItemService itemService;
     public List<Item> SelectedItems { get; set; } = new List<Item>();
 
@@ -24,6 +19,9 @@ public partial class ItemsPageViewModel : BaseViewModel
     public ICommand GetItemsCommand { get; protected set; }
     public ICommand AppearingCommand { get; set; }
     public ICommand RemoveSelectedItemsCommand { get; protected set; }
+
+    public ObservableCollection<Item> ItemManifest { get; set; }
+
     public ItemsPageViewModel(ItemService itemService)
     {
         ItemManifest = new ObservableCollection<Item>();
@@ -38,7 +36,7 @@ public partial class ItemsPageViewModel : BaseViewModel
         GetItemsCommand = new Command(async () =>
         {
             Debug.WriteLine("User clicked get items.");
-            await GetItemsAsync();
+            GetItemsAsync();
         });
 
         AppearingCommand = new Command(async () =>
@@ -50,22 +48,9 @@ public partial class ItemsPageViewModel : BaseViewModel
         async void Appearing()
         {
             Debug.WriteLine("Appearing() start.");
-            var items = await App.ItemService.GetItems();
-            Debug.WriteLine("Retrieved items.");
-            
-            if (ItemManifest.Count == 0)
-            {
-                ItemManifest.Clear();
-                Debug.WriteLine("Cleared ItemList.");
-            }
             try
             {
-                foreach (var item in items)
-                {
-                    ItemManifest.Add(item);
-                    Debug.WriteLine($"Added {item.ItemID}, {item.ItemName}");
-                }
-                Debug.WriteLine("Completed loop.");
+                GetItemsAsync();
             }
             catch (Exception ex)
             {
@@ -79,10 +64,8 @@ public partial class ItemsPageViewModel : BaseViewModel
         }
 
 
-        async Task GetItemsAsync()
+        async void GetItemsAsync()
         {
-            ObservableCollection<Item> DumpList = new();
-
             if (IsBusy)
                 return;
 
@@ -90,25 +73,13 @@ public partial class ItemsPageViewModel : BaseViewModel
             {
                 IsBusy = true;
 
-                List<Item> itemList = await itemService.GetItems();
-
-                // DEBUG ITEM MANIFEST
-                Debug.WriteLine($"Items stored in ItemManifest: {ItemManifest.Count}");
-                if (ItemManifest.Count != 0)
-                    ItemManifest.Clear();
-                Debug.WriteLine($"Items stored in ItemManifest after clear: {ItemManifest.Count}");
-
-                // DEBUG DATABASE ITEMLIST
+                ObservableCollection<Item> itemList = await itemService.GetItems();
                 Debug.WriteLine($"Items saved in database: {itemList.Count}");
 
-                // ADD ITEMLIST TO DUMPLIST
-                foreach (var item in itemList)
-                {
-                    DumpList.Add(item);
-                    Debug.WriteLine($"Added {item.ItemID}, {item.ItemName} to DumpList");
-                }
+                if (ItemManifest.Count != 0)
+                    ItemManifest.Clear();
 
-                ItemManifest = new(DumpList);
+                ItemManifest = new(itemList);
                 Debug.WriteLine("Transferred DumpList to ItemManifest");
 
                 foreach (var item in ItemManifest)

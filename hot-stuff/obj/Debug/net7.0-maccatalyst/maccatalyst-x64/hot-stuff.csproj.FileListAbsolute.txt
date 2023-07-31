@@ -276,3 +276,15 @@ C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\
 C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\CommunityToolkit.Maui.dll
 C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\CommunityToolkit.Maui.Core.dll
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\noitemdata.png
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\logo.appiconset\Contents.json
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\logo.appiconset\logo20x20@2x.png
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\logo.appiconset\logo20x20@3x.png
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\logo.appiconset\logo29x29@2x.png
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\logo.appiconset\logo29x29@3x.png
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\logo.appiconset\logo40x40@2x.png
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\logo.appiconset\logo40x40@3x.png
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\logo.appiconset\logo60x60@2x.png
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\logo.appiconset\logo60x60@3x.png
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\logo.appiconset\logo76x76@2x.png
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\logo.appiconset\logo83.5x83.5@2x.png
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\logo.appiconset\logoItunesArtwork.png

@@ -40,20 +40,20 @@ namespace HotStuff.Services
             }
         }
 
-        public async Task<List<Item>> GetItems()
+        public async Task<ObservableCollection<Item>> GetItems()
         {
             try 
             {
                 await Init();
                 Debug.WriteLine("Data retrieval attempted.");
-                return new(await Database.Table<Item>().ToListAsync());
+                return new ObservableCollection<Item>(await Database.Table<Item>().ToListAsync());
             }
             catch (Exception ex) 
             {
                 Debug.WriteLine($"Failed to retrieve data. {ex.Message}");
             }
 
-            return new List<Item>();
+            return new ObservableCollection<Item>();
         }
 
         public async Task DeleteItems(List<Item> SelectedItems)

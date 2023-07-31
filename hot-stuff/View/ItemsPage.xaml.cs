@@ -15,7 +15,26 @@ public partial class ItemsPage : UraniumContentPage
     protected async override void OnAppearing()
     {
         /* IN CASE OF EMERGENCY */ // await App.ItemService.FlushItems();
-        // UraniumGrid.ItemsSource = await App.ItemService.GetItems();
+                                   // UraniumGrid.ItemsSource = await App.ItemService.GetItems();
+        ObservableCollection<Item> tempCollection = await App.ItemService.GetItems();
+        try
+        {
+            Debug.WriteLine($"Data stored in tempCollection");
+            foreach (var item in tempCollection)
+            {
+                Debug.WriteLine($"ID: {item.ItemID}, NAME: {item.ItemName}, CAT: {item.Category}, COLOR: {item.Color}, QUANT: {item.Quantity}, PROOF: {item.PurchaseProof}, BRAND: {item.BrandManufacturer}, DATE: {item.PurchaseDate}, DESC: {item.ItemDescription}, ROOM: {item.Room}");
+            }
+            UraniumGrid.ItemsSource = tempCollection;
+            Debug.WriteLine("No error?");
+            int one = 1;
+            int two = 2;
+            int answer = one + two;
+        }
+        catch (Exception ex) 
+        {
+            Debug.WriteLine($"Issue adding to ItemsPage: {ex.Message}");
+            await Application.Current.MainPage.DisplayAlert("Binding Error", ex.Message, "OK");
+        }
         base.OnAppearing();
         //var items = await App.ItemService.GetItems();
         //MainThread.BeginInvokeOnMainThread(async () =>

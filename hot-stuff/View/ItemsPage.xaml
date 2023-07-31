@@ -10,7 +10,6 @@
     xmlns:local="clr-namespace:HotStuff"
     xmlns:models="clr-namespace:HotStuff.Model"
     xmlns:viewmodel="clr-namespace:HotStuff.ViewModel"
-    xmlns:validation="clr-namespace:InputKit.Shared.Validations;assembly=InputKit.Maui"
     x:DataType="viewmodel:ItemsPageViewModel"
     xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     Title="Items"
@@ -40,26 +39,7 @@
                 <Button Text="Delete" StyleClass="FilledButton" Command="{Binding RemoveSelectedItemsCommand}" HorizontalOptions="Start"/>
                 <Button Text="Get" StyleClass="FilledButton" Command="{Binding GetItemsCommand}" HorizontalOptions="Start"/>
             </StackLayout>
-            <material:DataGrid ItemsSource="{Binding ItemManifest}" SelectedItems="{Binding SelectedItems}" HorizontalOptions="Center" VerticalOptions="Center" x:Name="UraniumGrid">
-
-                <material:DataGrid.CellItemTemplate>
-                    <DataTemplate x:DataType="models:Item" />
-                </material:DataGrid.CellItemTemplate>
-
-                <material:DataGrid.EmptyView >
-                    <!-- TODO: Fix this Minimum width request, would really prefer not to hardcode here, preferably to the device's view model width -->
-                    <StackLayout Padding="100">
-                        <Image 
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"
-                            Source="noitemdata.png"
-                            HeightRequest="160"
-                            WidthRequest="160"
-                        />
-                        <Label Text="No items found" HorizontalOptions="Center" VerticalOptions="Center" Padding="10"/>
-                    </StackLayout>
-                </material:DataGrid.EmptyView>
-
+            <material:DataGrid ItemsSource="{Binding ItemManifest, Mode=TwoWay}" SelectedItems="{Binding SelectedItems}" HorizontalOptions="Center" VerticalOptions="Center" x:Name="UraniumGrid">
                 <material:DataGrid.Columns>
                     <material:DataGridSelectionColumn/>
                     <material:DataGridColumn Binding="{Binding ItemName}" Title="Item Name" Width="Auto"/>
@@ -73,6 +53,17 @@
                     <material:DataGridColumn Binding="{Binding PurchaseProof}" Title="Purchase Proof" Width="Auto"/>
                     <material:DataGridColumn Binding="{Binding ItemDescription}" Title="Item Description" Width="*"/>
                 </material:DataGrid.Columns>
+
+                <material:DataGrid.CellItemTemplate>
+                    <DataTemplate x:DataType="models:Item" />
+                </material:DataGrid.CellItemTemplate>
+
+                <material:DataGrid.EmptyView >
+                    <StackLayout Padding="100">
+                        <Image HorizontalOptions="Center" VerticalOptions="Center" Source="noitemdata.png" HeightRequest="160" WidthRequest="160" />
+                        <Label Text="No items found" HorizontalOptions="Center" VerticalOptions="Center" Padding="10"/>
+                    </StackLayout>
+                </material:DataGrid.EmptyView>
             </material:DataGrid>
         </VerticalStackLayout>
     </ScrollView>

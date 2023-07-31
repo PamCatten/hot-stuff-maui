@@ -11552,6 +11552,14 @@ public final class R {
     public static final int appicon_background=0x7f0d0001;
     public static final int appicon_foreground=0x7f0d0002;
     public static final int appicon_round=0x7f0d0003;
+    public static final int logo=0x7f0d0004;
+    public static final int logo_background=0x7f0d0005;
+    public static final int logo_foreground=0x7f0d0006;
+    public static final int logo_round=0x7f0d0007;
+    public static final int logoconfig=0x7f0d0008;
+    public static final int logoconfig_background=0x7f0d0009;
+    public static final int logoconfig_foreground=0x7f0d000a;
+    public static final int logoconfig_round=0x7f0d000b;
   }
   public static final class plurals {
     public static final int mtrl_badge_content_description=0x7f0e0000;

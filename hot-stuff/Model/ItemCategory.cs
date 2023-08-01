@@ -26,7 +26,7 @@ namespace HotStuff.Model
         KitchenUtensils, 
         Lighting, 
         Linens, 
-        MusicalInstruments, 
+        Music, 
         OfficeSupplies, 
         PersonalCare,
         PetSupplies, 

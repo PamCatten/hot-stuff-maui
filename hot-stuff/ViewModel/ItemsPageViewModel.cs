@@ -20,7 +20,8 @@ public partial class ItemsPageViewModel : BaseViewModel
     public ICommand AppearingCommand { get; set; }
     public ICommand RemoveSelectedItemsCommand { get; protected set; }
 
-    public ObservableCollection<Item> ItemManifest { get; set; }
+    private ObservableCollection<Item> itemManifest;
+    public ObservableCollection<Item> ItemManifest { get { return itemManifest; } set { itemManifest = value; OnPropertyChanged(); }}
 
     public ItemsPageViewModel(ItemService itemService)
     {
@@ -80,7 +81,7 @@ public partial class ItemsPageViewModel : BaseViewModel
                     ItemManifest.Clear();
 
                 ItemManifest = new(itemList);
-                Debug.WriteLine("Transferred DumpList to ItemManifest");
+                Debug.WriteLine("Transferred itemList to ItemManifest");
 
                 foreach (var item in ItemManifest)
                     Debug.WriteLine($"Item stored in ItemManifest: {item.ItemName}, {item.Category}");
@@ -117,3 +118,4 @@ public partial class ItemsPageViewModel : BaseViewModel
 }
 
 
+;

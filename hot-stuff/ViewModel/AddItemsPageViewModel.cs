@@ -17,11 +17,11 @@ namespace HotStuff.ViewModel
                     $"Name {NewItem.ItemName}, " +
                     $"Category {NewItem.Category}, " +
                     $"Room: {NewItem.Room}, " +
-                    $"Quantity: {NewItem.Quantity}, " +
-                    $"AmountPaid: {NewItem.AmountPaid}" +
+                    $"Quantity: {NewItem.ItemQuantity}, " +
+                    $"AmountPaid: {NewItem.ItemPrice}" +
                     $"Color: {NewItem.Color}" +
                     $"Brand: {NewItem.BrandManufacturer}" +
-                    $"Date: {NewItem.PurchaseDate}" +
+                    $"Date: {NewItem.DateAcquired}" +
                     $"Description: {NewItem.ItemDescription}");
                 await App.ItemService.AddItem(NewItem);
                 await Shell.Current.GoToAsync("..");

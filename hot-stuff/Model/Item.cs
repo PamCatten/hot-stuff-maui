@@ -1,35 +1,68 @@
 ﻿using SQLite;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace HotStuff.Model;
 
 [Table("Items")]
-public partial class Item : ObservableObject
+public partial class Item : INotifyPropertyChanged
 {
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    protected void OnPropertyChanged([CallerMemberName] string name = null)
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+    }
+
     [PrimaryKey, AutoIncrement]
     public int ItemID { get; set; }
 
-    [ObservableProperty]
-    string itemName;
+    private string itemName;
+    private string brandManufacturer;
+    private string itemDescription;
+    private string purchaseProof;
+    private string dateAcquired;
+    private decimal itemPrice;
+    private int itemQuantity;
+    
+    public string ItemName
+    {
+        get { return itemName; } 
+        set { itemName = value; OnPropertyChanged(); }
+    }
+    public string BrandManufacturer
+    {
+        get { return brandManufacturer; }
+        set { brandManufacturer = value; OnPropertyChanged(); }
+    }
+    public string ItemDescription
+    {
+        get { return itemDescription; }
+        set { itemDescription = value; OnPropertyChanged(); }
+    }
+    public string PurchaseProof
+    {
+        get { return purchaseProof; }
+        set { purchaseProof = value; OnPropertyChanged(); }
+    }
+    public string DateAcquired
+    {
+        get { return dateAcquired; }
+        set { dateAcquired = value; OnPropertyChanged(); }
+    }
+    public decimal ItemPrice
+    {
+        get { return itemPrice; }
+        set { itemPrice = value; OnPropertyChanged(); }
+    }
+    public int ItemQuantity
+    {
+        get { return itemQuantity; }
+        set { itemQuantity = value; OnPropertyChanged(); }
+    }
 
-    [ObservableProperty]
-    string brandManufacturer;
 
-    [ObservableProperty]
-    string itemDescription;
-
-    [ObservableProperty]
-    string purchaseDate;
-
-    [ObservableProperty]
-    string purchaseProof;
-
-    [ObservableProperty]
-    decimal amountPaid;
-
-    [ObservableProperty]
-    int quantity;
-
-    public ItemCategory Category { get; set; }
+    public ItemCategory? Category { get; set; }
 
     public ItemRoom? Room { get; set; }
 

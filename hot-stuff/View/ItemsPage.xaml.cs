@@ -22,13 +22,9 @@ public partial class ItemsPage : UraniumContentPage
             Debug.WriteLine($"Data stored in tempCollection");
             foreach (var item in tempCollection)
             {
-                Debug.WriteLine($"ID: {item.ItemID}, NAME: {item.ItemName}, CAT: {item.Category}, COLOR: {item.Color}, QUANT: {item.Quantity}, PROOF: {item.PurchaseProof}, BRAND: {item.BrandManufacturer}, DATE: {item.PurchaseDate}, DESC: {item.ItemDescription}, ROOM: {item.Room}");
+                Debug.WriteLine($"ID: {item.ItemID}, NAME: {item.ItemName}, CAT: {item.Category}, COLOR: {item.Color}, QUANT: {item.ItemQuantity}, PROOF: {item.PurchaseProof}, BRAND: {item.BrandManufacturer}, DATE: {item.DateAcquired}, DESC: {item.ItemDescription}, ROOM: {item.Room}");
             }
-            UraniumGrid.ItemsSource = tempCollection;
-            Debug.WriteLine("No error?");
-            int one = 1;
-            int two = 2;
-            int answer = one + two;
+            //UraniumGrid.ItemsSource = tempCollection;
         }
         catch (Exception ex) 
         {
@@ -36,18 +32,6 @@ public partial class ItemsPage : UraniumContentPage
             await Application.Current.MainPage.DisplayAlert("Binding Error", ex.Message, "OK");
         }
         base.OnAppearing();
-        //var items = await App.ItemService.GetItems();
-        //MainThread.BeginInvokeOnMainThread(async () =>
-        //{
-            //ItemManifest.Clear();
-            //Debug.WriteLine("Cleared items.");
-            //foreach (var item in items)
-            //{
-                //ItemManifest.Add(item);
-                //Debug.WriteLine($"Added {item.ItemID}, {item.ItemName}");
-            //}
-            //Debug.WriteLine("Completed loop.");
-        //});
     }
 
 

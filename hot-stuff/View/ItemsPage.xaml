@@ -54,10 +54,6 @@
                     <material:DataGridColumn Binding="{Binding ItemDescription}" Title="Item Description" Width="*"/>
                 </material:DataGrid.Columns>
 
-                <material:DataGrid.CellItemTemplate>
-                    <DataTemplate x:DataType="models:Item" />
-                </material:DataGrid.CellItemTemplate>
-
                 <material:DataGrid.EmptyView >
                     <StackLayout Padding="100">
                         <Image HorizontalOptions="Center" VerticalOptions="Center" Source="noitemdata.png" HeightRequest="160" WidthRequest="160" />

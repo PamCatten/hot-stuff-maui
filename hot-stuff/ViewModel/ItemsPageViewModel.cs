@@ -1,10 +1,8 @@
 ﻿using HotStuff.Services;
 using System.Windows.Input;
-using UraniumUI;
 
 namespace HotStuff.ViewModel;
 
-[QueryProperty(nameof(Item), "Item")]
 public partial class ItemsPageViewModel : BaseViewModel 
 {
     ItemService itemService;
@@ -19,13 +17,21 @@ public partial class ItemsPageViewModel : BaseViewModel
     public ICommand GetItemsCommand { get; protected set; }
     public ICommand AppearingCommand { get; set; }
     public ICommand RemoveSelectedItemsCommand { get; protected set; }
-
-    private ObservableCollection<Item> itemManifest;
-    public ObservableCollection<Item> ItemManifest { get { return itemManifest; } set { itemManifest = value; OnPropertyChanged(); }}
-
+    private ObservableCollection<Item> itemManifest = new();
+    public ObservableCollection<Item> ItemManifest
+    {
+        get 
+        { 
+            return itemManifest; 
+        }
+        set
+        {
+            itemManifest = value;
+            OnPropertyChanged(nameof(ItemManifest));
+        }
+    }
     public ItemsPageViewModel(ItemService itemService)
     {
-        ItemManifest = new ObservableCollection<Item>();
         this.itemService = itemService;
 
         RemoveSelectedItemsCommand = new Command(async () =>
@@ -70,6 +76,8 @@ public partial class ItemsPageViewModel : BaseViewModel
             if (IsBusy)
                 return;
 
+            ObservableCollection<Item> ItemManifest = new();
+
             try
             {
                 IsBusy = true;
@@ -77,14 +85,23 @@ public partial class ItemsPageViewModel : BaseViewModel
                 ObservableCollection<Item> itemList = await itemService.GetItems();
                 Debug.WriteLine($"Items saved in database: {itemList.Count}");
 
-                if (ItemManifest.Count != 0)
-                    ItemManifest.Clear();
-
-                ItemManifest = new(itemList);
+                try
+                {
+                    if (itemList is not null)
+                    {
+                        foreach (var item in itemList)
+                        {
+                            ItemManifest.Add(item);
+                            Debug.WriteLine($"Item stored in ItemManifest: {item.ItemName}, {item.Category}");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine($"Found the error: {ex.Message}");
+                    await Application.Current.MainPage.DisplayAlert("Transform Error", ex.Message, "OK");
+                }
                 Debug.WriteLine("Transferred itemList to ItemManifest");
-
-                foreach (var item in ItemManifest)
-                    Debug.WriteLine($"Item stored in ItemManifest: {item.ItemName}, {item.Category}");
             }
             catch (Exception ex) 
             {

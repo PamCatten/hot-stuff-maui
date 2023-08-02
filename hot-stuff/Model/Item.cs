@@ -27,38 +27,108 @@ public partial class Item : INotifyPropertyChanged
     
     public string ItemName
     {
-        get { return itemName; } 
-        set { itemName = value; OnPropertyChanged(); }
+        get
+        {
+            return itemName;
+        }
+        set
+        {
+            if (itemName != value)
+            {
+                itemName = value;
+            }
+            OnPropertyChanged();
+        }
     }
     public string BrandManufacturer
     {
-        get { return brandManufacturer; }
-        set { brandManufacturer = value; OnPropertyChanged(); }
+        get
+        {
+            return brandManufacturer;
+        }
+        set
+        {
+            if (brandManufacturer != value)
+            {
+                brandManufacturer = value;
+            }
+            OnPropertyChanged();
+        }
     }
     public string ItemDescription
     {
-        get { return itemDescription; }
-        set { itemDescription = value; OnPropertyChanged(); }
+        get
+        {
+            return itemDescription;
+        }
+        set
+        {
+            if (itemDescription != value)
+            {
+                itemDescription = value;
+            }
+            OnPropertyChanged();
+        }
     }
     public string PurchaseProof
     {
-        get { return purchaseProof; }
-        set { purchaseProof = value; OnPropertyChanged(); }
+        get
+        {
+            return purchaseProof;
+        }
+        set
+        {
+            if (purchaseProof != value)
+            {
+                purchaseProof = value;
+            }
+            OnPropertyChanged();
+        }
     }
     public string DateAcquired
     {
-        get { return dateAcquired; }
-        set { dateAcquired = value; OnPropertyChanged(); }
+        get
+        {
+            return dateAcquired;
+        }
+        set
+        {
+            if (dateAcquired != value)
+            {
+                dateAcquired = value;
+            }
+            OnPropertyChanged();
+        }
     }
     public decimal ItemPrice
     {
-        get { return itemPrice; }
-        set { itemPrice = value; OnPropertyChanged(); }
+        get
+        {
+            return itemPrice;
+        }
+        set
+        {
+            if (itemPrice != value)
+            { 
+                itemPrice = value; 
+            }
+            OnPropertyChanged();
+        }
     }
     public int ItemQuantity
     {
-        get { return itemQuantity; }
-        set { itemQuantity = value; OnPropertyChanged(); }
+        get 
+        { 
+            return itemQuantity; 
+        }
+        set 
+        { 
+            if (itemQuantity != value) 
+            {
+                itemQuantity = value; 
+            } 
+            OnPropertyChanged(); 
+        }
     }
 
 

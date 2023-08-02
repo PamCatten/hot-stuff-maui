@@ -42,7 +42,7 @@
             <material:DataGrid ItemsSource="{Binding ItemManifest}" SelectedItems="{Binding SelectedItems}" HorizontalOptions="Center" VerticalOptions="Center" x:Name="UraniumGrid">
                 <material:DataGrid.Columns>
                     <material:DataGridSelectionColumn/>
-                    <material:DataGridColumn Binding="{Binding ItemName}" Title="Item Name" Width="Auto"/>
+                    <material:DataGridColumn Binding="{Binding ItemName}" Title="Item Name" Width="Auto" />
                     <material:DataGridColumn Binding="{Binding Category}" Title="Item Category" Width="Auto"/>
                     <material:DataGridColumn Binding="{Binding BrandManufacturer}" Title="Brand / Manufacturer" Width="Auto"/>
                     <material:DataGridColumn Binding="{Binding Room}" Title="Room" Width="Auto"/>

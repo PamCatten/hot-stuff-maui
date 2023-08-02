@@ -77,7 +77,12 @@ public partial class ItemsPageViewModel : BaseViewModel
             if (IsBusy)
                 return;
 
-            ObservableCollection<Item> ItemManifest = new();
+            //ObservableCollection<Item> ItemManifest = new();
+            //if (ItemManifest is not null)
+            //{
+                //if (ItemManifest.Count != 0)
+                    //ItemManifest.Clear();
+            //}
 
             try
             {

@@ -54,6 +54,7 @@
 		<PackageReference Include="CommunityToolkit.Maui" Version="5.2.0" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
 		<PackageReference Include="sqlite-net-pcl" Version="1.9.141-beta" />
+		<PackageReference Include="SQLitePCLRaw.core" Version="2.1.5" />
 		<PackageReference Include="SQLitePCLRaw.provider.dynamic_cdecl" Version="2.1.5" />
 		<PackageReference Include="UraniumUI.Material" Version="2.5.4" />
 		<PackageReference Include="UraniumUI.Icons.FontAwesome" Version="2.5.4" />

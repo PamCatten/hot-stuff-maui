@@ -49,15 +49,16 @@ public partial class ItemsPageViewModel : BaseViewModel
         AppearingCommand = new Command(async () =>
         {
             Debug.WriteLine("AppearingCommand run.");
-            Appearing();
+            AppearingAsync();
         });
 
-        async void Appearing()
+        async void AppearingAsync()
         {
             Debug.WriteLine("Appearing() start.");
             try
             {
                 GetItemsAsync();
+                Debug.WriteLine("Finished getting items");
             }
             catch (Exception ex)
             {

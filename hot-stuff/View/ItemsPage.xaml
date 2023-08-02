@@ -28,7 +28,7 @@
     </uranium:UraniumContentPage.Resources>
 
     <uranium:UraniumContentPage.Behaviors>
-        <!-- <mct:EventToCommandBehavior Command="{Binding AppearingCommand}" EventName="Appearing" /> -->
+        <mct:EventToCommandBehavior Command="{Binding AppearingCommand}" EventName="Appearing" />
     </uranium:UraniumContentPage.Behaviors>
     
     

@@ -33233,6 +33233,7 @@
       "Microsoft.Extensions.Logging >= 7.0.0",
       "Microsoft.Extensions.Logging.Abstractions >= 7.0.0",
       "Microsoft.Maui.Graphics >= 7.0.86",
+      "SQLitePCLRaw.core >= 2.1.5",
       "SQLitePCLRaw.provider.dynamic_cdecl >= 2.1.5",
       "UraniumUI.Dialogs.Mopups >= 2.5.4",
       "UraniumUI.Icons.FontAwesome >= 2.5.4",
@@ -33259,6 +33260,7 @@
       "Microsoft.Extensions.Logging >= 7.0.0",
       "Microsoft.Extensions.Logging.Abstractions >= 7.0.0",
       "Microsoft.Maui.Graphics >= 7.0.86",
+      "SQLitePCLRaw.core >= 2.1.5",
       "SQLitePCLRaw.provider.dynamic_cdecl >= 2.1.5",
       "UraniumUI.Dialogs.Mopups >= 2.5.4",
       "UraniumUI.Icons.FontAwesome >= 2.5.4",
@@ -33274,6 +33276,7 @@
       "Microsoft.Extensions.Logging >= 7.0.0",
       "Microsoft.Extensions.Logging.Abstractions >= 7.0.0",
       "Microsoft.Maui.Graphics >= 7.0.86",
+      "SQLitePCLRaw.core >= 2.1.5",
       "SQLitePCLRaw.provider.dynamic_cdecl >= 2.1.5",
       "UraniumUI.Dialogs.Mopups >= 2.5.4",
       "UraniumUI.Icons.FontAwesome >= 2.5.4",
@@ -33292,6 +33295,7 @@
       "Microsoft.Maui.Graphics.Win2D.WinUI.Desktop >= 7.0.86",
       "Microsoft.Windows.SDK.BuildTools >= 10.0.22621.755",
       "Microsoft.WindowsAppSDK >= 1.2.221209.1",
+      "SQLitePCLRaw.core >= 2.1.5",
       "SQLitePCLRaw.provider.dynamic_cdecl >= 2.1.5",
       "UraniumUI.Dialogs.Mopups >= 2.5.4",
       "UraniumUI.Icons.FontAwesome >= 2.5.4",
@@ -33393,6 +33397,10 @@
             "target": "Package",
             "version": "[7.0.86, )",
             "autoReferenced": true
+          },
+          "SQLitePCLRaw.core": {
+            "target": "Package",
+            "version": "[2.1.5, )"
           },
           "SQLitePCLRaw.provider.dynamic_cdecl": {
             "target": "Package",
@@ -33540,6 +33548,10 @@
             "version": "[7.0.86, )",
             "autoReferenced": true
           },
+          "SQLitePCLRaw.core": {
+            "target": "Package",
+            "version": "[2.1.5, )"
+          },
           "SQLitePCLRaw.provider.dynamic_cdecl": {
             "target": "Package",
             "version": "[2.1.5, )"
@@ -33630,6 +33642,10 @@
             "target": "Package",
             "version": "[7.0.86, )",
             "autoReferenced": true
+          },
+          "SQLitePCLRaw.core": {
+            "target": "Package",
+            "version": "[2.1.5, )"
           },
           "SQLitePCLRaw.provider.dynamic_cdecl": {
             "target": "Package",
@@ -33738,6 +33754,10 @@
             "target": "Package",
             "version": "[1.2.221209.1, )",
             "autoReferenced": true
+          },
+          "SQLitePCLRaw.core": {
+            "target": "Package",
+            "version": "[2.1.5, )"
           },
           "SQLitePCLRaw.provider.dynamic_cdecl": {
             "target": "Package",

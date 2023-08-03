@@ -1,4 +1,6 @@
 ﻿using HotStuff.Services;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Windows.Input;
 
 namespace HotStuff.ViewModel;
@@ -71,7 +73,6 @@ public partial class ItemsPageViewModel : BaseViewModel
             }
         }
 
-
         async void GetItemsAsync()
         {
             if (IsBusy)
@@ -87,27 +88,21 @@ public partial class ItemsPageViewModel : BaseViewModel
             try
             {
                 IsBusy = true;
-
                 ObservableCollection<Item> itemList = await itemService.GetItems();
-                Debug.WriteLine($"Items saved in database: {itemList.Count}");
+                Debug.WriteLine($"There are: {itemList.Count} items currently saved in database.");
 
-                try
+                if (itemList is not null)
                 {
-                    if (itemList is not null && ItemManifest.Count == 0)
+
+                    foreach (var item in itemList)
                     {
-                        foreach (var item in itemList)
-                        {
+                        if (ItemManifest.Any(x => x.ItemID == item.ItemID))
+                            Debug.WriteLine($"Item {item.ItemName} already exists in ItemManifest.");
+                        else
                             ItemManifest.Add(item);
-                            Debug.WriteLine($"Item stored in ItemManifest: {item.ItemName}, {item.Category}");
-                        }
                     }
+                    Debug.WriteLine("Transferred itemList to ItemManifest");
                 }
-                catch (Exception ex)
-                {
-                    Debug.WriteLine($"Found the error: {ex.Message}");
-                    await Application.Current.MainPage.DisplayAlert("Transform Error", ex.Message, "OK");
-                }
-                Debug.WriteLine("Transferred itemList to ItemManifest");
             }
             catch (Exception ex) 
             {

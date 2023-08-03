@@ -40,6 +40,13 @@
                 <Button Text="Get" StyleClass="FilledButton" Command="{Binding GetItemsCommand}" HorizontalOptions="Start"/>
             </StackLayout>
             <material:DataGrid ItemsSource="{Binding ItemManifest}" SelectedItems="{Binding SelectedItems}" HorizontalOptions="Center" VerticalOptions="Center" x:Name="UraniumGrid">
+                <material:DataGrid.EmptyView >
+                    <StackLayout Padding="100">
+                        <Image HorizontalOptions="Center" VerticalOptions="Center" Source="noitemdata.png" HeightRequest="160" WidthRequest="160" />
+                        <Label Text="No items found" HorizontalOptions="Center" VerticalOptions="Center" Padding="10"/>
+                    </StackLayout>
+                </material:DataGrid.EmptyView>
+
                 <material:DataGrid.Columns>
                     <material:DataGridSelectionColumn/>
                     <material:DataGridColumn Binding="{Binding ItemName}" Title="Item Name" Width="Auto" />
@@ -54,12 +61,6 @@
                     <material:DataGridColumn Binding="{Binding ItemDescription}" Title="Item Description" Width="*"/>
                 </material:DataGrid.Columns>
 
-                <material:DataGrid.EmptyView >
-                    <StackLayout Padding="100">
-                        <Image HorizontalOptions="Center" VerticalOptions="Center" Source="noitemdata.png" HeightRequest="160" WidthRequest="160" />
-                        <Label Text="No items found" HorizontalOptions="Center" VerticalOptions="Center" Padding="10"/>
-                    </StackLayout>
-                </material:DataGrid.EmptyView>
             </material:DataGrid>
         </VerticalStackLayout>
     </ScrollView>

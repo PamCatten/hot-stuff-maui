@@ -93,7 +93,7 @@ public partial class ItemsPageViewModel : BaseViewModel
 
                 try
                 {
-                    if (itemList is not null)
+                    if (itemList is not null && ItemManifest.Count == 0)
                     {
                         foreach (var item in itemList)
                         {

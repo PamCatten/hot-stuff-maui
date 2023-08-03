@@ -29,25 +29,25 @@
     <AppXManifest Include="C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-07-30T22:08:08.409</Modified>
+      <Modified>2023-08-03T16:49:53.710</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-07-30T22:08:08.021</Modified>
+      <Modified>2023-08-03T16:49:52.877</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\hot-stuff.runtimeconfig.json">
       <PackagePath>hot-stuff.runtimeconfig.json</PackagePath>
-      <Modified>2023-07-29T18:52:44.367</Modified>
+      <Modified>2023-08-03T16:49:52.455</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\hot-stuff.dll">
       <PackagePath>hot-stuff.dll</PackagePath>
-      <Modified>2023-07-30T22:08:06.510</Modified>
+      <Modified>2023-08-03T16:49:48.508</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>hot-stuff.exe</PackagePath>
-      <Modified>2023-07-30T22:08:06.522</Modified>
+      <Modified>2023-08-03T16:49:48.557</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.9\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -991,7 +991,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\hot-stuff.deps.json">
       <PackagePath>hot-stuff.deps.json</PackagePath>
-      <Modified>2023-07-30T22:08:08.242</Modified>
+      <Modified>2023-08-03T16:49:53.321</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\dotnet\packs\Microsoft.Maui.Controls.Ref.win\7.0.86\ref\net7.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>

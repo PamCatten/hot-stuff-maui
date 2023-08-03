@@ -19,6 +19,7 @@
           "Microsoft.Maui.Graphics.Win2D.WinUI.Desktop": "7.0.86",
           "Microsoft.Windows.SDK.BuildTools": "10.0.22621.755",
           "Microsoft.WindowsAppSDK": "1.2.221209.1",
+          "SQLitePCLRaw.core": "2.1.5",
           "SQLitePCLRaw.provider.dynamic_cdecl": "2.1.5",
           "UraniumUI.Dialogs.Mopups": "2.5.4",
           "UraniumUI.Icons.FontAwesome": "2.5.4",

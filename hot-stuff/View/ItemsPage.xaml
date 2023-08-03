@@ -56,7 +56,7 @@
                     <material:DataGridColumn Binding="{Binding Color}" Title="Color" Width="Auto"/>
                     <material:DataGridColumn Binding="{Binding DateAcquired}" Title = "Purchase Date" Width="Auto"/>
                     <material:DataGridColumn Binding="{Binding ItemPrice}" Title = "Amount Paid" Width="Auto"/>
-                    <material:DataGridColumn Binding="{Binding Quantity}" Title = "Quantity" Width="Auto" />
+                    <material:DataGridColumn Binding="{Binding ItemQuantity}" Title = "Quantity" Width="Auto" />
                     <material:DataGridColumn Binding="{Binding PurchaseProof}" Title="Purchase Proof" Width="Auto"/>
                     <material:DataGridColumn Binding="{Binding ItemDescription}" Title="Item Description" Width="*"/>
                 </material:DataGrid.Columns>

@@ -12,6 +12,7 @@ public class MonoPackageManager_Resources {
 		"CommunityToolkit.Maui.dll",
 		"CommunityToolkit.Maui.Core.dll",
 		"CommunityToolkit.Mvvm.dll",
+		"CsvHelper.dll",
 		"GoogleGson.dll",
 		"HarfBuzzSharp.dll",
 		"InputKit.Maui.dll",

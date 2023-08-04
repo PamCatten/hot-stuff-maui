@@ -13,11 +13,13 @@ namespace HotStuff.ViewModel
         public IEnumerable<ISeries> Series { get; set; } =
             new[] { 2, 4, 1, 4, 3 }.AsPieSeries((value, series) =>
             {
-                series.InnerRadius = 50;
+                series.InnerRadius = 30;
             });
 
         public MainPageViewModel()
         {
+            
         }
+
     }
 }

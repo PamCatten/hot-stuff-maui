@@ -11,6 +11,7 @@
         "dependencies": {
           "CommunityToolkit.Maui": "5.2.0",
           "CommunityToolkit.Mvvm": "8.2.1",
+          "CsvHelper": "30.0.1",
           "LiveChartsCore.SkiaSharpView.Maui": "2.0.0-beta.911",
           "Microsoft.Extensions.Configuration": "7.0.0",
           "Microsoft.Extensions.DependencyInjection": "7.0.0",
@@ -839,6 +840,14 @@
           }
         }
       },
+      "CsvHelper/30.0.1": {
+        "runtime": {
+          "lib/net6.0/CsvHelper.dll": {
+            "assemblyVersion": "30.0.0.0",
+            "fileVersion": "30.0.1.0"
+          }
+        }
+      },
       "HarfBuzzSharp/2.8.2.4-preview.84": {
         "dependencies": {
           "HarfBuzzSharp.NativeAssets.Win32": "2.8.2.4-preview.84",
@@ -1371,6 +1380,13 @@
       "sha512": "sha512-I24ofWVEdplxYjUez9/bljv/qb8r8Ccj6cvYXHexNBegLaD3iDy3QrzAAOYVMmfGWIXxlU1ZtECQNfU07+6hXQ==",
       "path": "communitytoolkit.mvvm/8.2.1",
       "hashPath": "communitytoolkit.mvvm.8.2.1.nupkg.sha512"
+    },
+    "CsvHelper/30.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rcZtgbWR+As4G3Vpgx0AMNmShGuQLFjkHAPIIflzrfkJCx8/AOd4m96ZRmiU1Wi39qS5UVjV0P8qdgqOo5Cwyg==",
+      "path": "csvhelper/30.0.1",
+      "hashPath": "csvhelper.30.0.1.nupkg.sha512"
     },
     "HarfBuzzSharp/2.8.2.4-preview.84": {
       "type": "package",

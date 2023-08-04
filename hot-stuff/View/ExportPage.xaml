@@ -7,9 +7,12 @@
     xmlns:local="clr-namespace:HotStuff.View"
     Title = "Export Items"
 >
+
     <StackLayout>
-        <Label Text="Welcome to .NET MAUI!!!"
+        <Button Text="Convert Items to CSV"
             HorizontalOptions="Center"
-            VerticalOptions="Center"/>
+            VerticalOptions="Center"
+            Clicked="OnMakeCSVClicked"
+        />
     </StackLayout>
 </uranium:UraniumContentPage>

@@ -32,7 +32,8 @@
     <uranium:UraniumContentPage.Content>
         <Grid>
             <Label Text="Your Key Figures" FontSize="Large" FontAttributes="Bold" Margin="15,40,15,10"/>
-            <lvc:PieChart Series="{Binding Series}" Margin="50, 150, 50, 150" BackgroundColor="Black"/>
+            <lvc:PieChart Series="{Binding Series}" Margin="50, 150, 50, 150"/>
+            <Label Text="Your Breakdown" FontSize="Large" FontAttributes="Bold" Margin="15,10,15,10"/>
         </Grid>
     </uranium:UraniumContentPage.Content>
 

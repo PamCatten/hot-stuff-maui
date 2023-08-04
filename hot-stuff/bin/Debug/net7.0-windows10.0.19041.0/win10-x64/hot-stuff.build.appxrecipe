@@ -616,6 +616,9 @@
     <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\communitytoolkit.mvvm\8.2.1\lib\net6.0\CommunityToolkit.Mvvm.dll">
       <PackagePath>CommunityToolkit.Mvvm.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\csvhelper\30.0.1\lib\net6.0\CsvHelper.dll">
+      <PackagePath>CsvHelper.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\harfbuzzsharp\2.8.2.4-preview.84\lib\net6.0\HarfBuzzSharp.dll">
       <PackagePath>HarfBuzzSharp.dll</PackagePath>
     </AppxPackagedFile>

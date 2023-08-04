@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "q5inStoh/KPTDsorrMVbLPrnkmtIYphiABjDOluKl98fcTN8IvAOKiOSlBUsRBFK6fxllcf05Kh6y5Pws+rfXg==",
+  "dgSpecHash": "JL3m1Qe1o/p4MMUhzQcsOlMcLH9UAOcAP1Rqr4lwWTaMpr0ia8QBXbHUQUKzG3WRCwr3bBgD96bYfl9/w5HO2g==",
   "success": true,
   "projectFilePath": "C:\\Users\\campa\\hot-stuff\\hot-stuff\\hot-stuff.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\campa\\.nuget\\packages\\communitytoolkit.maui\\5.2.0\\communitytoolkit.maui.5.2.0.nupkg.sha512",
     "C:\\Users\\campa\\.nuget\\packages\\communitytoolkit.maui.core\\5.2.0\\communitytoolkit.maui.core.5.2.0.nupkg.sha512",
     "C:\\Users\\campa\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.1\\communitytoolkit.mvvm.8.2.1.nupkg.sha512",
+    "C:\\Users\\campa\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512",
     "C:\\Users\\campa\\.nuget\\packages\\googlegson\\2.9.1.1\\googlegson.2.9.1.1.nupkg.sha512",
     "C:\\Users\\campa\\.nuget\\packages\\harfbuzzsharp\\2.8.2.4-preview.84\\harfbuzzsharp.2.8.2.4-preview.84.nupkg.sha512",
     "C:\\Users\\campa\\.nuget\\packages\\harfbuzzsharp.nativeassets.android\\2.8.2.4-preview.84\\harfbuzzsharp.nativeassets.android.2.8.2.4-preview.84.nupkg.sha512",

@@ -1075,3 +1075,4 @@ C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\src\crc648e3
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\src\crc648e35430423bd4943\SKGLTextureViewRenderer.java
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\src\crc648e35430423bd4943\SKGLTextureView_InternalRenderer.java
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\src\crc648e35430423bd4943\SKSurfaceView.java
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\assets\CsvHelper.dll

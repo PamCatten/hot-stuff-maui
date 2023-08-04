@@ -69,6 +69,10 @@
               "target": "Package",
               "version": "[8.2.1, )"
             },
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[30.0.1, )"
+            },
             "LiveChartsCore.SkiaSharpView.Maui": {
               "target": "Package",
               "version": "[2.0.0-beta.911, )"
@@ -223,6 +227,10 @@
               "target": "Package",
               "version": "[8.2.1, )"
             },
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[30.0.1, )"
+            },
             "LiveChartsCore.SkiaSharpView.Maui": {
               "target": "Package",
               "version": "[2.0.0-beta.911, )"
@@ -321,6 +329,10 @@
             "CommunityToolkit.Mvvm": {
               "target": "Package",
               "version": "[8.2.1, )"
+            },
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[30.0.1, )"
             },
             "LiveChartsCore.SkiaSharpView.Maui": {
               "target": "Package",
@@ -421,6 +433,10 @@
             "CommunityToolkit.Mvvm": {
               "target": "Package",
               "version": "[8.2.1, )"
+            },
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[30.0.1, )"
             },
             "LiveChartsCore.SkiaSharpView.Maui": {
               "target": "Package",

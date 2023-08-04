@@ -177,3 +177,14 @@ UraniumUI.aar
 UraniumUI.Icons.FontAwesome.aar
 UraniumUI.Material.aar
 Xamarin.Google.Crypto.Tink.Android.aar
+HarfBuzzSharp.dll
+LiveChartsCore.dll
+LiveChartsCore.SkiaSharpView.dll
+LiveChartsCore.SkiaSharpView.Maui.dll
+SkiaSharp.dll
+SkiaSharp.Views.Android.dll
+SkiaSharp.Views.Maui.Controls.Compatibility.dll
+SkiaSharp.Views.Maui.Controls.dll
+SkiaSharp.Views.Maui.Core.dll
+LiveChartsCore.SkiaSharpView.Maui.aar
+SkiaSharp.Views.Android.aar

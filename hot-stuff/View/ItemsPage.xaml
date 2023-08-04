@@ -17,7 +17,7 @@
 
     <uranium:UraniumContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="{StaticResource AddIcon}" Clicked="OnAddItemsPageClicked" />
-        <ToolbarItem IconImageSource="{StaticResource DownloadIcon}" Clicked="OnAddItemsPageClicked" />
+        <ToolbarItem IconImageSource="{StaticResource DownloadIcon}" Clicked="OnExportPageClicked" />
         <ToolbarItem IconImageSource="{StaticResource ProfileIcon}" Clicked="OnProfilePageClicked"/>
     </uranium:UraniumContentPage.ToolbarItems>
 
@@ -37,10 +37,10 @@
             <StackLayout Padding="10" Orientation="Horizontal" Spacing="10">
                 <Button Text="Update" StyleClass ="FilledButton" HorizontalOptions="Start"/>
                 <Button Text="Delete" StyleClass="FilledButton" Command="{Binding RemoveSelectedItemsCommand}" HorizontalOptions="Start"/>
-                <Button Text="Get" StyleClass="FilledButton" Command="{Binding GetItemsCommand}" HorizontalOptions="Start"/>
             </StackLayout>
+            
             <material:DataGrid ItemsSource="{Binding ItemManifest}" SelectedItems="{Binding SelectedItems}" HorizontalOptions="Center" VerticalOptions="Center" x:Name="UraniumGrid">
-                <material:DataGrid.EmptyView >
+                <material:DataGrid.EmptyView>
                     <StackLayout Padding="100">
                         <Image HorizontalOptions="Center" VerticalOptions="Center" Source="noitemdata.png" HeightRequest="160" WidthRequest="160" />
                         <Label Text="No items found" HorizontalOptions="Center" VerticalOptions="Center" Padding="10"/>

@@ -42,12 +42,6 @@ public partial class ItemsPageViewModel : BaseViewModel
             DeleteAsync(SelectedItems);
         });
 
-        GetItemsCommand = new Command(async () =>
-        {
-            Debug.WriteLine("User clicked get items.");
-            GetItemsAsync();
-        });
-
         AppearingCommand = new Command(async () =>
         {
             Debug.WriteLine("AppearingCommand run.");
@@ -60,7 +54,6 @@ public partial class ItemsPageViewModel : BaseViewModel
             try
             {
                 GetItemsAsync();
-                Debug.WriteLine("Finished getting items");
             }
             catch (Exception ex)
             {
@@ -77,13 +70,6 @@ public partial class ItemsPageViewModel : BaseViewModel
         {
             if (IsBusy)
                 return;
-
-            //ObservableCollection<Item> ItemManifest = new();
-            //if (ItemManifest is not null)
-            //{
-                //if (ItemManifest.Count != 0)
-                    //ItemManifest.Clear();
-            //}
 
             try
             {

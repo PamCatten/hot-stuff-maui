@@ -9,5 +9,6 @@ public partial class AppShell : Shell
 
         Routing.RegisterRoute(nameof(AddItemsPage), typeof(AddItemsPage));
         Routing.RegisterRoute(nameof(ProfilePage), typeof(ProfilePage));
+        Routing.RegisterRoute(nameof(ExportPage), typeof(ExportPage));
     }
 }

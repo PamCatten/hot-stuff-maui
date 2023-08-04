@@ -616,8 +616,20 @@
     <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\communitytoolkit.mvvm\8.2.1\lib\net6.0\CommunityToolkit.Mvvm.dll">
       <PackagePath>CommunityToolkit.Mvvm.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\harfbuzzsharp\2.8.2.4-preview.84\lib\net6.0\HarfBuzzSharp.dll">
+      <PackagePath>HarfBuzzSharp.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\inputkit.maui\4.3.4\lib\net7.0-windows10.0.19041\InputKit.Maui.dll">
       <PackagePath>InputKit.Maui.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\livechartscore\2.0.0-beta.911\lib\net6.0\LiveChartsCore.dll">
+      <PackagePath>LiveChartsCore.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\livechartscore.skiasharpview\2.0.0-beta.911\lib\net6.0\LiveChartsCore.SkiaSharpView.dll">
+      <PackagePath>LiveChartsCore.SkiaSharpView.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\livechartscore.skiasharpview.maui\2.0.0-beta.911\lib\net7.0-windows10.0.19041\LiveChartsCore.SkiaSharpView.Maui.dll">
+      <PackagePath>LiveChartsCore.SkiaSharpView.Maui.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\microsoft.extensions.configuration\7.0.0\lib\net7.0\Microsoft.Extensions.Configuration.dll">
       <PackagePath>Microsoft.Extensions.Configuration.dll</PackagePath>
@@ -700,6 +712,24 @@
     <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\plainer.maui\1.6.4\lib\net7.0-windows10.0.19041\Plainer.Maui.dll">
       <PackagePath>Plainer.Maui.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\skiasharp\2.88.4-preview.84\lib\net6.0\SkiaSharp.dll">
+      <PackagePath>SkiaSharp.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\skiasharp.harfbuzz\2.88.4-preview.84\lib\net6.0\SkiaSharp.HarfBuzz.dll">
+      <PackagePath>SkiaSharp.HarfBuzz.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\skiasharp.views.maui.controls\2.88.4-preview.84\lib\net6.0-windows10.0.18362.0\SkiaSharp.Views.Maui.Controls.dll">
+      <PackagePath>SkiaSharp.Views.Maui.Controls.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\skiasharp.views.maui.controls.compatibility\2.88.4-preview.84\lib\net6.0-windows10.0.18362.0\SkiaSharp.Views.Maui.Controls.Compatibility.dll">
+      <PackagePath>SkiaSharp.Views.Maui.Controls.Compatibility.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\skiasharp.views.maui.core\2.88.4-preview.84\lib\net6.0-windows10.0.18362.0\SkiaSharp.Views.Maui.Core.dll">
+      <PackagePath>SkiaSharp.Views.Maui.Core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\skiasharp.views.winui\2.88.4-preview.84\lib\net6.0-windows10.0.19041.0\SkiaSharp.Views.Windows.dll">
+      <PackagePath>SkiaSharp.Views.Windows.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\sqlite-net-pcl\1.9.141-beta\lib\netstandard2.0\SQLite-net.dll">
       <PackagePath>SQLite-net.dll</PackagePath>
     </AppxPackagedFile>
@@ -733,11 +763,17 @@
     <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\xam.plugin.media\6.0.2\lib\net6.0-windows10.0.19041\Plugin.Media.dll">
       <PackagePath>Plugin.Media.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\harfbuzzsharp.nativeassets.win32\2.8.2.4-preview.84\runtimes\win-x64\native\libHarfBuzzSharp.dll">
+      <PackagePath>libHarfBuzzSharp.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\microsoft.graphics.win2d\1.0.4\runtimes\win10-x64\native\Microsoft.Graphics.Canvas.dll">
       <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\microsoft.windowsappsdk\1.2.221209.1\runtimes\win10-x64\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\skiasharp.nativeassets.win32\2.88.4-preview.84\runtimes\win-x64\native\libSkiaSharp.dll">
+      <PackagePath>libSkiaSharp.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\sqlitepclraw.lib.e_sqlite3\2.1.2\runtimes\win-x64\native\e_sqlite3.dll">
       <PackagePath>e_sqlite3.dll</PackagePath>

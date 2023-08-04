@@ -5,6 +5,7 @@ namespace HotStuff
 {
     public partial class MainPage : UraniumContentPage
     {
+
         public MainPage()
         {
             SelectionView.GlobalSetting.CornerRadius = 0;

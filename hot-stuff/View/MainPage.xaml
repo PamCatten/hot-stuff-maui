@@ -1,14 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<uranium:UraniumContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:uranium="clr-namespace:UraniumUI.Pages;assembly=UraniumUI"
-             xmlns:attachment="clr-namespace:UraniumUI.Material.Attachments;assembly=UraniumUI.Material"
-             xmlns:material="clr-namespace:UraniumUI.Material.Controls;assembly=UraniumUI.Material"
-             xmlns:fa="clr-namespace:UraniumUI.Icons.FontAwesome;assembly=UraniumUI.Icons.FontAwesome"
-             xmlns:input="clr-namespace:InputKit.Shared.Controls;assembly=InputKit.Maui"
-             x:Class="HotStuff.MainPage"
-             xmlns:local="clr-namespace:HotStuff"
-             x:Name="page"
+<uranium:UraniumContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:uranium="clr-namespace:UraniumUI.Pages;assembly=UraniumUI"
+    xmlns:attachment="clr-namespace:UraniumUI.Material.Attachments;assembly=UraniumUI.Material"
+    xmlns:material="clr-namespace:UraniumUI.Material.Controls;assembly=UraniumUI.Material"
+    xmlns:fa="clr-namespace:UraniumUI.Icons.FontAwesome;assembly=UraniumUI.Icons.FontAwesome"
+    xmlns:input="clr-namespace:InputKit.Shared.Controls;assembly=InputKit.Maui"
+    x:Class="HotStuff.MainPage"
+    xmlns:local="clr-namespace:HotStuff"
+    xmlns:viewmodel="clr-namespace:HotStuff.ViewModel"
+    xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.Maui;assembly=LiveChartsCore.SkiaSharpView.Maui"
+    x:Name="page"
+    Title="Hot Stuff"
 >
 
     <uranium:UraniumContentPage.Resources>
@@ -20,10 +24,23 @@
     <uranium:UraniumContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="{StaticResource ProfileIcon}" Clicked="OnProfilePageClicked"/>
     </uranium:UraniumContentPage.ToolbarItems>
-    
-    <ScrollView Orientation="Both" HorizontalScrollBarVisibility="Always">
 
-        <VerticalStackLayout />
+    <uranium:UraniumContentPage.BindingContext>
+        <viewmodel:MainPageViewModel />
+    </uranium:UraniumContentPage.BindingContext>
+
+    <uranium:UraniumContentPage.Content>
+        <Grid>
+            <Label Text="Your Key Figures" FontSize="Large" FontAttributes="Bold" Margin="15,40,15,10"/>
+            <lvc:PieChart Series="{Binding Series}" Margin="50, 150, 50, 150" BackgroundColor="Black"/>
+        </Grid>
+    </uranium:UraniumContentPage.Content>
+
+    <ScrollView Orientation="Both" HorizontalScrollBarVisibility="Always">
+        <VerticalStackLayout>
+
+
+        </VerticalStackLayout>
 
     </ScrollView>
 

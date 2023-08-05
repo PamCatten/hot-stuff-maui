@@ -29,13 +29,13 @@
     <AppXManifest Include="C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-08-04T21:07:56.093</Modified>
+      <Modified>2023-08-05T14:46:21.597</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-08-04T21:07:55.525</Modified>
+      <Modified>2023-08-05T14:46:21.033</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\hot-stuff.runtimeconfig.json">
       <PackagePath>hot-stuff.runtimeconfig.json</PackagePath>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\hot-stuff.dll">
       <PackagePath>hot-stuff.dll</PackagePath>
-      <Modified>2023-08-04T21:07:54.300</Modified>
+      <Modified>2023-08-05T14:46:18.286</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>hot-stuff.exe</PackagePath>
-      <Modified>2023-08-04T21:07:54.313</Modified>
+      <Modified>2023-08-05T14:46:18.335</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.9\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -1043,7 +1043,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\hot-stuff.deps.json">
       <PackagePath>hot-stuff.deps.json</PackagePath>
-      <Modified>2023-08-04T21:07:55.820</Modified>
+      <Modified>2023-08-05T14:46:21.303</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\dotnet\packs\Microsoft.Maui.Controls.Ref.win\7.0.86\ref\net7.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>

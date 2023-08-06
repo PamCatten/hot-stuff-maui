@@ -22,9 +22,9 @@
                 Route="ItemsPage" 
             />
         </Tab>
-        <Tab Title="Learning Center" Icon="{StaticResource LearnIcon}">
+        <Tab Title="Learn" Icon="{StaticResource LearnIcon}">
             <ShellContent
-                Title="Learning Center"
+                Title="Learn"
                 ContentTemplate="{DataTemplate view:LearnPage}"
                 Route="LearnPage" 
             />

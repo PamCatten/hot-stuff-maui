@@ -16,16 +16,10 @@
 >
 
     <uranium:UraniumContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="{StaticResource AddIcon}" Clicked="OnAddItemsPageClicked" />
+        <ToolbarItem IconImageSource="{StaticResource AddIcon}" Clicked="OnAddItemsPageClicked"/>
         <ToolbarItem IconImageSource="{StaticResource DownloadIcon}" Clicked="OnExportIconClicked" />
         <ToolbarItem IconImageSource="{StaticResource ProfileIcon}" Clicked="OnProfilePageClicked"/>
     </uranium:UraniumContentPage.ToolbarItems>
-
-    <uranium:UraniumContentPage.Resources>
-        <Style TargetType="Frame">
-            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource SecondaryContainer}, Dark={StaticResource SecondaryContainer}}" />
-        </Style>
-    </uranium:UraniumContentPage.Resources>
 
     <uranium:UraniumContentPage.Behaviors>
         <mct:EventToCommandBehavior Command="{Binding AppearingCommand}" EventName="Appearing" />
@@ -39,7 +33,7 @@
                 <Button Text="Delete" StyleClass="FilledButton" Command="{Binding RemoveSelectedItemsCommand}" HorizontalOptions="Start"/>
             </StackLayout>
             
-            <material:DataGrid ItemsSource="{Binding ItemManifest}" SelectedItems="{Binding SelectedItems}" HorizontalOptions="Center" VerticalOptions="Center" x:Name="UraniumGrid">
+            <material:DataGrid ItemsSource="{Binding ItemManifest}" SelectedItems="{Binding SelectedItems}" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="{StaticResource LightBackground}" x:Name="UraniumGrid">
                 <material:DataGrid.EmptyView>
                     <StackLayout Padding="100">
                         <Image HorizontalOptions="Center" VerticalOptions="Center" Source="noitemdata.png" HeightRequest="160" WidthRequest="160" />
@@ -49,16 +43,16 @@
 
                 <material:DataGrid.Columns>
                     <material:DataGridSelectionColumn/>
-                    <material:DataGridColumn Binding="{Binding ItemName}" Title="Item Name" Width="Auto" />
-                    <material:DataGridColumn Binding="{Binding Category}" Title="Item Category" Width="Auto"/>
+                    <material:DataGridColumn Binding="{Binding ItemName}" Title="Name" Width="Auto" />
+                    <material:DataGridColumn Binding="{Binding Category}" Title="Category" Width="Auto"/>
                     <material:DataGridColumn Binding="{Binding BrandManufacturer}" Title="Brand / Manufacturer" Width="Auto"/>
                     <material:DataGridColumn Binding="{Binding Room}" Title="Room" Width="Auto"/>
                     <material:DataGridColumn Binding="{Binding Color}" Title="Color" Width="Auto"/>
                     <material:DataGridColumn Binding="{Binding DateAcquired}" Title = "Purchase Date" Width="Auto"/>
-                    <material:DataGridColumn Binding="{Binding ItemPrice}" Title = "Amount Paid" Width="Auto"/>
+                    <material:DataGridColumn Binding="{Binding ItemPrice}" Title = "Price" Width="Auto"/>
                     <material:DataGridColumn Binding="{Binding ItemQuantity}" Title = "Quantity" Width="Auto" />
+                    <material:DataGridColumn Binding="{Binding ItemDescription}" Title="Description" Width="Auto"/>
                     <material:DataGridColumn Binding="{Binding PurchaseProof}" Title="Purchase Proof" Width="Auto"/>
-                    <material:DataGridColumn Binding="{Binding ItemDescription}" Title="Item Description" Width="*"/>
                 </material:DataGrid.Columns>
 
             </material:DataGrid>

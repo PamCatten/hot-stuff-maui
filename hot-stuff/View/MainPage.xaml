@@ -15,12 +15,6 @@
     Title="Hot Stuff"
 >
 
-    <uranium:UraniumContentPage.Resources>
-        <Style TargetType="Frame">
-            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource SecondaryContainer}, Dark={StaticResource SecondaryContainerDark}}" />
-        </Style>
-    </uranium:UraniumContentPage.Resources>
-
     <uranium:UraniumContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="{StaticResource ProfileIcon}" Clicked="OnProfilePageClicked"/>
     </uranium:UraniumContentPage.ToolbarItems>

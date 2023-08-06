@@ -10,7 +10,7 @@
              x:Class="HotStuff.View.LearnPage"
              xmlns:local="clr-namespace:HotStuff"
              xmlns:pages="clr-namespace:HotStuff.View"
-             Title="Learning Center"
+             Title="Learn"
 >
 
     <uranium:UraniumContentPage.ToolbarItems>

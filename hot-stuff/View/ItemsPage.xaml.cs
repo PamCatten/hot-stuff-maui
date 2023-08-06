@@ -20,7 +20,7 @@ public partial class ItemsPage : UraniumContentPage
         await Shell.Current.GoToAsync(nameof(AddItemsPage));
     }
 
-    async void OnExportPageClicked(object sender, EventArgs e)
+    async void OnExportIconClicked(object sender, EventArgs e)
     {
         Debug.WriteLine("----User clicked export icon.");
         var csvPath = Path.Combine($@"{Environment.CurrentDirectory}", $"items-{DateTime.Now.ToFileTime}.csv");

@@ -288,3 +288,16 @@ C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\logo.appiconset\logo76x76@2x.png
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\logo.appiconset\logo83.5x83.5@2x.png
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Assets.xcassets\logo.appiconset\logoItunesArtwork.png
+C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\CsvHelper.dll
+C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\HarfBuzzSharp.dll
+C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\LiveChartsCore.dll
+C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\LiveChartsCore.SkiaSharpView.dll
+C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\LiveChartsCore.SkiaSharpView.Maui.dll
+C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\SkiaSharp.dll
+C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\SkiaSharp.HarfBuzz.dll
+C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\SkiaSharp.Views.iOS.dll
+C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\SkiaSharp.Views.Maui.Controls.dll
+C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\SkiaSharp.Views.Maui.Controls.Compatibility.dll
+C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\SkiaSharp.Views.Maui.Core.dll
+C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\libHarfBuzzSharp.framework.zip
+C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\libSkiaSharp.framework.zip

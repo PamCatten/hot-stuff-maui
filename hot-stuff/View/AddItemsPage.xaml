@@ -102,7 +102,7 @@
                         <validation:NumericValidation />
                     </material:TextField.Validations>
                 </material:TextField>
-            
+
                 <material:DatePickerField
                             Title="Date Acquired (Optional)"
                             AllowClear="True"
@@ -110,7 +110,16 @@
                             Date="{Binding NewItem.DateAcquired}"
                             Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CalendarDays}}"
                 />
-            
+
+                <material:TextField 
+                    Title="Item Description (Optional)"
+                    Text="{Binding NewItem.ItemDescription}"
+                    AllowClear="True"
+                    AccentColor="{StaticResource Primary}"
+                    Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Pen}}"
+                />
+
+
                 <material:TextField 
                     x:Name="PurchaseProof"
                     Title="Purchase Proof (Optional)"
@@ -124,21 +133,13 @@
                         <Button 
                             Text="Select Photo"
                             TextColor="{StaticResource Shadow}"
-                            BackgroundColor="{StaticResource OnPrimary}"
+                            BackgroundColor="{StaticResource LightBackground}"
                             Margin="5"
                             StyleClass="FilledButton" 
                             Clicked="OnPickPhotoClicked"
                         />
                     </material:TextField.Attachments>
                 </material:TextField>
-
-                <material:TextField 
-                    Title="Item Description (Optional)"
-                    Text="{Binding NewItem.ItemDescription}"
-                    AllowClear="True"
-                    AccentColor="{StaticResource Primary}"
-                    Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Pen}}"
-                />
 
                 <Button 
                     Command="{Binding AddItemCommand}" 

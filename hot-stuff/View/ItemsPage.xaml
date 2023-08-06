@@ -29,7 +29,7 @@
     <ScrollView Orientation="Both" HorizontalScrollBarVisibility="Always" VerticalScrollBarVisibility="Always">
         <VerticalStackLayout>
             <StackLayout Padding="10" Orientation="Horizontal" Spacing="10">
-                <Button Text="Update" StyleClass ="FilledButton" HorizontalOptions="Start"/>
+                <Button Text="Update" StyleClass ="FilledButton" Command="{Binding UpdateItemCommand}" HorizontalOptions="Start"/>
                 <Button Text="Delete" StyleClass="FilledButton" Command="{Binding RemoveSelectedItemsCommand}" HorizontalOptions="Start"/>
             </StackLayout>
             
@@ -48,7 +48,7 @@
                     <material:DataGridColumn Binding="{Binding BrandManufacturer}" Title="Brand / Manufacturer" Width="Auto"/>
                     <material:DataGridColumn Binding="{Binding Room}" Title="Room" Width="Auto"/>
                     <material:DataGridColumn Binding="{Binding Color}" Title="Color" Width="Auto"/>
-                    <material:DataGridColumn Binding="{Binding DateAcquired}" Title = "Purchase Date" Width="Auto"/>
+                    <material:DataGridColumn Binding="{Binding DateAcquired}" Title = "Date Acquired" Width="Auto"/>
                     <material:DataGridColumn Binding="{Binding ItemPrice}" Title = "Price" Width="Auto"/>
                     <material:DataGridColumn Binding="{Binding ItemQuantity}" Title = "Quantity" Width="Auto" />
                     <material:DataGridColumn Binding="{Binding ItemDescription}" Title="Description" Width="Auto"/>

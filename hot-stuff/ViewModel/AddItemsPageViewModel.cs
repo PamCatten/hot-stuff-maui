@@ -21,7 +21,7 @@ namespace HotStuff.ViewModel
                     $"AmountPaid: {NewItem.ItemPrice}" +
                     $"Color: {NewItem.Color}" +
                     $"Brand: {NewItem.BrandManufacturer}" +
-                    $"Date: {NewItem.DateAcquired}" +
+                    $"Date: {NewItem.DateAcquired.Split(" 12:00:00 AM", StringSplitOptions.RemoveEmptyEntries)}" +
                     $"Description: {NewItem.ItemDescription}");
                 await App.ItemService.AddItem(NewItem);
                 await Shell.Current.GoToAsync("..");
@@ -30,6 +30,8 @@ namespace HotStuff.ViewModel
             AddItemCommand = new Command(async () =>
             {
                 Debug.WriteLine("----User called AddItemCommand.");
+                // TODO: Find a better way of bootstrapping this
+                NewItem.DateAcquired = NewItem.DateAcquired.Split(" 12:00:00 AM", StringSplitOptions.RemoveEmptyEntries)[0];
                 CreateItem(NewItem);
                 NewItem = new();
             });

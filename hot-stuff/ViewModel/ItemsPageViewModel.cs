@@ -19,6 +19,8 @@ public partial class ItemsPageViewModel : BaseViewModel
     public ICommand GetItemsCommand { get; protected set; }
     public ICommand AppearingCommand { get; set; }
     public ICommand RemoveSelectedItemsCommand { get; protected set; }
+    public ICommand UpdateItemCommand { get; protected set; }
+
     private ObservableCollection<Item> itemManifest = new();
     public ObservableCollection<Item> ItemManifest
     {
@@ -111,6 +113,12 @@ public partial class ItemsPageViewModel : BaseViewModel
             }
 
             await App.ItemService.DeleteItems(Items);
+        }
+
+        async void UpdateAsync(Item item)
+        {
+            Debug.WriteLine("Update item called.");
+            await App.ItemService.UpdateItem(item);
         }
 
         async void DeleteAllAsync()

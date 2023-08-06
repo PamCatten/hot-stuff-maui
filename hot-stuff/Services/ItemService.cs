@@ -27,7 +27,6 @@ namespace HotStuff.Services
         {
             try
             {
-                Debug.WriteLine("----Awaiting Init");
                 await Init();
 
                 await Database.InsertAsync(item);
@@ -67,9 +66,20 @@ namespace HotStuff.Services
             }
         }
 
-        Task IItemService.UpdateItem(Item item)
+        public async Task UpdateItem(Item item)
         {
-            throw new NotImplementedException();
+            try
+            {
+                await Init();
+
+                await Database.UpdateAsync(item);
+
+                Debug.WriteLine($"----Record saved. Updated: {item.ItemID}, {item.ItemName}");
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"----Failed to update {item.ItemID}, {item.ItemName}. Error: {ex.Message}");
+            }
         }
 
         public async Task FlushItems()

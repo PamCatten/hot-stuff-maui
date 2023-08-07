@@ -48,6 +48,7 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\noitemdata.png" />
+	  <None Remove="Resources\Images\noitemdatadark.png" />
 	</ItemGroup>
 
 	<ItemGroup>

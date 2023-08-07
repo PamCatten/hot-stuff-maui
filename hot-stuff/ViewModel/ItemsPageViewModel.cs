@@ -4,7 +4,6 @@ using System.Security.Cryptography.X509Certificates;
 using System.Windows.Input;
 
 namespace HotStuff.ViewModel;
-
 public partial class ItemsPageViewModel : BaseViewModel 
 {
     ItemService itemService;
@@ -125,9 +124,5 @@ public partial class ItemsPageViewModel : BaseViewModel
         {
             await App.ItemService.FlushItems();
         }
-
     }
 }
-
-
-;

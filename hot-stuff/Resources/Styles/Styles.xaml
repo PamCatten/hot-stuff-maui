@@ -33,6 +33,7 @@
     />
     <FontImage x:Key="DropdownIcon"
                FontFamily="FontAwesome"
+               Color="{StaticResource BlackText}"
                Glyph="{x:Static local:IconFont.CircleChevronDown}"
     />
     <FontImage x:Key="DownloadIcon"
@@ -69,7 +70,7 @@
     </Style>
 
     <Style TargetType="Button">
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource WhiteText}, Dark={StaticResource BlackText}}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}" />
         <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Primary}}" />
         <Setter Property="FontFamily" Value="OpenSansRegular"/>
         <Setter Property="FontSize" Value="14"/>

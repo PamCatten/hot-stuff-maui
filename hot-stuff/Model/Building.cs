@@ -63,7 +63,7 @@ public partial class Building : INotifyPropertyChanged
             {
                 buildingManifest = value;
             }
-            OnPropertyChanged();
+            OnPropertyChanged(nameof(buildingManifest));
         }
     }
 

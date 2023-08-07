@@ -10,7 +10,6 @@
 
     <Color x:Key="LightBackground">#FFFBFE</Color>
     <Color x:Key="DarkBackground">#1C1B1F</Color>
-    
 
     <!--MAUI STANDARDS-->
     <Color x:Key="White">White</Color>

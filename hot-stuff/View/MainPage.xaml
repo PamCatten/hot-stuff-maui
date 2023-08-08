@@ -34,11 +34,11 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Label Grid.Column="0" Grid.Row="0" Text="Building value" FontSize="Medium" HorizontalOptions="Start" VerticalOptions="End"  FontAttributes="Bold" TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}" />
-            <Label Grid.Column="1" Grid.Row="0" Text="$2,501.82" FontSize="Medium"  HorizontalOptions="End" VerticalOptions="End"  FontAttributes="Bold" TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}" />
-            <Label Grid.Column="0" Grid.Row="1" Text="Johnson House" HorizontalOptions="Start" VerticalOptions="Start" FontSize="Small" TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}" />
-            <Label Grid.Column="1" Grid.Row="1" Text="98 items" FontSize="Small" HorizontalOptions="End" VerticalOptions="Start" TextColor="{StaticResource Primary}" FontAttributes="Bold"/>
-            <Label Grid.ColumnSpan="2" Grid.Row="2" Text="BAR CHART" FontSize="Large" TextColor="{StaticResource BlackText}" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Brown"/>
+            <Label Grid.Column="0" Grid.Row="0" Text="Building value" FontSize="Medium" HorizontalOptions="Start" VerticalOptions="End"  FontAttributes="Bold" TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}" FontFamily="MontserratRegular"/>
+            <Label Grid.Column="1" Grid.Row="0" Text="$2,501.82" FontSize="Medium"  HorizontalOptions="End" VerticalOptions="End"  FontAttributes="Bold" TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}" FontFamily="MontserratRegular"/>
+            <Label Grid.Column="0" Grid.Row="1" Text="Johnson House" HorizontalOptions="Start" VerticalOptions="Start" FontSize="Small" TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}" FontFamily="MontserratRegular"/>
+            <Label Grid.Column="1" Grid.Row="1" Text="98 items" FontSize="Small" HorizontalOptions="End" VerticalOptions="Start" TextColor="{StaticResource Primary}" FontAttributes="Bold" FontFamily="MontserratRegular"/>
+            <Label Grid.ColumnSpan="2" Grid.Row="2" Text="BAR CHART" FontSize="Large" TextColor="{StaticResource BlackText}" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Brown" FontFamily="MontserratRegular"/>
         </Grid>
 
     </ScrollView>

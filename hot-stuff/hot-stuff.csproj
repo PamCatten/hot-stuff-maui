@@ -47,6 +47,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Fonts\Montserrat-Bold.ttf" />
+	  <None Remove="Resources\Fonts\Montserrat-BoldItalic.ttf" />
+	  <None Remove="Resources\Fonts\Montserrat-Italic.ttf" />
+	  <None Remove="Resources\Fonts\Montserrat-Light.ttf" />
+	  <None Remove="Resources\Fonts\Montserrat-LightItalic.ttf" />
+	  <None Remove="Resources\Fonts\Montserrat-Regular.ttf" />
+	  <None Remove="Resources\Fonts\Montserrat-SemiBold.ttf" />
 	  <None Remove="Resources\Images\noitemdata.png" />
 	  <None Remove="Resources\Images\noitemdatadark.png" />
 	</ItemGroup>

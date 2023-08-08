@@ -1,3 +1,8 @@
 File=Resources\Fonts\fa_solid.otf;Link=;Alias=
-File=Resources\Fonts\OpenSans-Regular.ttf;Link=;Alias=
-File=Resources\Fonts\OpenSans-Semibold.ttf;Link=;Alias=
+File=Resources\Fonts\Montserrat-Bold.ttf;Link=;Alias=
+File=Resources\Fonts\Montserrat-BoldItalic.ttf;Link=;Alias=
+File=Resources\Fonts\Montserrat-Italic.ttf;Link=;Alias=
+File=Resources\Fonts\Montserrat-Light.ttf;Link=;Alias=
+File=Resources\Fonts\Montserrat-LightItalic.ttf;Link=;Alias=
+File=Resources\Fonts\Montserrat-Regular.ttf;Link=;Alias=
+File=Resources\Fonts\Montserrat-SemiBold.ttf;Link=;Alias=

@@ -1084,3 +1084,11 @@ C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\resizetizer\f\Montse
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\resizetizer\f\Montserrat-LightItalic.ttf
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\resizetizer\f\Montserrat-Regular.ttf
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\resizetizer\f\Montserrat-SemiBold.ttf
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\resizetizer\f\OpenSans-Bold.ttf
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\resizetizer\f\OpenSans-BoldItalic.ttf
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\resizetizer\f\OpenSans-Italic.ttf
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\resizetizer\f\OpenSans-Light.ttf
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\resizetizer\f\OpenSans-LightItalic.ttf
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\resizetizer\f\OpenSans-Medium.ttf
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\resizetizer\f\OpenSans-MediumItalic.ttf
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\resizetizer\f\OpenSans-SemiBoldItalic.ttf

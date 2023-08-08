@@ -27,6 +27,7 @@
                 Title="Learn"
                 ContentTemplate="{DataTemplate view:LearnPage}"
                 Route="LearnPage"
+                
             />
         </Tab>
     </TabBar>

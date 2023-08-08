@@ -19,6 +19,8 @@ public partial class Building : INotifyPropertyChanged
 
     private string buildingName;
     private string buildingDescription;
+    private int buildingItemCount;
+    private decimal buildingValue;
     private ObservableCollection<Item> buildingManifest;
 
     public string BuildingName
@@ -51,6 +53,37 @@ public partial class Building : INotifyPropertyChanged
             OnPropertyChanged();
         }
     }
+    public int BuildingItemCount
+    {
+        get
+        {
+            return buildingItemCount;
+        }
+        set
+        {
+            if (buildingItemCount != value)
+            {
+                buildingItemCount = value;
+            }
+            OnPropertyChanged();
+        }
+    }
+    public decimal BuildingValue
+    {
+        get
+        {
+            return buildingValue;
+        }
+        set
+        {
+            if (buildingValue != value)
+            {
+                buildingValue = value;
+            }
+            OnPropertyChanged();
+        }
+    }
+
     public ObservableCollection<Item> BuildingManifest
     {
         get

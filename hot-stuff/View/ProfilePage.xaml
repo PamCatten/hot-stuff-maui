@@ -29,6 +29,7 @@
             HorizontalOptions="Start"
             Margin="15, 5, 15, 10"
         />
+        
         <BoxView StyleClass="Divider" />
         <Label 
             Text="Settings"

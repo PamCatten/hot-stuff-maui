@@ -48,21 +48,14 @@ namespace HotStuff.ViewModel
                         new Item { ItemID = 48, ItemName = "Test Item 48", ItemQuantity = 5, Room = ItemRoom.Kitchen, ItemPrice = 33.99m, Category = ItemCategory.Lighting, ItemDescription = "Test Item", Color = ItemColor.Black, BrandManufacturer = "Test Company" },
                         new Item { ItemID = 49, ItemName = "Test Item 49", ItemQuantity = 1, Room = ItemRoom.Bathroom, ItemPrice = 400.00m, Category = ItemCategory.Electronics, ItemDescription = "Test Item", Color = ItemColor.Black, BrandManufacturer = "Test Company" },
                     },
-                    BuildingValue = 3251.74m,
-                    BuildingItemCount = 09,
+                    BuildingValue = 1.00m,
+                    BuildingItemCount = 0,
 
 
                 };
                 Debug.WriteLine($"ID: {ActiveBuilding.BuildingID} NAME: {ActiveBuilding.BuildingName} DESCRIPTION: {ActiveBuilding.BuildingDescription}");
                 //ActiveBuilding.BuildingValue = ActiveBuilding.BuildingManifest.Sum(item => item.ItemPrice);
                 Debug.WriteLine($"Building value: ${ActiveBuilding.BuildingValue}");
-
-                //ActiveBuilding = new Building
-                //{
-                //BuildingID = 1,
-                //BuildingName = "Patten Home",
-                //BuildingDescription = "The Patten Home is a 3 bedroom, 2 bathroom home with a 3 car garage and a large backyard.",
-                //ActiveBuilding.BuildingItemCount = 0,
             }
             else
             {

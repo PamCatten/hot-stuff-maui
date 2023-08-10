@@ -94,6 +94,6 @@
 	  <Folder Include="Data\" />
 	</ItemGroup>
 
-	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadUnhandledDeviceExceptionhotstuffHideInfoBar="True" /></VisualStudio></ProjectExtensions>
+	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionhotstuffHideInfoBar="True" XamarinHotReloadUnhandledDeviceExceptionhotstuffHideInfoBar="True" /></VisualStudio></ProjectExtensions>
 
 </Project>

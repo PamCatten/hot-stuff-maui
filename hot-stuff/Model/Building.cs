@@ -63,9 +63,11 @@ public partial class Building : INotifyPropertyChanged
         }
         set
         {
-            if (buildingItemCount != value)
+            if (buildingManifest is null)
+                buildingItemCount = 0;
+            else if (buildingItemCount != value)
             {
-                buildingItemCount = BuildingManifest.Count;
+                buildingItemCount = BuildingManifest.Sum(item => item.ItemQuantity);
             }
             OnPropertyChanged();
         }
@@ -78,9 +80,11 @@ public partial class Building : INotifyPropertyChanged
         }
         set
         {
-            if (buildingValue != value)
+            if (buildingManifest is null)
+                buildingValue = 0.00m;
+            else if (buildingValue != value)
             {
-                buildingValue = value;
+                buildingValue = BuildingManifest.Sum(item => item.ItemPrice);
             }
             OnPropertyChanged();
         }

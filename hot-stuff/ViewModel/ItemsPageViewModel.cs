@@ -1,6 +1,4 @@
 ﻿using HotStuff.Services;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Windows.Input;
 
 namespace HotStuff.ViewModel;

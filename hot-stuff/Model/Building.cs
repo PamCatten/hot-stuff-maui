@@ -116,6 +116,13 @@ public partial class Building : INotifyPropertyChanged
         {
             if (buildingRoomValue != value)
             {
+                foreach (var item in BuildingManifest)
+                {
+                    if (BuildingRoomValue.ContainsKey((ItemRoom)item.Room) == false)
+                        BuildingRoomValue.Add((ItemRoom)item.Room, item.ItemPrice);
+                    else
+                        BuildingRoomValue[(ItemRoom)item.Room] += item.ItemPrice;
+                }
                 buildingRoomValue = value;
             }
             OnPropertyChanged(nameof(buildingRoomValue));

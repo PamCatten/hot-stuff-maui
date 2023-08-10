@@ -1,3 +1,11 @@
 File=Resources\Fonts\fa_solid.otf;Link=;Alias=
+File=Resources\Fonts\OpenSans-Bold.ttf;Link=;Alias=
+File=Resources\Fonts\OpenSans-BoldItalic.ttf;Link=;Alias=
+File=Resources\Fonts\OpenSans-Italic.ttf;Link=;Alias=
+File=Resources\Fonts\OpenSans-Light.ttf;Link=;Alias=
+File=Resources\Fonts\OpenSans-LightItalic.ttf;Link=;Alias=
+File=Resources\Fonts\OpenSans-Medium.ttf;Link=;Alias=
+File=Resources\Fonts\OpenSans-MediumItalic.ttf;Link=;Alias=
 File=Resources\Fonts\OpenSans-Regular.ttf;Link=;Alias=
-File=Resources\Fonts\OpenSans-Semibold.ttf;Link=;Alias=
+File=Resources\Fonts\OpenSans-SemiBold.ttf;Link=;Alias=
+File=Resources\Fonts\OpenSans-SemiBoldItalic.ttf;Link=;Alias=

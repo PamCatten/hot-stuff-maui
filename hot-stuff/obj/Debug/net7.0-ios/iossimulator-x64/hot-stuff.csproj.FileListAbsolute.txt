@@ -315,3 +315,11 @@ C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-ios\iossimulator-x64\CodeRes
 C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-ios\iossimulator-x64\libHarfBuzzSharp
 C:\Users\campa\hot-stuff\hot-stuff\bin\Debug\net7.0-ios\iossimulator-x64\libSkiaSharp
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\r\Resources\noitemdatadark.png
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\f\OpenSans-Bold.ttf
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\f\OpenSans-BoldItalic.ttf
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\f\OpenSans-Italic.ttf
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\f\OpenSans-Light.ttf
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\f\OpenSans-LightItalic.ttf
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\f\OpenSans-Medium.ttf
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\f\OpenSans-MediumItalic.ttf
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\f\OpenSans-SemiBoldItalic.ttf

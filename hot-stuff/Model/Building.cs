@@ -22,6 +22,8 @@ public partial class Building : INotifyPropertyChanged
     private int buildingItemCount;
     private decimal buildingValue;
     private ObservableCollection<Item> buildingManifest;
+    private Dictionary<ItemRoom, decimal> buildingRoomValue;
+    private Dictionary<ItemCategory, int> buildingCategoryCount;
 
     public string BuildingName
     {
@@ -57,13 +59,13 @@ public partial class Building : INotifyPropertyChanged
     {
         get
         {
-            return buildingItemCount;
+            return BuildingManifest.Count;
         }
         set
         {
             if (buildingItemCount != value)
             {
-                buildingItemCount = value;
+                buildingItemCount = BuildingManifest.Count;
             }
             OnPropertyChanged();
         }
@@ -100,8 +102,39 @@ public partial class Building : INotifyPropertyChanged
         }
     }
 
+    public Dictionary<ItemRoom, decimal> BuildingRoomValue
+    {
+        get
+        {
+            return buildingRoomValue;
+        }
+        set
+        {
+            if (buildingRoomValue != value)
+            {
+                buildingRoomValue = value;
+            }
+            OnPropertyChanged(nameof(buildingRoomValue));
+        }
+    }
 
-    public BuildingType? Type { get; set; }
+    public Dictionary<ItemCategory, int> BuildingCategoryCount
+    {
+        get
+        {
+            return buildingCategoryCount;
+        }
+        set
+        {
+            if (buildingCategoryCount != value)
+            {
+                buildingCategoryCount = value;
+            }
+            OnPropertyChanged(nameof(buildingCategoryCount));
+        }
+    }
+
+    public BuildingType? BuildingType { get; set; }
 
     public static BuildingType[] AvailableCategories => Enum.GetValues(typeof(BuildingType)) as BuildingType[];
 }

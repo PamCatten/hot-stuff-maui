@@ -114,17 +114,18 @@ public partial class Building : INotifyPropertyChanged
         }
         set
         {
-            if (buildingRoomValue != value)
-            {
-                foreach (var item in BuildingManifest)
-                {
-                    if (BuildingRoomValue.ContainsKey((ItemRoom)item.Room) == false)
-                        BuildingRoomValue.Add((ItemRoom)item.Room, item.ItemPrice);
-                    else
-                        BuildingRoomValue[(ItemRoom)item.Room] += item.ItemPrice;
-                }
-                buildingRoomValue = value;
-            }
+            //if (buildingRoomValue != value)
+            //{
+                //foreach (var item in BuildingManifest)
+                //{
+                    //if (BuildingRoomValue.ContainsKey((ItemRoom)item.Room) == false)
+                        //BuildingRoomValue.Add((ItemRoom)item.Room, item.ItemPrice);
+                    //else
+                        //BuildingRoomValue[(ItemRoom)item.Room] += item.ItemPrice;
+                //}
+                //buildingRoomValue = value;
+            //}
+            buildingRoomValue = value;
             OnPropertyChanged(nameof(buildingRoomValue));
         }
     }

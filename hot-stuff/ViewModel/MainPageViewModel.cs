@@ -1,4 +1,8 @@
 ﻿using LiveChartsCore;
+using LiveChartsCore.Defaults;
+using LiveChartsCore.Drawing;
+using LiveChartsCore.Kernel;
+using LiveChartsCore.Measure;
 using LiveChartsCore.SkiaSharpView;
 using LiveChartsCore.SkiaSharpView.Painting;
 using SkiaSharp;
@@ -51,9 +55,10 @@ public class MainPageViewModel : UraniumBindableObject
                 },
                 BuildingValue = 1.00m,
                 BuildingItemCount = 0,
-                //BuildingRoomValue = new Dictionary<ItemRoom, decimal> { { ItemRoom.Attic, 0.00m }, { ItemRoom.Studio, 1.00m } },
+                BuildingRoomValue = new Dictionary<ItemRoom, decimal> { { ItemRoom.Attic, 0.00m }, { ItemRoom.Studio, 1.00m } },
 
             };
+            Debug.WriteLine($"BuildingRoomValue = {ActiveBuilding.BuildingRoomValue}");
             Debug.WriteLine($"ID: {ActiveBuilding.BuildingID} NAME: {ActiveBuilding.BuildingName} DESCRIPTION: {ActiveBuilding.BuildingDescription}");
             Debug.WriteLine($"Building value: ${ActiveBuilding.BuildingValue}");
             
@@ -62,6 +67,7 @@ public class MainPageViewModel : UraniumBindableObject
         {
             Debug.WriteLine("ActiveBuilding is Null.");
         };
+
 
 
     }

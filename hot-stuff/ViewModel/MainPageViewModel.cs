@@ -1,7 +1,9 @@
-﻿using LiveChartsCore;
+﻿using HotStuff.Model;
+using LiveChartsCore;
 using LiveChartsCore.Defaults;
 using LiveChartsCore.Drawing;
 using LiveChartsCore.Kernel;
+using LiveChartsCore.Kernel.Sketches;
 using LiveChartsCore.Measure;
 using LiveChartsCore.SkiaSharpView;
 using LiveChartsCore.SkiaSharpView.Painting;
@@ -13,20 +15,15 @@ public class MainPageViewModel : UraniumBindableObject
 {
     private Building activeBuilding = new();
     public Building ActiveBuilding { get => activeBuilding; set { activeBuilding = value; OnPropertyChanged(); } }
-    public ISeries[] Series { get; set; } =
-    {
-        new ColumnSeries<int>
-        {
-            Values = new[] { 2, 3, 5, 7, 3, 4, 6, 5 },
-            Stroke = null,
-            Name = "test",
-            Fill = new SolidColorPaint(SKColor.Parse("FC5D52")),
-            MaxBarWidth = double.MaxValue,
-            IgnoresBarPosition = true
-        },
-    };
 
-    public Dictionary<ItemRoom, decimal> ItemDictionary = new(); 
+    public List<string> ColumnChartKeys = new();
+    public ObservableCollection<ObservableValue> ColumnChartValues = new();
+
+    public ISeries[] Series { get; set; }
+    public List<Axis> XAxis { get; set; } 
+    public List<Axis> YAxis { get; set; }
+
+    public Dictionary<ItemRoom, decimal> ItemDictionary = new();
 
     public IEnumerable<ISeries> PieSeries { get; set; } =
     new[] { 2, 4, 1, 4, 3 }.AsPieSeries((value, series) =>
@@ -88,6 +85,41 @@ public class MainPageViewModel : UraniumBindableObject
         foreach (KeyValuePair<ItemRoom, decimal> entry in ActiveBuilding.BuildingRoomValue)
         {
             Debug.WriteLine($"Key: {entry.Key}, Value: {entry.Value}");
+            //ColumnChartValues.Add(new ObservableValue((double)entry.Value)); C# 9
+            ColumnChartValues.Add(new((double)entry.Value));
+            ColumnChartKeys.Add(entry.Key.ToString());
         }
+
+        Series = new ISeries[]
+        {
+            new ColumnSeries<ObservableValue>
+            {
+                Values = ColumnChartValues,
+                Stroke = null,
+                Name = ActiveBuilding.BuildingName,
+                Fill = new SolidColorPaint(SKColor.Parse("FC5D52")),
+                MaxBarWidth = double.MaxValue,
+                IgnoresBarPosition = true
+            }
+        };
+
+        XAxis = new List<Axis>
+        {
+            new Axis
+            {
+            Labels = ColumnChartKeys,
+            LabelsRotation = 300,
+            TextSize = 12,
+            }
+        };
+
+        YAxis = new List<Axis>
+        {
+            new Axis
+            {
+                
+            }
+        };
+
     }
 }

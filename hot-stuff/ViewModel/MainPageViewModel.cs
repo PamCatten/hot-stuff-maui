@@ -19,9 +19,9 @@ public class MainPageViewModel : UraniumBindableObject
     public List<string> ColumnChartKeys = new();
     public ObservableCollection<ObservableValue> ColumnChartValues = new();
 
-    public ISeries[] Series { get; set; }
-    public List<Axis> XAxis { get; set; } 
-    public List<Axis> YAxis { get; set; }
+    public ISeries[] RoomValueBarChart { get; set; }
+    public List<Axis> BarChartXAxis { get; set; } 
+    public List<Axis> BarChartYAxis { get; set; }
 
     public Dictionary<ItemRoom, decimal> ItemDictionary = new();
 
@@ -90,34 +90,35 @@ public class MainPageViewModel : UraniumBindableObject
             ColumnChartKeys.Add(entry.Key.ToString());
         }
 
-        Series = new ISeries[]
+        RoomValueBarChart = new ISeries[]
         {
             new ColumnSeries<ObservableValue>
             {
                 Values = ColumnChartValues,
                 Stroke = null,
-                Name = ActiveBuilding.BuildingName,
+                Name = "Room Total",
                 Fill = new SolidColorPaint(SKColor.Parse("FC5D52")),
                 MaxBarWidth = double.MaxValue,
                 IgnoresBarPosition = true
             }
         };
 
-        XAxis = new List<Axis>
+        BarChartXAxis = new List<Axis>
         {
             new Axis
             {
             Labels = ColumnChartKeys,
             LabelsRotation = 300,
-            TextSize = 12,
+            TextSize = 14,
             }
         };
 
-        YAxis = new List<Axis>
+        BarChartYAxis = new List<Axis>
         {
             new Axis
             {
-                
+                TextSize = 14,
+                MinStep = 100,
             }
         };
 

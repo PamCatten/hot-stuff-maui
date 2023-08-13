@@ -20,17 +20,12 @@ public class MainPageViewModel : UraniumBindableObject
     public ObservableCollection<ObservableValue> ColumnChartValues = new();
 
     public ISeries[] RoomValueBarChart { get; set; }
+    public IEnumerable<ISeries> CategoryCountPieChart { get; set; }
     public List<Axis> BarChartXAxis { get; set; } 
     public List<Axis> BarChartYAxis { get; set; }
 
-    public Dictionary<ItemRoom, decimal> ItemDictionary = new();
-
-    public IEnumerable<ISeries> PieSeries { get; set; } =
-    new[] { 2, 4, 1, 4, 3 }.AsPieSeries((value, series) =>
-    {
-        series.InnerRadius = 0;
-
-    });
+    public List<string> PieChartKeys = new();
+    public ObservableCollection<ObservableValue> PieChartValues = new();
     public MainPageViewModel()
     {
         try
@@ -57,6 +52,7 @@ public class MainPageViewModel : UraniumBindableObject
                     BuildingValue = 1.00m,
                     BuildingItemCount = 0,
                     BuildingRoomValue = new Dictionary<ItemRoom, decimal> {},
+                    BuildingCategoryCount = new Dictionary<ItemCategory, int> {},
                 };
             }
             else
@@ -72,23 +68,50 @@ public class MainPageViewModel : UraniumBindableObject
 
         // TODO: This is gross, but it's good enough for now. I'm sure there's a better way to do this.
         ActiveBuilding.BuildingRoomValue.Clear();
+        ActiveBuilding.BuildingCategoryCount.Clear();
         foreach (var item in ActiveBuilding.BuildingManifest)
         {
             if (ActiveBuilding.BuildingRoomValue.ContainsKey((ItemRoom)item.Room))
                 ActiveBuilding.BuildingRoomValue[(ItemRoom)item.Room] += item.ItemPrice;
             else
                 ActiveBuilding.BuildingRoomValue.Add((ItemRoom)item.Room, item.ItemPrice);
+
+            if (ActiveBuilding.BuildingCategoryCount.ContainsKey((ItemCategory)item.Category))
+                ActiveBuilding.BuildingCategoryCount[(ItemCategory)item.Category] += item.ItemQuantity;
+            else
+                ActiveBuilding.BuildingCategoryCount.Add((ItemCategory)item.Category, item.ItemQuantity);
         }
-        ItemDictionary = ActiveBuilding.BuildingRoomValue;
-        Debug.WriteLine($"ItemDictionary: {ItemDictionary}");
 
         foreach (KeyValuePair<ItemRoom, decimal> entry in ActiveBuilding.BuildingRoomValue)
         {
             Debug.WriteLine($"Key: {entry.Key}, Value: {entry.Value}");
-            //ColumnChartValues.Add(new ObservableValue((double)entry.Value)); C# 9
             ColumnChartValues.Add(new((double)entry.Value));
             ColumnChartKeys.Add(entry.Key.ToString());
         }
+
+        foreach (KeyValuePair<ItemCategory, int> entry in ActiveBuilding.BuildingCategoryCount)
+        {
+            Debug.WriteLine($"Key: {entry.Key}, Value: {entry.Value}");
+            PieChartValues.Add(new(entry.Value));
+            PieChartKeys.Add(entry.Key.ToString());
+        }
+        
+
+        //TODO: Need to figure out how to get the slices to display the Category name.
+        CategoryCountPieChart = PieChartValues.AsPieSeries((value, series) =>
+        {
+            series.InnerRadius = 0;
+            series.Name = "Items";
+            series.DataLabelsFormatter = point =>
+            {
+                var pv = point.Coordinate.PrimaryValue;
+                var sv = point.StackedValue!;
+
+                var a = $"{pv}/{sv.Total}{Environment.NewLine}{sv.Share:P2}";
+                return a;
+            };
+            
+        });
 
         RoomValueBarChart = new ISeries[]
         {
@@ -99,7 +122,7 @@ public class MainPageViewModel : UraniumBindableObject
                 Name = "Room Total",
                 Fill = new SolidColorPaint(SKColor.Parse("FC5D52")),
                 MaxBarWidth = double.MaxValue,
-                IgnoresBarPosition = true
+                IgnoresBarPosition = true,
             }
         };
 

@@ -43,7 +43,7 @@
             <lvc:CartesianChart Grid.ColumnSpan="2" Grid.Row="2" Margin="0"  Series="{Binding RoomValueBarChart}" XAxes="{Binding BarChartXAxis}" YAxes="{Binding BarChartYAxis}"/>
             <Label Grid.Column="0" Grid.Row="3" Text="Item distribution" FontSize="Medium" HorizontalOptions="Start" VerticalOptions="End"  FontAttributes="Bold" TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}" FontFamily="OpenSansRegular"/>
             <Label Grid.Column="1" Grid.Row="3" Text="Category" FontSize="Medium"  HorizontalOptions="End" VerticalOptions="End"  FontAttributes="Bold" TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}" FontFamily="OpenSansRegular"/>
-            <lvc:PieChart Grid.ColumnSpan="2" Grid.Row="4"  Margin="20" Series="{Binding PieSeries}" />
+            <lvc:PieChart Grid.ColumnSpan="2" Grid.Row="4"  Margin="20" Series="{Binding CategoryCountPieChart}" />
         </Grid>
 
     </ScrollView>

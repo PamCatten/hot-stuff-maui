@@ -1,4 +1,5 @@
-﻿using HotStuff.Services;
+﻿using CommunityToolkit.Mvvm.Messaging;
+using HotStuff.Services;
 using System.Windows.Input;
 
 namespace HotStuff.ViewModel;
@@ -12,13 +13,13 @@ public partial class ItemsPageViewModel : BaseViewModel
     bool isBusy;
 
     public bool IsNotBusy => !IsBusy;
-
     public ICommand GetItemsCommand { get; protected set; }
     public ICommand AppearingCommand { get; set; }
     public ICommand RemoveSelectedItemsCommand { get; protected set; }
     public ICommand UpdateItemCommand { get; protected set; }
 
     private ObservableCollection<Item> itemManifest = new();
+    public Building ActiveBuilding { get; set; }
     public ObservableCollection<Item> ItemManifest
     {
         get 
@@ -34,6 +35,8 @@ public partial class ItemsPageViewModel : BaseViewModel
     public ItemsPageViewModel(ItemService itemService)
     {
         this.itemService = itemService;
+
+        WeakReferenceMessenger.Default.Register<Building>(this, (r, m) => ActiveBuilding = m);
 
         RemoveSelectedItemsCommand = new Command(async () =>
         {

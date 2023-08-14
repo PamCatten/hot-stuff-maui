@@ -1,4 +1,6 @@
-﻿using HotStuff.Model;
+﻿using CommunityToolkit.Mvvm.Messaging;
+using HotStuff.Messages;
+using HotStuff.Model;
 using LiveChartsCore;
 using LiveChartsCore.Defaults;
 using LiveChartsCore.Drawing;
@@ -13,19 +15,22 @@ using UraniumUI;
 namespace HotStuff.ViewModel;
 public class MainPageViewModel : UraniumBindableObject
 {
+    // Set & manage the active building
     private Building activeBuilding = new();
     public Building ActiveBuilding { get => activeBuilding; set { activeBuilding = value; OnPropertyChanged(); } }
 
-    public List<string> ColumnChartKeys = new();
-    public ObservableCollection<ObservableValue> ColumnChartValues = new();
-
+   // Main page bar chart controls & data
+    public List<string> BarChartKeys = new();
+    public ObservableCollection<ObservableValue> BarChartValues = new();
     public ISeries[] RoomValueBarChart { get; set; }
-    public IEnumerable<ISeries> CategoryCountPieChart { get; set; }
-    public List<Axis> BarChartXAxis { get; set; } 
+    public List<Axis> BarChartXAxis { get; set; }
     public List<Axis> BarChartYAxis { get; set; }
 
+    // Main page pie chart controls & data
+    public IEnumerable<ISeries> CategoryCountPieChart { get; set; }
     public List<string> PieChartKeys = new();
     public ObservableCollection<ObservableValue> PieChartValues = new();
+
     public MainPageViewModel()
     {
         try
@@ -82,12 +87,45 @@ public class MainPageViewModel : UraniumBindableObject
                 ActiveBuilding.BuildingCategoryCount.Add((ItemCategory)item.Category, item.ItemQuantity);
         }
 
+
+        // Bar chart data handling
         foreach (KeyValuePair<ItemRoom, decimal> entry in ActiveBuilding.BuildingRoomValue)
         {
             Debug.WriteLine($"Key: {entry.Key}, Value: {entry.Value}");
-            ColumnChartValues.Add(new((double)entry.Value));
-            ColumnChartKeys.Add(entry.Key.ToString());
+            BarChartValues.Add(new((double)entry.Value));
+            BarChartKeys.Add(entry.Key.ToString());
         }
+        RoomValueBarChart = new ISeries[]
+        {
+            new ColumnSeries<ObservableValue>
+            {
+                Values = BarChartValues,
+                Stroke = null,
+                Name = "Room Total",
+                Fill = new SolidColorPaint(SKColor.Parse("FC5D52")),
+                MaxBarWidth = double.MaxValue,
+                IgnoresBarPosition = true,
+            }
+        };
+        BarChartXAxis = new List<Axis>
+        {
+            new Axis
+            {
+            Labels = BarChartKeys,
+            LabelsRotation = 300,
+            TextSize = 14,
+            }
+        };
+        BarChartYAxis = new List<Axis>
+        {
+            new Axis
+            {
+                TextSize = 14,
+                MinStep = 100,
+            }
+        };
+
+        // Pie chart data handling
 
         foreach (KeyValuePair<ItemCategory, int> entry in ActiveBuilding.BuildingCategoryCount)
         {
@@ -95,7 +133,6 @@ public class MainPageViewModel : UraniumBindableObject
             PieChartValues.Add(new(entry.Value));
             PieChartKeys.Add(entry.Key.ToString());
         }
-        
 
         //TODO: Need to figure out how to get the slices to display the Category name.
         CategoryCountPieChart = PieChartValues.AsPieSeries((value, series) =>
@@ -113,37 +150,7 @@ public class MainPageViewModel : UraniumBindableObject
             
         });
 
-        RoomValueBarChart = new ISeries[]
-        {
-            new ColumnSeries<ObservableValue>
-            {
-                Values = ColumnChartValues,
-                Stroke = null,
-                Name = "Room Total",
-                Fill = new SolidColorPaint(SKColor.Parse("FC5D52")),
-                MaxBarWidth = double.MaxValue,
-                IgnoresBarPosition = true,
-            }
-        };
-
-        BarChartXAxis = new List<Axis>
-        {
-            new Axis
-            {
-            Labels = ColumnChartKeys,
-            LabelsRotation = 300,
-            TextSize = 14,
-            }
-        };
-
-        BarChartYAxis = new List<Axis>
-        {
-            new Axis
-            {
-                TextSize = 14,
-                MinStep = 100,
-            }
-        };
-
+        WeakReferenceMessenger.Default.Send(new ActiveBuildingMessage(ActiveBuilding));
+        
     }
 }

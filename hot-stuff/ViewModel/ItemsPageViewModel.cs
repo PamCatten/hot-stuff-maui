@@ -12,10 +12,12 @@ public partial class ItemsPageViewModel : BaseViewModel
     [NotifyPropertyChangedFor(nameof(IsNotBusy))]
     bool isBusy;
 
+    [ObservableProperty]
+    bool isRefreshing;
+
     public bool IsNotBusy => !IsBusy;
     public ICommand GetItemsCommand { get; protected set; }
-    public ICommand AppearingCommand { get; set; }
-    public ICommand RemoveSelectedItemsCommand { get; protected set; }
+    public ICommand RemoveSelectedItemsCommand { get; protected set;}
     public ICommand UpdateItemCommand { get; protected set; }
 
     private ObservableCollection<Item> itemManifest = new();
@@ -44,38 +46,20 @@ public partial class ItemsPageViewModel : BaseViewModel
             DeleteAsync(SelectedItems);
         });
 
-        AppearingCommand = new Command(async () =>
+        GetItemsCommand = new Command(async () =>
         {
-            Debug.WriteLine("AppearingCommand run.");
-            AppearingAsync();
+            GetItemsAsync();
         });
-
-        async void AppearingAsync()
-        {
-            Debug.WriteLine("Appearing() start.");
-            try
-            {
-                GetItemsAsync();
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Unable to get items: {ex.Message}");
-                await Shell.Current.DisplayAlert("Data Retrieval Error", ex.Message, "OK");
-            }
-            finally
-            {
-                Debug.WriteLine("Appearing() end.");
-            }
-        }
 
         async void GetItemsAsync()
         {
-            if (IsBusy)
+            if (IsBusy | IsRefreshing)
                 return;
 
             try
             {
                 IsBusy = true;
+                IsRefreshing = true;
                 ObservableCollection<Item> itemList = await itemService.GetItems();
                 Debug.WriteLine($"There are: {itemList.Count} items currently saved in database.");
 
@@ -100,6 +84,7 @@ public partial class ItemsPageViewModel : BaseViewModel
             finally
             {
                 IsBusy = false;
+                IsRefreshing = false;
             }
         }
 

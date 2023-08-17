@@ -10,11 +10,14 @@ using LiveChartsCore.Measure;
 using LiveChartsCore.SkiaSharpView;
 using LiveChartsCore.SkiaSharpView.Painting;
 using SkiaSharp;
+using System.Windows.Input;
 using UraniumUI;
 
 namespace HotStuff.ViewModel;
 public class MainPageViewModel : UraniumBindableObject
 {
+    public ICommand GetBuildingCommand { get; protected set; }
+
     // Set & manage the active building
     private Building activeBuilding = new();
     public Building ActiveBuilding { get => activeBuilding; set { activeBuilding = value; OnPropertyChanged(); } }
@@ -33,6 +36,7 @@ public class MainPageViewModel : UraniumBindableObject
 
     public MainPageViewModel()
     {
+
         try
         {
             if (ActiveBuilding is not null)
@@ -148,6 +152,11 @@ public class MainPageViewModel : UraniumBindableObject
                 return a;
             };
             
+        });
+
+        GetBuildingCommand = new Command(async () =>
+        {
+            GetBuildingAsync();
         });
 
         WeakReferenceMessenger.Default.Send(new ActiveBuildingMessage(ActiveBuilding));

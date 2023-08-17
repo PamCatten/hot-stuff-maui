@@ -39,7 +39,7 @@ namespace HotStuff.Services
             }
         }
 
-        public async Task<ObservableCollection<Building>> GetBuilding()
+        public async Task<ObservableCollection<Building>> GetBuildings()
         {
             try 
             {

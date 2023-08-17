@@ -40,13 +40,13 @@ public partial class ItemsPageViewModel : BaseViewModel
 
         WeakReferenceMessenger.Default.Register<Building>(this, (r, m) => ActiveBuilding = m);
 
-        RemoveSelectedItemsCommand = new Command(async () =>
+        RemoveSelectedItemsCommand = new Command(() =>
         {
             Debug.WriteLine("User clicked delete items.");
             DeleteAsync(SelectedItems);
         });
 
-        GetItemsCommand = new Command(async () =>
+        GetItemsCommand = new Command(() =>
         {
             GetItemsAsync();
         });

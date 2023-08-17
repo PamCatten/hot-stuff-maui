@@ -59,7 +59,7 @@ public partial class Building : INotifyPropertyChanged
     {
         get
         {
-            return BuildingManifest.Count;
+            return BuildingManifest.Sum(item => item.ItemQuantity);
         }
         set
         {
@@ -84,7 +84,7 @@ public partial class Building : INotifyPropertyChanged
                 buildingValue = 0.00m;
             else if (buildingValue != value)
             {
-                buildingValue = BuildingManifest.Sum(item => item.ItemPrice);
+                buildingValue = BuildingManifest.Sum(item => (item.ItemPrice * item.ItemQuantity));
             }
             OnPropertyChanged();
         }
@@ -114,17 +114,6 @@ public partial class Building : INotifyPropertyChanged
         }
         set
         {
-            //if (buildingRoomValue != value)
-            //{
-                //foreach (var item in BuildingManifest)
-                //{
-                    //if (BuildingRoomValue.ContainsKey((ItemRoom)item.Room) == false)
-                        //BuildingRoomValue.Add((ItemRoom)item.Room, item.ItemPrice);
-                    //else
-                        //BuildingRoomValue[(ItemRoom)item.Room] += item.ItemPrice;
-                //}
-                //buildingRoomValue = value;
-            //}
             buildingRoomValue = value;
             OnPropertyChanged(nameof(buildingRoomValue));
         }

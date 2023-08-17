@@ -24,42 +24,43 @@
     <uranium:UraniumContentPage.Behaviors>
         <mct:EventToCommandBehavior Command="{Binding AppearingCommand}" EventName="Appearing" />
     </uranium:UraniumContentPage.Behaviors>
-    
-    
-    <ScrollView Orientation="Both" HorizontalScrollBarVisibility="Always" VerticalScrollBarVisibility="Always">
-        <VerticalStackLayout>
-            <StackLayout Padding="10" Orientation="Horizontal" Spacing="10">
-                <Button Text="Update" Command="{Binding UpdateItemCommand}" HorizontalOptions="Start"/>
-                <Button Text="Delete" Command="{Binding RemoveSelectedItemsCommand}" HorizontalOptions="Start"/>
-            </StackLayout>
-            
-            <material:DataGrid 
+
+    <RefreshView IsRefreshing="{Binding IsRefreshing}" Command="{Binding RefreshCommand}" RefreshColor="{StaticResource Primary}">  
+        <ScrollView Orientation="Both" HorizontalScrollBarVisibility="Always" VerticalScrollBarVisibility="Always">
+            <VerticalStackLayout>
+                <StackLayout Padding="10" Orientation="Horizontal" Spacing="10">
+                    <Button Text="Update" Command="{Binding UpdateItemCommand}" HorizontalOptions="Start"/>
+                    <Button Text="Delete" Command="{Binding RemoveSelectedItemsCommand}" HorizontalOptions="Start"/>
+                </StackLayout>
+
+                <material:DataGrid 
                 ItemsSource="{Binding ItemManifest}" SelectedItems="{Binding SelectedItems}" 
                 HorizontalOptions="Center" VerticalOptions="Center" x:Name="UraniumGrid"
                 BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}"
             >
-                <material:DataGrid.EmptyView>
-                    <StackLayout Padding="100">
-                        <Image HorizontalOptions="Center" VerticalOptions="Center" Source="{AppThemeBinding Light='noitemdata.png', Dark='noitemdatadark.png'}" HeightRequest="160" WidthRequest="160" />
-                        <Label Text="No items found" HorizontalOptions="Center" VerticalOptions="Center" Padding="10"/>
-                    </StackLayout>
-                </material:DataGrid.EmptyView>
+                    <material:DataGrid.EmptyView>
+                        <StackLayout Padding="100">
+                            <Image HorizontalOptions="Center" VerticalOptions="Center" Source="{AppThemeBinding Light='noitemdata.png', Dark='noitemdatadark.png'}" HeightRequest="160" WidthRequest="160" />
+                            <Label Text="No items found" HorizontalOptions="Center" VerticalOptions="Center" Padding="10"/>
+                        </StackLayout>
+                    </material:DataGrid.EmptyView>
 
-                <material:DataGrid.Columns>
-                    <material:DataGridSelectionColumn/>
-                    <material:DataGridColumn Binding="{Binding ItemName}" Title="Name" Width="Auto" />
-                    <material:DataGridColumn Binding="{Binding Category}" Title="Category" Width="Auto"/>
-                    <material:DataGridColumn Binding="{Binding BrandManufacturer}" Title="Brand / Manufacturer" Width="Auto"/>
-                    <material:DataGridColumn Binding="{Binding Room}" Title="Room" Width="Auto"/>
-                    <material:DataGridColumn Binding="{Binding Color}" Title="Color" Width="Auto"/>
-                    <material:DataGridColumn Binding="{Binding DateAcquired}" Title = "Date Acquired" Width="Auto"/>
-                    <material:DataGridColumn Binding="{Binding ItemPrice}" Title = "Price" Width="Auto"/>
-                    <material:DataGridColumn Binding="{Binding ItemQuantity}" Title = "Quantity" Width="Auto" />
-                    <material:DataGridColumn Binding="{Binding ItemDescription}" Title="Description" Width="Auto"/>
-                    <material:DataGridColumn Binding="{Binding PurchaseProof}" Title="Purchase Proof" Width="Auto"/>
-                </material:DataGrid.Columns>
+                    <material:DataGrid.Columns>
+                        <material:DataGridSelectionColumn/>
+                        <material:DataGridColumn Binding="{Binding ItemName}" Title="Name" Width="Auto" />
+                        <material:DataGridColumn Binding="{Binding Category}" Title="Category" Width="Auto"/>
+                        <material:DataGridColumn Binding="{Binding BrandManufacturer}" Title="Brand / Manufacturer" Width="Auto"/>
+                        <material:DataGridColumn Binding="{Binding Room}" Title="Room" Width="Auto"/>
+                        <material:DataGridColumn Binding="{Binding Color}" Title="Color" Width="Auto"/>
+                        <material:DataGridColumn Binding="{Binding DateAcquired}" Title = "Date Acquired" Width="Auto"/>
+                        <material:DataGridColumn Binding="{Binding ItemPrice}" Title = "Price" Width="Auto"/>
+                        <material:DataGridColumn Binding="{Binding ItemQuantity}" Title = "Quantity" Width="Auto" />
+                        <material:DataGridColumn Binding="{Binding ItemDescription}" Title="Description" Width="Auto"/>
+                        <material:DataGridColumn Binding="{Binding PurchaseProof}" Title="Purchase Proof" Width="Auto"/>
+                    </material:DataGrid.Columns>
 
-            </material:DataGrid>
-        </VerticalStackLayout>
-    </ScrollView>
+                </material:DataGrid>
+            </VerticalStackLayout>
+        </ScrollView>
+    </RefreshView>
 </uranium:UraniumContentPage>

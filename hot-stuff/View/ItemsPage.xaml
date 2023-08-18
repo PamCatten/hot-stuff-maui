@@ -16,9 +16,9 @@
 >
 
     <uranium:UraniumContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="{StaticResource AddIcon}" Clicked="OnAddItemsPageClicked"/>
-        <ToolbarItem IconImageSource="{StaticResource DownloadIcon}" Clicked="OnExportIconClicked" />
-        <ToolbarItem IconImageSource="{StaticResource ProfileIcon}" Clicked="OnProfilePageClicked"/>
+        <ToolbarItem IconImageSource="{StaticResource AddIcon}" Clicked="OnAddItemsPageClicked" SemanticProperties.Description="Add item" SemanticProperties.Hint="Opens the add item page."/>
+        <ToolbarItem IconImageSource="{StaticResource DownloadIcon}" Clicked="OnExportIconClicked" SemanticProperties.Description="Download" SemanticProperties.Hint="Opens the download menu."/>
+        <ToolbarItem IconImageSource="{StaticResource ProfileIcon}" Clicked="OnProfilePageClicked" SemanticProperties.Description="Profile" SemanticProperties.Hint="Opens the profile page."/>
     </uranium:UraniumContentPage.ToolbarItems>
 
     <uranium:UraniumContentPage.Behaviors>

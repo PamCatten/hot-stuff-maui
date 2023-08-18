@@ -19,6 +19,12 @@
         <member name="P:HotStuff.ViewModel.ItemsPageViewModel.IsRefreshing">
             <inheritdoc cref="F:HotStuff.ViewModel.ItemsPageViewModel.isRefreshing"/>
         </member>
+        <member name="T:HotStuff.ViewModel.MainPageViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:HotStuff.ViewModel.MainPageViewModel.IsRefreshing">
+            <inheritdoc cref="F:HotStuff.ViewModel.MainPageViewModel.isRefreshing"/>
+        </member>
         <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
             <summary>
             Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color

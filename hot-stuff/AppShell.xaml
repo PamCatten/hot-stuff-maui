@@ -12,14 +12,18 @@
             <ShellContent
                 Title="Home"
                 ContentTemplate="{DataTemplate local:MainPage}"
-                Route="MainPage" 
+                Route="MainPage"
+                SemanticProperties.Description="Home"
+                SemanticProperties.Hint="Opens the home page."
             />
         </Tab>
         <Tab Title="Items" Icon="{StaticResource DatabaseIcon}">
             <ShellContent
                 Title="Items"
                 ContentTemplate="{DataTemplate view:ItemsPage}"
-                Route="ItemsPage" 
+                Route="ItemsPage"
+                SemanticProperties.Description="Items"
+                SemanticProperties.Hint="Opens the item data grid page."
             />
         </Tab>
         <Tab Title="Learn" Icon="{StaticResource LearnIcon}">
@@ -27,7 +31,8 @@
                 Title="Learn"
                 ContentTemplate="{DataTemplate view:LearnPage}"
                 Route="LearnPage"
-                
+                SemanticProperties.Description="Learn"
+                SemanticProperties.Hint="Opens the learn page."
             />
         </Tab>
     </TabBar>

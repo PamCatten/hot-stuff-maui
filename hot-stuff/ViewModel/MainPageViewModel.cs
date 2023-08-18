@@ -15,10 +15,14 @@ using System.Windows.Input;
 using UraniumUI;
 
 namespace HotStuff.ViewModel;
-public class MainPageViewModel : UraniumBindableObject
+public partial class MainPageViewModel : BaseViewModel
 {
     BuildingService buildingService;
     public ICommand GetBuildingCommand { get; protected set; }
+
+    [ObservableProperty]
+    bool isRefreshing;
+
     // Set & manage the active building
     private Building activeBuilding = new();
     public Building ActiveBuilding { get => activeBuilding; set { activeBuilding = value; OnPropertyChanged(); } }
@@ -38,21 +42,6 @@ public class MainPageViewModel : UraniumBindableObject
     public MainPageViewModel()
     {
         GetBuildingAsync();
-        try
-        {
-            if (ActiveBuilding is not null)
-            {
-            }
-            else
-            {
-                Debug.WriteLine("ActiveBuilding is null.");
-            }
-        }
-        catch (Exception ex)
-        {
-            Debug.WriteLine($"Error retrieving ActiveBuilding: {ex.Message}");
-            Shell.Current.DisplayAlert("Building Record Retrieval Error", ex.Message, "OK");
-        }
 
         // Bar chart data handling
         foreach (KeyValuePair<ItemRoom, decimal> entry in ActiveBuilding.BuildingRoomValue)
@@ -116,7 +105,7 @@ public class MainPageViewModel : UraniumBindableObject
             
         });
 
-        GetBuildingCommand = new Command(async () =>
+        GetBuildingCommand = new Command(() =>
         {
             GetBuildingAsync();
         });
@@ -127,8 +116,12 @@ public class MainPageViewModel : UraniumBindableObject
 
     async void GetBuildingAsync()
     {
-        //if (IsBusy | IsRefreshing)
-        //return;
+        if (IsBusy | IsRefreshing)
+            return;
+
+        IsBusy = true;
+        IsRefreshing = true;
+
         try
         {
             if (ActiveBuilding is not null && ActiveBuilding.BuildingID == 0)
@@ -159,6 +152,16 @@ public class MainPageViewModel : UraniumBindableObject
             else
             {
                 ObservableCollection<Building> buildingList = await buildingService.GetBuildings();
+                foreach (var building in buildingList)
+                {
+                    if (building.BuildingID == ActiveBuilding.BuildingID)
+                    {
+                        ActiveBuilding = building;
+                        //break;
+                    }
+                    else
+                        Debug.WriteLine($"ID: {building.BuildingID}, NAME {building.BuildingName}");
+                }
                 // Set retrieved building to ActiveBuilding
             }
 
@@ -185,8 +188,8 @@ public class MainPageViewModel : UraniumBindableObject
         }
         finally
         {
-            //IsBusy = false;
-            //IsRefreshing = false;
+            IsBusy = false;
+            IsRefreshing = false;
         }
     }
 }

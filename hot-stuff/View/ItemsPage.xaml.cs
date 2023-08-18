@@ -17,7 +17,6 @@ public partial class ItemsPage : UraniumContentPage
 
     async void OnAddItemsPageClicked(object sender, EventArgs e)
     {
-        Debug.WriteLine("----User clicked add icon");
         await Shell.Current.GoToAsync(nameof(AddItemsPage));
     }
 
@@ -47,8 +46,6 @@ public partial class ItemsPage : UraniumContentPage
 
     async void OnProfilePageClicked(object sender, EventArgs e)
     {
-        Debug.WriteLine("----User clicked profile icon.");
-
         await Shell.Current.GoToAsync(nameof(ProfilePage));
     }
 }

@@ -17,11 +17,12 @@
 >
 
     <uranium:UraniumContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="{StaticResource ProfileIcon}" Clicked="OnProfilePageClicked"/>
+        <ToolbarItem IconImageSource="{AppThemeBinding Light={StaticResource ProfileIcon}, Dark={StaticResource ProfileIconDark}}" Clicked="OnProfilePageClicked" SemanticProperties.Description="Profile" SemanticProperties.Hint="Opens the profile page."/>
     </uranium:UraniumContentPage.ToolbarItems>
 
     <uranium:UraniumContentPage.Behaviors>
         <mct:EventToCommandBehavior Command="{Binding GetBuildingCommand }" EventName="Appearing"/>
+        <mct:StatusBarBehavior StatusBarColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}" />
     </uranium:UraniumContentPage.Behaviors>
 
     <uranium:UraniumContentPage.BindingContext>

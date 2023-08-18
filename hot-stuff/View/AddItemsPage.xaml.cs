@@ -5,10 +5,10 @@ namespace HotStuff.View;
 
 public partial class AddItemsPage : UraniumContentPage
 {
-    public AddItemsPage(AddItemsPageViewModel addItemsPageViewModel)
+    public AddItemsPage(AddItemsPageViewModel vm)
     {
         InitializeComponent();
-        BindingContext = addItemsPageViewModel;
+        BindingContext = vm;
     }
 
     private async void OnPickPhotoClicked(object sender, EventArgs e)

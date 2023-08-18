@@ -21,9 +21,15 @@
                Color="{StaticResource BlackText}"
                Glyph="{x:Static local:IconFont.GraduationCap}" 
     />
+    <!-- TODO: Unbelievably gross, please forgive me, but all my other alternatives have yet to work with FontImageExtension.-->
     <FontImage x:Key="AddIcon"
                FontFamily="FontAwesome"
                Color="{StaticResource BlackText}"
+               Glyph="{x:Static local:IconFont.CirclePlus}" 
+    />
+    <FontImage x:Key="AddIconDark"
+               FontFamily="FontAwesome"
+               Color="{StaticResource WhiteText}"
                Glyph="{x:Static local:IconFont.CirclePlus}" 
     />
     <FontImage x:Key="ProfileIcon"
@@ -31,9 +37,19 @@
                Color="{StaticResource BlackText}"
                Glyph="{x:Static local:IconFont.CircleUser}"
     />
+    <FontImage x:Key="ProfileIconDark"
+               FontFamily="FontAwesome"
+               Color="{StaticResource WhiteText}"
+               Glyph="{x:Static local:IconFont.CircleUser}"
+    />
     <FontImage x:Key="DropdownIcon"
                FontFamily="FontAwesome"
                Color="{StaticResource BlackText}"
+               Glyph="{x:Static local:IconFont.CircleChevronDown}"
+    />
+    <FontImage x:Key="DropdownIconDark"
+               FontFamily="FontAwesome"
+               Color="{StaticResource WhiteText}"
                Glyph="{x:Static local:IconFont.CircleChevronDown}"
     />
     <FontImage x:Key="DownloadIcon"
@@ -41,6 +57,12 @@
                Color="{StaticResource BlackText}"
                Glyph="{x:Static local:IconFont.Download}"
     />
+    <FontImage x:Key="DownloadIconDark"
+               FontFamily="FontAwesome"
+               Color="{StaticResource WhiteText}"
+               Glyph="{x:Static local:IconFont.Download}"
+    />
+
     <Style TargetType="input:CheckBox">
         <Setter Property="Color" Value="{StaticResource Primary}" />
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource White}}" />

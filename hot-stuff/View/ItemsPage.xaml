@@ -16,9 +16,9 @@
 >
 
     <uranium:UraniumContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="{StaticResource AddIcon}" Clicked="OnAddItemsPageClicked" SemanticProperties.Description="Add item" SemanticProperties.Hint="Opens the add item page."/>
-        <ToolbarItem IconImageSource="{StaticResource DownloadIcon}" Clicked="OnExportIconClicked" SemanticProperties.Description="Download" SemanticProperties.Hint="Opens the download menu."/>
-        <ToolbarItem IconImageSource="{StaticResource ProfileIcon}" Clicked="OnProfilePageClicked" SemanticProperties.Description="Profile" SemanticProperties.Hint="Opens the profile page."/>
+        <ToolbarItem IconImageSource="{AppThemeBinding Light={StaticResource AddIcon}, Dark={StaticResource AddIconDark}}" Clicked="OnAddItemsPageClicked" SemanticProperties.Description="Add item" SemanticProperties.Hint="Opens the add item page."/>
+        <ToolbarItem IconImageSource="{AppThemeBinding Light={StaticResource DownloadIcon}, Dark={StaticResource DownloadIconDark}}" Clicked="OnExportIconClicked" SemanticProperties.Description="Download" SemanticProperties.Hint="Opens the download menu."/>
+        <ToolbarItem IconImageSource="{AppThemeBinding Light={StaticResource ProfileIcon}, Dark={StaticResource ProfileIconDark}}" Clicked="OnProfilePageClicked" SemanticProperties.Description="Profile" SemanticProperties.Hint="Opens the profile page."/>
     </uranium:UraniumContentPage.ToolbarItems>
 
     <uranium:UraniumContentPage.Behaviors>

@@ -10,58 +10,111 @@
     x:Class="HotStuff.View.ProfilePage"
     xmlns:local="clr-namespace:HotStuff"
     xmlns:pages="clr-namespace:HotStuff.View"
+    xmlns:viewmodel="clr-namespace:HotStuff.ViewModel"
+    x:DataType="viewmodel:ProfilePageViewModel"
     Title="Profile Menu"
 >
 
     <VerticalStackLayout>
-        <Label 
-            Text="Personal Info"
-            FontSize="Medium"
-            FontAttributes="Bold"
-            VerticalOptions="Center" 
-            HorizontalOptions="Start"
-            Margin="15, 10, 15, 5"
-        />
-        <Label 
-            Text="Name, email, phone number, ..."
-            FontSize="Small"
-            VerticalOptions="Center" 
-            HorizontalOptions="Start"
-            Margin="15, 5, 15, 10"
-        />
-        
+        <material:ButtonView BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}" Margin="5,0,5,0">
+            <StackLayout>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding BuildingSettingsCommand}" />
+                </StackLayout.GestureRecognizers>
+                <Label 
+                    Text="Personal Info" 
+                    TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start"
+                    Margin="0, 5, 0, 5"
+                />
+                <Label 
+                    Text="Name, email, phone number, ..."
+                    TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                    FontSize="Small"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start"
+                    Margin="0, 5, 0, 5"
+                />
+            </StackLayout>
+        </material:ButtonView>
         <BoxView StyleClass="Divider" />
-        <Label 
-            Text="Settings"
-            FontSize="Medium"
-            FontAttributes="Bold"
-            VerticalOptions="Center" 
-            HorizontalOptions="Start"
-            Margin="15, 10, 15, 5"
-        />
-        <Label 
-            Text="Notifications, Password, App Unlock, ..."
-            FontSize="Small"
-            VerticalOptions="Center" 
-            HorizontalOptions="Start"
-            Margin="15, 5, 15, 10"
-        />
+        <material:ButtonView BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}" Margin="5,0,5,0">
+            <StackLayout>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding BuildingSettingsCommand}" />
+                </StackLayout.GestureRecognizers>
+                <Label 
+                    Text="Building Settings" 
+                    TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start"
+                    Margin="0, 5, 0, 5"
+                />
+                <Label 
+                    Text="Name, Description, Type, ..."
+                    TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                    FontSize="Small"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start"
+                    Margin="0, 5, 0, 5"
+                />
+            </StackLayout>
+        </material:ButtonView>
         <BoxView StyleClass="Divider" />
-        <Label 
-            Text="Legal"
-            FontSize="Medium"
-            FontAttributes="Bold"
-            VerticalOptions="Center" 
-            HorizontalOptions="Start"
-            Margin="15, 10, 15, 5"
-        />
-        <Label 
-            Text="Terms of Use, Privacy Policies, ..."
-            FontSize="Small"
-            VerticalOptions="Center" 
-            HorizontalOptions="Start"
-            Margin="15, 5, 15, 10"
-        />
+        <material:ButtonView BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}" Margin="5,0,5,0">
+            <StackLayout>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding BuildingSettingsCommand}" />
+                </StackLayout.GestureRecognizers>
+                <Label 
+                    Text="Settings" 
+                    TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start"
+                    Margin="0, 5, 0, 5"
+                />
+                <Label 
+                    Text="Notifications, Password, App Unlock, ..."
+                    TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                    FontSize="Small"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start"
+                    Margin="0, 5, 0, 5"
+                />
+            </StackLayout>
+        </material:ButtonView>
+        <BoxView StyleClass="Divider" />
+        <material:ButtonView BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}" Margin="5,0,5,0">
+            <StackLayout>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding BuildingSettingsCommand}" />
+                </StackLayout.GestureRecognizers>
+                <Label 
+                    Text="Legal" 
+                    TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start"
+                    Margin="0, 5, 0, 5"
+                />
+                <Label 
+                    Text="Terms of Use, Privacy Policies, ..."
+                    TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                    FontSize="Small"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start"
+                    Margin="0, 5, 0, 5"
+                />
+            </StackLayout>
+        </material:ButtonView>
         <BoxView StyleClass="Divider" />
         <Label 
             Text="Log Out"

@@ -16,28 +16,78 @@
 >
 
     <uranium:UraniumContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="{AppThemeBinding Light={StaticResource AddIcon}, Dark={StaticResource AddIconDark}}" Clicked="OnAddItemsPageClicked" SemanticProperties.Description="Add item" SemanticProperties.Hint="Opens the add item page."/>
-        <ToolbarItem IconImageSource="{AppThemeBinding Light={StaticResource DownloadIcon}, Dark={StaticResource DownloadIconDark}}" Clicked="OnExportIconClicked" SemanticProperties.Description="Download" SemanticProperties.Hint="Opens the download menu."/>
         <ToolbarItem IconImageSource="{AppThemeBinding Light={StaticResource ProfileIcon}, Dark={StaticResource ProfileIconDark}}" Clicked="OnProfilePageClicked" SemanticProperties.Description="Profile" SemanticProperties.Hint="Opens the profile page."/>
     </uranium:UraniumContentPage.ToolbarItems>
 
     <uranium:UraniumContentPage.Behaviors>
         <mct:EventToCommandBehavior Command="{Binding GetItemsCommand}" EventName="Appearing"/>
     </uranium:UraniumContentPage.Behaviors>
+    <RefreshView IsRefreshing="{Binding IsRefreshing}" Command="{Binding GetItemsCommand}" RefreshColor="{StaticResource Primary}">
+        <Grid HorizontalOptions="FillAndExpand">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
-    <RefreshView IsRefreshing="{Binding IsRefreshing}" Command="{Binding GetItemsCommand}" RefreshColor="{StaticResource Primary}">  
-        <ScrollView Orientation="Both" HorizontalScrollBarVisibility="Always" VerticalScrollBarVisibility="Always">
-            <VerticalStackLayout>
-                <StackLayout Padding="10" Orientation="Horizontal" Spacing="10">
-                    <Button Text="Update" Command="{Binding UpdateItemCommand}" HorizontalOptions="Start"/>
-                    <Button Text="Delete" Command="{Binding RemoveSelectedItemsCommand}" HorizontalOptions="Start"/>
-                </StackLayout>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="80" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="80" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Column="0" Grid.Row="1">
+                <ImageButton Clicked="OnAddItemsPageClicked" SemanticProperties.Description="Add item" SemanticProperties.Hint="Opens the add item page.">
+                    <ImageButton.Source>
+                        <FontImageSource FontFamily="FontAwesome" Glyph="{x:Static local:IconFont.CirclePlus}" Color="{StaticResource Primary}"/>
+                    </ImageButton.Source>
+                </ImageButton>
+                <Label Text="Add item" FontSize="Small" FontAttributes="Bold" TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}" 
+                    FontFamily="OpenSansRegular" HorizontalTextAlignment="Center" VerticalTextAlignment="End" Margin="0,5,0,0"
+                />
+            </StackLayout>
+
+            <StackLayout Grid.Column="1" Grid.Row="1">
+                <ImageButton Command="{Binding RemoveSelectedItemsCommand}">
+                    <ImageButton.Source>
+                        <FontImageSource FontFamily="FontAwesome" Glyph="{x:Static local:IconFont.CircleXmark}" Color="{StaticResource Primary}"/>
+                    </ImageButton.Source>
+                </ImageButton>
+                <Label Text="Delete items" FontSize="Small" FontAttributes="Bold" TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}" 
+                    FontFamily="OpenSansRegular" HorizontalTextAlignment="Center" VerticalTextAlignment="End" Margin="0,5,0,0"
+                />
+            </StackLayout>
+
+            <StackLayout Grid.Column="0" Grid.Row="3">
+                <ImageButton SemanticProperties.Description="Update" SemanticProperties.Hint="">
+                    <ImageButton.Source>
+                        <FontImageSource FontFamily="FontAwesome" Glyph="{x:Static local:IconFont.ArrowsRotate}" Color="{StaticResource Primary}"/>
+                    </ImageButton.Source>
+                </ImageButton>
+                <Label Text="Update item" FontSize="Small" FontAttributes="Bold" TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}" 
+                    FontFamily="OpenSansRegular" HorizontalTextAlignment="Center" VerticalTextAlignment="End" Margin="0,5,0,0"
+                />
+            </StackLayout>
+
+            <StackLayout Grid.Column="1" Grid.Row="3">
+                <ImageButton Clicked="OnExportIconClicked" SemanticProperties.Description="Download" SemanticProperties.Hint="Opens the download menu.">
+                    <ImageButton.Source>
+                        <FontImageSource FontFamily="FontAwesome" Glyph="{x:Static local:IconFont.Download}" Color="{StaticResource Primary}"/>
+                    </ImageButton.Source>
+                </ImageButton>
+                <Label Text="Download items" FontSize="Small" FontAttributes="Bold" TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}" 
+                    FontFamily="OpenSansRegular" HorizontalTextAlignment="Center" VerticalTextAlignment="End" Margin="0,5,0,0"
+                />
+            </StackLayout>
+
+            <ScrollView Orientation="Both" HorizontalScrollBarVisibility="Always" VerticalScrollBarVisibility="Always" Grid.Row="4" Grid.ColumnSpan="2">
 
                 <material:DataGrid 
-                ItemsSource="{Binding ItemManifest}" SelectedItems="{Binding SelectedItems}" 
-                HorizontalOptions="Center" VerticalOptions="Center" x:Name="UraniumGrid"
-                BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}"
-            >
+                    ItemsSource="{Binding ItemManifest}" SelectedItems="{Binding SelectedItems}" 
+                    HorizontalOptions="Center" VerticalOptions="StartAndExpand" x:Name="UraniumGrid"
+                    BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}"
+                >
                     <material:DataGrid.EmptyView>
                         <StackLayout Padding="100">
                             <Image HorizontalOptions="Center" VerticalOptions="Center" Source="{AppThemeBinding Light='noitemdata.png', Dark='noitemdatadark.png'}" HeightRequest="160" WidthRequest="160" />
@@ -58,9 +108,9 @@
                         <material:DataGridColumn Binding="{Binding ItemDescription}" Title="Description" Width="Auto"/>
                         <material:DataGridColumn Binding="{Binding PurchaseProof}" Title="Purchase Proof" Width="Auto"/>
                     </material:DataGrid.Columns>
-
                 </material:DataGrid>
-            </VerticalStackLayout>
-        </ScrollView>
+            </ScrollView>
+
+        </Grid>
     </RefreshView>
 </uranium:UraniumContentPage>

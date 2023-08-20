@@ -151,17 +151,18 @@ public partial class MainPageViewModel : BaseViewModel
             }
             else
             {
-                ObservableCollection<Building> buildingList = await buildingService.GetBuildings();
-                foreach (var building in buildingList)
-                {
-                    if (building.BuildingID == ActiveBuilding.BuildingID)
-                    {
-                        ActiveBuilding = building;
+                // THROWS ERROR
+                //ObservableCollection<Building> buildingList = await buildingService.GetBuildings();
+                //foreach (var building in buildingList)
+                //{
+                    //if (building.BuildingID == ActiveBuilding.BuildingID)
+                    //{
+                        //ActiveBuilding = building;
                         //break;
-                    }
-                    else
-                        Debug.WriteLine($"ID: {building.BuildingID}, NAME {building.BuildingName}");
-                }
+                    //}
+                    //else
+                        //Debug.WriteLine($"ID: {building.BuildingID}, NAME {building.BuildingName}");
+                //}
                 // Set retrieved building to ActiveBuilding
             }
 

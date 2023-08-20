@@ -27,7 +27,11 @@ public static class MauiProgram
 
             fonts.AddFontAwesomeIconFonts();
             fonts.AddFont("fa_solid.otf", "FontAwesome");
-
+        }).ConfigureMauiHandlers(handlers => 
+        {
+            #if ANDROID
+                handlers.AddHandler(typeof(Shell), typeof(HotStuff.Platforms.Android.CustomShellRenderer));
+            #endif
         }).UseMauiCommunityToolkit();
             builder.Services.AddSingleton<MainPage>();
             builder.Services.AddTransient<ItemsPage>();
@@ -36,9 +40,12 @@ public static class MauiProgram
             builder.Services.AddTransient<AddItemsPageViewModel>();
             builder.Services.AddSingleton<ItemService>();
 
+
+
         string DatabasePath = Path.Combine(FileSystem.AppDataDirectory, "ItemData.db3");
             builder.Services.AddSingleton(s => ActivatorUtilities.CreateInstance<ItemService>(s, DatabasePath));
             builder.Services.AddMopupsDialogs();
         return builder.Build();
     }
 }
+

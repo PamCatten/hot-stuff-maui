@@ -144,7 +144,7 @@
                 <Button 
                     Command="{Binding AddItemCommand}" 
                     Text="Add Item"
-                    StyleClass="FilledButton"
+                    BackgroundColor="{StaticResource Primary}"
                     input:FormView.IsSubmitButton="True"
                 />
             </VerticalStackLayout>

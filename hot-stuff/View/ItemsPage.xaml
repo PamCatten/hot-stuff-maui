@@ -16,7 +16,24 @@
 >
 
     <uranium:UraniumContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="{AppThemeBinding Light={StaticResource ProfileIcon}, Dark={StaticResource ProfileIconDark}}" Clicked="OnProfilePageClicked" SemanticProperties.Description="Profile" SemanticProperties.Hint="Opens the profile page."/>
+        <ToolbarItem 
+            IconImageSource="{AppThemeBinding Light={StaticResource SearchIcon}, 
+            Dark={StaticResource SearchIconDark}}" 
+            Clicked="OnProfilePageClicked" SemanticProperties.Description="Search" 
+            SemanticProperties.Hint="Opens the search submenu."
+        />
+        <ToolbarItem 
+            IconImageSource="{AppThemeBinding Light={StaticResource FilterIcon}, 
+            Dark={StaticResource FilterIconDark}}" 
+            Clicked="OnProfilePageClicked" SemanticProperties.Description="Filter" 
+            SemanticProperties.Hint="Opens the filter submenu."
+        />
+        <ToolbarItem 
+            IconImageSource="{AppThemeBinding Light={StaticResource ProfileIcon}, 
+            Dark={StaticResource ProfileIconDark}}" 
+            Clicked="OnProfilePageClicked" SemanticProperties.Description="Profile" 
+            SemanticProperties.Hint="Opens the profile page."
+        />
     </uranium:UraniumContentPage.ToolbarItems>
 
     <uranium:UraniumContentPage.Behaviors>
@@ -50,12 +67,13 @@
             </StackLayout>
 
             <StackLayout Grid.Column="1" Grid.Row="1">
-                <ImageButton Command="">
+                <ImageButton SemanticProperties.Description="Modify" SemanticProperties.Hint="Modifies an existing item's characteristics.">
                     <ImageButton.Source>
-                        <FontImageSource FontFamily="FontAwesome" Glyph="{x:Static local:IconFont.Copy}" Color="{StaticResource Primary}"/>
+                        <FontImageSource FontFamily="FontAwesome" Glyph="{x:Static local:IconFont.ArrowsRotate}" Color="{StaticResource Primary}"/>
                     </ImageButton.Source>
                 </ImageButton>
-                <Label Text="Copy" FontSize="Small" FontAttributes="Bold" TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}" 
+                <Label Text="Modify" FontSize="Small" FontAttributes="Bold" 
+                    TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}" 
                     FontFamily="OpenSansRegular" HorizontalTextAlignment="Center" VerticalTextAlignment="End" Margin="0,5,0,0"
                 />
             </StackLayout>
@@ -72,18 +90,18 @@
             </StackLayout>
 
             <StackLayout Grid.Column="0" Grid.Row="3">
-                <ImageButton SemanticProperties.Description="Modify" SemanticProperties.Hint="Modifies an existing item's characteristics.">
+                <ImageButton SemanticProperties.Description="Copy" SemanticProperties.Hint="Creates copies of the selected items.">
                     <ImageButton.Source>
-                        <FontImageSource FontFamily="FontAwesome" Glyph="{x:Static local:IconFont.ArrowsRotate}" Color="{StaticResource Primary}"/>
+                        <FontImageSource FontFamily="FontAwesome" Glyph="{x:Static local:IconFont.Copy}" Color="{StaticResource Primary}"/>
                     </ImageButton.Source>
                 </ImageButton>
-                <Label Text="Modify" FontSize="Small" FontAttributes="Bold" TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}" 
+                <Label Text="Copy" FontSize="Small" FontAttributes="Bold" TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}" 
                     FontFamily="OpenSansRegular" HorizontalTextAlignment="Center" VerticalTextAlignment="End" Margin="0,5,0,0"
                 />
             </StackLayout>
 
             <StackLayout Grid.Column="1" Grid.Row="3">
-                <ImageButton Clicked="" SemanticProperties.Description="Transfer" SemanticProperties.Hint="Transfers items between buildings.">
+                <ImageButton SemanticProperties.Description="Transfer" SemanticProperties.Hint="Transfers items between buildings.">
                     <ImageButton.Source>
                         <FontImageSource FontFamily="FontAwesome" Glyph="{x:Static local:IconFont.ArrowRightArrowLeft}" Color="{StaticResource Primary}"/>
                     </ImageButton.Source>

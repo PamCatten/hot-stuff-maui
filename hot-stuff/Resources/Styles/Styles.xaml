@@ -22,15 +22,15 @@
                Glyph="{x:Static local:IconFont.GraduationCap}" 
     />
     <!-- TODO: Unbelievably gross, please forgive me, but all my other alternatives have yet to work with FontImageExtension.-->
-    <FontImage x:Key="AddIcon"
+    <FontImage x:Key="SearchIcon"
                FontFamily="FontAwesome"
                Color="{StaticResource BlackText}"
-               Glyph="{x:Static local:IconFont.CirclePlus}" 
+               Glyph="{x:Static local:IconFont.MagnifyingGlass}" 
     />
-    <FontImage x:Key="AddIconDark"
+    <FontImage x:Key="SearchIconDark"
                FontFamily="FontAwesome"
                Color="{StaticResource WhiteText}"
-               Glyph="{x:Static local:IconFont.CirclePlus}" 
+               Glyph="{x:Static local:IconFont.MagnifyingGlass}" 
     />
     <FontImage x:Key="ProfileIcon"
                FontFamily="FontAwesome"
@@ -52,15 +52,15 @@
                Color="{StaticResource WhiteText}"
                Glyph="{x:Static local:IconFont.CircleChevronDown}"
     />
-    <FontImage x:Key="DownloadIcon"
+    <FontImage x:Key="FilterIcon"
                FontFamily="FontAwesome"
                Color="{StaticResource BlackText}"
-               Glyph="{x:Static local:IconFont.Download}"
+               Glyph="{x:Static local:IconFont.Filter}"
     />
-    <FontImage x:Key="DownloadIconDark"
+    <FontImage x:Key="FilterIconDark"
                FontFamily="FontAwesome"
                Color="{StaticResource WhiteText}"
-               Glyph="{x:Static local:IconFont.Download}"
+               Glyph="{x:Static local:IconFont.Filter}"
     />
 
     <Style TargetType="input:CheckBox">

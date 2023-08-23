@@ -17,7 +17,6 @@ using UraniumUI;
 namespace HotStuff.ViewModel;
 public partial class MainPageViewModel : BaseViewModel
 {
-    BuildingService buildingService;
     public ICommand GetBuildingCommand { get; protected set; }
 
     [ObservableProperty]

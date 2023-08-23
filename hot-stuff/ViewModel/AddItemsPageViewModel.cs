@@ -27,9 +27,8 @@ namespace HotStuff.ViewModel
                 await Shell.Current.GoToAsync("..");
             }
 
-            AddItemCommand = new Command(async () =>
+            AddItemCommand = new Command(() =>
             {
-                Debug.WriteLine("----User called AddItemCommand.");
                 // TODO: Find a better way of bootstrapping this
                 NewItem.DateAcquired = NewItem.DateAcquired.Split(" 12:00:00 AM", StringSplitOptions.RemoveEmptyEntries)[0];
                 CreateItem(NewItem);

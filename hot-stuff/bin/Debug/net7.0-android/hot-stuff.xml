@@ -10,6 +10,15 @@
         <member name="P:HotStuff.ViewModel.BaseViewModel.IsBusy">
             <inheritdoc cref="F:HotStuff.ViewModel.BaseViewModel.isBusy"/>
         </member>
+        <member name="T:HotStuff.ViewModel.BuildingSettingsPageViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:HotStuff.ViewModel.BuildingSettingsPageViewModel.IsBusy">
+            <inheritdoc cref="F:HotStuff.ViewModel.BuildingSettingsPageViewModel.isBusy"/>
+        </member>
+        <member name="P:HotStuff.ViewModel.BuildingSettingsPageViewModel.IsRefreshing">
+            <inheritdoc cref="F:HotStuff.ViewModel.BuildingSettingsPageViewModel.isRefreshing"/>
+        </member>
         <member name="T:HotStuff.ViewModel.ItemsPageViewModel">
             <inheritdoc/>
         </member>

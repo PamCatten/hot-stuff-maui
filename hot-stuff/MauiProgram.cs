@@ -33,17 +33,21 @@ public static class MauiProgram
                 handlers.AddHandler(typeof(Shell), typeof(HotStuff.Platforms.Android.CustomShellRenderer));
             #endif
         }).UseMauiCommunityToolkit();
-            builder.Services.AddSingleton<MainPage>();
+            builder.Services.AddTransient<MainPage>();
             builder.Services.AddTransient<ItemsPage>();
             builder.Services.AddTransient<ItemsPageViewModel>();
             builder.Services.AddTransient<AddItemsPage>();
             builder.Services.AddTransient<AddItemsPageViewModel>();
+            builder.Services.AddTransient<ProfilePage>();
+            builder.Services.AddTransient<BuildingSettingsPage>();
+            builder.Services.AddTransient<BuildingSettingsPageViewModel>();
             builder.Services.AddSingleton<ItemService>();
-
+            builder.Services.AddSingleton<BuildingService>();
 
 
         string DatabasePath = Path.Combine(FileSystem.AppDataDirectory, "ItemData.db3");
             builder.Services.AddSingleton(s => ActivatorUtilities.CreateInstance<ItemService>(s, DatabasePath));
+            builder.Services.AddSingleton(s => ActivatorUtilities.CreateInstance<BuildingService>(s, DatabasePath));
             builder.Services.AddMopupsDialogs();
         return builder.Build();
     }

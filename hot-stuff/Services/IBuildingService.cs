@@ -1,11 +1,9 @@
-﻿namespace HotStuff.Services
+﻿namespace HotStuff.Services;
+public interface IBuildingService
 {
-    public interface IBuildingService
-    {
-        Task<ObservableCollection<Building>> GetBuildings();
-        Task AddBuilding(Building building);
-        Task UpdateBuilding(Building building);
-        Task DeleteBuilding(Building building);
-        Task FlushBuildings();
-    }
+    Task<ObservableCollection<Building>> GetBuildings();
+    Task AddBuilding(Building building);
+    Task UpdateBuilding(Building building);
+    Task DeleteBuilding(Building building);
+    Task FlushBuildings();
 }

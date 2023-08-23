@@ -1,11 +1,9 @@
-﻿namespace HotStuff.Services
+﻿namespace HotStuff.Services;
+public interface IItemService
 {
-    public interface IItemService
-    {
-        Task<ObservableCollection<Item>> GetItems();
-        Task AddItem(Item item);
-        Task UpdateItem(Item item);
-        Task DeleteItems(List<Item> items);
-        Task FlushItems();
-    }
+    Task<ObservableCollection<Item>> GetItems();
+    Task AddItem(Item item);
+    Task UpdateItem(Item item);
+    Task DeleteItems(List<Item> items);
+    Task FlushItems();
 }

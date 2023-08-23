@@ -5,7 +5,7 @@ using System.Windows.Input;
 namespace HotStuff.ViewModel;
 public partial class ItemsPageViewModel : BaseViewModel 
 {
-    ItemService itemService;
+    readonly ItemService itemService;
     public List<Item> SelectedItems { get; set; } = new List<Item>();
 
     [ObservableProperty]
@@ -14,12 +14,10 @@ public partial class ItemsPageViewModel : BaseViewModel
 
     [ObservableProperty]
     bool isRefreshing;
-
     public bool IsNotBusy => !IsBusy;
     public ICommand GetItemsCommand { get; protected set; }
     public ICommand RemoveSelectedItemsCommand { get; protected set;}
     public ICommand UpdateItemCommand { get; protected set; }
-
     private ObservableCollection<Item> itemManifest = new();
     public Building ActiveBuilding { get; set; }
     public ObservableCollection<Item> ItemManifest
@@ -42,7 +40,6 @@ public partial class ItemsPageViewModel : BaseViewModel
 
         RemoveSelectedItemsCommand = new Command(() =>
         {
-            Debug.WriteLine("User clicked delete items.");
             DeleteAsync(SelectedItems);
         });
 

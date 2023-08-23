@@ -119,7 +119,6 @@
                     Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Pen}}"
                 />
 
-
                 <material:TextField 
                     x:Name="PurchaseProof"
                     Title="Purchase Proof (Optional)"

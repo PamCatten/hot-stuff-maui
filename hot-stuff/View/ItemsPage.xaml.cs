@@ -7,7 +7,6 @@ namespace HotStuff.View;
 
 public partial class ItemsPage : UraniumContentPage
 {
-
     public ItemsPage(ItemsPageViewModel vm)
     {
         SelectionView.GlobalSetting.CornerRadius = 0;
@@ -29,11 +28,9 @@ public partial class ItemsPage : UraniumContentPage
         {
             using (var streamWriter = new StreamWriter(csvPath))
             {
-                using (var csvWriter = new CsvWriter(streamWriter, CultureInfo.InvariantCulture))
-                {
-                    var items = App.ItemService.GetItems();
-                    csvWriter.WriteRecords((System.Collections.IEnumerable)items);
-                }
+                using var csvWriter = new CsvWriter(streamWriter, CultureInfo.InvariantCulture);
+                var items = App.ItemService.GetItems();
+                csvWriter.WriteRecords((System.Collections.IEnumerable)items);
             }
             Debug.WriteLine("----Made CSV.");
         }

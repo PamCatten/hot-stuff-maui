@@ -3,14 +3,78 @@
     x:Class="HotStuff.View.BuildingSettingsPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:HotStuff.View"
+    xmlns:local="clr-namespace:HotStuff"
+    xmlns:input="clr-namespace:InputKit.Shared.Controls;assembly=InputKit.Maui"
+    xmlns:material="clr-namespace:UraniumUI.Material.Controls;assembly=UraniumUI.Material"
+    xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:models="clr-namespace:HotStuff.Model"
     xmlns:uranium="clr-namespace:UraniumUI.Pages;assembly=UraniumUI"
+    xmlns:validation="clr-namespace:InputKit.Shared.Validations;assembly=InputKit.Maui"
+    xmlns:viewmodel="clr-namespace:HotStuff.ViewModel"
+    x:DataType="viewmodel:BuildingSettingsPageViewModel"
     Title="Building Settings"
     >
-    
-    <StackLayout>
-        <Label Text="Welcome to .NET MAUI!!!"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"/>
-    </StackLayout>
+
+    <uranium:UraniumContentPage.Behaviors>
+        <mct:EventToCommandBehavior Command="{Binding GetBuildingsCommand}" EventName="Appearing"/>
+    </uranium:UraniumContentPage.Behaviors>
+
+    <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">
+        <input:FormView SubmitCommand="{Binding AddBuildingCommand}">
+            <VerticalStackLayout Spacing="10" Padding="25,30" HorizontalOptions="Center" MinimumWidthRequest="400">
+                <material:DataGrid 
+                    ItemsSource="{Binding BuildingList}"
+                    HorizontalOptions="Center" VerticalOptions="StartAndExpand"
+                    BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}"
+                >
+
+                    <material:DataGrid.Columns>
+                        <material:DataGridSelectionColumn/>
+                        <material:DataGridColumn Binding="{Binding BuildingID}" Title="ID" Width="Auto" />
+                        <material:DataGridColumn Binding="{Binding BuildingName}" Title="Name" Width="Auto" />
+                        <material:DataGridColumn Binding="{Binding BuildingType}" Title="Type" Width="Auto"/>
+                        <material:DataGridColumn Binding="{Binding BuildingDescription}" Title="Description" Width="Auto"/>
+                    </material:DataGrid.Columns>
+                </material:DataGrid>
+                <material:TextField 
+                    Title="Building Name (Required)"
+                    Text="{Binding NewBuilding.BuildingName}"
+                    AccentColor="{StaticResource Primary}"
+                    Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Pen}}"
+                >
+                    <material:TextField.Validations>
+                        <validation:RequiredValidation />
+                    </material:TextField.Validations>
+                </material:TextField>
+
+                <material:PickerField
+                    Title="Building Type (Required)"
+                    ItemsSource="{x:Static models:Building.AvailableCategories}"
+                    SelectedItem="{Binding NewBuilding.BuildingType}"
+                    AllowClear="True"
+                    AccentColor="{StaticResource Primary}"
+                    Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CircleChevronDown}}"
+                >
+                    <material:PickerField.Validations>
+                        <validation:RequiredValidation />
+                    </material:PickerField.Validations>
+                </material:PickerField>
+
+                <material:TextField 
+                    Title="Building Description (Optional)"
+                    Text="{Binding NewBuilding.BuildingDescription}"
+                    AllowClear="True"
+                    AccentColor="{StaticResource Primary}"
+                    Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Pen}}"
+                />
+
+                <Button 
+                    Command="{Binding AddBuildingCommand}" 
+                    Text="Add Item"
+                    BackgroundColor="{StaticResource Primary}"
+                    input:FormView.IsSubmitButton="True"
+                />
+            </VerticalStackLayout>
+        </input:FormView>
+    </ScrollView>
 </uranium:UraniumContentPage>

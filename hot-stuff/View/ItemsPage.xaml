@@ -39,7 +39,7 @@
     <uranium:UraniumContentPage.Behaviors>
         <mct:EventToCommandBehavior Command="{Binding GetItemsCommand}" EventName="Appearing"/>
     </uranium:UraniumContentPage.Behaviors>
-    
+
     <RefreshView IsRefreshing="{Binding IsRefreshing}" Command="{Binding GetItemsCommand}" RefreshColor="{StaticResource Primary}">
         <Grid HorizontalOptions="FillAndExpand">
             <Grid.ColumnDefinitions>
@@ -57,7 +57,7 @@
             </Grid.RowDefinitions>
 
             <StackLayout Grid.Column="0" Grid.Row="1">
-                <ImageButton Clicked="OnAddItemsPageClicked" SemanticProperties.Description="Add item" SemanticProperties.Hint="Opens the add item page.">
+                <ImageButton Clicked="OnAddItemPopupClicked" SemanticProperties.Description="Add item" SemanticProperties.Hint="Opens the add item page.">
                     <ImageButton.Source>
                         <FontImageSource FontFamily="FontAwesome" Glyph="{x:Static local:IconFont.CirclePlus}" Color="{StaticResource Primary}"/>
                     </ImageButton.Source>
@@ -155,4 +155,5 @@
 
         </Grid>
     </RefreshView>
+
 </uranium:UraniumContentPage>

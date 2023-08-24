@@ -34,6 +34,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.Resources.Styles.
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
+[C:/Users/campa/hot-stuff/hot-stuff/View/AddItemPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.AddItemPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = View\AddItemPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = View\AddItemPopup.xaml
+
 [C:/Users/campa/hot-stuff/hot-stuff/View/AddItemsPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.AddItemsPage.xaml

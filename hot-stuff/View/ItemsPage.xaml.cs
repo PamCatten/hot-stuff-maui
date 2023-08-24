@@ -1,5 +1,7 @@
-﻿using CsvHelper;
+﻿using CommunityToolkit.Maui.Views;
+using CsvHelper;
 using InputKit.Shared.Controls;
+using Mopups.Services;
 using System.Globalization;
 using UraniumUI.Pages;
 
@@ -14,6 +16,10 @@ public partial class ItemsPage : UraniumContentPage
         BindingContext = vm;
     }
 
+    async void OnAddItemPopupClicked(object sender, EventArgs e)
+    {
+        await MopupService.Instance.PushAsync(new AddItemPopup());
+    }
     async void OnAddItemsPageClicked(object sender, EventArgs e)
     {
         await Shell.Current.GoToAsync(nameof(AddItemsPage));

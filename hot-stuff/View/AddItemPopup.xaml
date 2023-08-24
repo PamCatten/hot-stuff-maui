@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="HotStuff.View.AddItemPopup"
+    xmlns:input="clr-namespace:InputKit.Shared.Controls;assembly=InputKit.Maui"
+    xmlns:local="clr-namespace:HotStuff"
+    xmlns:material="clr-namespace:UraniumUI.Material.Controls;assembly=UraniumUI.Material"
+    xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:models="clr-namespace:HotStuff.Model"
+    xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+    xmlns:validation="clr-namespace:InputKit.Shared.Validations;assembly=InputKit.Maui"
+    BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}"
+>
+
+    <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">
+        <input:FormView SubmitCommand="{Binding AddItemCommand}">
+            <VerticalStackLayout Spacing="10" Padding="25,30" HorizontalOptions="Center" MinimumWidthRequest="400">
+                
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Add Item" FontSize="Medium" FontAttributes="Bold" Grid.Column="0" HorizontalOptions="Start"/>
+                    <ImageButton Clicked="OnClosePopup" Grid.Column="1" HorizontalOptions="End">
+                        <ImageButton.Source>
+                            <FontImageSource FontFamily="FontAwesome" Glyph="{x:Static local:IconFont.CircleXmark}" Color="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"/>
+                        </ImageButton.Source>
+                    </ImageButton>
+                </Grid>
+                
+                <material:TextField 
+                    Title="Item Name (Required)"
+                    Text="{Binding NewItem.ItemName}"
+                    AccentColor="{StaticResource Primary}"
+                    Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Pen}}"
+                >
+                    <material:TextField.Validations>
+                        <validation:RequiredValidation />
+                    </material:TextField.Validations>
+                </material:TextField>
+
+                <material:PickerField
+                    Title="Item Category (Required)"
+                    ItemsSource="{x:Static models:Item.AvailableCategories}"
+                    SelectedItem="{Binding NewItem.Category}"
+                    AllowClear="True"
+                    AccentColor="{StaticResource Primary}"
+                    Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CircleChevronDown}}"
+                >
+                    <material:PickerField.Validations>
+                        <validation:RequiredValidation />
+                    </material:PickerField.Validations>
+                </material:PickerField>
+
+                <material:PickerField 
+                    Title="Item Room (Required)"
+                    ItemsSource="{x:Static models:Item.AvailableRooms}"
+                    SelectedItem="{Binding NewItem.Room}"
+                    AllowClear="True"
+                    AccentColor="{StaticResource Primary}"
+                    Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CircleChevronDown}}"
+                >
+                    <material:PickerField.Validations>
+                        <validation:RequiredValidation />
+                    </material:PickerField.Validations>
+                </material:PickerField>
+
+                <material:TextField 
+                    Title="Brand / Manufacturer Name (Optional)"
+                    Text="{Binding NewItem.BrandManufacturer}"
+                    AllowClear="True"
+                    AccentColor="{StaticResource Primary}"
+                    Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Pen}}"
+                />
+
+                <material:PickerField 
+                    Title="Item Color (Optional)"
+                    ItemsSource="{x:Static models:Item.AvailableColors}"
+                    SelectedItem="{Binding NewItem.Color}"
+                    AllowClear="True"
+                    AccentColor="{StaticResource Primary}"
+                    Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CircleChevronDown}}"
+                />
+
+                <material:TextField 
+                    Title="Item Quantity (Required)"
+                    Text="{Binding NewItem.ItemQuantity}"
+                    AllowClear="True"
+                    AccentColor="{StaticResource Primary}"
+                    Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Hashtag}}"
+                >
+                    <material:TextField.Validations>
+                        <validation:RequiredValidation/>
+                        <validation:DigitsOnlyValidation />
+                        <validation:MinValueValidation MinValue="1" />
+                    </material:TextField.Validations>
+                </material:TextField>
+
+                <material:TextField 
+                            x:Name="AmountPaidEntry"
+                            Title="Item Price (Optional)"
+                            Text="{Binding NewItem.ItemPrice}"
+                            AllowClear="True"
+                            AccentColor="{StaticResource Primary}"
+                            Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.DollarSign}}"
+                >
+                    <material:TextField.Validations>
+                        <validation:NumericValidation />
+                    </material:TextField.Validations>
+                </material:TextField>
+
+                <material:DatePickerField
+                            Title="Date Acquired (Optional)"
+                            AllowClear="True"
+                            AccentColor="{StaticResource Primary}"
+                            Date="{Binding NewItem.DateAcquired}"
+                            Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CalendarDays}}"
+                />
+
+                <material:TextField 
+                    Title="Item Description (Optional)"
+                    Text="{Binding NewItem.ItemDescription}"
+                    AllowClear="True"
+                    AccentColor="{StaticResource Primary}"
+                    Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Pen}}"
+                />
+
+                <material:TextField 
+                    x:Name="PurchaseProof"
+                    Title="Purchase Proof (Optional)"
+                    Text="{Binding NewItem.PurchaseProof}"
+                    AllowClear="True"
+                    AccentColor="{StaticResource Primary}"
+                    Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Camera}}"
+                >
+                    <material:TextField.Attachments>
+                        <!-- <Button Text="Take Photo" Clicked="OnTakePhotoClicked"/> -->
+                        <Button 
+                            Text="Select Photo"
+                            TextColor="{StaticResource Shadow}"
+                            BackgroundColor="{StaticResource LightBackground}"
+                            Margin="5"
+                            StyleClass="FilledButton" 
+                            Clicked="OnPickPhotoClicked"
+                        />
+                    </material:TextField.Attachments>
+                </material:TextField>
+
+                <Button
+                    Clicked="OnClosePopup"
+                    Command="{Binding AddItemCommand}" 
+                    Text="Add Item"
+                    BackgroundColor="{StaticResource Primary}"
+                    input:FormView.IsSubmitButton="True"
+                />
+            </VerticalStackLayout>
+        </input:FormView>
+    </ScrollView>
+</mopups:PopupPage>

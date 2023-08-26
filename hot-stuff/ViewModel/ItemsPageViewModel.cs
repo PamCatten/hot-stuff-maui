@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.Messaging;
 using HotStuff.Services;
+using Mopups.Services;
 using System.Windows.Input;
 
 namespace HotStuff.ViewModel;
@@ -7,7 +8,8 @@ public partial class ItemsPageViewModel : BaseViewModel
 {
     readonly ItemService itemService;
     public List<Item> SelectedItems { get; set; } = new List<Item>();
-
+    private Item newItem = new();
+    public Item NewItem { get => newItem; set { newItem = value; OnPropertyChanged(); } }
     [ObservableProperty]
     [NotifyPropertyChangedFor(nameof(IsNotBusy))]
     bool isBusy;
@@ -15,8 +17,12 @@ public partial class ItemsPageViewModel : BaseViewModel
     [ObservableProperty]
     bool isRefreshing;
     public bool IsNotBusy => !IsBusy;
+    public ICommand AddItemCommand { get; protected set; }
+    public ICommand OpenAddItemPopupCommand { get; protected set; }
+    public ICommand OpenDeletePopupCommand { get; protected set; }
+    public ICommand ClosePopupCommand { get; protected set; }
     public ICommand GetItemsCommand { get; protected set; }
-    public ICommand RemoveSelectedItemsCommand { get; protected set;}
+    public ICommand DeleteSelectedItemsCommand { get; protected set;}
     public ICommand UpdateItemCommand { get; protected set; }
     private ObservableCollection<Item> itemManifest = new();
     public Building ActiveBuilding { get; set; }
@@ -35,10 +41,9 @@ public partial class ItemsPageViewModel : BaseViewModel
     public ItemsPageViewModel(ItemService itemService)
     {
         this.itemService = itemService;
-
         WeakReferenceMessenger.Default.Register<Building>(this, (r, m) => ActiveBuilding = m);
 
-        RemoveSelectedItemsCommand = new Command(() =>
+        DeleteSelectedItemsCommand = new Command(() =>
         {
             DeleteAsync(SelectedItems);
         });
@@ -47,6 +52,37 @@ public partial class ItemsPageViewModel : BaseViewModel
         {
             GetItemsAsync();
         });
+
+        OpenAddItemPopupCommand = new Command(async () =>
+        {
+            await MopupService.Instance.PushAsync(new AddItemPopup(itemService));
+        });
+
+        OpenDeletePopupCommand = new Command(async () =>
+        {
+            await MopupService.Instance.PushAsync(new DeletePopup(itemService));
+        });
+
+        ClosePopupCommand = new Command(async () =>
+        {
+            await MopupService.Instance.PopAsync();
+        });
+
+        AddItemCommand = new Command(async () =>
+        {
+            // TODO: Find a better way of bootstrapping this
+            NewItem.DateAcquired = NewItem.DateAcquired.Split(" 12:00:00 AM", StringSplitOptions.RemoveEmptyEntries)[0];
+            CreateItem(NewItem);
+            NewItem = new();
+            await MopupService.Instance.PopAsync();
+        });
+
+        async void CreateItem(Item NewItem)
+        {
+            Debug.WriteLine("----User called CreateItem.");
+            await App.ItemService.AddItem(NewItem);
+            await Shell.Current.GoToAsync("..");
+        }
 
         async void GetItemsAsync()
         {

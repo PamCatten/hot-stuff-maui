@@ -16,15 +16,6 @@ public partial class ItemsPage : UraniumContentPage
         BindingContext = vm;
     }
 
-    async void OnAddItemPopupClicked(object sender, EventArgs e)
-    {
-        await MopupService.Instance.PushAsync(new AddItemPopup());
-    }
-    async void OnAddItemsPageClicked(object sender, EventArgs e)
-    {
-        await Shell.Current.GoToAsync(nameof(AddItemsPage));
-    }
-
     async void OnExportIconClicked(object sender, EventArgs e)
     {
         Debug.WriteLine("----User clicked export icon.");

@@ -44,17 +44,17 @@ build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.AddItemPopup
 build_metadata.AdditionalFiles.TargetPath = View\AddItemPopup.xaml
 build_metadata.AdditionalFiles.RelativePath = View\AddItemPopup.xaml
 
-[C:/Users/campa/hot-stuff/hot-stuff/View/AddItemsPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.AddItemsPage.xaml
-build_metadata.AdditionalFiles.TargetPath = View\AddItemsPage.xaml
-build_metadata.AdditionalFiles.RelativePath = View\AddItemsPage.xaml
-
 [C:/Users/campa/hot-stuff/hot-stuff/View/BuildingSettingsPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.BuildingSettingsPage.xaml
 build_metadata.AdditionalFiles.TargetPath = View\BuildingSettingsPage.xaml
 build_metadata.AdditionalFiles.RelativePath = View\BuildingSettingsPage.xaml
+
+[C:/Users/campa/hot-stuff/hot-stuff/View/DeletePopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.DeletePopup.xaml
+build_metadata.AdditionalFiles.TargetPath = View\DeletePopup.xaml
+build_metadata.AdditionalFiles.RelativePath = View\DeletePopup.xaml
 
 [C:/Users/campa/hot-stuff/hot-stuff/View/ItemsPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
@@ -73,6 +73,12 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = View\MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = View\MainPage.xaml
+
+[C:/Users/campa/hot-stuff/hot-stuff/View/ModifyItemPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.ModifyItemPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ModifyItemPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ModifyItemPopup.xaml
 
 [C:/Users/campa/hot-stuff/hot-stuff/View/ProfilePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

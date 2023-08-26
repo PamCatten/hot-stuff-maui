@@ -76,6 +76,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="View\DeletePopup.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\ModifyItemPopup.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\AddItemPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -98,6 +104,15 @@
 
 	<ItemGroup>
 	  <Folder Include="Data\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="View\DeletePopup.xaml.cs">
+	    <DependentUpon>DeletePopup.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="View\ModifyItemPopup.xaml.cs">
+	    <DependentUpon>ModifyItemPopup.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionhotstuffHideInfoBar="True" XamarinHotReloadUnhandledDeviceExceptionhotstuffHideInfoBar="True" /></VisualStudio></ProjectExtensions>

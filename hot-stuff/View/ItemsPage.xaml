@@ -57,7 +57,7 @@
             </Grid.RowDefinitions>
 
             <StackLayout Grid.Column="0" Grid.Row="1">
-                <ImageButton Clicked="OnAddItemPopupClicked" SemanticProperties.Description="Add item" SemanticProperties.Hint="Opens the add item page.">
+                <ImageButton Command="{Binding OpenAddItemPopupCommand}" SemanticProperties.Description="Add item" SemanticProperties.Hint="Opens the add item page.">
                     <ImageButton.Source>
                         <FontImageSource FontFamily="FontAwesome" Glyph="{x:Static local:IconFont.CirclePlus}" Color="{StaticResource Primary}"/>
                     </ImageButton.Source>
@@ -80,7 +80,7 @@
             </StackLayout>
 
             <StackLayout Grid.Column="2" Grid.Row="1">
-                <ImageButton Command="{Binding RemoveSelectedItemsCommand}">
+                <ImageButton Command="{Binding OpenDeletePopupCommand}">
                     <ImageButton.Source>
                         <FontImageSource FontFamily="FontAwesome" Glyph="{x:Static local:IconFont.CircleXmark}" Color="{StaticResource Primary}"/>
                     </ImageButton.Source>

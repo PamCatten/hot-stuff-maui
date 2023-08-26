@@ -10,7 +10,9 @@
     xmlns:models="clr-namespace:HotStuff.Model"
     xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
     xmlns:validation="clr-namespace:InputKit.Shared.Validations;assembly=InputKit.Maui"
+    xmlns:viewmodel="clr-namespace:HotStuff.ViewModel"
     BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}"
+    x:DataType="viewmodel:ItemsPageViewModel"
 >
 
     <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">
@@ -22,8 +24,9 @@
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
-                    <Label Text="Add Item" FontSize="Medium" FontAttributes="Bold" Grid.Column="0" HorizontalOptions="Start"/>
-                    <ImageButton Clicked="OnClosePopup" Grid.Column="1" HorizontalOptions="End">
+
+                    <Label Text="Add Item" FontSize="Large" FontAttributes="Bold" Grid.Column="0" HorizontalOptions="Start" TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"/>
+                    <ImageButton Command="{Binding ClosePopupCommand}" Grid.Column="1" HorizontalOptions="End">
                         <ImageButton.Source>
                             <FontImageSource FontFamily="FontAwesome" Glyph="{x:Static local:IconFont.CircleXmark}" Color="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"/>
                         </ImageButton.Source>
@@ -149,8 +152,7 @@
                 </material:TextField>
 
                 <Button
-                    Clicked="OnClosePopup"
-                    Command="{Binding AddItemCommand}" 
+                    Command="{Binding AddItemCommand}"
                     Text="Add Item"
                     BackgroundColor="{StaticResource Primary}"
                     input:FormView.IsSubmitButton="True"

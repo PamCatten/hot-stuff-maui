@@ -3,14 +3,16 @@ using Mopups.Pages;
 using Plugin.Media.Abstractions;
 using Plugin.Media;
 using Mopups.Services;
+using HotStuff.Services;
 
 namespace HotStuff.View;
 
 public partial class AddItemPopup : PopupPage
 {
-	public AddItemPopup()
+	public AddItemPopup(ItemService itemService)
 	{
 		InitializeComponent();
+        BindingContext = new ItemsPageViewModel(itemService);
 	}
 
     private async void OnPickPhotoClicked(object sender, EventArgs e)
@@ -44,10 +46,4 @@ public partial class AddItemPopup : PopupPage
         var result = await CrossMedia.Current.TakePhotoAsync(options);
         if (result is null) return;
     }
-
-    private async void OnClosePopup(object sender, EventArgs e)
-    {
-        await MopupService.Instance.PopAsync();
-    }
-
 }

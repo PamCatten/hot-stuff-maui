@@ -16,7 +16,7 @@
 >
 
     <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">
-        <input:FormView SubmitCommand="{Binding AddItemCommand}">
+        <input:FormView SubmitCommand="{Binding UpdateItemCommand}">
             <VerticalStackLayout Spacing="10" Padding="25,30" HorizontalOptions="Center" MinimumWidthRequest="400">
                 
                 <Grid>
@@ -24,7 +24,9 @@
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
-                    <Label Text="Add Item" FontSize="Large" FontAttributes="Bold" Grid.Column="0" HorizontalOptions="Start" TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"/>
+                    <Label Text="Modify Item" FontSize="Large" FontAttributes="Bold" Grid.Column="0" HorizontalOptions="Start" 
+                           TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                    />
                     <ImageButton Clicked="OnClosePopup" Grid.Column="1" HorizontalOptions="End">
                         <ImageButton.Source>
                             <FontImageSource FontFamily="FontAwesome" Glyph="{x:Static local:IconFont.CircleXmark}" Color="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"/>
@@ -34,7 +36,8 @@
                 
                 <material:TextField 
                     Title="Item Name (Required)"
-                    Text="{Binding NewItem.ItemName}"
+                    Text="{Binding SelectedItems[0].ItemName}"
+                    TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
                     AccentColor="{StaticResource Primary}"
                     Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Pen}}"
                 >
@@ -46,7 +49,8 @@
                 <material:PickerField
                     Title="Item Category (Required)"
                     ItemsSource="{x:Static models:Item.AvailableCategories}"
-                    SelectedItem="{Binding NewItem.Category}"
+                    SelectedItem="{Binding SelectedItems[0].Category}"
+                    TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
                     AllowClear="True"
                     AccentColor="{StaticResource Primary}"
                     Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CircleChevronDown}}"
@@ -59,7 +63,8 @@
                 <material:PickerField 
                     Title="Item Room (Required)"
                     ItemsSource="{x:Static models:Item.AvailableRooms}"
-                    SelectedItem="{Binding NewItem.Room}"
+                    SelectedItem="{Binding SelectedItems[0].Room}"
+                    TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
                     AllowClear="True"
                     AccentColor="{StaticResource Primary}"
                     Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CircleChevronDown}}"
@@ -71,7 +76,8 @@
 
                 <material:TextField 
                     Title="Brand / Manufacturer Name (Optional)"
-                    Text="{Binding NewItem.BrandManufacturer}"
+                    Text="{Binding SelectedItems[0].BrandManufacturer}"
+                    TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
                     AllowClear="True"
                     AccentColor="{StaticResource Primary}"
                     Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Pen}}"
@@ -80,7 +86,8 @@
                 <material:PickerField 
                     Title="Item Color (Optional)"
                     ItemsSource="{x:Static models:Item.AvailableColors}"
-                    SelectedItem="{Binding NewItem.Color}"
+                    TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                    SelectedItem="{Binding SelectedItems[0].Color}"
                     AllowClear="True"
                     AccentColor="{StaticResource Primary}"
                     Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CircleChevronDown}}"
@@ -88,7 +95,8 @@
 
                 <material:TextField 
                     Title="Item Quantity (Required)"
-                    Text="{Binding NewItem.ItemQuantity}"
+                    Text="{Binding SelectedItems[0].ItemQuantity}"
+                    TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
                     AllowClear="True"
                     AccentColor="{StaticResource Primary}"
                     Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Hashtag}}"
@@ -101,12 +109,13 @@
                 </material:TextField>
 
                 <material:TextField 
-                            x:Name="AmountPaidEntry"
-                            Title="Item Price (Optional)"
-                            Text="{Binding NewItem.ItemPrice}"
-                            AllowClear="True"
-                            AccentColor="{StaticResource Primary}"
-                            Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.DollarSign}}"
+                    x:Name="AmountPaidEntry"
+                    Title="Item Price (Optional)"
+                    Text="{Binding SelectedItems[0].ItemPrice}"
+                    TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                    AllowClear="True"
+                    AccentColor="{StaticResource Primary}"
+                    Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.DollarSign}}"
                 >
                     <material:TextField.Validations>
                         <validation:NumericValidation />
@@ -114,16 +123,17 @@
                 </material:TextField>
 
                 <material:DatePickerField
-                            Title="Date Acquired (Optional)"
-                            AllowClear="True"
-                            AccentColor="{StaticResource Primary}"
-                            Date="{Binding NewItem.DateAcquired}"
-                            Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CalendarDays}}"
+                    Title="Date Acquired (Optional)"
+                    AllowClear="True"
+                    AccentColor="{StaticResource Primary}"
+                    Date="{Binding SelectedItems[0].DateAcquired}"
+                    Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CalendarDays}}"
                 />
 
                 <material:TextField 
                     Title="Item Description (Optional)"
-                    Text="{Binding NewItem.ItemDescription}"
+                    Text="{Binding SelectedItems[0].ItemDescription}"
+                    TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
                     AllowClear="True"
                     AccentColor="{StaticResource Primary}"
                     Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Pen}}"
@@ -132,7 +142,8 @@
                 <material:TextField 
                     x:Name="PurchaseProof"
                     Title="Purchase Proof (Optional)"
-                    Text="{Binding NewItem.PurchaseProof}"
+                    Text="{Binding SelectedItems[0].PurchaseProof}"
+                    TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
                     AllowClear="True"
                     AccentColor="{StaticResource Primary}"
                     Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Camera}}"
@@ -141,8 +152,8 @@
                         <!-- <Button Text="Take Photo" Clicked="OnTakePhotoClicked"/> -->
                         <Button 
                             Text="Select Photo"
-                            TextColor="{StaticResource Shadow}"
-                            BackgroundColor="{StaticResource LightBackground}"
+                            TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                            BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}"
                             Margin="5"
                             StyleClass="FilledButton" 
                             Clicked="OnPickPhotoClicked"
@@ -151,8 +162,10 @@
                 </material:TextField>
 
                 <Button
-                    Command="{Binding AddItemCommand}"
-                    Text="Add Item"
+                    Command="{Binding UpdateItemCommand}"
+                    Text="Update Item"
+                    FontSize="Small"
+                    TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
                     BackgroundColor="{StaticResource Primary}"
                     input:FormView.IsSubmitButton="True"
                 />

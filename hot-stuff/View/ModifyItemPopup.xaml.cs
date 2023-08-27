@@ -3,14 +3,16 @@ using Mopups.Pages;
 using Plugin.Media.Abstractions;
 using Plugin.Media;
 using Mopups.Services;
+using HotStuff.Services;
 
 namespace HotStuff.View;
 
 public partial class ModifyItemPopup : PopupPage
 {
-	public ModifyItemPopup()
+	public ModifyItemPopup(ItemService itemService)
 	{
 		InitializeComponent();
+        BindingContext = new ItemsPageViewModel(itemService);
 	}
 
     private async void OnPickPhotoClicked(object sender, EventArgs e)

@@ -68,7 +68,7 @@
             </StackLayout>
 
             <StackLayout Grid.Column="1" Grid.Row="1">
-                <ImageButton SemanticProperties.Description="Modify" SemanticProperties.Hint="Modifies an existing item's characteristics.">
+                <ImageButton Command="{Binding OpenModifyItemPopupCommand}"  SemanticProperties.Description="Modify" SemanticProperties.Hint="Modifies an existing item's characteristics.">
                     <ImageButton.Source>
                         <FontImageSource FontFamily="FontAwesome" Glyph="{x:Static local:IconFont.ArrowsRotate}" Color="{StaticResource Primary}"/>
                     </ImageButton.Source>
@@ -126,7 +126,7 @@
             <ScrollView Orientation="Both" HorizontalScrollBarVisibility="Always" VerticalScrollBarVisibility="Always" Grid.Row="4" Grid.ColumnSpan="3">
 
                 <material:DataGrid 
-                    ItemsSource="{Binding ItemManifest}" SelectedItems="{Binding SelectedItems}" 
+                    ItemsSource="{Binding ItemManifest}" SelectedItems="{Binding SelectedItems}" SelectionColor="{StaticResource Primary}"
                     HorizontalOptions="Center" VerticalOptions="StartAndExpand" x:Name="UraniumGrid"
                     BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}"
                 >

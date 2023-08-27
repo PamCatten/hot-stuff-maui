@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<mopups:PopupPage 
+<mopups:PopupPage
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="HotStuff.View.DeletePopup"
@@ -11,13 +11,13 @@
     xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
     xmlns:validation="clr-namespace:InputKit.Shared.Validations;assembly=InputKit.Maui"
     xmlns:viewmodel="clr-namespace:HotStuff.ViewModel"
-    BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}"
     x:DataType="viewmodel:ItemsPageViewModel"
 >
 
     <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">
-        <input:FormView SubmitCommand="{Binding DeleteSelectedItemsCommand}">
-            <VerticalStackLayout Spacing="10" Padding="25,30" HorizontalOptions="Center" MinimumWidthRequest="400">
+        <Border MinimumWidthRequest="200" MaximumWidthRequest="400" MinimumHeightRequest="200" MaximumHeightRequest="400" HorizontalOptions="Center"
+                BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}">
+            <VerticalStackLayout Spacing="10" Padding="25,30" HorizontalOptions="Center" VerticalOptions="Center">
 
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -30,7 +30,7 @@
                         <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
-                    
+
                     <Label Text="Delete Item(s)" FontSize="Large" FontAttributes="Bold" Grid.Column="0" Grid.Row="0"  HorizontalOptions="Start" TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"/>
                     <ImageButton Command="{Binding ClosePopupCommand}" Grid.Column="1" Grid.Row="0" HorizontalOptions="End">
                         <ImageButton.Source>
@@ -39,16 +39,16 @@
                     </ImageButton>
                 </Grid>
 
-                <Label Grid.Row="1" Grid.ColumnSpan="2"  Text="Are you sure? These items will be permanently deleted." HorizontalOptions="Center" />
+                <Label Grid.Row="1" Grid.ColumnSpan="2"  Text="Are you sure? These items will be permanently deleted." FontSize="Medium" Margin="0,40,0,40"  HorizontalOptions="Center" />
                 <Button Grid.Row="2" Grid.ColumnSpan="2"
                     Command="{Binding DeleteSelectedItemsCommand}"
                     Text="Delete"
-                    TextColor="{AppThemeBinding Light={StaticResource WhiteText}, Dark={StaticResource BlackText}}"
+                    FontAttributes="Bold"
+                    TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
                     BackgroundColor="{StaticResource Primary}"
                     input:FormView.IsSubmitButton="True"
                 />
-
             </VerticalStackLayout>
-        </input:FormView>
+        </Border>
     </ScrollView>
 </mopups:PopupPage>

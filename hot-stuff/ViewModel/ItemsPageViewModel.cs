@@ -7,7 +7,7 @@ namespace HotStuff.ViewModel;
 public partial class ItemsPageViewModel : BaseViewModel 
 {
     readonly ItemService itemService;
-    public List<Item> SelectedItems { get; set; } = new List<Item>();
+    public ObservableCollection<Item> SelectedItems { get; set; } = new ObservableCollection<Item>();
     private Item newItem = new();
     public Item NewItem { get => newItem; set { newItem = value; OnPropertyChanged(); } }
     [ObservableProperty]
@@ -19,6 +19,7 @@ public partial class ItemsPageViewModel : BaseViewModel
     public bool IsNotBusy => !IsBusy;
     public ICommand AddItemCommand { get; protected set; }
     public ICommand OpenAddItemPopupCommand { get; protected set; }
+    public ICommand OpenModifyItemPopupCommand { get; protected set; }
     public ICommand OpenDeletePopupCommand { get; protected set; }
     public ICommand ClosePopupCommand { get; protected set; }
     public ICommand GetItemsCommand { get; protected set; }
@@ -45,7 +46,7 @@ public partial class ItemsPageViewModel : BaseViewModel
 
         DeleteSelectedItemsCommand = new Command(() =>
         {
-            DeleteAsync(SelectedItems);
+            DeleteAsync();
         });
 
         GetItemsCommand = new Command(() =>
@@ -55,11 +56,50 @@ public partial class ItemsPageViewModel : BaseViewModel
 
         OpenAddItemPopupCommand = new Command(async () =>
         {
-            await MopupService.Instance.PushAsync(new AddItemPopup(itemService));
+            if (IsBusy | IsRefreshing)
+                return;
+            try
+            {
+                IsBusy = true;
+                IsRefreshing = true;
+                await MopupService.Instance.PushAsync(new AddItemPopup(itemService));
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Something went wrong when opening an AddItemPopup: {ex.Message}");
+                await Application.Current.MainPage.DisplayAlert("Navigation Error", ex.Message, "OK");
+            }
+            finally
+            {
+                IsBusy = false;
+                IsRefreshing = false;
+            }
+        });
+
+        OpenModifyItemPopupCommand = new Command(async () =>
+        {
+            if (SelectedItems.Count == 0)
+            {
+                await Application.Current.MainPage.DisplayAlert("Selection Error", "No items selected.", "OK");
+                return;
+            }
+            else if (SelectedItems.Count > 1)
+            {
+                await Application.Current.MainPage.DisplayAlert("Selection Error", "Too many items selected. Please select only one item to modify.", "OK");
+                return;
+            }
+
+            await MopupService.Instance.PushAsync(new ModifyItemPopup(itemService));
         });
 
         OpenDeletePopupCommand = new Command(async () =>
         {
+            if (SelectedItems.Count == 0)
+            { 
+                await Application.Current.MainPage.DisplayAlert("Selection Error", "No items selected.", "OK");
+                return;
+            }
+
             await MopupService.Instance.PushAsync(new DeletePopup(itemService));
         });
 
@@ -121,16 +161,15 @@ public partial class ItemsPageViewModel : BaseViewModel
             }
         }
 
-        async void DeleteAsync(List<Item> Items)
+        async void DeleteAsync()
         {
-            Debug.WriteLine("Delete items called.");
-
             foreach (var item in SelectedItems)
             {
+                Debug.WriteLine($"{item.ItemName}");
                 ItemManifest.Remove(item);
             }
-
-            await App.ItemService.DeleteItems(Items);
+            await App.ItemService.DeleteItems(SelectedItems);
+            await MopupService.Instance.PopAsync();
         }
 
         async void UpdateAsync(Item item)

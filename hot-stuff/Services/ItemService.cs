@@ -54,7 +54,7 @@ public class ItemService : IItemService
         return new ObservableCollection<Item>();
     }
 
-    public async Task DeleteItems(List<Item> SelectedItems)
+    public async Task DeleteItems(ObservableCollection<Item> SelectedItems)
     {
         await Init();
         foreach (var item in SelectedItems)

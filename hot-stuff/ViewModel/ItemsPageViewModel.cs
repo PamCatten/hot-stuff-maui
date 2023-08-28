@@ -1,6 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.Messaging;
+using CsvHelper;
 using HotStuff.Services;
 using Mopups.Services;
+using System.Globalization;
 using System.Windows.Input;
 
 namespace HotStuff.ViewModel;
@@ -23,6 +25,8 @@ public partial class ItemsPageViewModel : BaseViewModel
     public ICommand OpenDeletePopupCommand { get; protected set; }
     public ICommand ClosePopupCommand { get; protected set; }
     public ICommand GetItemsCommand { get; protected set; }
+    public ICommand ExportItemsCommand { get; protected set; }
+    public ICommand OpenExportItemsPopupCommand { get; protected set; }
     public ICommand DeleteSelectedItemsCommand { get; protected set;}
     public ICommand UpdateItemCommand { get; protected set; }
     private ObservableCollection<Item> itemManifest = new();
@@ -52,6 +56,41 @@ public partial class ItemsPageViewModel : BaseViewModel
         GetItemsCommand = new Command(() =>
         {
             GetItemsAsync();
+        });
+
+        OpenExportItemsPopupCommand = new Command(async () =>
+        {
+            if (ItemManifest.Count == 0)
+            {
+                await Application.Current.MainPage.DisplayAlert("Transfer Error", "No items saved in manifest.", "OK");
+                return;
+            }
+
+            await MopupService.Instance.PushAsync(new ExportPopup(itemService));
+        });
+
+        ExportItemsCommand = new Command(async () =>
+        {
+            Debug.WriteLine("----User clicked export icon.");
+            var csvPath = Path.Combine($@"{Environment.CurrentDirectory}", $"items-{DateTime.Now.ToFileTime}.csv");
+            Debug.WriteLine($"Path: {csvPath}");
+            try
+            {
+                using (var streamWriter = new StreamWriter(csvPath))
+                {
+                    using var csvWriter = new CsvWriter(streamWriter, CultureInfo.InvariantCulture);
+                    var items = App.ItemService.GetItems();
+                    csvWriter.WriteRecords((System.Collections.IEnumerable)items);
+                }
+                Debug.WriteLine("----Made CSV.");
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Something went wrong: {ex.Message}");
+                await Application.Current.MainPage.DisplayAlert("Transfer Error", ex.Message, "OK");
+            }
+
+            await MopupService.Instance.PushAsync(new ExportPopup(itemService));
         });
 
         OpenAddItemPopupCommand = new Command(async () =>

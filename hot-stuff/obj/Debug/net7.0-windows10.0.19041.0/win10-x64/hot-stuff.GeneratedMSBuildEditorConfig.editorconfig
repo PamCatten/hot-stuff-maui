@@ -52,6 +52,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.DeletePopup.
 build_metadata.AdditionalFiles.TargetPath = View\DeletePopup.xaml
 build_metadata.AdditionalFiles.RelativePath = View\DeletePopup.xaml
 
+[C:/Users/campa/hot-stuff/hot-stuff/View/ExportPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.ExportPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ExportPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ExportPopup.xaml
+
 [C:/Users/campa/hot-stuff/hot-stuff/View/ItemsPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.ItemsPage.xaml

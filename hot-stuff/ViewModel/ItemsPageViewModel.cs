@@ -2,6 +2,8 @@
 using CsvHelper;
 using HotStuff.Services;
 using Mopups.Services;
+using Plugin.Media.Abstractions;
+using Plugin.Media;
 using System.Globalization;
 using System.Windows.Input;
 
@@ -21,14 +23,21 @@ public partial class ItemsPageViewModel : BaseViewModel
     public bool IsNotBusy => !IsBusy;
     public ICommand AddItemCommand { get; protected set; }
     public ICommand OpenAddItemPopupCommand { get; protected set; }
-    public ICommand OpenModifyItemPopupCommand { get; protected set; }
     public ICommand OpenDeletePopupCommand { get; protected set; }
+    public ICommand DeleteSelectedItemsCommand { get; protected set; }
     public ICommand ClosePopupCommand { get; protected set; }
     public ICommand GetItemsCommand { get; protected set; }
     public ICommand ExportItemsCommand { get; protected set; }
     public ICommand OpenExportItemsPopupCommand { get; protected set; }
-    public ICommand DeleteSelectedItemsCommand { get; protected set;}
-    public ICommand UpdateItemCommand { get; protected set; }
+    public ICommand OpenModifyItemPopupCommand { get; protected set; }
+    public ICommand ModifyItemCommand { get; protected set; }
+    public ICommand OpenTransferItemPopupCommand { get; protected set; }
+    public ICommand TransferItemCommand { get; protected set; }
+    public ICommand OpenCopyItemPopupCommand { get; protected set; }
+    public ICommand CopyItemCommand { get; protected set; }
+    public ICommand TakePhotoCommand { get; protected set; }
+    public ICommand PickPhotoCommand { get; protected set; }
+
     private ObservableCollection<Item> itemManifest = new();
     public Building ActiveBuilding { get; set; }
     public ObservableCollection<Item> ItemManifest
@@ -58,6 +67,11 @@ public partial class ItemsPageViewModel : BaseViewModel
             GetItemsAsync();
         });
 
+        ModifyItemCommand = new Command(() =>
+        {
+            ModifyItemAsync(SelectedItems[0]);
+        });
+
         OpenExportItemsPopupCommand = new Command(async () =>
         {
             if (ItemManifest.Count == 0)
@@ -71,7 +85,6 @@ public partial class ItemsPageViewModel : BaseViewModel
 
         ExportItemsCommand = new Command(async () =>
         {
-            Debug.WriteLine("----User clicked export icon.");
             var csvPath = Path.Combine($@"{Environment.CurrentDirectory}", $"items-{DateTime.Now.ToFileTime}.csv");
             Debug.WriteLine($"Path: {csvPath}");
             try
@@ -95,24 +108,7 @@ public partial class ItemsPageViewModel : BaseViewModel
 
         OpenAddItemPopupCommand = new Command(async () =>
         {
-            if (IsBusy | IsRefreshing)
-                return;
-            try
-            {
-                IsBusy = true;
-                IsRefreshing = true;
-                await MopupService.Instance.PushAsync(new AddItemPopup(itemService));
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Something went wrong when opening an AddItemPopup: {ex.Message}");
-                await Application.Current.MainPage.DisplayAlert("Navigation Error", ex.Message, "OK");
-            }
-            finally
-            {
-                IsBusy = false;
-                IsRefreshing = false;
-            }
+            await MopupService.Instance.PushAsync(new AddItemPopup(itemService));
         });
 
         OpenModifyItemPopupCommand = new Command(async () =>
@@ -131,6 +127,17 @@ public partial class ItemsPageViewModel : BaseViewModel
             await MopupService.Instance.PushAsync(new ModifyItemPopup(itemService));
         });
 
+        OpenCopyItemPopupCommand = new Command(async () =>
+        {
+            if (SelectedItems.Count == 0)
+            {
+                await Application.Current.MainPage.DisplayAlert("Selection Error", "No items selected.", "OK");
+                return;
+            }
+
+            await MopupService.Instance.PushAsync(new CopyPopup(itemService));
+        });
+
         OpenDeletePopupCommand = new Command(async () =>
         {
             if (SelectedItems.Count == 0)
@@ -145,6 +152,39 @@ public partial class ItemsPageViewModel : BaseViewModel
         ClosePopupCommand = new Command(async () =>
         {
             await MopupService.Instance.PopAsync();
+        });
+
+        TakePhotoCommand = new Command(async () =>
+        {
+            var options = new StoreCameraMediaOptions { CompressionQuality = 100 };
+            var result = await CrossMedia.Current.TakePhotoAsync(options);
+            if (result is null) return;
+        });
+
+        PickPhotoCommand = new Command(async () =>
+        {
+            var result = await FilePicker.PickAsync(new PickOptions
+            {
+                PickerTitle = "Select Image",
+                FileTypes = FilePickerFileType.Images
+
+            });
+
+            if (result is null) return;
+
+            //PurchaseProof.Text = result?.FullPath;
+
+            //var stream = await result.OpenReadAsync();
+            //ItemImage.Source = ImageSource.FromStream(() => stream);
+
+            // First implementation
+            //var result = await CrossMedia.Current.PickPhotoAsync();
+            //if (result is null) return;
+
+            //ItemImage.Source = result?.Path;
+
+            //var fileInfo = new FileInfo(result?.Path);
+            //var fileLength = fileInfo.Length;
         });
 
         AddItemCommand = new Command(async () =>
@@ -211,15 +251,21 @@ public partial class ItemsPageViewModel : BaseViewModel
             await MopupService.Instance.PopAsync();
         }
 
-        async void UpdateAsync(Item item)
+        async void ModifyItemAsync(Item item)
         {
             Debug.WriteLine("Update item called.");
-            await App.ItemService.UpdateItem(item);
+            await App.ItemService.ModifyItem(item);
+            await MopupService.Instance.PopAsync();
         }
 
         async void DeleteAllAsync()
         {
             await App.ItemService.FlushItems();
+        }
+
+        async void TransferAsync(ObservableCollection<Item> items)
+        {
+            Debug.WriteLine("User clicked transfer.");
         }
     }
 }

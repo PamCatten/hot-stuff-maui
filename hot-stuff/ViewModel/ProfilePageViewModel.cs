@@ -10,6 +10,9 @@ namespace HotStuff.ViewModel;
 public partial class ProfilePageViewModel : ObservableObject
 {
     public ICommand BuildingSettingsCommand { get; protected set; }
+    public ICommand OpenBuildingSettingsPopupCommand { get; protected set; }
+    public ICommand OpenAddBuildingPopupCommand { get; protected set; }
+    public ICommand AddBuildingCommand { get; protected set; }
 
     public ProfilePageViewModel()
     {

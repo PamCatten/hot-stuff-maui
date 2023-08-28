@@ -38,6 +38,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.Resources.Styles.
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
+[C:/Users/campa/hot-stuff/hot-stuff/View/AddBuildingPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.AddBuildingPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = View\AddBuildingPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = View\AddBuildingPopup.xaml
+
 [C:/Users/campa/hot-stuff/hot-stuff/View/AddItemPopup.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.AddItemPopup.xaml
@@ -49,6 +55,12 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.BuildingSettingsPage.xaml
 build_metadata.AdditionalFiles.TargetPath = View\BuildingSettingsPage.xaml
 build_metadata.AdditionalFiles.RelativePath = View\BuildingSettingsPage.xaml
+
+[C:/Users/campa/hot-stuff/hot-stuff/View/CopyPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.CopyPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = View\CopyPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = View\CopyPopup.xaml
 
 [C:/Users/campa/hot-stuff/hot-stuff/View/DeletePopup.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

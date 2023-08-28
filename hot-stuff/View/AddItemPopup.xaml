@@ -27,7 +27,7 @@
                         Text="Add Item" FontSize="Large" FontAttributes="Bold" Grid.Column="0" HorizontalOptions="Start" 
                         TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
                     />
-                    <ImageButton Command="{Binding ClosePopupCommand}" Grid.Column="1" HorizontalOptions="End">
+                    <ImageButton Command="{Binding ClosePopupCommand}" Grid.Column="1" Grid.Row="0" HorizontalOptions="End">
                         <ImageButton.Source>
                             <FontImageSource 
                                 FontFamily="FontAwesome" Glyph="{x:Static local:IconFont.CircleXmark}" 

@@ -31,23 +31,31 @@
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
 
-                    <Label Text="Delete Item(s)" FontSize="Large" FontAttributes="Bold" Grid.Column="0" Grid.Row="0"  HorizontalOptions="Start" TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"/>
+                    <Label Text="Download Items" FontSize="Large" FontAttributes="Bold" Grid.Column="0" Grid.Row="0"  HorizontalOptions="Start" TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"/>
                     <ImageButton Command="{Binding ClosePopupCommand}" Grid.Column="1" Grid.Row="0" HorizontalOptions="End">
                         <ImageButton.Source>
                             <FontImageSource FontFamily="FontAwesome" Glyph="{x:Static local:IconFont.CircleXmark}" Color="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"/>
                         </ImageButton.Source>
                     </ImageButton>
-                </Grid>
 
-                <Label Grid.Row="1" Grid.ColumnSpan="2"  Text="Are you sure? These items will be permanently deleted." FontSize="Medium" Margin="0,40,0,40"  HorizontalOptions="Center" />
-                <Button Grid.Row="2" Grid.ColumnSpan="2"
-                    Command="{Binding DeleteSelectedItemsCommand}"
-                    Text="Delete"
+                    <Label Grid.Row="1" Grid.ColumnSpan="2"  Text="Are you sure? Depending on the number of items this may take a while." FontSize="Medium"  HorizontalOptions="Center" />
+                <Button Grid.Row="2" Grid.Column="0"
+                    Command="{Binding ExportItemsCommand}"
+                    Text="Download as CSV"
                     FontAttributes="Bold"
                     TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
                     BackgroundColor="{StaticResource Primary}"
                     input:FormView.IsSubmitButton="True"
                 />
+                <Button Grid.Row="2" Grid.Column="1"
+                    Command="{Binding ExportItemsCommand}"
+                    Text="Download as PDF"
+                    FontAttributes="Bold"
+                    TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                    BackgroundColor="{StaticResource Primary}"
+                    input:FormView.IsSubmitButton="True"
+                />
+                </Grid>
             </VerticalStackLayout>
         </Border>
     </ScrollView>

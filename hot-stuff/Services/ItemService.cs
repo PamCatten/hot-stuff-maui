@@ -65,7 +65,7 @@ public class ItemService : IItemService
         }
     }
 
-    public async Task UpdateItem(Item item)
+    public async Task ModifyItem(Item item)
     {
         try
         {
@@ -77,7 +77,7 @@ public class ItemService : IItemService
         }
         catch (Exception ex)
         {
-            Debug.WriteLine($"----Failed to update {item.ItemID}, {item.ItemName}. Error: {ex.Message}");
+            Debug.WriteLine($"----Failed to update {item.ItemID}, {item.ItemName} Error: {ex.Message}");
         }
     }
 

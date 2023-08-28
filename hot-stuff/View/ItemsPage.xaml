@@ -91,7 +91,7 @@
             </StackLayout>
 
             <StackLayout Grid.Column="0" Grid.Row="3">
-                <ImageButton SemanticProperties.Description="Copy" SemanticProperties.Hint="Creates copies of the selected items.">
+                <ImageButton Command="{Binding OpenCopyItemPopupCommand}"  SemanticProperties.Description="Copy" SemanticProperties.Hint="Creates copies of the selected items.">
                     <ImageButton.Source>
                         <FontImageSource FontFamily="FontAwesome" Glyph="{x:Static local:IconFont.Copy}" Color="{StaticResource Primary}"/>
                     </ImageButton.Source>
@@ -102,7 +102,7 @@
             </StackLayout>
 
             <StackLayout Grid.Column="1" Grid.Row="3">
-                <ImageButton Command="{Binding OpenExportItemsPopupCommand}" SemanticProperties.Description="Transfer" SemanticProperties.Hint="Transfers items between buildings.">
+                <ImageButton SemanticProperties.Description="Transfer" SemanticProperties.Hint="Transfers items between buildings.">
                     <ImageButton.Source>
                         <FontImageSource FontFamily="FontAwesome" Glyph="{x:Static local:IconFont.ArrowRightArrowLeft}" Color="{StaticResource Primary}"/>
                     </ImageButton.Source>
@@ -113,7 +113,7 @@
             </StackLayout>
 
             <StackLayout Grid.Column="2" Grid.Row="3">
-                <ImageButton Clicked="OnExportIconClicked" SemanticProperties.Description="Download" SemanticProperties.Hint="Opens the download menu.">
+                <ImageButton Command="{Binding OpenExportItemsPopupCommand}" SemanticProperties.Description="Download" SemanticProperties.Hint="Opens the download menu.">
                     <ImageButton.Source>
                         <FontImageSource FontFamily="FontAwesome" Glyph="{x:Static local:IconFont.Download}" Color="{StaticResource Primary}"/>
                     </ImageButton.Source>

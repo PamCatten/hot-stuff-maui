@@ -37,9 +37,8 @@
                             <FontImageSource FontFamily="FontAwesome" Glyph="{x:Static local:IconFont.CircleXmark}" Color="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"/>
                         </ImageButton.Source>
                     </ImageButton>
-                </Grid>
 
-                <Label Grid.Row="1" Grid.ColumnSpan="2"  Text="Are you sure? These items will be permanently deleted." FontSize="Medium" Margin="0,40,0,40"  HorizontalOptions="Center" />
+                    <Label Grid.Row="1" Grid.ColumnSpan="2"  Text="Are you sure? These items will be permanently deleted." FontSize="Medium" Margin="0,40,0,40"  HorizontalOptions="Center" />
                 <Button Grid.Row="2" Grid.ColumnSpan="2"
                     Command="{Binding DeleteSelectedItemsCommand}"
                     Text="Delete"
@@ -48,6 +47,7 @@
                     BackgroundColor="{StaticResource Primary}"
                     input:FormView.IsSubmitButton="True"
                 />
+                </Grid>
             </VerticalStackLayout>
         </Border>
     </ScrollView>

@@ -16,7 +16,7 @@
 >
 
     <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">
-        <input:FormView SubmitCommand="{Binding UpdateItemCommand}">
+        <input:FormView SubmitCommand="{Binding ModifyItemCommand}">
             <VerticalStackLayout Spacing="10" Padding="25,30" HorizontalOptions="Center" MinimumWidthRequest="400">
                 
                 <Grid>
@@ -162,7 +162,7 @@
                 </material:TextField>
 
                 <Button
-                    Command="{Binding UpdateItemCommand}"
+                    Command="{Binding ModifyItemCommand}"
                     Text="Update Item"
                     FontSize="Small"
                     TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"

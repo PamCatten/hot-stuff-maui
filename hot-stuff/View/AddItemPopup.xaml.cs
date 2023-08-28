@@ -39,11 +39,4 @@ public partial class AddItemPopup : PopupPage
         //var fileInfo = new FileInfo(result?.Path);
         //var fileLength = fileInfo.Length;
     }
-
-    private async void OnTakePhotoClicked(object sender, EventArgs e)
-    {
-        var options = new StoreCameraMediaOptions { CompressionQuality = 100 };
-        var result = await CrossMedia.Current.TakePhotoAsync(options);
-        if (result is null) return;
-    }
 }

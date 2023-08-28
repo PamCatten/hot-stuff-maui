@@ -11,6 +11,7 @@ namespace HotStuff.ViewModel;
 public partial class ItemsPageViewModel : BaseViewModel 
 {
     readonly ItemService itemService;
+    public ObservableCollection<Item> Items { get; set; }
     public ObservableCollection<Item> SelectedItems { get; set; } = new ObservableCollection<Item>();
     private Item newItem = new();
     public Item NewItem { get => newItem; set { newItem = value; OnPropertyChanged(); } }
@@ -55,11 +56,13 @@ public partial class ItemsPageViewModel : BaseViewModel
     public ItemsPageViewModel(ItemService itemService)
     {
         this.itemService = itemService;
+        //Items = new ObservableCollection<Item>(itemService.GetItems());
+        GetItemsAsync();
         WeakReferenceMessenger.Default.Register<Building>(this, (r, m) => ActiveBuilding = m);
 
         DeleteSelectedItemsCommand = new Command(() =>
         {
-            DeleteAsync();
+            DeleteAsync(SelectedItems);
         });
 
         GetItemsCommand = new Command(() =>
@@ -79,7 +82,6 @@ public partial class ItemsPageViewModel : BaseViewModel
                 await Application.Current.MainPage.DisplayAlert("Transfer Error", "No items saved in manifest.", "OK");
                 return;
             }
-
             await MopupService.Instance.PushAsync(new ExportPopup(itemService));
         });
 
@@ -95,7 +97,6 @@ public partial class ItemsPageViewModel : BaseViewModel
                     var items = App.ItemService.GetItems();
                     csvWriter.WriteRecords((System.Collections.IEnumerable)items);
                 }
-                Debug.WriteLine("----Made CSV.");
             }
             catch (Exception ex)
             {
@@ -196,6 +197,21 @@ public partial class ItemsPageViewModel : BaseViewModel
             await MopupService.Instance.PopAsync();
         });
 
+        OpenTransferItemPopupCommand = new Command(async () =>
+        {
+            if (ItemManifest.Count == 0)
+            {
+                await Application.Current.MainPage.DisplayAlert("Transfer Error", "No items saved in manifest.", "OK");
+                return;
+            }
+            await MopupService.Instance.PushAsync(new TransferPopup(itemService));
+        });
+
+        TransferItemCommand = new Command(async () =>
+        {
+            // Transfer items between buildings (modify associated buildingID's?)
+        });
+
         async void CreateItem(Item NewItem)
         {
             Debug.WriteLine("----User called CreateItem.");
@@ -214,18 +230,15 @@ public partial class ItemsPageViewModel : BaseViewModel
                 IsRefreshing = true;
                 ObservableCollection<Item> itemList = await itemService.GetItems();
                 Debug.WriteLine($"There are: {itemList.Count} items currently saved in database.");
-
                 if (itemList is not null)
                 {
-
                     foreach (var item in itemList)
                     {
                         if (ItemManifest.Any(x => x.ItemID == item.ItemID))
-                            Debug.WriteLine($"Item {item.ItemName} already exists in ItemManifest.");
+                            continue;
                         else
                             ItemManifest.Add(item);
                     }
-                    Debug.WriteLine("Transferred itemList to ItemManifest");
                 }
             }
             catch (Exception ex) 
@@ -240,14 +253,14 @@ public partial class ItemsPageViewModel : BaseViewModel
             }
         }
 
-        async void DeleteAsync()
+        async void DeleteAsync(ObservableCollection<Item> items)
         {
-            foreach (var item in SelectedItems)
+            foreach (var item in items)
             {
                 Debug.WriteLine($"{item.ItemName}");
                 ItemManifest.Remove(item);
             }
-            await App.ItemService.DeleteItems(SelectedItems);
+            await App.ItemService.DeleteItems(items);
             await MopupService.Instance.PopAsync();
         }
 

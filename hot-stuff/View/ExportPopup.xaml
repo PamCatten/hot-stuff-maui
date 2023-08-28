@@ -39,17 +39,9 @@
                     </ImageButton>
 
                     <Label Grid.Row="1" Grid.ColumnSpan="2"  Text="Are you sure? Depending on the number of items this may take a while." FontSize="Medium"  HorizontalOptions="Center" />
-                <Button Grid.Row="2" Grid.Column="0"
+                    <Button Grid.Row="2" Grid.ColumnSpan="2"
                     Command="{Binding ExportItemsCommand}"
-                    Text="Download as CSV"
-                    FontAttributes="Bold"
-                    TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
-                    BackgroundColor="{StaticResource Primary}"
-                    input:FormView.IsSubmitButton="True"
-                />
-                <Button Grid.Row="2" Grid.Column="1"
-                    Command="{Binding ExportItemsCommand}"
-                    Text="Download as PDF"
+                    Text="Download"
                     FontAttributes="Bold"
                     TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
                     BackgroundColor="{StaticResource Primary}"

@@ -99,3 +99,9 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.ProfilePage.xaml
 build_metadata.AdditionalFiles.TargetPath = View\ProfilePage.xaml
 build_metadata.AdditionalFiles.RelativePath = View\ProfilePage.xaml
+
+[C:/Users/campa/hot-stuff/hot-stuff/View/TransferPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.TransferPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = View\TransferPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = View\TransferPopup.xaml

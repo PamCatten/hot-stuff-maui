@@ -36,9 +36,7 @@
         />
     </uranium:UraniumContentPage.ToolbarItems>
 
-    <uranium:UraniumContentPage.Behaviors>
-        <mct:EventToCommandBehavior Command="{Binding GetItemsCommand}" EventName="Appearing"/>
-    </uranium:UraniumContentPage.Behaviors>
+
 
     <RefreshView IsRefreshing="{Binding IsRefreshing}" Command="{Binding GetItemsCommand}" RefreshColor="{StaticResource Primary}">
         <Grid HorizontalOptions="FillAndExpand">

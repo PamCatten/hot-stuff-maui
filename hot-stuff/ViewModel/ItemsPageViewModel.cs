@@ -114,18 +114,12 @@ public partial class ItemsPageViewModel : BaseViewModel
 
         OpenModifyItemPopupCommand = new Command(async () =>
         {
-            if (SelectedItems.Count == 0)
-            {
-                await Application.Current.MainPage.DisplayAlert("Selection Error", "No items selected.", "OK");
-                return;
-            }
-            else if (SelectedItems.Count > 1)
-            {
+            if (SelectedItems.Count == 1)
+                await MopupService.Instance.PushAsync(new ModifyItemPopup(itemService));
+            else if (SelectedItems.Count == 0)
+                await Application.Current.MainPage.DisplayAlert("Selection Error", "No item selected. Please select the item you wish to modify.", "OK");
+            else
                 await Application.Current.MainPage.DisplayAlert("Selection Error", "Too many items selected. Please select only one item to modify.", "OK");
-                return;
-            }
-
-            await MopupService.Instance.PushAsync(new ModifyItemPopup(itemService));
         });
 
         OpenCopyItemPopupCommand = new Command(async () =>
@@ -146,7 +140,6 @@ public partial class ItemsPageViewModel : BaseViewModel
                 await Application.Current.MainPage.DisplayAlert("Selection Error", "No items selected.", "OK");
                 return;
             }
-
             await MopupService.Instance.PushAsync(new DeletePopup(itemService));
         });
 
@@ -170,10 +163,9 @@ public partial class ItemsPageViewModel : BaseViewModel
                 FileTypes = FilePickerFileType.Images
 
             });
-
-            if (result is null) return;
-
-            //PurchaseProof.Text = result?.FullPath;
+            if (result is null) 
+                return;
+            NewItem.PurchaseProof = result?.FullPath;
 
             //var stream = await result.OpenReadAsync();
             //ItemImage.Source = ImageSource.FromStream(() => stream);
@@ -214,16 +206,13 @@ public partial class ItemsPageViewModel : BaseViewModel
 
         async void CreateItem(Item NewItem)
         {
-            Debug.WriteLine("----User called CreateItem.");
             await App.ItemService.AddItem(NewItem);
-            await Shell.Current.GoToAsync("..");
         }
 
         async void GetItemsAsync()
         {
             if (IsBusy | IsRefreshing)
                 return;
-
             try
             {
                 IsBusy = true;
@@ -257,7 +246,6 @@ public partial class ItemsPageViewModel : BaseViewModel
         {
             foreach (var item in items)
             {
-                Debug.WriteLine($"{item.ItemName}");
                 ItemManifest.Remove(item);
             }
             await App.ItemService.DeleteItems(items);

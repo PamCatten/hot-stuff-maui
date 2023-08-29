@@ -75,16 +75,6 @@ public partial class ItemsPageViewModel : BaseViewModel
             ModifyItemAsync(SelectedItems[0]);
         });
 
-        OpenExportItemsPopupCommand = new Command(async () =>
-        {
-            if (ItemManifest.Count == 0)
-            {
-                await Application.Current.MainPage.DisplayAlert("Transfer Error", "No items saved in manifest.", "OK");
-                return;
-            }
-            await MopupService.Instance.PushAsync(new ExportPopup(itemService));
-        });
-
         ExportItemsCommand = new Command(async () =>
         {
             var csvPath = Path.Combine($@"{Environment.CurrentDirectory}", $"items-{DateTime.Now.ToFileTime}.csv");
@@ -122,25 +112,36 @@ public partial class ItemsPageViewModel : BaseViewModel
                 await Application.Current.MainPage.DisplayAlert("Selection Error", "Too many items selected. Please select only one item to modify.", "OK");
         });
 
-        OpenCopyItemPopupCommand = new Command(async () =>
-        {
-            if (SelectedItems.Count == 0)
-            {
-                await Application.Current.MainPage.DisplayAlert("Selection Error", "No items selected.", "OK");
-                return;
-            }
-
-            await MopupService.Instance.PushAsync(new CopyPopup(itemService));
-        });
-
         OpenDeletePopupCommand = new Command(async () =>
         {
-            if (SelectedItems.Count == 0)
-            { 
-                await Application.Current.MainPage.DisplayAlert("Selection Error", "No items selected.", "OK");
-                return;
-            }
-            await MopupService.Instance.PushAsync(new DeletePopup(itemService));
+            if (SelectedItems.Count > 0)
+                await MopupService.Instance.PushAsync(new DeletePopup(itemService));
+            else
+                await Application.Current.MainPage.DisplayAlert("Selection Error", "No items selected. Please select the items you wish to delete.", "OK");
+        });
+
+        OpenCopyItemPopupCommand = new Command(async () =>
+        {
+            if (SelectedItems.Count > 0)
+                await MopupService.Instance.PushAsync(new CopyPopup(itemService));
+            else
+                await Application.Current.MainPage.DisplayAlert("Selection Error", "No items selected. Please select the items you wish to copy.", "OK");
+        });
+
+        OpenTransferItemPopupCommand = new Command(async () =>
+        {
+            if (ItemManifest.Count > 0)
+                await MopupService.Instance.PushAsync(new TransferPopup(itemService));
+            else
+                await Application.Current.MainPage.DisplayAlert("Selection Error", "No items selected. Please select the items you wish to transfer.", "OK");
+        });
+
+        OpenExportItemsPopupCommand = new Command(async () =>
+        {
+            if (ItemManifest.Count > 0)
+                await MopupService.Instance.PushAsync(new ExportPopup(itemService));
+            else
+                await Application.Current.MainPage.DisplayAlert("Transfer Error", "Empty item manifest. Please add the items you wish to download.", "OK");
         });
 
         ClosePopupCommand = new Command(async () =>
@@ -187,16 +188,6 @@ public partial class ItemsPageViewModel : BaseViewModel
             CreateItem(NewItem);
             NewItem = new();
             await MopupService.Instance.PopAsync();
-        });
-
-        OpenTransferItemPopupCommand = new Command(async () =>
-        {
-            if (ItemManifest.Count == 0)
-            {
-                await Application.Current.MainPage.DisplayAlert("Transfer Error", "No items saved in manifest.", "OK");
-                return;
-            }
-            await MopupService.Instance.PushAsync(new TransferPopup(itemService));
         });
 
         TransferItemCommand = new Command(async () =>

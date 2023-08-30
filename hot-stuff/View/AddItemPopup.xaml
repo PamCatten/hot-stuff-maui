@@ -18,24 +18,15 @@
     <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">
         <input:FormView SubmitCommand="{Binding AddItemCommand}">
             <VerticalStackLayout Spacing="10" Padding="25,30" HorizontalOptions="Center" MinimumWidthRequest="400">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
-                    <Label 
-                        Text="Add Item" FontSize="Large" FontAttributes="Bold" Grid.Column="0" HorizontalOptions="Start" 
-                        TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
-                    />
-                    <ImageButton Command="{Binding ClosePopupCommand}" Grid.Column="1" Grid.Row="0" HorizontalOptions="End">
-                        <ImageButton.Source>
-                            <FontImageSource 
-                                FontFamily="FontAwesome" Glyph="{x:Static local:IconFont.CircleXmark}" 
-                                Color="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
-                            />
-                        </ImageButton.Source>
-                    </ImageButton>
-                </Grid>
+                <ImageButton Command="{Binding ClosePopupCommand}" HorizontalOptions="Start">
+                    <ImageButton.Source>
+                        <FontImageSource 
+                            FontFamily="FontAwesome" 
+                            Glyph="{x:Static local:IconFont.ArrowLeft}" 
+                            Color="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                        />
+                    </ImageButton.Source>
+                </ImageButton>
                 
                 <material:TextField 
                     Title="Item Name (Required)"
@@ -106,12 +97,11 @@
                 </material:TextField>
 
                 <material:TextField 
-                            x:Name="AmountPaidEntry"
-                            Title="Item Price (Optional)"
-                            Text="{Binding NewItem.ItemPrice}"
-                            AllowClear="True"
-                            AccentColor="{StaticResource Primary}"
-                            Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.DollarSign}}"
+                    Title="Item Price (Optional)"
+                    Text="{Binding NewItem.ItemPrice}"
+                    AllowClear="True"
+                    AccentColor="{StaticResource Primary}"
+                    Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.DollarSign}}"
                 >
                     <material:TextField.Validations>
                         <validation:NumericValidation />
@@ -159,6 +149,7 @@
                     Command="{Binding AddItemCommand}"
                     Text="Add Item"
                     TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                    FontSize="Medium"
                     FontAttributes="Bold"
                     BackgroundColor="{StaticResource Primary}"
                     input:FormView.IsSubmitButton="True"

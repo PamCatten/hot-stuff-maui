@@ -13,41 +13,39 @@
     xmlns:viewmodel="clr-namespace:HotStuff.ViewModel"
     x:DataType="viewmodel:ItemsPageViewModel"
 >
-
     <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">
-        <Border MinimumWidthRequest="200" MaximumWidthRequest="400" MinimumHeightRequest="200" MaximumHeightRequest="400" HorizontalOptions="Center"
-                BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}">
+        <Border 
+            MinimumWidthRequest="200" MaximumWidthRequest="400" 
+            MinimumHeightRequest="200" MaximumHeightRequest="400" 
+            HorizontalOptions="Center" VerticalOptions="Center"
+            BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}"
+        >
             <VerticalStackLayout Spacing="10" Padding="25,30" HorizontalOptions="Center" VerticalOptions="Center">
-
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
-
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*" />
-                        <RowDefinition Height="*" />
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
-
-                    <Label Text="Delete Item(s)" FontSize="Large" FontAttributes="Bold" Grid.Column="0" Grid.Row="0"  HorizontalOptions="Start" TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"/>
-                    <ImageButton Command="{Binding ClosePopupCommand}" Grid.Column="1" Grid.Row="0" HorizontalOptions="End">
-                        <ImageButton.Source>
-                            <FontImageSource FontFamily="FontAwesome" Glyph="{x:Static local:IconFont.CircleXmark}" Color="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"/>
-                        </ImageButton.Source>
-                    </ImageButton>
-
-                    <Label Grid.Row="1" Grid.ColumnSpan="2"  Text="Are you sure? These items will be permanently deleted." FontSize="Medium" Margin="0,40,0,40"  HorizontalOptions="Center" />
-                <Button Grid.Row="2" Grid.ColumnSpan="2"
-                    Command="{Binding DeleteSelectedItemsCommand}"
+                <ImageButton Command="{Binding ClosePopupCommand}" HorizontalOptions="Start">
+                    <ImageButton.Source>
+                        <FontImageSource 
+                            FontFamily="FontAwesome" 
+                            Glyph="{x:Static local:IconFont.ArrowLeft}" 
+                            Color="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                        />
+                    </ImageButton.Source>
+                </ImageButton>
+                    <Label 
+                        Text="Are you sure? All selected items will be permanently deleted." 
+                        FontSize="Medium" 
+                        Margin="0,40,0,40"
+                        HorizontalOptions="Center" 
+                    />
+                <Button 
+                    Command="{Binding DeleteItemCommand}" 
                     Text="Delete"
+                    FontSize="Medium"
                     FontAttributes="Bold"
+                    HorizontalOptions="CenterAndExpand"
                     TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
-                    BackgroundColor="{StaticResource Primary}"
+                    BackgroundColor="{StaticResource Primary}" 
                     input:FormView.IsSubmitButton="True"
                 />
-                </Grid>
             </VerticalStackLayout>
         </Border>
     </ScrollView>

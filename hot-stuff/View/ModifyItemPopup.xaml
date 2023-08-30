@@ -14,29 +14,21 @@
     BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}"
     x:DataType="viewmodel:ItemsPageViewModel"
 >
-
     <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">
         <input:FormView SubmitCommand="{Binding ModifyItemCommand}">
             <VerticalStackLayout Spacing="10" Padding="25,30" HorizontalOptions="Center" MinimumWidthRequest="400">
-                
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
-                    <Label Text="Modify Item" FontSize="Large" FontAttributes="Bold" Grid.Column="0" HorizontalOptions="Start" 
-                           TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
-                    />
-                    <ImageButton Clicked="OnClosePopup" Grid.Column="1" HorizontalOptions="End">
-                        <ImageButton.Source>
-                            <FontImageSource FontFamily="FontAwesome" Glyph="{x:Static local:IconFont.CircleXmark}" Color="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"/>
-                        </ImageButton.Source>
-                    </ImageButton>
-                </Grid>
-                
-                <material:TextField 
+                <ImageButton Command="{Binding ClosePopupCommand}" HorizontalOptions="Start">
+                    <ImageButton.Source>
+                        <FontImageSource 
+                            FontFamily="FontAwesome" 
+                            Glyph="{x:Static local:IconFont.ArrowLeft}" 
+                            Color="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                        />
+                    </ImageButton.Source>
+                </ImageButton>
+                <material:TextField  
                     Title="Item Name (Required)"
-                    Text="{Binding SelectedItems[0].ItemName}"
+                    Text="{Binding ModifyItem.ItemName}"
                     TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
                     AccentColor="{StaticResource Primary}"
                     Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Pen}}"
@@ -49,7 +41,7 @@
                 <material:PickerField
                     Title="Item Category (Required)"
                     ItemsSource="{x:Static models:Item.AvailableCategories}"
-                    SelectedItem="{Binding SelectedItems[0].Category}"
+                    SelectedItem="{Binding ModifyItem.Category}"
                     TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
                     AllowClear="True"
                     AccentColor="{StaticResource Primary}"
@@ -63,7 +55,7 @@
                 <material:PickerField 
                     Title="Item Room (Required)"
                     ItemsSource="{x:Static models:Item.AvailableRooms}"
-                    SelectedItem="{Binding SelectedItems[0].Room}"
+                    SelectedItem="{Binding ModifyItem.Room}"
                     TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
                     AllowClear="True"
                     AccentColor="{StaticResource Primary}"
@@ -76,7 +68,7 @@
 
                 <material:TextField 
                     Title="Brand / Manufacturer Name (Optional)"
-                    Text="{Binding SelectedItems[0].BrandManufacturer}"
+                    Text="{Binding ModifyItem.BrandManufacturer}"
                     TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
                     AllowClear="True"
                     AccentColor="{StaticResource Primary}"
@@ -87,7 +79,7 @@
                     Title="Item Color (Optional)"
                     ItemsSource="{x:Static models:Item.AvailableColors}"
                     TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
-                    SelectedItem="{Binding SelectedItems[0].Color}"
+                    SelectedItem="{Binding ModifyItem.Color}"
                     AllowClear="True"
                     AccentColor="{StaticResource Primary}"
                     Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CircleChevronDown}}"
@@ -95,7 +87,7 @@
 
                 <material:TextField 
                     Title="Item Quantity (Required)"
-                    Text="{Binding SelectedItems[0].ItemQuantity}"
+                    Text="{Binding ModifyItem.ItemQuantity}"
                     TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
                     AllowClear="True"
                     AccentColor="{StaticResource Primary}"
@@ -109,9 +101,8 @@
                 </material:TextField>
 
                 <material:TextField 
-                    x:Name="AmountPaidEntry"
                     Title="Item Price (Optional)"
-                    Text="{Binding SelectedItems[0].ItemPrice}"
+                    Text="{Binding ModifyItem.ItemPrice}"
                     TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
                     AllowClear="True"
                     AccentColor="{StaticResource Primary}"
@@ -126,13 +117,13 @@
                     Title="Date Acquired (Optional)"
                     AllowClear="True"
                     AccentColor="{StaticResource Primary}"
-                    Date="{Binding SelectedItems[0].DateAcquired}"
+                    Date="{Binding ModifyItem.DateAcquired}"
                     Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CalendarDays}}"
                 />
 
                 <material:TextField 
                     Title="Item Description (Optional)"
-                    Text="{Binding SelectedItems[0].ItemDescription}"
+                    Text="{Binding ModifyItem.ItemDescription}"
                     TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
                     AllowClear="True"
                     AccentColor="{StaticResource Primary}"
@@ -142,7 +133,7 @@
                 <material:TextField 
                     x:Name="PurchaseProof"
                     Title="Purchase Proof (Optional)"
-                    Text="{Binding SelectedItems[0].PurchaseProof}"
+                    Text="{Binding ModifyItem.PurchaseProof}"
                     TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
                     AllowClear="True"
                     AccentColor="{StaticResource Primary}"
@@ -163,7 +154,7 @@
 
                 <Button
                     Command="{Binding ModifyItemCommand}"
-                    Text="Update Item"
+                    Text="Modify Item"
                     FontSize="Small"
                     TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
                     BackgroundColor="{StaticResource Primary}"

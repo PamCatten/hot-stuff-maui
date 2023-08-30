@@ -100,7 +100,7 @@
             </StackLayout>
 
             <StackLayout Grid.Column="1" Grid.Row="3">
-                <ImageButton SemanticProperties.Description="Transfer" SemanticProperties.Hint="Transfers items between buildings.">
+                <ImageButton Command="{Binding OpenTransferItemPopupCommand}"  SemanticProperties.Description="Transfer" SemanticProperties.Hint="Transfers items between buildings.">
                     <ImageButton.Source>
                         <FontImageSource FontFamily="FontAwesome" Glyph="{x:Static local:IconFont.ArrowRightArrowLeft}" Color="{StaticResource Primary}"/>
                     </ImageButton.Source>

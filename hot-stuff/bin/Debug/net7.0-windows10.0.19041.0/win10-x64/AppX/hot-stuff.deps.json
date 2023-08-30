@@ -7,7 +7,7 @@
   "targets": {
     ".NETCoreApp,Version=v7.0": {},
     ".NETCoreApp,Version=v7.0/win10-x64": {
-      "hot-stuff/1.0": {
+      "hot-stuff/1.0.0": {
         "dependencies": {
           "CommunityToolkit.Maui": "5.2.0",
           "CommunityToolkit.Mvvm": "8.2.1",
@@ -1323,7 +1323,7 @@
     }
   },
   "libraries": {
-    "hot-stuff/1.0": {
+    "hot-stuff/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

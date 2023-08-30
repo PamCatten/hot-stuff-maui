@@ -15,6 +15,8 @@ public partial class ItemsPageViewModel : BaseViewModel
     public ObservableCollection<Item> SelectedItems { get; set; } = new ObservableCollection<Item>();
     private Item newItem = new();
     public Item NewItem { get => newItem; set { newItem = value; OnPropertyChanged(); } }
+    private Item modifyItem = new();
+    public Item ModifyItem { get => modifyItem; set { modifyItem = value; OnPropertyChanged(); } }
     [ObservableProperty]
     [NotifyPropertyChangedFor(nameof(IsNotBusy))]
     bool isBusy;
@@ -25,7 +27,7 @@ public partial class ItemsPageViewModel : BaseViewModel
     public ICommand AddItemCommand { get; protected set; }
     public ICommand OpenAddItemPopupCommand { get; protected set; }
     public ICommand OpenDeletePopupCommand { get; protected set; }
-    public ICommand DeleteSelectedItemsCommand { get; protected set; }
+    public ICommand DeleteItemCommand { get; protected set; }
     public ICommand ClosePopupCommand { get; protected set; }
     public ICommand GetItemsCommand { get; protected set; }
     public ICommand ExportItemsCommand { get; protected set; }
@@ -56,11 +58,12 @@ public partial class ItemsPageViewModel : BaseViewModel
     public ItemsPageViewModel(ItemService itemService)
     {
         this.itemService = itemService;
+        ModifyItem = new Item();
         //Items = new ObservableCollection<Item>(itemService.GetItems());
         GetItemsAsync();
         WeakReferenceMessenger.Default.Register<Building>(this, (r, m) => ActiveBuilding = m);
 
-        DeleteSelectedItemsCommand = new Command(() =>
+        DeleteItemCommand = new Command(() =>
         {
             DeleteAsync(SelectedItems);
         });
@@ -94,7 +97,7 @@ public partial class ItemsPageViewModel : BaseViewModel
                 await Application.Current.MainPage.DisplayAlert("Transfer Error", ex.Message, "OK");
             }
 
-            await MopupService.Instance.PushAsync(new ExportPopup(itemService));
+            await MopupService.Instance.PushAsync(new DownloadPopup(itemService));
         });
 
         OpenAddItemPopupCommand = new Command(async () =>
@@ -105,7 +108,10 @@ public partial class ItemsPageViewModel : BaseViewModel
         OpenModifyItemPopupCommand = new Command(async () =>
         {
             if (SelectedItems.Count == 1)
+            {
+                ModifyItem = SelectedItems[0];
                 await MopupService.Instance.PushAsync(new ModifyItemPopup(itemService));
+            }
             else if (SelectedItems.Count == 0)
                 await Application.Current.MainPage.DisplayAlert("Selection Error", "No item selected. Please select the item you wish to modify.", "OK");
             else
@@ -130,7 +136,7 @@ public partial class ItemsPageViewModel : BaseViewModel
 
         OpenTransferItemPopupCommand = new Command(async () =>
         {
-            if (ItemManifest.Count > 0)
+            if (SelectedItems.Count > 0)
                 await MopupService.Instance.PushAsync(new TransferPopup(itemService));
             else
                 await Application.Current.MainPage.DisplayAlert("Selection Error", "No items selected. Please select the items you wish to transfer.", "OK");
@@ -139,7 +145,7 @@ public partial class ItemsPageViewModel : BaseViewModel
         OpenExportItemsPopupCommand = new Command(async () =>
         {
             if (ItemManifest.Count > 0)
-                await MopupService.Instance.PushAsync(new ExportPopup(itemService));
+                await MopupService.Instance.PushAsync(new DownloadPopup(itemService));
             else
                 await Application.Current.MainPage.DisplayAlert("Transfer Error", "Empty item manifest. Please add the items you wish to download.", "OK");
         });

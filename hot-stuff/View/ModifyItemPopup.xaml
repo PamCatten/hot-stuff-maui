@@ -155,7 +155,7 @@
                 <Button
                     Command="{Binding ModifyItemCommand}"
                     Text="Modify Item"
-                    FontSize="Small"
+                    FontSize="Medium"
                     TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
                     BackgroundColor="{StaticResource Primary}"
                     input:FormView.IsSubmitButton="True"

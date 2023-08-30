@@ -137,7 +137,7 @@
 
                     <material:DataGrid.Columns>
                         <material:DataGridSelectionColumn/>
-                        <material:DataGridColumn Binding="{Binding ItemName}" Title="Name" Width="Auto" />
+                        <material:DataGridColumn Binding="{Binding ItemName}" Title="Name" Width="Auto"/>
                         <material:DataGridColumn Binding="{Binding Category}" Title="Category" Width="Auto"/>
                         <material:DataGridColumn Binding="{Binding BrandManufacturer}" Title="Brand / Manufacturer" Width="Auto"/>
                         <material:DataGridColumn Binding="{Binding Room}" Title="Room" Width="Auto"/>

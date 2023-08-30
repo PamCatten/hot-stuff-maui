@@ -40,15 +40,12 @@ public partial class ItemsPageViewModel : BaseViewModel
     public ICommand CopyItemCommand { get; protected set; }
     public ICommand TakePhotoCommand { get; protected set; }
     public ICommand PickPhotoCommand { get; protected set; }
-
     private ObservableCollection<Item> itemManifest = new();
     public Building ActiveBuilding { get; set; }
+    public Building TransferBuilding { get; set; }
     public ObservableCollection<Item> ItemManifest
     {
-        get 
-        { 
-            return itemManifest; 
-        }
+        get { return itemManifest; }
         set
         {
             itemManifest = value;
@@ -63,21 +60,9 @@ public partial class ItemsPageViewModel : BaseViewModel
         GetItemsAsync();
         WeakReferenceMessenger.Default.Register<Building>(this, (r, m) => ActiveBuilding = m);
 
-        DeleteItemCommand = new Command(() =>
-        {
-            DeleteAsync(SelectedItems);
-        });
-
-        GetItemsCommand = new Command(() =>
-        {
-            GetItemsAsync();
-        });
-
-        ModifyItemCommand = new Command(() =>
-        {
-            ModifyItemAsync(SelectedItems[0]);
-        });
-
+        DeleteItemCommand = new Command(() => DeleteAsync(SelectedItems));
+        GetItemsCommand = new Command(() => GetItemsAsync());
+        ModifyItemCommand = new Command(() => ModifyItemAsync(SelectedItems[0]));
         ExportItemsCommand = new Command(async () =>
         {
             var csvPath = Path.Combine($@"{Environment.CurrentDirectory}", $"items-{DateTime.Now.ToFileTime}.csv");
@@ -96,15 +81,10 @@ public partial class ItemsPageViewModel : BaseViewModel
                 Debug.WriteLine($"Something went wrong: {ex.Message}");
                 await Application.Current.MainPage.DisplayAlert("Transfer Error", ex.Message, "OK");
             }
-
             await MopupService.Instance.PushAsync(new DownloadPopup(itemService));
         });
 
-        OpenAddItemPopupCommand = new Command(async () =>
-        {
-            await MopupService.Instance.PushAsync(new AddItemPopup(itemService));
-        });
-
+        OpenAddItemPopupCommand = new Command(async () => await MopupService.Instance.PushAsync(new AddItemPopup(itemService)));
         OpenModifyItemPopupCommand = new Command(async () =>
         {
             if (SelectedItems.Count == 1)
@@ -117,7 +97,6 @@ public partial class ItemsPageViewModel : BaseViewModel
             else
                 await Application.Current.MainPage.DisplayAlert("Selection Error", "Too many items selected. Please select only one item to modify.", "OK");
         });
-
         OpenDeletePopupCommand = new Command(async () =>
         {
             if (SelectedItems.Count > 0)
@@ -125,7 +104,6 @@ public partial class ItemsPageViewModel : BaseViewModel
             else
                 await Application.Current.MainPage.DisplayAlert("Selection Error", "No items selected. Please select the items you wish to delete.", "OK");
         });
-
         OpenCopyItemPopupCommand = new Command(async () =>
         {
             if (SelectedItems.Count > 0)
@@ -133,7 +111,6 @@ public partial class ItemsPageViewModel : BaseViewModel
             else
                 await Application.Current.MainPage.DisplayAlert("Selection Error", "No items selected. Please select the items you wish to copy.", "OK");
         });
-
         OpenTransferItemPopupCommand = new Command(async () =>
         {
             if (SelectedItems.Count > 0)
@@ -141,7 +118,6 @@ public partial class ItemsPageViewModel : BaseViewModel
             else
                 await Application.Current.MainPage.DisplayAlert("Selection Error", "No items selected. Please select the items you wish to transfer.", "OK");
         });
-
         OpenExportItemsPopupCommand = new Command(async () =>
         {
             if (ItemManifest.Count > 0)
@@ -149,63 +125,33 @@ public partial class ItemsPageViewModel : BaseViewModel
             else
                 await Application.Current.MainPage.DisplayAlert("Transfer Error", "Empty item manifest. Please add the items you wish to download.", "OK");
         });
-
-        ClosePopupCommand = new Command(async () =>
-        {
-            await MopupService.Instance.PopAsync();
-        });
-
+        ClosePopupCommand = new Command(() => ClosePopup());
+        TransferItemCommand = new Command(() => TransferAsync(SelectedItems));
         TakePhotoCommand = new Command(async () =>
         {
             var options = new StoreCameraMediaOptions { CompressionQuality = 100 };
             var result = await CrossMedia.Current.TakePhotoAsync(options);
             if (result is null) return;
         });
-
         PickPhotoCommand = new Command(async () =>
         {
             var result = await FilePicker.PickAsync(new PickOptions
             {
                 PickerTitle = "Select Image",
                 FileTypes = FilePickerFileType.Images
-
             });
             if (result is null) 
                 return;
             NewItem.PurchaseProof = result?.FullPath;
-
-            //var stream = await result.OpenReadAsync();
-            //ItemImage.Source = ImageSource.FromStream(() => stream);
-
-            // First implementation
-            //var result = await CrossMedia.Current.PickPhotoAsync();
-            //if (result is null) return;
-
-            //ItemImage.Source = result?.Path;
-
-            //var fileInfo = new FileInfo(result?.Path);
-            //var fileLength = fileInfo.Length;
         });
-
-        AddItemCommand = new Command(async () =>
+        AddItemCommand = new Command(() =>  // TODO: Find a better way of bootstrapping this
         {
-            // TODO: Find a better way of bootstrapping this
             NewItem.DateAcquired = NewItem.DateAcquired.Split(" 12:00:00 AM", StringSplitOptions.RemoveEmptyEntries)[0];
             CreateItem(NewItem);
             NewItem = new();
-            await MopupService.Instance.PopAsync();
+            ClosePopup();
         });
-
-        TransferItemCommand = new Command(async () =>
-        {
-            // Transfer items between buildings (modify associated buildingID's?)
-        });
-
-        async void CreateItem(Item NewItem)
-        {
-            await App.ItemService.AddItem(NewItem);
-        }
-
+        async void CreateItem(Item NewItem) { await App.ItemService.AddItem(NewItem); }
         async void GetItemsAsync()
         {
             if (IsBusy | IsRefreshing)
@@ -238,7 +184,6 @@ public partial class ItemsPageViewModel : BaseViewModel
                 IsRefreshing = false;
             }
         }
-
         async void DeleteAsync(ObservableCollection<Item> items)
         {
             foreach (var item in items)
@@ -246,24 +191,24 @@ public partial class ItemsPageViewModel : BaseViewModel
                 ItemManifest.Remove(item);
             }
             await App.ItemService.DeleteItems(items);
-            await MopupService.Instance.PopAsync();
+            ClosePopup();
         }
-
         async void ModifyItemAsync(Item item)
         {
             Debug.WriteLine("Update item called.");
             await App.ItemService.ModifyItem(item);
-            await MopupService.Instance.PopAsync();
+            ClosePopup();
         }
-
-        async void DeleteAllAsync()
-        {
-            await App.ItemService.FlushItems();
-        }
-
+        async void DeleteAllAsync() { await App.ItemService.FlushItems(); }
         async void TransferAsync(ObservableCollection<Item> items)
         {
-            Debug.WriteLine("User clicked transfer.");
+            foreach (var item in SelectedItems)
+            {
+                item.BuildingID = TransferBuilding.BuildingID;
+                await App.ItemService.ModifyItem(item);
+            }
+            ClosePopup();
         }
+        async void ClosePopup() { await MopupService.Instance.PopAsync(); }
     }
 }

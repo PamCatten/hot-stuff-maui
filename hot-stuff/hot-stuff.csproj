@@ -85,7 +85,7 @@
 	  <MauiXaml Update="View\TransferPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\ExportPopup.xaml">
+	  <MauiXaml Update="View\DownloadPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\DeletePopup.xaml">
@@ -121,8 +121,8 @@
 	  <Compile Update="View\TransferPopup.xaml.cs">
 	    <DependentUpon>TransferPopup.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="View\ExportPopup.xaml.cs">
-	    <DependentUpon>ExportPopup.xaml</DependentUpon>
+	  <Compile Update="View\DownloadPopup.xaml.cs">
+	    <DependentUpon>DownloadPopup.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="View\DeletePopup.xaml.cs">
 	    <DependentUpon>DeletePopup.xaml</DependentUpon>

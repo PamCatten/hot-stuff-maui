@@ -10,15 +10,6 @@
         <member name="P:HotStuff.ViewModel.BaseViewModel.IsBusy">
             <inheritdoc cref="F:HotStuff.ViewModel.BaseViewModel.isBusy"/>
         </member>
-        <member name="T:HotStuff.ViewModel.BuildingSettingsPageViewModel">
-            <inheritdoc/>
-        </member>
-        <member name="P:HotStuff.ViewModel.BuildingSettingsPageViewModel.IsBusy">
-            <inheritdoc cref="F:HotStuff.ViewModel.BuildingSettingsPageViewModel.isBusy"/>
-        </member>
-        <member name="P:HotStuff.ViewModel.BuildingSettingsPageViewModel.IsRefreshing">
-            <inheritdoc cref="F:HotStuff.ViewModel.BuildingSettingsPageViewModel.isRefreshing"/>
-        </member>
         <member name="T:HotStuff.ViewModel.ItemsPageViewModel">
             <inheritdoc/>
         </member>
@@ -33,6 +24,15 @@
         </member>
         <member name="P:HotStuff.ViewModel.MainPageViewModel.IsRefreshing">
             <inheritdoc cref="F:HotStuff.ViewModel.MainPageViewModel.isRefreshing"/>
+        </member>
+        <member name="T:HotStuff.ViewModel.ProfilePageViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:HotStuff.ViewModel.ProfilePageViewModel.IsBusy">
+            <inheritdoc cref="F:HotStuff.ViewModel.ProfilePageViewModel.isBusy"/>
+        </member>
+        <member name="P:HotStuff.ViewModel.ProfilePageViewModel.IsRefreshing">
+            <inheritdoc cref="F:HotStuff.ViewModel.ProfilePageViewModel.isRefreshing"/>
         </member>
         <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
             <summary>

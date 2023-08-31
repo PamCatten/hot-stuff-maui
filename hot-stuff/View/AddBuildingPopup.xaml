@@ -13,7 +13,7 @@
     xmlns:validation="clr-namespace:InputKit.Shared.Validations;assembly=InputKit.Maui"
     xmlns:viewmodel="clr-namespace:HotStuff.ViewModel"
     BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}"
-    x:DataType="viewmodel:BuildingSettingsPageViewModel"
+    x:DataType="viewmodel:ProfilePageViewModel"
 >
     <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">
         <input:FormView SubmitCommand="{Binding AddBuildingCommand}">
@@ -23,7 +23,6 @@
                     HorizontalOptions="Center" VerticalOptions="StartAndExpand"
                     BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}"
                 >
-
                     <material:DataGrid.Columns>
                         <material:DataGridSelectionColumn/>
                         <material:DataGridColumn Binding="{Binding BuildingID}" Title="ID" Width="Auto" />
@@ -67,6 +66,9 @@
                 <Button 
                     Command="{Binding AddBuildingCommand}" 
                     Text="Add"
+                    TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
                     BackgroundColor="{StaticResource Primary}"
                     input:FormView.IsSubmitButton="True"
                 />

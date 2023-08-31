@@ -1,17 +1,13 @@
-using CommunityToolkit.Maui.Views;
 using Mopups.Pages;
-using Plugin.Media.Abstractions;
-using Plugin.Media;
-using Mopups.Services;
 using HotStuff.Services;
 
 namespace HotStuff.View;
 
 public partial class AddBuildingPopup : PopupPage
 {
-	public AddBuildingPopup(ItemService itemService)
+	public AddBuildingPopup(BuildingService buildingService)
 	{
 		InitializeComponent();
-        BindingContext = new ItemsPageViewModel(itemService);
+        BindingContext = new ProfilePageViewModel(buildingService);
 	}
 }

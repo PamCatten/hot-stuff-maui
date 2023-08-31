@@ -30,18 +30,18 @@ public static class MauiProgram
         }).ConfigureMauiHandlers(handlers => 
         {
             #if ANDROID
-                handlers.AddHandler(typeof(Shell), typeof(HotStuff.Platforms.Android.CustomShellRenderer));
+                handlers.AddHandler(typeof(Shell), typeof(Platforms.Android.CustomShellRenderer));
             #endif
         }).UseMauiCommunityToolkit();
             builder.Services.AddTransient<MainPage>();
             builder.Services.AddTransient<ItemsPage>();
             builder.Services.AddTransient<ItemsPageViewModel>();
             builder.Services.AddTransient<ProfilePage>();
-            builder.Services.AddTransient<BuildingSettingsPage>();
-            builder.Services.AddTransient<BuildingSettingsPageViewModel>();
+            builder.Services.AddTransient<ProfilePageViewModel>();
             builder.Services.AddSingleton<ItemService>();
             builder.Services.AddSingleton<BuildingService>();
             builder.Services.AddTransient<AddItemPopup>();
+            builder.Services.AddTransient<BuildingSettingsPopup>();
 
 
         string DatabasePath = Path.Combine(FileSystem.AppDataDirectory, "ItemData.db3");

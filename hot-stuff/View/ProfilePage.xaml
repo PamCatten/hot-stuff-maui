@@ -12,9 +12,8 @@
     xmlns:pages="clr-namespace:HotStuff.View"
     xmlns:viewmodel="clr-namespace:HotStuff.ViewModel"
     x:DataType="viewmodel:ProfilePageViewModel"
-    Title="Profile Menu"
+    Title="Profile"
 >
-
     <VerticalStackLayout>
         <material:ButtonView BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}" Margin="5,0,5,0">
             <StackLayout>
@@ -44,7 +43,7 @@
         <material:ButtonView BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}" Margin="5,0,5,0">
             <StackLayout>
                 <StackLayout.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding BuildingSettingsCommand}" />
+                    <TapGestureRecognizer Command="{Binding OpenBuildingSettingsPopupCommand}" />
                 </StackLayout.GestureRecognizers>
                 <Label 
                     Text="Building Settings" 

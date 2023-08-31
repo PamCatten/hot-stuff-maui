@@ -3,15 +3,9 @@ namespace HotStuff.View;
 
 public partial class ProfilePage : UraniumContentPage
 {
-    public ProfilePage()
+    public ProfilePage(ProfilePageViewModel vm)
     {
         InitializeComponent();
-        BindingContext = new ProfilePageViewModel();
+        BindingContext = vm;
     }
-
-    async void BuildingSettingsCommand(object sender, EventArgs e)
-    {
-        await Shell.Current.GoToAsync(nameof(BuildingSettingsPage));
-    }
-
 }

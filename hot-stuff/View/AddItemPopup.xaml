@@ -15,7 +15,6 @@
     CloseWhenBackgroundIsClicked="True"
     BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}"
 >
-
     <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">
         <input:FormView SubmitCommand="{Binding AddItemCommand}">
             <VerticalStackLayout Spacing="10" Padding="25,30" HorizontalOptions="Center" MinimumWidthRequest="400">

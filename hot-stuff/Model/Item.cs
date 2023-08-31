@@ -17,7 +17,6 @@ public partial class Item : INotifyPropertyChanged
     [PrimaryKey, AutoIncrement]
     public int ItemID { get; set; }
     public int BuildingID { get; set; }
-
     private string itemName;
     private string brandManufacturer;
     private string itemDescription;

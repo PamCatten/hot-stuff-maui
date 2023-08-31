@@ -15,7 +15,6 @@
     BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}"
     x:DataType="viewmodel:BuildingSettingsPageViewModel"
 >
-
     <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">
         <input:FormView SubmitCommand="{Binding AddBuildingCommand}">
             <VerticalStackLayout Spacing="10" Padding="25,30" HorizontalOptions="Center" MinimumWidthRequest="400">

@@ -32,7 +32,7 @@
                     FontSize="Medium"  HorizontalOptions="Center" 
                 />
                 <Button
-                    Command="{Binding ExportItemsCommand}"
+                    Command="{Binding DownloadItemCommand}"
                     Text="Download"
                     FontSize="Medium"
                     FontAttributes="Bold"

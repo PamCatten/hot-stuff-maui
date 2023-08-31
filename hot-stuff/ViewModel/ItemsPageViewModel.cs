@@ -30,8 +30,8 @@ public partial class ItemsPageViewModel : BaseViewModel
     public ICommand DeleteItemCommand { get; protected set; }
     public ICommand ClosePopupCommand { get; protected set; }
     public ICommand GetItemsCommand { get; protected set; }
-    public ICommand ExportItemsCommand { get; protected set; }
-    public ICommand OpenExportItemsPopupCommand { get; protected set; }
+    public ICommand DownloadItemCommand { get; protected set; }
+    public ICommand OpenDownloadItemPopupCommand { get; protected set; }
     public ICommand OpenModifyItemPopupCommand { get; protected set; }
     public ICommand ModifyItemCommand { get; protected set; }
     public ICommand OpenTransferItemPopupCommand { get; protected set; }
@@ -60,30 +60,14 @@ public partial class ItemsPageViewModel : BaseViewModel
         GetItemsAsync();
         WeakReferenceMessenger.Default.Register<Building>(this, (r, m) => ActiveBuilding = m);
 
+        AddItemCommand = new Command(() => CreateItem(NewItem));
         DeleteItemCommand = new Command(() => DeleteAsync(SelectedItems));
         GetItemsCommand = new Command(() => GetItemsAsync());
         ModifyItemCommand = new Command(() => ModifyItemAsync(SelectedItems[0]));
-        ExportItemsCommand = new Command(async () =>
-        {
-            var csvPath = Path.Combine($@"{Environment.CurrentDirectory}", $"items-{DateTime.Now.ToFileTime}.csv");
-            Debug.WriteLine($"Path: {csvPath}");
-            try
-            {
-                using (var streamWriter = new StreamWriter(csvPath))
-                {
-                    using var csvWriter = new CsvWriter(streamWriter, CultureInfo.InvariantCulture);
-                    var items = App.ItemService.GetItems();
-                    csvWriter.WriteRecords((System.Collections.IEnumerable)items);
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Something went wrong: {ex.Message}");
-                await Application.Current.MainPage.DisplayAlert("Transfer Error", ex.Message, "OK");
-            }
-            await MopupService.Instance.PushAsync(new DownloadPopup(itemService));
-        });
-
+        ClosePopupCommand = new Command(() => ClosePopup());
+        TransferItemCommand = new Command(() => TransferAsync(SelectedItems));
+        DownloadItemCommand = new Command(() => DownloadItemsAsync(ItemManifest));
+        
         OpenAddItemPopupCommand = new Command(async () => await MopupService.Instance.PushAsync(new AddItemPopup(itemService)));
         OpenModifyItemPopupCommand = new Command(async () =>
         {
@@ -118,15 +102,13 @@ public partial class ItemsPageViewModel : BaseViewModel
             else
                 await Application.Current.MainPage.DisplayAlert("Selection Error", "No items selected. Please select the items you wish to transfer.", "OK");
         });
-        OpenExportItemsPopupCommand = new Command(async () =>
+        OpenDownloadItemPopupCommand = new Command(async () =>
         {
             if (ItemManifest.Count > 0)
                 await MopupService.Instance.PushAsync(new DownloadPopup(itemService));
             else
                 await Application.Current.MainPage.DisplayAlert("Transfer Error", "Empty item manifest. Please add the items you wish to download.", "OK");
         });
-        ClosePopupCommand = new Command(() => ClosePopup());
-        TransferItemCommand = new Command(() => TransferAsync(SelectedItems));
         TakePhotoCommand = new Command(async () =>
         {
             var options = new StoreCameraMediaOptions { CompressionQuality = 100 };
@@ -144,14 +126,46 @@ public partial class ItemsPageViewModel : BaseViewModel
                 return;
             NewItem.PurchaseProof = result?.FullPath;
         });
-        AddItemCommand = new Command(() =>  // TODO: Find a better way of bootstrapping this
-        {
+
+        async void CreateItem(Item NewItem) // TODO: Find a better way of bootstrapping this
+        { 
             NewItem.DateAcquired = NewItem.DateAcquired.Split(" 12:00:00 AM", StringSplitOptions.RemoveEmptyEntries)[0];
-            CreateItem(NewItem);
+            await App.ItemService.AddItem(NewItem);
             NewItem = new();
             ClosePopup();
-        });
-        async void CreateItem(Item NewItem) { await App.ItemService.AddItem(NewItem); }
+        }
+
+        async void RefreshItemsAsync()
+        {
+            if (IsBusy | IsRefreshing) return;
+            try
+            {
+                IsBusy = true; 
+                IsRefreshing = true;
+                ObservableCollection<Item> itemList = await itemService.RefreshItems(ActiveBuilding.BuildingID);
+                if (itemList is not null)
+                {
+                    // Worried about Big O here. I'm not sure how .Any() is implemented under the hood but I need to move on.
+                    // TODO: Check that out.
+                    foreach (var item in itemList)
+                    {
+                        if (ItemManifest.Any(i => i.ItemID == item.ItemID)) continue;
+                        else ItemManifest.Add(item);
+                    }
+                }
+            } 
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Something went wrong when refreshing: {ex.Message}");
+                await Application.Current.MainPage.DisplayAlert("Refresh Error", ex.Message, "OK");
+            }
+            finally
+            {
+                IsBusy = false;
+                IsRefreshing = false;
+            }
+        }
+
         async void GetItemsAsync()
         {
             if (IsBusy | IsRefreshing)
@@ -198,6 +212,24 @@ public partial class ItemsPageViewModel : BaseViewModel
             Debug.WriteLine("Update item called.");
             await App.ItemService.ModifyItem(item);
             ClosePopup();
+        }
+        async void DownloadItemsAsync(ObservableCollection<Item> items) // TODO: Finish this broken mess
+        {
+            var csvPath = Path.Combine($@"{Environment.CurrentDirectory}", $"items-{DateTime.Now.ToFileTime}.csv");
+            Debug.WriteLine($"Path: {csvPath}");
+            try
+            {
+                using (var streamWriter = new StreamWriter(csvPath))
+                {
+                    using var csvWriter = new CsvWriter(streamWriter, CultureInfo.InvariantCulture);
+                    csvWriter.WriteRecords((System.Collections.IEnumerable)items);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Something went wrong: {ex.Message}");
+                await Application.Current.MainPage.DisplayAlert("Transfer Error", ex.Message, "OK");
+            }
         }
         async void DeleteAllAsync() { await App.ItemService.FlushItems(); }
         async void TransferAsync(ObservableCollection<Item> items)

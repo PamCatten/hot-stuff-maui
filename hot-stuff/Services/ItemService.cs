@@ -45,6 +45,20 @@ public class ItemService : IItemService
         }
     }
 
+    public async Task<ObservableCollection<Item>> RefreshItems(int BuildingID)
+    {
+        try
+        {
+            await Init();
+            return new ObservableCollection<Item>(await Database.Table<Item>().Where(i => i.BuildingID == BuildingID).ToListAsync());
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine($"Failed to refresh item data. Error: {ex.Message}");
+            return new ObservableCollection<Item>();
+        }
+    }
+
     public async Task DeleteItems(ObservableCollection<Item> SelectedItems)
     {
         try

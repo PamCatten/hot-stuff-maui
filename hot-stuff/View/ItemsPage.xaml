@@ -111,7 +111,7 @@
             </StackLayout>
 
             <StackLayout Grid.Column="2" Grid.Row="3">
-                <ImageButton Command="{Binding OpenExportItemsPopupCommand}" SemanticProperties.Description="Download" SemanticProperties.Hint="Opens the download menu.">
+                <ImageButton Command="{Binding OpenDownloadItemPopupCommand}" SemanticProperties.Description="Download" SemanticProperties.Hint="Opens the download menu.">
                     <ImageButton.Source>
                         <FontImageSource FontFamily="FontAwesome" Glyph="{x:Static local:IconFont.Download}" Color="{StaticResource Primary}"/>
                     </ImageButton.Source>

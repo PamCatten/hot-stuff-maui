@@ -4,12 +4,19 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
+    <!-- App Theme -->
     <Color x:Key="Primary">#FC5D52</Color>
     <Color x:Key="BlackText">#1C1B1F</Color>
     <Color x:Key="WhiteText">#FFFBFE</Color>
 
+    <!-- App Backgrounds -->
     <Color x:Key="LightBackground">#FFFBFE</Color>
     <Color x:Key="DarkBackground">#1C1B1F</Color>
+    <Color x:Key="Dim20">#20000000</Color>
+    <Color x:Key="Dim40">#40000000</Color>
+    <Color x:Key="Dim60">#60000000</Color>
+    <Color x:Key="Dim80">#80000000</Color>
+    <Color x:Key="Dim90">#90000000</Color>
 
     <!--MAUI STANDARDS-->
     <Color x:Key="White">White</Color>

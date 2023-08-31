@@ -12,10 +12,16 @@
     xmlns:validation="clr-namespace:InputKit.Shared.Validations;assembly=InputKit.Maui"
     xmlns:viewmodel="clr-namespace:HotStuff.ViewModel"
     x:DataType="viewmodel:ItemsPageViewModel"
+    CloseWhenBackgroundIsClicked="True"
+    BackgroundColor="{StaticResource Dim90}"
 >
     <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">
-        <Border MinimumWidthRequest="200" MaximumWidthRequest="400" MinimumHeightRequest="200" MaximumHeightRequest="400" HorizontalOptions="Center"
-                BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}">
+        <Border 
+            MinimumWidthRequest="200" MaximumWidthRequest="400" 
+            MinimumHeightRequest="200" MaximumHeightRequest="400" 
+            HorizontalOptions="Center" VerticalOptions="Center"
+            BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}"
+        >
             <VerticalStackLayout Spacing="10" Padding="25,30" HorizontalOptions="Center" VerticalOptions="Center">
                 <ImageButton Command="{Binding ClosePopupCommand}" HorizontalOptions="Start">
                     <ImageButton.Source>
@@ -26,18 +32,20 @@
                         />
                     </ImageButton.Source>
                 </ImageButton>
-
                 <Label 
-                    Text="Are you sure? Depending on the number of items this may take a while." 
-                    FontSize="Medium"  HorizontalOptions="Center" 
-                />
-                <Button
-                    Command="{Binding DownloadItemCommand}"
+                        Text="Are you sure? Depending on the number of items this may take a while." 
+                        FontSize="Medium" 
+                        Margin="0,40,0,40"
+                        HorizontalOptions="Center" 
+                    />
+                <Button 
+                    Command="{Binding DownloadItemCommand}" 
                     Text="Download"
                     FontSize="Medium"
                     FontAttributes="Bold"
+                    HorizontalOptions="CenterAndExpand"
                     TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
-                    BackgroundColor="{StaticResource Primary}"
+                    BackgroundColor="{StaticResource Primary}" 
                     input:FormView.IsSubmitButton="True"
                 />
             </VerticalStackLayout>

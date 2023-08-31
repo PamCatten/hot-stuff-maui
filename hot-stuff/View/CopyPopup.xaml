@@ -12,6 +12,8 @@
     xmlns:validation="clr-namespace:InputKit.Shared.Validations;assembly=InputKit.Maui"
     xmlns:viewmodel="clr-namespace:HotStuff.ViewModel"
     x:DataType="viewmodel:ItemsPageViewModel"
+    CloseWhenBackgroundIsClicked="True"
+    BackgroundColor="{StaticResource Dim90}"
 >
     <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">
         <Border 
@@ -38,7 +40,7 @@
                     />
                 <Button 
                     Command="{Binding CopyItemCommand}" 
-                    Text="Delete"
+                    Text="Copy"
                     FontSize="Medium"
                     FontAttributes="Bold"
                     HorizontalOptions="Center"

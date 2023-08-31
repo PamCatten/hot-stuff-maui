@@ -45,12 +45,12 @@ public class ItemService : IItemService
         }
     }
 
-    public async Task<ObservableCollection<Item>> RefreshItems(int BuildingID)
+    public async Task<ObservableCollection<Item>> RefreshItems(int buildingID)
     {
         try
         {
             await Init();
-            return new ObservableCollection<Item>(await Database.Table<Item>().Where(i => i.BuildingID == BuildingID).ToListAsync());
+            return new ObservableCollection<Item>(await Database.Table<Item>().Where(i => i.BuildingID == buildingID).ToListAsync());
         }
         catch (Exception ex)
         {
@@ -64,10 +64,8 @@ public class ItemService : IItemService
         try
         {
             await Init();
-            foreach (var item in SelectedItems)
-            {
+            foreach (var item in SelectedItems) 
                 await Database.DeleteAsync<Item>(item.ItemID);
-            }
         }
         catch (Exception ex)
         {
@@ -90,7 +88,6 @@ public class ItemService : IItemService
 
     public async Task FlushItems()
     {
-        Debug.WriteLine("Emergency flush initiated");
         await Init();
         await Database.DeleteAllAsync<Item>();
     }

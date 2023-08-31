@@ -198,19 +198,17 @@ public partial class ItemsPageViewModel : BaseViewModel
                 IsRefreshing = false;
             }
         }
-        async void DeleteAsync(ObservableCollection<Item> items)
+        async void DeleteAsync(ObservableCollection<Item> selectedItems)
         {
-            foreach (var item in items)
-            {
+            foreach (var item in selectedItems)
                 ItemManifest.Remove(item);
-            }
-            await App.ItemService.DeleteItems(items);
+            await App.ItemService.DeleteItems(selectedItems);
             ClosePopup();
         }
         async void ModifyItemAsync(Item item)
         {
-            Debug.WriteLine("Update item called.");
             await App.ItemService.ModifyItem(item);
+            if (SelectedItems[0] != item) ItemManifest[ItemManifest.IndexOf(SelectedItems[0])] = item;
             ClosePopup();
         }
         async void DownloadItemsAsync(ObservableCollection<Item> items) // TODO: Finish this broken mess

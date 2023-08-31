@@ -11,8 +11,9 @@
     xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
     xmlns:validation="clr-namespace:InputKit.Shared.Validations;assembly=InputKit.Maui"
     xmlns:viewmodel="clr-namespace:HotStuff.ViewModel"
-    BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}"
     x:DataType="viewmodel:ItemsPageViewModel"
+    CloseWhenBackgroundIsClicked="True"
+    BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}"
 >
 
     <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">
@@ -147,7 +148,7 @@
 
                 <Button
                     Command="{Binding AddItemCommand}"
-                    Text="Add Item"
+                    Text="Add"
                     TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
                     FontSize="Medium"
                     FontAttributes="Bold"

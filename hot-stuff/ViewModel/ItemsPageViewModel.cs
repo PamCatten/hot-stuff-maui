@@ -11,6 +11,7 @@ namespace HotStuff.ViewModel;
 public partial class ItemsPageViewModel : BaseViewModel 
 {
     readonly ItemService itemService;
+    readonly BuildingService buildingService;
     public ObservableCollection<Item> Items { get; set; }
     public ObservableCollection<Item> SelectedItems { get; set; } = new ObservableCollection<Item>();
     private Item newItem = new();
@@ -38,6 +39,7 @@ public partial class ItemsPageViewModel : BaseViewModel
     public ICommand TransferItemCommand { get; protected set; }
     public ICommand OpenCopyItemPopupCommand { get; protected set; }
     public ICommand CopyItemCommand { get; protected set; }
+    public ICommand OpenProfilePopupCommand { get; protected set; }
     public ICommand TakePhotoCommand { get; protected set; }
     public ICommand PickPhotoCommand { get; protected set; }
     private ObservableCollection<Item> itemManifest = new();
@@ -69,6 +71,7 @@ public partial class ItemsPageViewModel : BaseViewModel
         DownloadItemCommand = new Command(() => DownloadItemsAsync(ItemManifest));
         
         OpenAddItemPopupCommand = new Command(async () => await MopupService.Instance.PushAsync(new AddItemPopup(itemService)));
+        OpenProfilePopupCommand = new Command(async () => await MopupService.Instance.PushAsync(new ProfilePopup(buildingService)));
         OpenModifyItemPopupCommand = new Command(async () =>
         {
             if (SelectedItems.Count == 1)
@@ -211,7 +214,9 @@ public partial class ItemsPageViewModel : BaseViewModel
             if (SelectedItems[0] != item) ItemManifest[ItemManifest.IndexOf(SelectedItems[0])] = item;
             ClosePopup();
         }
-        async void DownloadItemsAsync(ObservableCollection<Item> items) // TODO: Finish this broken mess
+
+        // FIXME: Emulator filepath dumps out in a weird spot, not sure how to proceed
+        async void DownloadItemsAsync(ObservableCollection<Item> items) 
         {
             var csvPath = Path.Combine($@"{Environment.CurrentDirectory}", $"items-{DateTime.Now.ToFileTime}.csv");
             Debug.WriteLine($"Path: {csvPath}");

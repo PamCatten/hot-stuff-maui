@@ -76,6 +76,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="View\ProfilePopup.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\BuildingSettingsPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -112,6 +115,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="View\ProfilePopup.xaml.cs">
+	    <DependentUpon>ProfilePopup.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="View\BuildingSettingsPopup.xaml.cs">
 	    <DependentUpon>BuildingSettingsPopup.xaml</DependentUpon>
 	  </Compile>

@@ -1,4 +1,8 @@
-﻿namespace HotStuff.ViewModel;
+﻿using HotStuff.Services;
+using Mopups.Services;
+using System.Windows.Input;
+
+namespace HotStuff.ViewModel;
 
 public partial class BaseViewModel : ObservableObject
 {

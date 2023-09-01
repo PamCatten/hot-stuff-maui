@@ -8,14 +8,9 @@ public class BuildingService : IBuildingService
 
     async Task Init()
     {
-
-        if (BuildingDatabase is not null)
-            return;
-
+        if (BuildingDatabase is not null) return;
         BuildingDatabase = new SQLiteAsyncConnection(buildingDatabasePath);
-
         await BuildingDatabase.CreateTableAsync<Building>();
-
     }
 
     public BuildingService(string BuildingDatabasePath)
@@ -28,14 +23,11 @@ public class BuildingService : IBuildingService
         try
         {
             await Init();
-
             await BuildingDatabase.InsertAsync(building);
-
-            Debug.WriteLine($"----Record saved. Added: {building.BuildingID}, {building.BuildingName}");
         }
         catch (Exception ex)
         {
-            Debug.WriteLine($"----Failed to add {building.BuildingID}, {building.BuildingName}. Error: {ex.Message}");
+            Debug.WriteLine($" Failed to add {building.BuildingID}, {building.BuildingName}. Error: {ex.Message}");
         }
     }
 
@@ -44,14 +36,12 @@ public class BuildingService : IBuildingService
         try 
         {
             await Init();
-            Debug.WriteLine("Data retrieval attempted.");
             return new ObservableCollection<Building>(await BuildingDatabase.Table<Building>().ToListAsync());
         }
         catch (Exception ex) 
         {
             Debug.WriteLine($"Failed to retrieve data. {ex.Message}");
         }
-
         return new ObservableCollection<Building>();
     }
 
@@ -67,19 +57,16 @@ public class BuildingService : IBuildingService
         {
             await Init();
             await BuildingDatabase.UpdateAsync(building);
-            Debug.WriteLine($"----Record saved. Updated: {building.BuildingID}, {building.BuildingName}");
         }
         catch (Exception ex)
         {
-            Debug.WriteLine($"----Failed to update {building.BuildingID}, {building.BuildingName}. Error: {ex.Message}");
+            Debug.WriteLine($"Failed to update {building.BuildingID}, {building.BuildingName}. Error: {ex.Message}");
         }
     }
 
     public async Task FlushBuildings()
     {
         await Init();
-        Debug.WriteLine("Emergency building flush started.");
         await BuildingDatabase.DeleteAllAsync<Building>();
-        Debug.WriteLine("Emergency building flush finished.");
     }
 }

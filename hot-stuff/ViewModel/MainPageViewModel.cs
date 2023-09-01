@@ -10,6 +10,7 @@ using LiveChartsCore.Kernel.Sketches;
 using LiveChartsCore.Measure;
 using LiveChartsCore.SkiaSharpView;
 using LiveChartsCore.SkiaSharpView.Painting;
+using Mopups.Services;
 using SkiaSharp;
 using System.Windows.Input;
 using UraniumUI;
@@ -17,7 +18,9 @@ using UraniumUI;
 namespace HotStuff.ViewModel;
 public partial class MainPageViewModel : BaseViewModel
 {
+    readonly BuildingService buildingService;
     public ICommand GetBuildingCommand { get; protected set; }
+    public ICommand OpenProfilePopupCommand { get; protected set; }
 
     [ObservableProperty]
     bool isRefreshing;
@@ -103,24 +106,17 @@ public partial class MainPageViewModel : BaseViewModel
             };
             
         });
-
-        GetBuildingCommand = new Command(() =>
-        {
-            GetBuildingAsync();
-        });
+        GetBuildingCommand = new Command(() => GetBuildingAsync());
+        OpenProfilePopupCommand = new Command(async () => await MopupService.Instance.PushAsync(new ProfilePopup(buildingService)));
 
         WeakReferenceMessenger.Default.Send(new ActiveBuildingMessage(ActiveBuilding));
-        
     }
 
     async void GetBuildingAsync()
     {
-        if (IsBusy | IsRefreshing)
-            return;
-
+        if (IsBusy | IsRefreshing) return;
         IsBusy = true;
         IsRefreshing = true;
-
         try
         {
             if (ActiveBuilding is not null && ActiveBuilding.BuildingID == 0)

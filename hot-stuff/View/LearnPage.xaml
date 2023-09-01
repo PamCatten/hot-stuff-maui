@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <uranium:UraniumContentPage 
-             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:uranium="clr-namespace:UraniumUI.Pages;assembly=UraniumUI"
-             xmlns:attachment="clr-namespace:UraniumUI.Material.Attachments;assembly=UraniumUI.Material"
-             xmlns:material="clr-namespace:UraniumUI.Material.Controls;assembly=UraniumUI.Material"
-             xmlns:fa="clr-namespace:UraniumUI.Icons.FontAwesome;assembly=UraniumUI.Icons.FontAwesome"
-             xmlns:input="clr-namespace:InputKit.Shared.Controls;assembly=InputKit.Maui"
-             x:Class="HotStuff.View.LearnPage"
-             xmlns:local="clr-namespace:HotStuff"
-             xmlns:pages="clr-namespace:HotStuff.View"
-             Title="Learn"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:uranium="clr-namespace:UraniumUI.Pages;assembly=UraniumUI"
+    xmlns:attachment="clr-namespace:UraniumUI.Material.Attachments;assembly=UraniumUI.Material"
+    xmlns:material="clr-namespace:UraniumUI.Material.Controls;assembly=UraniumUI.Material"
+    xmlns:fa="clr-namespace:UraniumUI.Icons.FontAwesome;assembly=UraniumUI.Icons.FontAwesome"
+    xmlns:input="clr-namespace:InputKit.Shared.Controls;assembly=InputKit.Maui"
+    x:Class="HotStuff.View.LearnPage"
+    xmlns:local="clr-namespace:HotStuff"
+    xmlns:pages="clr-namespace:HotStuff.View"
+    xmlns:viewmodel="clr-namespace:HotStuff.ViewModel"
+    Title="Learn"
 >
-
     <uranium:UraniumContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="{AppThemeBinding Light={StaticResource ProfileIcon}, Dark={StaticResource ProfileIconDark}}" Clicked="OnProfilePageClicked" SemanticProperties.Description="Profile" SemanticProperties.Hint="Opens the profile page."/>
+        <ToolbarItem 
+            IconImageSource="{AppThemeBinding Light={StaticResource ProfileIcon}, Dark={StaticResource ProfileIconDark}}" 
+            Command="{Binding}" 
+            SemanticProperties.Description="Profile" 
+            SemanticProperties.Hint="Opens the profile page."
+        />
     </uranium:UraniumContentPage.ToolbarItems>
 
     <VerticalStackLayout>

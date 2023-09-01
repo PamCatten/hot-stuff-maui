@@ -1,12 +1,7 @@
-﻿using CommunityToolkit.Maui.Views;
-using CsvHelper;
-using InputKit.Shared.Controls;
-using Mopups.Services;
-using System.Globalization;
+﻿using InputKit.Shared.Controls;
 using UraniumUI.Pages;
 
 namespace HotStuff.View;
-
 public partial class ItemsPage : UraniumContentPage
 {
     public ItemsPage(ItemsPageViewModel vm)
@@ -14,32 +9,5 @@ public partial class ItemsPage : UraniumContentPage
         SelectionView.GlobalSetting.CornerRadius = 0;
         InitializeComponent();
         BindingContext = vm;
-    }
-
-    async void OnExportIconClicked(object sender, EventArgs e)
-    {
-        Debug.WriteLine("----User clicked export icon.");
-        var csvPath = Path.Combine($@"{Environment.CurrentDirectory}", $"items-{DateTime.Now.ToFileTime}.csv");
-        Debug.WriteLine($"Path: {csvPath}");
-        try
-        {
-            using (var streamWriter = new StreamWriter(csvPath))
-            {
-                using var csvWriter = new CsvWriter(streamWriter, CultureInfo.InvariantCulture);
-                var items = App.ItemService.GetItems();
-                csvWriter.WriteRecords((System.Collections.IEnumerable)items);
-            }
-            Debug.WriteLine("----Made CSV.");
-        }
-        catch (Exception ex)
-        {
-            Debug.WriteLine($"Something went wrong: {ex.Message}");
-            await Application.Current.MainPage.DisplayAlert("Transfer Error", ex.Message, "OK");
-        }
-    }
-
-    async void OnProfilePageClicked(object sender, EventArgs e)
-    {
-        await Shell.Current.GoToAsync(nameof(ProfilePage));
     }
 }

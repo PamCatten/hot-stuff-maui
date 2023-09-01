@@ -19,24 +19,22 @@
         <ToolbarItem 
             IconImageSource="{AppThemeBinding Light={StaticResource SearchIcon}, 
             Dark={StaticResource SearchIconDark}}" 
-            Clicked="OnProfilePageClicked" SemanticProperties.Description="Search" 
+            Command="{Binding OpenProfilePopupCommand}" SemanticProperties.Description="Search" 
             SemanticProperties.Hint="Opens the search submenu."
         />
         <ToolbarItem 
             IconImageSource="{AppThemeBinding Light={StaticResource FilterIcon}, 
             Dark={StaticResource FilterIconDark}}" 
-            Clicked="OnProfilePageClicked" SemanticProperties.Description="Filter" 
+            Command="{Binding OpenProfilePopupCommand}" SemanticProperties.Description="Filter" 
             SemanticProperties.Hint="Opens the filter submenu."
         />
         <ToolbarItem 
-            IconImageSource="{AppThemeBinding Light={StaticResource ProfileIcon}, 
-            Dark={StaticResource ProfileIconDark}}" 
-            Clicked="OnProfilePageClicked" SemanticProperties.Description="Profile" 
+            IconImageSource="{AppThemeBinding Light={StaticResource ProfileIcon}, Dark={StaticResource ProfileIconDark}}" 
+            Command="{Binding OpenProfilePopupCommand}" 
+            SemanticProperties.Description="Profile" 
             SemanticProperties.Hint="Opens the profile page."
         />
     </uranium:UraniumContentPage.ToolbarItems>
-
-
 
     <RefreshView IsRefreshing="{Binding IsRefreshing}" Command="{Binding GetItemsCommand}" RefreshColor="{StaticResource Primary}">
         <Grid HorizontalOptions="FillAndExpand">

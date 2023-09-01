@@ -41,7 +41,6 @@ public partial class ProfilePageViewModel : BaseViewModel
     public ProfilePageViewModel(BuildingService buildingService)
     {
         this.buildingService = buildingService;
-
         AddBuildingCommand = new Command(() => AddBuildingAsync(NewBuilding));
         GetBuildingsCommand = new Command(() => GetBuildingsAsync());
         UpdateBuildingCommand = new Command(() => UpdateBuildingAsync(NewBuilding));
@@ -64,25 +63,22 @@ public partial class ProfilePageViewModel : BaseViewModel
                 IsBusy = true;
                 IsRefreshing = true;
                 ObservableCollection<Building> tempList = await buildingService.GetBuildings();
-                Debug.WriteLine($"There are: {tempList.Count} buildings currently saved in database.");
-
+                // Some concern about Big O here, but I can't imagine it being a problem for a small app like this
+                // because realistically we're talking about a handful of buildings per user at most
+                // TODO: When free, look into a better way to do this
                 if (tempList is not null)
                 {
-
                     foreach (var item in tempList)
                     {
-                        if (BuildingList.Any(x => x.BuildingID == item.BuildingID))
-                            Debug.WriteLine($"Item {item.BuildingName} already exists in BuildingList.");
-                        else
-                            BuildingList.Add(item);
+                        if (BuildingList.Any(x => x.BuildingID == item.BuildingID)) continue;
+                        else BuildingList.Add(item);
                     }
-                    Debug.WriteLine("Transferred itemList to ItemManifest");
                 }
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"Something went wrong: {ex.Message}");
-                await Application.Current.MainPage.DisplayAlert("Transfer Error", ex.Message, "OK");
+                Debug.WriteLine($"Something went wrong retrieving buildings: {ex.Message}");
+                await Application.Current.MainPage.DisplayAlert("Retrieval Error", ex.Message, "OK");
             }
             finally
             {

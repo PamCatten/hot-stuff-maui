@@ -214,7 +214,6 @@ public partial class ItemsPageViewModel : BaseViewModel
             if (SelectedItems[0] != item) ItemManifest[ItemManifest.IndexOf(SelectedItems[0])] = item;
             ClosePopup();
         }
-
         // FIXME: Emulator filepath dumps out in a weird spot, not sure how to proceed
         async void DownloadItemsAsync(ObservableCollection<Item> items) 
         {

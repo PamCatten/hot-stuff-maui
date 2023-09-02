@@ -1,11 +1,12 @@
+using HotStuff.Services;
 using UraniumUI.Pages;
 
 namespace HotStuff.View;
 public partial class LearnPage : UraniumContentPage
 {
-	public LearnPage(LearnViewModel vm)
+	public LearnPage()
 	{
 		InitializeComponent();
-		BindingContext = vm;
+		BindingContext = new LearnViewModel();
 	}
 }

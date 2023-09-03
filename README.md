@@ -1,5 +1,5 @@
 ## Hot Stuff
-A web / desktop / mobile application designed to help users format fire insurance claims. 
+An android mobile application designed to help users format fire insurance claims. 
 
 ### Objective
 To help people better recover/prepare for the arduous process of receiving fair value for their lost belongings in fire insurance claims.

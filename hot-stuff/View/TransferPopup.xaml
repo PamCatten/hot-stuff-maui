@@ -16,12 +16,7 @@
     BackgroundColor="{StaticResource Dim90}"
 >
     <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">
-        <Border 
-            MinimumWidthRequest="200" MaximumWidthRequest="400" 
-            MinimumHeightRequest="200" MaximumHeightRequest="400" 
-            HorizontalOptions="Center" VerticalOptions="Center"
-            BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}"
-        >
+        <Frame BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}">
             <VerticalStackLayout Spacing="10" Padding="25,30" HorizontalOptions="Center" VerticalOptions="Center">
                 <ImageButton Command="{Binding ClosePopupCommand}" HorizontalOptions="Start">
                     <ImageButton.Source>
@@ -49,6 +44,6 @@
                     input:FormView.IsSubmitButton="True"
                 />
             </VerticalStackLayout>
-        </Border>
+        </Frame>
     </ScrollView>
 </mopups:PopupPage>

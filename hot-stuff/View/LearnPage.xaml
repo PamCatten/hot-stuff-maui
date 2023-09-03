@@ -16,7 +16,7 @@
     <uranium:UraniumContentPage.ToolbarItems>
         <ToolbarItem 
             IconImageSource="{AppThemeBinding Light={StaticResource ProfileIcon}, Dark={StaticResource ProfileIconDark}}" 
-            Command="{Binding}" 
+            Command="{Binding OpenProfilePopupCommand}" 
             SemanticProperties.Description="Profile" 
             SemanticProperties.Hint="Opens the profile page."
         />

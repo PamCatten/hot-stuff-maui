@@ -59,6 +59,8 @@
 	  <None Remove="Resources\Fonts\OpenSans-SemiBoldItalic.ttf" />
 	  <None Remove="Resources\Images\noitemdata.png" />
 	  <None Remove="Resources\Images\noitemdatadark.png" />
+	  <None Remove="Resources\Images\onboarddark.png" />
+	  <None Remove="Resources\Images\onboardlight.png" />
 	</ItemGroup>
 
 	<ItemGroup>

@@ -1079,6 +1079,8 @@ C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\resizetizer\f\OpenSa
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\resizetizer\f\OpenSans-Medium.ttf
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\resizetizer\f\OpenSans-MediumItalic.ttf
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\resizetizer\f\OpenSans-SemiBoldItalic.ttf
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\resizetizer\r\drawable\onboarddark.png
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\resizetizer\r\drawable\onboardlight.png
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\assets\mscorlib.dll
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\assets\System.Collections.Concurrent.dll
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\assets\System.Data.Common.dll

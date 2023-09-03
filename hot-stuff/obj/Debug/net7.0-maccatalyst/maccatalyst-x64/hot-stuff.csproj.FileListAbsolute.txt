@@ -310,3 +310,5 @@ C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\f\OpenSans-Medium.ttf
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\f\OpenSans-MediumItalic.ttf
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\f\OpenSans-SemiBoldItalic.ttf
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\onboarddark.png
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\onboardlight.png

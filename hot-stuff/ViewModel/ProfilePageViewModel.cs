@@ -36,6 +36,7 @@ public partial class ProfilePageViewModel : BaseViewModel
     public ICommand BuildingSettingsCommand { get; protected set; }
     public ICommand OpenBuildingSettingsPopupCommand { get; protected set; }
     public ICommand OpenAddBuildingPopupCommand { get; protected set; }
+    public ICommand OpenLegalPopupCommand { get; protected set; }
     public ICommand ClosePopupCommand { get; protected set; }
 
     public ProfilePageViewModel(BuildingService buildingService)
@@ -46,6 +47,7 @@ public partial class ProfilePageViewModel : BaseViewModel
         UpdateBuildingCommand = new Command(() => UpdateBuildingAsync(NewBuilding));
         OpenAddBuildingPopupCommand = new Command(async () => await MopupService.Instance.PushAsync(new AddBuildingPopup(buildingService)));
         OpenBuildingSettingsPopupCommand = new Command(async () => await MopupService.Instance.PushAsync(new BuildingSettingsPopup(buildingService)));
+        OpenLegalPopupCommand = new Command(async () => await MopupService.Instance.PushAsync(new LegalPopup(buildingService)));
         ClosePopupCommand = new Command(() => ClosePopup());
 
         async void AddBuildingAsync(Building building)

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="HotStuff.View.LegalPopup"
+    xmlns:uranium="clr-namespace:UraniumUI.Pages;assembly=UraniumUI"
+    xmlns:input="clr-namespace:InputKit.Shared.Controls;assembly=InputKit.Maui"
+    xmlns:local="clr-namespace:HotStuff"
+    xmlns:material="clr-namespace:UraniumUI.Material.Controls;assembly=UraniumUI.Material"
+    xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:models="clr-namespace:HotStuff.Model"
+    xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+    xmlns:validation="clr-namespace:InputKit.Shared.Validations;assembly=InputKit.Maui"
+    xmlns:viewmodel="clr-namespace:HotStuff.ViewModel"
+    BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}"
+    x:DataType="viewmodel:ProfilePageViewModel"
+>
+    <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">
+        <VerticalStackLayout>
+            <ImageButton Command="{Binding ClosePopupCommand}" HorizontalOptions="Start" Margin="20,20,20,10">
+                <ImageButton.Source>
+                    <FontImageSource 
+                            FontFamily="FontAwesome" 
+                            Glyph="{x:Static local:IconFont.ArrowLeft}" 
+                            Color="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                        />
+                </ImageButton.Source>
+            </ImageButton>
+            <!-- FIXME: Beyond Gross, but I needed a quick solution and I couldn't find a formatting method that worked-->
+            <Label
+                TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                VerticalOptions="Center"
+                Margin="20,10,20,10"
+                Text="Terms and Conditions: MIT License"
+            />
+            <Label
+                TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                VerticalOptions="Center"
+                Margin="10"
+                Text="Copyright (c) 2023 Hot Stuff, Cam Patten"
+            />
+            <Label
+                TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                VerticalOptions="Center"
+                Margin="10"
+                Text="Permission is hereby granted, free of charge, to any person obtaining a copy
+                    of this software and associated documentation files ('Hot Stuff'), to deal
+                    in the Hot Stuff without restriction, including without limitation the rights
+                    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                    copies of the Hot Stuff, and to permit persons to whom the Hot Stuff is
+                    furnished to do so, subject to the following conditions:" 
+            />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</mopups:PopupPage>

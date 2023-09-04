@@ -109,11 +109,11 @@
                 </material:TextField>
 
                 <material:DatePickerField
-                            Title="Date Acquired (Optional)"
-                            AllowClear="True"
-                            AccentColor="{StaticResource Primary}"
-                            Date="{Binding NewItem.DateAcquired}"
-                            Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CalendarDays}}"
+                    Title="Date Acquired (Optional)"
+                    AllowClear="True"
+                    AccentColor="{StaticResource Primary}"
+                    Date="{Binding NewItem.DateAcquired}"
+                    Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CalendarDays}}"
                 />
 
                 <material:TextField 
@@ -137,7 +137,7 @@
                         <Button 
                             Text="Select Photo"
                             TextColor="{StaticResource Shadow}"
-                            BackgroundColor="{StaticResource LightBackground}"
+                            BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}"
                             Margin="5"
                             StyleClass="FilledButton" 
                             Clicked="OnPickPhotoClicked"
@@ -148,7 +148,7 @@
                 <Button
                     Command="{Binding AddItemCommand}"
                     Text="Add"
-                    TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                    TextColor="{AppThemeBinding Light={StaticResource WhiteText}, Dark={StaticResource BlackText}}"
                     FontSize="Medium"
                     FontAttributes="Bold"
                     BackgroundColor="{StaticResource Primary}"

@@ -78,6 +78,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="View\LegalPopup.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\ProfilePopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -114,6 +117,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="View\LegalPopup.xaml.cs">
+	    <DependentUpon>LegalPopup.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="View\ProfilePopup.xaml.cs">
 	    <DependentUpon>ProfilePopup.xaml</DependentUpon>
 	  </Compile>

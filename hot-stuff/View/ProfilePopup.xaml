@@ -107,7 +107,7 @@
         <material:ButtonView BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}" Margin="5,0,5,0">
             <StackLayout>
                 <StackLayout.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding OpenBuildingSettingsPopupCommand}" />
+                    <TapGestureRecognizer Command="{Binding OpenLegalPopupCommand}" />
                 </StackLayout.GestureRecognizers>
                 <Label 
                     Text="Legal" 

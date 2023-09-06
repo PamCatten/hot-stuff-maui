@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="HotStuff.View.OnboardPopup"
+    xmlns:uranium="clr-namespace:UraniumUI.Pages;assembly=UraniumUI"
+    xmlns:input="clr-namespace:InputKit.Shared.Controls;assembly=InputKit.Maui"
+    xmlns:local="clr-namespace:HotStuff"
+    xmlns:material="clr-namespace:UraniumUI.Material.Controls;assembly=UraniumUI.Material"
+    xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:models="clr-namespace:HotStuff.Model"
+    xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+    xmlns:validation="clr-namespace:InputKit.Shared.Validations;assembly=InputKit.Maui"
+    xmlns:viewmodel="clr-namespace:HotStuff.ViewModel"
+    BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}"
+    x:DataType="viewmodel:OnboardViewModel"
+>
+    <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">
+        <VerticalStackLayout Spacing="10" Padding="25,30" HorizontalOptions="Center" MinimumWidthRequest="400">
+            <Grid Margin="10" RowDefinitions="*,Auto">
+                <CarouselView Grid.Row="0"
+                    IndicatorView="indicatorView" 
+                    Loop="False"
+                    HorizontalOptions="FillAndExpand" 
+                    VerticalOptions="FillAndExpand" 
+                    ItemsSource="{Binding OnboardScreens}"
+                >
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate x:DataType="models:OnboardScreen">
+                            <Grid RowDefinitions="60*,40*">
+                                <Image Source="{AppThemeBinding Light='onboardlight', Dark='onboarddark'}" Aspect="AspectFit" Grid.Row="0" />
+
+                                <VerticalStackLayout Spacing="10" Grid.Row="1">
+                                    <Label Text="{Binding OnboardTitle}" FontSize="28" FontAttributes="Bold" />
+                                    <Label Text="{Binding OnboardDescription}" FontSize="20"  TextColor="Gray" />
+                                </VerticalStackLayout>
+                            </Grid>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+                <StackLayout  Orientation="Horizontal"  
+                      Grid.Row="1" >
+                    <IndicatorView x:Name="indicatorView" 
+                           VerticalOptions="Center"
+                           IndicatorSize="10"
+                           IndicatorColor="LightGray"  
+                           SelectedIndicatorColor="{x:StaticResource Primary}" />
+
+
+                    <Frame 
+                HorizontalOptions="EndAndExpand"
+                Padding="0"
+                   CornerRadius="30"
+                    HeightRequest="60" 
+                   WidthRequest="60" 
+                   BackgroundColor="{x:StaticResource Primary}">
+                        <Label Text="Next" TextColor="White" 
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center" 
+                       VerticalTextAlignment="Center" />
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ClosePopupCommand}" />
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                </StackLayout>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</mopups:PopupPage>

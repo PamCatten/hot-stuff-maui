@@ -18,19 +18,6 @@
     <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">
         <input:FormView SubmitCommand="{Binding AddBuildingCommand}">
             <VerticalStackLayout Spacing="10" Padding="25,30" HorizontalOptions="Center" MinimumWidthRequest="400">
-                <material:DataGrid 
-                    ItemsSource="{Binding BuildingList}"
-                    HorizontalOptions="Center" VerticalOptions="StartAndExpand"
-                    BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}"
-                >
-                    <material:DataGrid.Columns>
-                        <material:DataGridSelectionColumn/>
-                        <material:DataGridColumn Binding="{Binding BuildingID}" Title="ID" Width="Auto" />
-                        <material:DataGridColumn Binding="{Binding BuildingName}" Title="Name" Width="Auto" />
-                        <material:DataGridColumn Binding="{Binding BuildingType}" Title="Type" Width="Auto"/>
-                        <material:DataGridColumn Binding="{Binding BuildingDescription}" Title="Description" Width="Auto"/>
-                    </material:DataGrid.Columns>
-                </material:DataGrid>
                 <material:TextField 
                     Title="Building Name (Required)"
                     Text="{Binding NewBuilding.BuildingName}"

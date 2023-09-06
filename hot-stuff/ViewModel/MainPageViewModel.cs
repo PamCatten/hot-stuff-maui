@@ -1,5 +1,4 @@
 ﻿using CommunityToolkit.Mvvm.Messaging;
-using HotStuff.Messages;
 using HotStuff.Model;
 using HotStuff.Services;
 using LiveChartsCore;
@@ -35,7 +34,7 @@ public partial class MainPageViewModel : BaseViewModel
     public ISeries[] RoomValueBarChart { get; set; }
     public List<Axis> BarChartXAxis { get; set; }
     public List<Axis> BarChartYAxis { get; set; }
-
+    public List<string> ChartType { get; set;  }
     // Main page pie chart controls & data
     public IEnumerable<ISeries> CategoryCountPieChart { get; set; }
     public List<string> PieChartKeys = new();
@@ -43,7 +42,13 @@ public partial class MainPageViewModel : BaseViewModel
 
     public MainPageViewModel()
     {
+        OnboardAsync();
         GetBuildingAsync();
+
+        ChartType = new List<string>
+        {
+            "Category", "Room", 
+        };
 
         // Bar chart data handling
         foreach (KeyValuePair<ItemRoom, decimal> entry in ActiveBuilding.BuildingRoomValue)
@@ -52,6 +57,7 @@ public partial class MainPageViewModel : BaseViewModel
             BarChartValues.Add(new((double)entry.Value));
             BarChartKeys.Add(entry.Key.ToString());
         }
+
         RoomValueBarChart = new ISeries[]
         {
             new ColumnSeries<ObservableValue>
@@ -108,10 +114,14 @@ public partial class MainPageViewModel : BaseViewModel
         });
         GetBuildingCommand = new Command(() => GetBuildingAsync());
         OpenProfilePopupCommand = new Command(async () => await MopupService.Instance.PushAsync(new ProfilePopup(buildingService)));
-
-        WeakReferenceMessenger.Default.Send(new ActiveBuildingMessage(ActiveBuilding));
     }
-
+    async void OnboardAsync()
+    {
+        if (ActiveBuilding is not null && ActiveBuilding.BuildingID == 0)
+        {
+            await MopupService.Instance.PushAsync(new OnboardPopup(buildingService));
+        }
+    }
     async void GetBuildingAsync()
     {
         if (IsBusy | IsRefreshing) return;

@@ -71,7 +71,7 @@
                 />
                 <Button 
                     Text="Save"
-                    TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                    TextColor="{AppThemeBinding Light={StaticResource WhiteText}, Dark={StaticResource BlackText}}"
                     FontSize="Medium"
                     FontAttributes="Bold"
                     BackgroundColor="{StaticResource Primary}"

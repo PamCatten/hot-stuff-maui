@@ -60,7 +60,6 @@ public partial class ItemsPageViewModel : BaseViewModel
         ModifyItem = new Item();
         //Items = new ObservableCollection<Item>(itemService.GetItems());
         GetItemsAsync();
-        WeakReferenceMessenger.Default.Register<Building>(this, (r, m) => ActiveBuilding = m);
 
         AddItemCommand = new Command(() => CreateItem(NewItem));
         DeleteItemCommand = new Command(() => DeleteAsync(SelectedItems));

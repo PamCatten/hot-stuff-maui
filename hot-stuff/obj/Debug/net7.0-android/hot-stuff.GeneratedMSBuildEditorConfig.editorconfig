@@ -104,6 +104,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.ModifyItemPo
 build_metadata.AdditionalFiles.TargetPath = View\ModifyItemPopup.xaml
 build_metadata.AdditionalFiles.RelativePath = View\ModifyItemPopup.xaml
 
+[C:/Users/campa/hot-stuff/hot-stuff/View/OnboardPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.OnboardPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = View\OnboardPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = View\OnboardPopup.xaml
+
 [C:/Users/campa/hot-stuff/hot-stuff/View/ProfilePopup.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.ProfilePopup.xaml

@@ -113,16 +113,16 @@
                     TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}" 
                     FontFamily="OpenSansRegular"
                 />
-                <Label 
-                    Grid.Column="1" 
-                    Grid.Row="3" 
-                    Text="Category" 
-                    FontSize="Medium"  
-                    HorizontalOptions="End" 
-                    VerticalOptions="End"  
-                    FontAttributes="Bold" 
-                    TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}" 
+                <Picker
+                    Grid.Column="1"
+                    Grid.Row="3"
+                    FontSize="Medium"
                     FontFamily="OpenSansRegular"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Start"
+                    VerticalOptions="End"
+                    TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                    ItemsSource="{Binding ChartType}"
                 />
                 <lvc:PieChart 
                     Grid.ColumnSpan="2" 

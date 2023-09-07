@@ -57,6 +57,8 @@
 	  <None Remove="Resources\Fonts\OpenSans-Regular.ttf" />
 	  <None Remove="Resources\Fonts\OpenSans-SemiBold.ttf" />
 	  <None Remove="Resources\Fonts\OpenSans-SemiBoldItalic.ttf" />
+	  <None Remove="Resources\Images\hotstuffdark.png" />
+	  <None Remove="Resources\Images\hotstufflight.png" />
 	  <None Remove="Resources\Images\noitemdata.png" />
 	  <None Remove="Resources\Images\noitemdatadark.png" />
 	  <None Remove="Resources\Images\onboarddark.png" />

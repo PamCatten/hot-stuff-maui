@@ -17,53 +17,30 @@
 >
     <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">
         <VerticalStackLayout Spacing="10" Padding="25,30" HorizontalOptions="Center" MinimumWidthRequest="400">
-            <Grid Margin="10" RowDefinitions="*,Auto">
-                <CarouselView Grid.Row="0"
-                    IndicatorView="indicatorView" 
-                    Loop="False"
-                    HorizontalOptions="FillAndExpand" 
-                    VerticalOptions="FillAndExpand" 
-                    ItemsSource="{Binding OnboardScreens}"
-                >
-                    <CarouselView.ItemTemplate>
-                        <DataTemplate x:DataType="models:OnboardScreen">
-                            <Grid RowDefinitions="60*,40*">
-                                <Image Source="{AppThemeBinding Light='onboardlight', Dark='onboarddark'}" Aspect="AspectFit" Grid.Row="0" />
-
-                                <VerticalStackLayout Spacing="10" Grid.Row="1">
-                                    <Label Text="{Binding OnboardTitle}" FontSize="28" FontAttributes="Bold" />
-                                    <Label Text="{Binding OnboardDescription}" FontSize="20"  TextColor="Gray" />
-                                </VerticalStackLayout>
-                            </Grid>
-                        </DataTemplate>
-                    </CarouselView.ItemTemplate>
-                </CarouselView>
-                <StackLayout  Orientation="Horizontal"  
-                      Grid.Row="1" >
-                    <IndicatorView x:Name="indicatorView" 
-                           VerticalOptions="Center"
-                           IndicatorSize="10"
-                           IndicatorColor="LightGray"  
-                           SelectedIndicatorColor="{x:StaticResource Primary}" />
-
-
-                    <Frame 
-                HorizontalOptions="EndAndExpand"
-                Padding="0"
-                   CornerRadius="30"
-                    HeightRequest="60" 
-                   WidthRequest="60" 
-                   BackgroundColor="{x:StaticResource Primary}">
-                        <Label Text="Next" TextColor="White" 
-                       FontSize="18"
-                       FontAttributes="Bold"
-                       HorizontalTextAlignment="Center" 
-                       VerticalTextAlignment="Center" />
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding ClosePopupCommand}" />
-                        </Frame.GestureRecognizers>
-                    </Frame>
-                </StackLayout>
+            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="Fill">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Image 
+                    Grid.Row="0"
+                    Source="{AppThemeBinding Light='hotstufflight', Dark='hotstuffdark'}"
+                    MinimumWidthRequest="200"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                />
+                <Button
+                    Grid.Row="1"
+                    Command="{Binding ClosePopupCommand}" 
+                    Text="Get started"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    VerticalOptions="End"
+                    MinimumWidthRequest="300"
+                    TextColor="{AppThemeBinding Light={StaticResource WhiteText}, Dark={StaticResource BlackText}}"
+                    BackgroundColor="{StaticResource Primary}" 
+                />
             </Grid>
         </VerticalStackLayout>
     </ScrollView>

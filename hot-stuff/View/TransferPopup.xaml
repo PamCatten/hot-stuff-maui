@@ -39,7 +39,7 @@
                     FontSize="Medium"
                     FontAttributes="Bold"
                     HorizontalOptions="Center"
-                    TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                    TextColor="{AppThemeBinding Light={StaticResource WhiteText}, Dark={StaticResource BlackText}}"
                     BackgroundColor="{StaticResource Primary}" 
                     input:FormView.IsSubmitButton="True"
                 />

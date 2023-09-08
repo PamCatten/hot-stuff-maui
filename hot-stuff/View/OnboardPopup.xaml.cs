@@ -10,4 +10,5 @@ public partial class OnboardPopup : PopupPage
 		InitializeComponent();
         BindingContext = new ProfilePageViewModel(buildingService);
 	}
+
 }

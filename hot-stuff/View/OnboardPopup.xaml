@@ -36,6 +36,7 @@
                 Command="{Binding ClosePopupCommand}" 
                 Text="Get started"
                 FontSize="Medium"
+                FontFamily="OpenSansRegular"
                 FontAttributes="Bold"
                 HorizontalOptions="Center"
                 VerticalOptions="EndAndExpand"
@@ -46,14 +47,25 @@
             />
             <Label
                 Grid.Row="2"
-                Text="By continuing, you agree with our Terms."
                 FontAttributes="Bold"
+                FontFamily="OpenSansRegular"
+                FontSize="Subtitle"
                 HorizontalOptions="CenterAndExpand"
                 VerticalOptions="CenterAndExpand"
-                Margin="40,10,40,40"
+                Margin="40,10,40,20"
                 TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
-                TextDecorations="Underline"
-            />
+            >
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OpenLegalPopupCommand}" />
+                </Label.GestureRecognizers>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="By continuing, you agree with our " />
+                        <Span Text="Terms" TextDecorations="Underline"/>
+                        <Span Text="." />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
         </Grid>
     </ScrollView>
 </mopups:PopupPage>

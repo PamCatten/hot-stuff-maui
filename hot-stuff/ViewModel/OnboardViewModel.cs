@@ -1,10 +1,12 @@
-﻿using Mopups.Services;
+﻿using HotStuff.Services;
+using Mopups.Services;
 using System.Windows.Input;
 
 namespace HotStuff.ViewModel;
-
-public partial class OnboardViewModel : ObservableObject
+public partial class OnboardViewModel : BaseViewModel
 {
+    readonly BuildingService buildingService;
+    public ICommand OpenLegalPopupCommand { get; protected set; }
     public ICommand ClosePopupCommand { get; protected set; }
     public ObservableCollection<OnboardScreen> OnboardScreens { get; set; } = new ObservableCollection<OnboardScreen>();
     private string buttonText = "Next";
@@ -29,6 +31,7 @@ public partial class OnboardViewModel : ObservableObject
     public int Position { get => position; set { position = value; OnPropertyChanged(); } }
     public OnboardViewModel()
     {
+        OpenLegalPopupCommand = new Command(async () => await MopupService.Instance.PushAsync(new LegalPopup(buildingService)));
         ClosePopupCommand = new Command(() => ClosePopup());
 
         OnboardScreens.Add(new OnboardScreen

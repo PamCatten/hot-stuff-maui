@@ -31,7 +31,43 @@
                 TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
                 VerticalOptions="Center"
                 Margin="20,10,20,10"
-                Text="Terms and Conditions: MIT License"
+                Text="Terms and Conditions"
+            />
+            <Label
+                TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                VerticalOptions="Center"
+                Margin="20,10,20,10"
+                Text="1. License Agreement"
+            />
+            <Label
+                TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                VerticalOptions="Center"
+                Margin="20,10,20,10"
+                Text=""
+            />
+            <Label
+                TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                VerticalOptions="Center"
+                Margin="20,10,20,10"
+                Text="2. Description of Hot Stuff"
+            />
+            <Label
+                TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                VerticalOptions="Center"
+                Margin="20,10,20,10"
+                Text="Hot Stuff allows users to access and use a variety of services, both functional and educational, including cataloguing information about purchased goods and learning about specifics types of insurance forms. Hot Stuff may, in its sole discretion and at any time, update, change, suspend, improve, or discontinue any aspect of these services, either temporarily or permanently."
+            />
+            <Label
+                TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                VerticalOptions="Center"
+                Margin="20,10,20,10"
+                Text="3. Acceptable Use of Hot Stuff"
+            />
+            <Label
+                TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                VerticalOptions="Center"
+                Margin="20,10,20,10"
+                Text="You are responsible for your use of Hot Stuff, and for any use of Hot Stuff made using your account. My goal with Hot Stuff was to create a powerful, positive, and useful tool to help families mitigate the effects of an all too-common tragedy. Accordingly, behavior that may be harmful to other users or to Hot Stuff itself (such as spreading related misinformation, etc.), is expressely prohibited."
             />
             <Label
                 TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"

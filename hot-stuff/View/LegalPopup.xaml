@@ -20,10 +20,10 @@
             <ImageButton Command="{Binding ClosePopupCommand}" HorizontalOptions="Start" Margin="20,20,20,10">
                 <ImageButton.Source>
                     <FontImageSource 
-                            FontFamily="FontAwesome" 
-                            Glyph="{x:Static local:IconFont.ArrowLeft}" 
-                            Color="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
-                        />
+                        FontFamily="FontAwesome" 
+                        Glyph="{x:Static local:IconFont.ArrowLeft}" 
+                        Color="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                    />
                 </ImageButton.Source>
             </ImageButton>
             <!-- FIXME: Beyond Gross, but I needed a quick solution and I couldn't find a formatting method that worked-->
@@ -31,49 +31,23 @@
                 TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
                 VerticalOptions="Center"
                 Margin="20,10,20,10"
-                Text="Terms and Conditions"
+                FontAttributes="Bold"
+                FontSize="Large"
+                Text="Hot Stuff Terms and Conditions"
             />
             <Label
                 TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
                 VerticalOptions="Center"
                 Margin="20,10,20,10"
+                FontAttributes="Bold"
+                FontSize="Medium"
                 Text="1. License Agreement"
             />
             <Label
                 TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
                 VerticalOptions="Center"
                 Margin="20,10,20,10"
-                Text=""
-            />
-            <Label
-                TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
-                VerticalOptions="Center"
-                Margin="20,10,20,10"
-                Text="2. Description of Hot Stuff"
-            />
-            <Label
-                TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
-                VerticalOptions="Center"
-                Margin="20,10,20,10"
-                Text="Hot Stuff allows users to access and use a variety of services, both functional and educational, including cataloguing information about purchased goods and learning about specifics types of insurance forms. Hot Stuff may, in its sole discretion and at any time, update, change, suspend, improve, or discontinue any aspect of these services, either temporarily or permanently."
-            />
-            <Label
-                TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
-                VerticalOptions="Center"
-                Margin="20,10,20,10"
-                Text="3. Acceptable Use of Hot Stuff"
-            />
-            <Label
-                TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
-                VerticalOptions="Center"
-                Margin="20,10,20,10"
-                Text="You are responsible for your use of Hot Stuff, and for any use of Hot Stuff made using your account. My goal with Hot Stuff was to create a powerful, positive, and useful tool to help families mitigate the effects of an all too-common tragedy. Accordingly, behavior that may be harmful to other users or to Hot Stuff itself (such as spreading related misinformation, etc.), is expressely prohibited."
-            />
-            <Label
-                TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
-                VerticalOptions="Center"
-                Margin="20,10,20,10"
-                Text="Copyright (c) 2023 Cam Patten, Hot Stuff"
+                Text="Copyright (c) 2023 Hot Stuff"
             />
             <Label
                 TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
@@ -86,6 +60,84 @@
                 VerticalOptions="Center"
                 Margin="20,10,20,10"
                 Text="HOT STUFF IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH HOT STUFF OR THE USE OR OTHER DEALINGS IN HOT STUFF." 
+            />
+            <Label
+                TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                VerticalOptions="Center"
+                Margin="20,10,20,10"
+                FontAttributes="Bold"
+                FontSize="Medium"
+                Text="2. Description of Hot Stuff"
+            />
+            <Label
+                TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                VerticalOptions="Center"
+                Margin="20,10,20,10"
+                Text="Hot Stuff allows users to access and use a variety of services, both functional and educational, including cataloguing information about purchased goods and learning about specifics types of insurance forms. Hot Stuff may, in its sole discretion and at any time, update, change, suspend, improve, or discontinue any aspect of these services, either temporarily or permanently."
+            />
+            <Label
+                TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                VerticalOptions="Center"
+                Margin="20,10,20,10"
+                FontAttributes="Bold"
+                FontSize="Medium"
+                Text="3. Acceptable Use of Hot Stuff"
+            />
+            <Label
+                TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                VerticalOptions="Center"
+                Margin="20,10,20,10"
+                Text="You are responsible for your use of Hot Stuff, and for any use of Hot Stuff made using your account. My goal with Hot Stuff was to create a powerful, positive, and useful tool to help families take pro-active action to mitigate the effects of an all too-common tragedy. Accordingly, behavior that may be harmful to other users or to Hot Stuff itself (such as spreading related misinformation, etc.), is expressely prohibited."
+            />
+            <Label
+                TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                VerticalOptions="Center"
+                Margin="20,10,20,10"
+                FontAttributes="Bold"
+                FontSize="Medium"
+                Text="4. Limitation on Types of Damages/Limitation of Liability"
+            />
+            <Label
+                TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                VerticalOptions="Center"
+                Margin="20,10,20,10"
+                Text="TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT WILL HOT STUFF OR THE DEVELOPER BE LIABLE TO YOU OR ANY THIRD PARTY CLAIMING THROUGH YOU (WHETHER BASED IN CONTRACT, TORT, STRICT LIABILITY, OR OTHER THEORY) FOR INDIRECT, INCIDENTAL, SPECIAL CONSEQUENTIAL OR EXEMPLARY DAMAGES ARISING OUT OF OR RELATING TO THE ACCESS OR USE HOT STUFF OR ANY PORTION THEREOF."
+            />
+            <Label
+                TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                VerticalOptions="Center"
+                Margin="20,10,20,10"
+                FontAttributes="Bold"
+                FontSize="Medium"
+                Text="5. Governing Law"
+            />
+            <Label
+                TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                VerticalOptions="Center"
+                Margin="20,10,20,10"
+                Text="These Terms and Conditions shall be governed by and construed under the laws of the State of New Hampshire, United States of America, excluding any conflict of laws provisions, regardless of your country of origin or where you access Hot Stuff."
+            />
+            <Label
+                TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                VerticalOptions="Center"
+                Margin="20,10,20,10"
+                FontAttributes="Bold"
+                FontSize="Medium"
+                Text="6. Language"
+            />
+            <Label
+                TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                VerticalOptions="Center"
+                Margin="20,10,20,10"
+                Text="This agreement was originally written in English (US). To the extent any translated version of this agreement conflicts with the English version, the English version controls."
+            />
+            <Label
+                TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                VerticalOptions="Center"
+                Margin="20,10,20,10"
+                FontAttributes="Bold"
+                FontSize="Medium"
+                Text="Last revised on September 10th, 2023"
             />
         </VerticalStackLayout>
     </ScrollView>

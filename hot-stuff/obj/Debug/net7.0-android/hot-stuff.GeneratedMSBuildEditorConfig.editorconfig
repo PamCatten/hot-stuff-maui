@@ -104,6 +104,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.ModifyItemPo
 build_metadata.AdditionalFiles.TargetPath = View\ModifyItemPopup.xaml
 build_metadata.AdditionalFiles.RelativePath = View\ModifyItemPopup.xaml
 
+[C:/Users/campa/hot-stuff/hot-stuff/View/OnboardCarouselPopup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.OnboardCarouselPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = View\OnboardCarouselPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = View\OnboardCarouselPopup.xaml
+
 [C:/Users/campa/hot-stuff/hot-stuff/View/OnboardPopup.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.OnboardPopup.xaml

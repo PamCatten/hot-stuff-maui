@@ -119,7 +119,7 @@ public partial class MainPageViewModel : BaseViewModel
     {
         if (ActiveBuilding is not null && ActiveBuilding.BuildingID == 0)
         {
-            await MopupService.Instance.PushAsync(new OnboardPopup(buildingService));
+            await MopupService.Instance.PushAsync(new OnboardPopup());
         }
     }
     async void GetBuildingAsync()

@@ -80,6 +80,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="View\OnboardCarouselPopup.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\OnboardPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -122,6 +125,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="View\OnboardCarouselPopup.xaml.cs">
+	    <DependentUpon>OnboardCarouselPopup.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="View\OnboardPopup.xaml.cs">
 	    <DependentUpon>OnboardPopup.xaml</DependentUpon>
 	  </Compile>

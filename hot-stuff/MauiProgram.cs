@@ -33,18 +33,33 @@ public static class MauiProgram
                 handlers.AddHandler(typeof(Shell), typeof(Platforms.Android.CustomShellRenderer));
             #endif
         }).UseMauiCommunityToolkit();
+            builder.Services.AddSingleton<ItemService>();
+            builder.Services.AddSingleton<BuildingService>();
+            // Pages
             builder.Services.AddTransient<MainPage>();
             builder.Services.AddTransient<ItemsPage>();
+            builder.Services.AddSingleton<LearnPage>();
+            // Popups (Mopups)
+            builder.Services.AddSingleton<AddBuildingPopup>();
+            builder.Services.AddSingleton<AddItemPopup>();
+            builder.Services.AddSingleton<BuildingSettingsPopup>();
+            builder.Services.AddSingleton<CopyPopup>();
+            builder.Services.AddSingleton<DeletePopup>();
+            builder.Services.AddSingleton<DownloadPopup>();
+            builder.Services.AddSingleton<LegalPopup>();
+            builder.Services.AddSingleton<OnboardCarouselPopup>();
+            builder.Services.AddSingleton<OnboardPopup>();
+            builder.Services.AddSingleton<ProfilePopup>();
+            builder.Services.AddSingleton<TransferPopup>();
+            // ViewModels
+            builder.Services.AddTransient<BaseViewModel>();
+            builder.Services.AddTransient<MainPageViewModel>();
             builder.Services.AddTransient<ItemsPageViewModel>();
             builder.Services.AddTransient<LearnViewModel>();
             builder.Services.AddTransient<ProfilePageViewModel>();
-            builder.Services.AddSingleton<ItemService>();
-            builder.Services.AddSingleton<BuildingService>();
-            builder.Services.AddTransient<AddItemPopup>();
-            builder.Services.AddTransient<BuildingSettingsPopup>();
+            builder.Services.AddTransient<OnboardViewModel>();
 
-
-        string DatabasePath = Path.Combine(FileSystem.AppDataDirectory, "ItemData.db3");
+            string DatabasePath = Path.Combine(FileSystem.AppDataDirectory, "ItemData.db3");
             builder.Services.AddSingleton(s => ActivatorUtilities.CreateInstance<ItemService>(s, DatabasePath));
             builder.Services.AddSingleton(s => ActivatorUtilities.CreateInstance<BuildingService>(s, DatabasePath));
             builder.Services.AddMopupsDialogs();

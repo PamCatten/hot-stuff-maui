@@ -16,55 +16,57 @@
     x:DataType="viewmodel:OnboardViewModel"
 >
     <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">
-        <Grid MinimumWidthRequest="400" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <VerticalStackLayout>
             <CarouselView 
-                Grid.Row="0" Position="{Binding Position}"
-                IndicatorView="indicatorView" 
+                Position="{Binding Position}"
                 Loop="False"
-                HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
-                ItemsSource="{Binding OnboardScreens}">
+                HorizontalOptions="FillAndExpand" 
+                VerticalOptions="FillAndExpand" 
+                ItemsSource="{Binding OnboardScreens}"
+                IndicatorView="OnboardScreenPositionIndicator" 
+            >
                 <CarouselView.ItemTemplate>
                     <DataTemplate x:DataType="models:OnboardScreen">
-                        <Grid RowDefinitions="60*,40*">
-                            <Image Source="{Binding OnboardImageLight}" Aspect="AspectFit" Grid.Row="0" />
-                            <VerticalStackLayout Spacing="10" Grid.Row="1">
-                                <Label Text="{Binding OnboardTitle}" FontSize="28" FontAttributes="Bold" />
-                                <Label Text="{Binding OnboardDescription}" FontSize="20"  TextColor="Gray" />
-                            </VerticalStackLayout>
-                        </Grid>
+                        <VerticalStackLayout MinimumHeightRequest="300" MinimumWidthRequest="300">
+                            <Image Source="{Binding OnboardImageLight}" Aspect="AspectFit" />
+                            <Label Text="{Binding OnboardTitle}" FontSize="28" FontAttributes="Bold" TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}" />
+                            <Label Text="{Binding OnboardDescription}" FontSize="20" TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}" />
+                        </VerticalStackLayout>
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
             </CarouselView>
+            <Image Source="{AppThemeBinding Light={Binding OnboardImageLight}, Dark={Binding OnboardImageDark}}" />
             <StackLayout 
-                Orientation="Horizontal"  
-                Grid.Row="1" >
-                <IndicatorView x:Name="indicatorView" 
+                Spacing="10" 
+                Padding="25,30" 
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                MinimumWidthRequest="400"
+            >
+                <IndicatorView 
+                    x:Name="OnboardScreenPositionIndicator" 
                     VerticalOptions="Center"
                     IndicatorSize="10"
-                    IndicatorColor="LightGray"  
+                    IndicatorColor="{AppThemeBinding Light={StaticResource DarkBackground}, Dark={StaticResource LightBackground}}"  
                     SelectedIndicatorColor="{x:StaticResource Primary}"
                 />
-                <Frame 
+                <ImageButton
                     HorizontalOptions="EndAndExpand"
-                    Padding="0"
                     CornerRadius="30"
                     HeightRequest="60" 
                     WidthRequest="60" 
                     BackgroundColor="{x:StaticResource Primary}"
+                    Command="{Binding OnboardPositionCommand}"
                 >
-                    <Label 
-                        Text="{Binding ButtonText}" 
-                        TextColor="White" 
-                        FontSize="18"
-                        FontAttributes="Bold"
-                        HorizontalTextAlignment="Center" 
-                        VerticalTextAlignment="Center" 
-                    />
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding NextCommand}" />
-                    </Frame.GestureRecognizers>
-                </Frame>
+                    <ImageButton.Source>
+                        <FontImageSource 
+                            FontFamily="FontAwesome" 
+                            Glyph="{x:Static local:IconFont.ArrowRight}"
+                            Color="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}"
+                        />
+                    </ImageButton.Source>
+                </ImageButton>
             </StackLayout>
-        </Grid>
+        </VerticalStackLayout>
     </ScrollView>
 </mopups:PopupPage>

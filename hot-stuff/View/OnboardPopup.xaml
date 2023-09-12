@@ -33,7 +33,7 @@
             <Button
                 Grid.Row="1"
                 Command="{Binding OpenOnboardCarouselPopupCommand}" 
-                Text="Get started"
+                Text="Continue"
                 FontSize="Medium"
                 FontFamily="OpenSansRegular"
                 FontAttributes="Bold"
@@ -59,7 +59,7 @@
                 </Label.GestureRecognizers>
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span Text="By continuing, you agree with our " />
+                        <Span Text="By continuing, you agree with our "/>
                         <Span Text="Terms" TextDecorations="Underline"/>
                         <Span Text="." />
                     </FormattedString>

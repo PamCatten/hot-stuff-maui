@@ -27,24 +27,23 @@ public partial class OnboardViewModel : BaseViewModel
 
         OnboardScreens.Add(new OnboardScreen
         {
-            OnboardTitle = "Onboard Title 1",
-            OnboardDescription = "Onboard Description 1",
-            OnboardImageLight = "onboardlight",
-            OnboardImageDark = "onboarddark"
+            OnboardTitle = "Conveniently manage your possessions",
+            OnboardDescription = "Viamusa ac liquola augue luctus ulfratum praesant tempus mi enim at phaentra tempus mi enum at lineuk quam pelientseque non.",
+            OnboardImage = "onboarddark"
         });
+
         OnboardScreens.Add(new OnboardScreen
         {
-            OnboardTitle = "Onboard Title 2",
-            OnboardDescription = "Onboard Description 2",
-            OnboardImageLight = "onboardlight",
-            OnboardImageDark = "onboarddark"
+            OnboardTitle = "Download info easily to Excel or Sheets",
+            OnboardDescription = "Viamusa ac liquola augue luctus ulfratum praesant tempus mi enim at phaentra tempus mi enum at lineuk quam pelientseque non.",
+            OnboardImage = "onboarddark"
         });
+
         OnboardScreens.Add(new OnboardScreen
         {
-            OnboardTitle = "Onboard Title 3",
-            OnboardDescription = "Onboard Description 3",
-            OnboardImageLight = "onboardlight",
-            OnboardImageDark = "onboarddark"
+            OnboardTitle = "Completely free, entirely anonymous",
+            OnboardDescription = "Your records are private, no name, email, or credit card required.",
+            OnboardImage = "onboarddark"
         });
     }
 }

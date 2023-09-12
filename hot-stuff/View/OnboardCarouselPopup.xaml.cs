@@ -8,6 +8,6 @@ public partial class OnboardCarouselPopup : PopupPage
 	public OnboardCarouselPopup(BuildingService buildingService)
 	{
 		InitializeComponent();
-        BindingContext = new ProfilePageViewModel(buildingService);
+        BindingContext = new OnboardViewModel();
 	}
 }

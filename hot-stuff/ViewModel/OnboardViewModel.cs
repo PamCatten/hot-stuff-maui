@@ -27,22 +27,29 @@ public partial class OnboardViewModel : BaseViewModel
 
         OnboardScreens.Add(new OnboardScreen
         {
-            OnboardTitle = "Conveniently manage your possessions",
-            OnboardDescription = "Viamusa ac liquola augue luctus ulfratum praesant tempus mi enim at phaentra tempus mi enum at lineuk quam pelientseque non.",
+            OnboardTitle = "Get organized, stay secure",
+            OnboardDescription = "Welcome to Hot Stuff, your trusted companion in making proof-of-loss claims quick and easy. Add photos, descriptions, and values to ensure you're prepared for the unexpected.",
             OnboardImage = "onboarddark"
         });
 
         OnboardScreens.Add(new OnboardScreen
         {
-            OnboardTitle = "Download info easily to Excel or Sheets",
-            OnboardDescription = "Viamusa ac liquola augue luctus ulfratum praesant tempus mi enim at phaentra tempus mi enum at lineuk quam pelientseque non.",
+            OnboardTitle = "Seamless data management",
+            OnboardDescription = "Effortlessly download and transfer your records to Excel or Google Sheets for added convenience. You're in control of your data, always.",
             OnboardImage = "onboarddark"
         });
 
         OnboardScreens.Add(new OnboardScreen
         {
-            OnboardTitle = "Completely free, entirely anonymous",
-            OnboardDescription = "Your records are private, no name, email, or credit card required.",
+            OnboardTitle = "Privacy first",
+            OnboardDescription = "Designed with anonymity in mind, we never collect any of your personal information. Your data stays private, and we're here to help you protect it.",
+            OnboardImage = "onboarddark"
+        });
+
+        OnboardScreens.Add(new OnboardScreen
+        {
+            OnboardTitle = "Peace of mind, simplified",
+            OnboardDescription = "Rest easy knowing that if a fire breaks out, your records are secured digitally, so you are free to focus all of your attention on protecting what matters most.",
             OnboardImage = "onboarddark"
         });
     }

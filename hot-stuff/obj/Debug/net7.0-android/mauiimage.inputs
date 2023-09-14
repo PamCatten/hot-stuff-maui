@@ -1,7 +1,7 @@
-File=Resources\Images\hotstuffdark.png;Link=;BaseSize=;Resize=;TintColor=;Color=;IsAppIcon=;ForegroundScale=;ForegroundFile=
-File=Resources\Images\hotstufflight.png;Link=;BaseSize=;Resize=;TintColor=;Color=;IsAppIcon=;ForegroundScale=;ForegroundFile=
-File=Resources\Images\noitemdata.png;Link=;BaseSize=;Resize=;TintColor=;Color=;IsAppIcon=;ForegroundScale=;ForegroundFile=
-File=Resources\Images\noitemdatadark.png;Link=;BaseSize=;Resize=;TintColor=;Color=;IsAppIcon=;ForegroundScale=;ForegroundFile=
-File=Resources\Images\onboarddark.png;Link=;BaseSize=;Resize=;TintColor=;Color=;IsAppIcon=;ForegroundScale=;ForegroundFile=
-File=Resources\Images\onboardlight.png;Link=;BaseSize=;Resize=;TintColor=;Color=;IsAppIcon=;ForegroundScale=;ForegroundFile=
+File=Resources\Images\hotstuff.png;Link=;BaseSize=;Resize=;TintColor=;Color=;IsAppIcon=;ForegroundScale=;ForegroundFile=
+File=Resources\Images\noitems.png;Link=;BaseSize=;Resize=;TintColor=;Color=;IsAppIcon=;ForegroundScale=;ForegroundFile=
+File=Resources\Images\onboard1.png;Link=;BaseSize=;Resize=;TintColor=;Color=;IsAppIcon=;ForegroundScale=;ForegroundFile=
+File=Resources\Images\onboard2.png;Link=;BaseSize=;Resize=;TintColor=;Color=;IsAppIcon=;ForegroundScale=;ForegroundFile=
+File=Resources\Images\onboard3.png;Link=;BaseSize=;Resize=;TintColor=;Color=;IsAppIcon=;ForegroundScale=;ForegroundFile=
+File=Resources\Images\onboard4.png;Link=;BaseSize=;Resize=;TintColor=;Color=;IsAppIcon=;ForegroundScale=;ForegroundFile=
 File=Resources\AppIcon\logo.png;Link=;BaseSize=;Resize=;TintColor=;Color=;IsAppIcon=True;ForegroundScale=;ForegroundFile=

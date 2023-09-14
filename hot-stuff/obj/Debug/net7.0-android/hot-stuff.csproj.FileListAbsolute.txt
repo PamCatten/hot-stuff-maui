@@ -1096,3 +1096,9 @@ C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\assets\Syste
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\assets\System.Runtime.Extensions.dll
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\assets\System.Runtime.Serialization.Formatters.dll
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\android\assets\System.Xml.dll
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\resizetizer\r\drawable\onboard1.png
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\resizetizer\r\drawable\onboard2.png
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\resizetizer\r\drawable\onboard3.png
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\resizetizer\r\drawable\onboard4.png
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\resizetizer\r\drawable\noitems.png
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-android\resizetizer\r\drawable\hotstuff.png

@@ -127,7 +127,7 @@
                 >
                     <material:DataGrid.EmptyView>
                         <StackLayout Padding="100">
-                            <Image HorizontalOptions="Center" VerticalOptions="Center" Source="{AppThemeBinding Light='noitemdata.png', Dark='noitemdatadark.png'}" HeightRequest="160" WidthRequest="160" />
+                            <Image HorizontalOptions="Center" VerticalOptions="Center" Source="noitems.png" HeightRequest="160" WidthRequest="160" />
                             <Label Text="No items found" HorizontalOptions="Center" VerticalOptions="Center" Padding="10"/>
                         </StackLayout>
                     </material:DataGrid.EmptyView>

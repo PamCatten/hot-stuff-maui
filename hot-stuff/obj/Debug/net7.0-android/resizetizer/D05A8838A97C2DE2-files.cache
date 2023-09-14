@@ -1,7 +1,13 @@
-﻿obj\Debug\net7.0-android\resizetizer\r\drawable\hotstuffdark.png
+﻿obj\Debug\net7.0-android\resizetizer\r\drawable\hotstuff.png
+obj\Debug\net7.0-android\resizetizer\r\drawable\hotstuffdark.png
 obj\Debug\net7.0-android\resizetizer\r\drawable\hotstufflight.png
 obj\Debug\net7.0-android\resizetizer\r\drawable\noitemdata.png
 obj\Debug\net7.0-android\resizetizer\r\drawable\noitemdatadark.png
+obj\Debug\net7.0-android\resizetizer\r\drawable\noitems.png
+obj\Debug\net7.0-android\resizetizer\r\drawable\onboard1.png
+obj\Debug\net7.0-android\resizetizer\r\drawable\onboard2.png
+obj\Debug\net7.0-android\resizetizer\r\drawable\onboard3.png
+obj\Debug\net7.0-android\resizetizer\r\drawable\onboard4.png
 obj\Debug\net7.0-android\resizetizer\r\drawable\onboarddark.png
 obj\Debug\net7.0-android\resizetizer\r\drawable\onboardlight.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\dotnet_bot.png

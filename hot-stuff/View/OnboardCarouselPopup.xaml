@@ -44,7 +44,7 @@
                             <Image 
                                 Source="{Binding OnboardImage}"
                                 Aspect="AspectFit"
-                                Margin="20"
+                                Margin="0"
                                 Grid.Row="1"
                             />
                             <Label 

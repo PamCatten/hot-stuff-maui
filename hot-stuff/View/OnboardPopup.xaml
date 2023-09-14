@@ -24,7 +24,7 @@
             </Grid.RowDefinitions>
             <Image 
                 Grid.Row="0"
-                Source="{AppThemeBinding Light='hotstufflight', Dark='hotstuffdark'}"
+                Source="hotstuff.png"
                 MinimumWidthRequest="300"
                 HorizontalOptions="Center"
                 VerticalOptions="CenterAndExpand"

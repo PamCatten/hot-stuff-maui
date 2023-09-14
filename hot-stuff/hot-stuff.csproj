@@ -57,12 +57,12 @@
 	  <None Remove="Resources\Fonts\OpenSans-Regular.ttf" />
 	  <None Remove="Resources\Fonts\OpenSans-SemiBold.ttf" />
 	  <None Remove="Resources\Fonts\OpenSans-SemiBoldItalic.ttf" />
-	  <None Remove="Resources\Images\hotstuffdark.png" />
-	  <None Remove="Resources\Images\hotstufflight.png" />
-	  <None Remove="Resources\Images\noitemdata.png" />
-	  <None Remove="Resources\Images\noitemdatadark.png" />
-	  <None Remove="Resources\Images\onboarddark.png" />
-	  <None Remove="Resources\Images\onboardlight.png" />
+	  <None Remove="Resources\Images\hotstuff.png" />
+	  <None Remove="Resources\Images\noitems.png" />
+	  <None Remove="Resources\Images\onboard1.png" />
+	  <None Remove="Resources\Images\onboard2.png" />
+	  <None Remove="Resources\Images\onboard3.png" />
+	  <None Remove="Resources\Images\onboard4.png" />
 	</ItemGroup>
 
 	<ItemGroup>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="HotStuff.View.DeletePopup"
+    xmlns:input="clr-namespace:InputKit.Shared.Controls;assembly=InputKit.Maui"
+    xmlns:local="clr-namespace:HotStuff"
+    xmlns:material="clr-namespace:UraniumUI.Material.Controls;assembly=UraniumUI.Material"
+    xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:models="clr-namespace:HotStuff.Model"
+    xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+    xmlns:validation="clr-namespace:InputKit.Shared.Validations;assembly=InputKit.Maui"
+    xmlns:viewmodel="clr-namespace:HotStuff.ViewModel"
+    x:DataType="viewmodel:ItemsPageViewModel"
+    CloseWhenBackgroundIsClicked="True"
+    BackgroundColor="{StaticResource Dim90}"
+>
+    <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">
+        <Border 
+            MinimumWidthRequest="200" MaximumWidthRequest="400" 
+            MinimumHeightRequest="200" MaximumHeightRequest="400" 
+            HorizontalOptions="Center" VerticalOptions="Center"
+            BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}"
+        >
+            <VerticalStackLayout Spacing="10" Padding="25,30" HorizontalOptions="Center" VerticalOptions="Center">
+                <ImageButton Command="{Binding ClosePopupCommand}" HorizontalOptions="Start">
+                    <ImageButton.Source>
+                        <FontImageSource 
+                            FontFamily="FontAwesome" 
+                            Glyph="{x:Static local:IconFont.ArrowLeft}" 
+                            Color="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                        />
+                    </ImageButton.Source>
+                </ImageButton>
+                <Label 
+                    Text="Are you sure? All selected items will be permanently deleted." 
+                    FontSize="Medium" 
+                    Margin="0,40,0,40"
+                    HorizontalOptions="Center" 
+                />
+                <Button 
+                    Command="{Binding DeleteItemCommand}" 
+                    Text="Delete"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    HorizontalOptions="CenterAndExpand"
+                    TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                    BackgroundColor="{StaticResource Primary}" 
+                />
+            </VerticalStackLayout>
+        </Border>
+    </ScrollView>
+</mopups:PopupPage>

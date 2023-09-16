@@ -38,92 +38,92 @@ build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.Resources.Styles.
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[C:/Users/campa/hot-stuff/hot-stuff/View/AddBuildingPopup.xaml]
+[C:/Users/campa/hot-stuff/hot-stuff/Views/ItemsPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.AddBuildingPopup.xaml
-build_metadata.AdditionalFiles.TargetPath = View\AddBuildingPopup.xaml
-build_metadata.AdditionalFiles.RelativePath = View\AddBuildingPopup.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.Views.ItemsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ItemsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ItemsPage.xaml
 
-[C:/Users/campa/hot-stuff/hot-stuff/View/AddItemPopup.xaml]
+[C:/Users/campa/hot-stuff/hot-stuff/Views/LearnPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.AddItemPopup.xaml
-build_metadata.AdditionalFiles.TargetPath = View\AddItemPopup.xaml
-build_metadata.AdditionalFiles.RelativePath = View\AddItemPopup.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.Views.LearnPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\LearnPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\LearnPage.xaml
 
-[C:/Users/campa/hot-stuff/hot-stuff/View/BuildingSettingsPopup.xaml]
+[C:/Users/campa/hot-stuff/hot-stuff/Views/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.BuildingSettingsPopup.xaml
-build_metadata.AdditionalFiles.TargetPath = View\BuildingSettingsPopup.xaml
-build_metadata.AdditionalFiles.RelativePath = View\BuildingSettingsPopup.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.Views.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MainPage.xaml
 
-[C:/Users/campa/hot-stuff/hot-stuff/View/CopyPopup.xaml]
+[C:/Users/campa/hot-stuff/hot-stuff/Views/Popups/AddBuildingPopup.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.CopyPopup.xaml
-build_metadata.AdditionalFiles.TargetPath = View\CopyPopup.xaml
-build_metadata.AdditionalFiles.RelativePath = View\CopyPopup.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.Views.Popups.AddBuildingPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Popups\AddBuildingPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Popups\AddBuildingPopup.xaml
 
-[C:/Users/campa/hot-stuff/hot-stuff/View/DeletePopup.xaml]
+[C:/Users/campa/hot-stuff/hot-stuff/Views/Popups/AddItemPopup.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.DeletePopup.xaml
-build_metadata.AdditionalFiles.TargetPath = View\DeletePopup.xaml
-build_metadata.AdditionalFiles.RelativePath = View\DeletePopup.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.Views.Popups.AddItemPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Popups\AddItemPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Popups\AddItemPopup.xaml
 
-[C:/Users/campa/hot-stuff/hot-stuff/View/DownloadPopup.xaml]
+[C:/Users/campa/hot-stuff/hot-stuff/Views/Popups/BuildingSettingsPopup.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.DownloadPopup.xaml
-build_metadata.AdditionalFiles.TargetPath = View\DownloadPopup.xaml
-build_metadata.AdditionalFiles.RelativePath = View\DownloadPopup.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.Views.Popups.BuildingSettingsPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Popups\BuildingSettingsPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Popups\BuildingSettingsPopup.xaml
 
-[C:/Users/campa/hot-stuff/hot-stuff/View/ItemsPage.xaml]
+[C:/Users/campa/hot-stuff/hot-stuff/Views/Popups/CopyPopup.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.ItemsPage.xaml
-build_metadata.AdditionalFiles.TargetPath = View\ItemsPage.xaml
-build_metadata.AdditionalFiles.RelativePath = View\ItemsPage.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.Views.Popups.CopyPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Popups\CopyPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Popups\CopyPopup.xaml
 
-[C:/Users/campa/hot-stuff/hot-stuff/View/LearnPage.xaml]
+[C:/Users/campa/hot-stuff/hot-stuff/Views/Popups/DeletePopup.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.LearnPage.xaml
-build_metadata.AdditionalFiles.TargetPath = View\LearnPage.xaml
-build_metadata.AdditionalFiles.RelativePath = View\LearnPage.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.Views.Popups.DeletePopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Popups\DeletePopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Popups\DeletePopup.xaml
 
-[C:/Users/campa/hot-stuff/hot-stuff/View/LegalPopup.xaml]
+[C:/Users/campa/hot-stuff/hot-stuff/Views/Popups/DownloadPopup.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.LegalPopup.xaml
-build_metadata.AdditionalFiles.TargetPath = View\LegalPopup.xaml
-build_metadata.AdditionalFiles.RelativePath = View\LegalPopup.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.Views.Popups.DownloadPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Popups\DownloadPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Popups\DownloadPopup.xaml
 
-[C:/Users/campa/hot-stuff/hot-stuff/View/MainPage.xaml]
+[C:/Users/campa/hot-stuff/hot-stuff/Views/Popups/LegalPopup.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.MainPage.xaml
-build_metadata.AdditionalFiles.TargetPath = View\MainPage.xaml
-build_metadata.AdditionalFiles.RelativePath = View\MainPage.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.Views.Popups.LegalPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Popups\LegalPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Popups\LegalPopup.xaml
 
-[C:/Users/campa/hot-stuff/hot-stuff/View/ModifyItemPopup.xaml]
+[C:/Users/campa/hot-stuff/hot-stuff/Views/Popups/ModifyItemPopup.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.ModifyItemPopup.xaml
-build_metadata.AdditionalFiles.TargetPath = View\ModifyItemPopup.xaml
-build_metadata.AdditionalFiles.RelativePath = View\ModifyItemPopup.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.Views.Popups.ModifyItemPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Popups\ModifyItemPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Popups\ModifyItemPopup.xaml
 
-[C:/Users/campa/hot-stuff/hot-stuff/View/OnboardCarouselPopup.xaml]
+[C:/Users/campa/hot-stuff/hot-stuff/Views/Popups/OnboardCarouselPopup.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.OnboardCarouselPopup.xaml
-build_metadata.AdditionalFiles.TargetPath = View\OnboardCarouselPopup.xaml
-build_metadata.AdditionalFiles.RelativePath = View\OnboardCarouselPopup.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.Views.Popups.OnboardCarouselPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Popups\OnboardCarouselPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Popups\OnboardCarouselPopup.xaml
 
-[C:/Users/campa/hot-stuff/hot-stuff/View/OnboardPopup.xaml]
+[C:/Users/campa/hot-stuff/hot-stuff/Views/Popups/OnboardPopup.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.OnboardPopup.xaml
-build_metadata.AdditionalFiles.TargetPath = View\OnboardPopup.xaml
-build_metadata.AdditionalFiles.RelativePath = View\OnboardPopup.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.Views.Popups.OnboardPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Popups\OnboardPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Popups\OnboardPopup.xaml
 
-[C:/Users/campa/hot-stuff/hot-stuff/View/ProfilePopup.xaml]
+[C:/Users/campa/hot-stuff/hot-stuff/Views/Popups/ProfilePopup.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.ProfilePopup.xaml
-build_metadata.AdditionalFiles.TargetPath = View\ProfilePopup.xaml
-build_metadata.AdditionalFiles.RelativePath = View\ProfilePopup.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.Views.Popups.ProfilePopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Popups\ProfilePopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Popups\ProfilePopup.xaml
 
-[C:/Users/campa/hot-stuff/hot-stuff/View/TransferPopup.xaml]
+[C:/Users/campa/hot-stuff/hot-stuff/Views/Popups/TransferPopup.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.View.TransferPopup.xaml
-build_metadata.AdditionalFiles.TargetPath = View\TransferPopup.xaml
-build_metadata.AdditionalFiles.RelativePath = View\TransferPopup.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HotStuff.Views.Popups.TransferPopup.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Popups\TransferPopup.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Popups\TransferPopup.xaml

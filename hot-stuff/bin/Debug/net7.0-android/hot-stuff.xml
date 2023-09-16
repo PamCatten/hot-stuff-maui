@@ -13,14 +13,14 @@
         <member name="P:HotStuff.ViewModel.ItemsPageViewModel.IsRefreshing">
             <inheritdoc cref="F:HotStuff.ViewModel.ItemsPageViewModel.isRefreshing"/>
         </member>
-        <member name="T:HotStuff.ViewModel.MainPageViewModel">
+        <member name="T:HotStuff.ViewModel.BaseViewModel">
             <inheritdoc/>
         </member>
-        <member name="P:HotStuff.ViewModel.MainPageViewModel.IsBusy">
-            <inheritdoc cref="F:HotStuff.ViewModel.MainPageViewModel.isBusy"/>
+        <member name="P:HotStuff.ViewModel.BaseViewModel.IsBusy">
+            <inheritdoc cref="F:HotStuff.ViewModel.BaseViewModel.isBusy"/>
         </member>
-        <member name="P:HotStuff.ViewModel.MainPageViewModel.IsRefreshing">
-            <inheritdoc cref="F:HotStuff.ViewModel.MainPageViewModel.isRefreshing"/>
+        <member name="P:HotStuff.ViewModel.BaseViewModel.IsRefreshing">
+            <inheritdoc cref="F:HotStuff.ViewModel.BaseViewModel.isRefreshing"/>
         </member>
         <member name="T:HotStuff.ViewModel.ProfilePageViewModel">
             <inheritdoc/>

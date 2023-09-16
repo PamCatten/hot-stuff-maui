@@ -33,9 +33,10 @@ public static class MauiProgram
                 handlers.AddHandler(typeof(Shell), typeof(Platforms.Android.CustomShellRenderer));
             #endif
         }).UseMauiCommunityToolkit();
+            // Services
             builder.Services.AddSingleton<ItemService>();
             builder.Services.AddSingleton<BuildingService>();
-            // Pages
+            // Views
             builder.Services.AddTransient<MainPage>();
             builder.Services.AddTransient<ItemsPage>();
             builder.Services.AddSingleton<LearnPage>();
@@ -52,7 +53,7 @@ public static class MauiProgram
             builder.Services.AddSingleton<ProfilePopup>();
             builder.Services.AddSingleton<TransferPopup>();
             // ViewModels
-            builder.Services.AddTransient<MainPageViewModel>();
+            builder.Services.AddTransient<BaseViewModel>();
             builder.Services.AddTransient<ItemsPageViewModel>();
             builder.Services.AddTransient<LearnViewModel>();
             builder.Services.AddTransient<ProfilePageViewModel>();

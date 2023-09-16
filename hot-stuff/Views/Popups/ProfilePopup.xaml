@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="HotStuff.View.ProfilePopup"
+    xmlns:input="clr-namespace:InputKit.Shared.Controls;assembly=InputKit.Maui"
+    xmlns:local="clr-namespace:HotStuff"
+    xmlns:material="clr-namespace:UraniumUI.Material.Controls;assembly=UraniumUI.Material"
+    xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:models="clr-namespace:HotStuff.Model"
+    xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+    xmlns:validation="clr-namespace:InputKit.Shared.Validations;assembly=InputKit.Maui"
+    xmlns:viewmodel="clr-namespace:HotStuff.ViewModel"
+    x:DataType="viewmodel:ProfilePageViewModel"
+    CloseWhenBackgroundIsClicked="True"
+    BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}"
+>
+    <mopups:PopupPage.BindingContext>
+        <viewmodel:BaseViewModel />
+    </mopups:PopupPage.BindingContext>
+
+    <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">
+        <VerticalStackLayout Spacing="10" Margin="10" HorizontalOptions="Center" MinimumWidthRequest="400">
+            <ImageButton Command="{Binding ClosePopupCommand}" HorizontalOptions="Start">
+                <ImageButton.Source>
+                    <FontImageSource 
+                        FontFamily="FontAwesome" 
+                        Glyph="{x:Static local:IconFont.ArrowLeft}" 
+                        Color="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                    />
+                </ImageButton.Source>
+            </ImageButton>
+            <material:ButtonView BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}">
+                <StackLayout>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding OpenBuildingSettingsPopupCommand}" />
+                    </StackLayout.GestureRecognizers>
+                    <Label 
+                        Text="Buildings" 
+                        TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                        FontSize="Medium"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Start"
+                    />
+                    <Label 
+                        Text="Name, Description, Type, ..."
+                        TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                        FontSize="Small"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Start"
+                    />
+                </StackLayout>
+            </material:ButtonView>
+            <BoxView StyleClass="Divider" />
+            <material:ButtonView BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}">
+                <StackLayout>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding OpenBuildingSettingsPopupCommand}" />
+                    </StackLayout.GestureRecognizers>
+                    <Label 
+                        Text="Settings" 
+                        TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                        FontSize="Medium"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Start"
+                    />
+                    <Label 
+                        Text="Notifications, App Theme"
+                        TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                        FontSize="Small"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Start"
+                    />
+                </StackLayout>
+            </material:ButtonView>
+            <BoxView StyleClass="Divider" />
+            <material:ButtonView BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}">
+                <StackLayout>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding OpenLegalPopupCommand}" />
+                    </StackLayout.GestureRecognizers>
+                    <Label 
+                        Text="Legal" 
+                        TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                        FontSize="Medium"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Start"
+                    />
+                    <Label 
+                        Text="Terms of Use"
+                        TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                        FontSize="Small"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Start"
+                    />
+                </StackLayout>
+            </material:ButtonView>
+            <BoxView StyleClass="Divider" />
+            <StackLayout>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ClosePopupCommand}" />
+                </StackLayout.GestureRecognizers>
+                <Label 
+                    Text="Log Out"
+                    TextColor="{StaticResource Primary}"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start"
+                />
+            </StackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</mopups:PopupPage>

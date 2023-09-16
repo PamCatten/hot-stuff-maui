@@ -80,84 +80,89 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="View\OnboardCarouselPopup.xaml">
+	  <MauiXaml Update="Views\Popups\OnboardCarouselPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\OnboardPopup.xaml">
+	  <MauiXaml Update="Views\Popups\OnboardPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\LegalPopup.xaml">
+	  <MauiXaml Update="Views\Popups\LegalPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\ProfilePopup.xaml">
+	  <MauiXaml Update="Views\Popups\ProfilePopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\BuildingSettingsPopup.xaml">
+	  <MauiXaml Update="Views\Popups\BuildingSettingsPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\AddBuildingPopup.xaml">
+	  <MauiXaml Update="Views\Popups\AddBuildingPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\CopyPopup.xaml">
+	  <MauiXaml Update="Views\Popups\CopyPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\TransferPopup.xaml">
+	  <MauiXaml Update="Views\Popups\TransferPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\DownloadPopup.xaml">
+	  <MauiXaml Update="Views\Popups\DownloadPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\DeletePopup.xaml">
+	  <MauiXaml Update="Views\Popups\DeletePopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\ModifyItemPopup.xaml">
+	  <MauiXaml Update="Views\Popups\ModifyItemPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\AddItemPopup.xaml">
+	  <MauiXaml Update="Views\Popups\AddItemPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\ItemsPage.xaml">
+	  <MauiXaml Update="Views\ItemsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\LearnPage.xaml">
+	  <MauiXaml Update="Views\LearnPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="View\OnboardCarouselPopup.xaml.cs">
+	  <Compile Update="Views\Popups\OnboardCarouselPopup.xaml.cs">
 	    <DependentUpon>OnboardCarouselPopup.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="View\OnboardPopup.xaml.cs">
+	  <Compile Update="Views\Popups\OnboardPopup.xaml.cs">
 	    <DependentUpon>OnboardPopup.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="View\LegalPopup.xaml.cs">
+	  <Compile Update="Views\Popups\LegalPopup.xaml.cs">
 	    <DependentUpon>LegalPopup.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="View\ProfilePopup.xaml.cs">
+	  <Compile Update="Views\Popups\ProfilePopup.xaml.cs">
 	    <DependentUpon>ProfilePopup.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="View\BuildingSettingsPopup.xaml.cs">
+	  <Compile Update="Views\Popups\BuildingSettingsPopup.xaml.cs">
 	    <DependentUpon>BuildingSettingsPopup.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="View\AddBuildingPopup.xaml.cs">
+	  <Compile Update="Views\Popups\AddBuildingPopup.xaml.cs">
 	    <DependentUpon>AddBuildingPopup.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="View\CopyPopup.xaml.cs">
+	  <Compile Update="Views\Popups\CopyPopup.xaml.cs">
 	    <DependentUpon>CopyPopup.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="View\TransferPopup.xaml.cs">
+	  <Compile Update="Views\Popups\TransferPopup.xaml.cs">
 	    <DependentUpon>TransferPopup.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="View\DownloadPopup.xaml.cs">
+	  <Compile Update="Views\Popups\DownloadPopup.xaml.cs">
 	    <DependentUpon>DownloadPopup.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="View\DeletePopup.xaml.cs">
+	  <Compile Update="Views\Popups\DeletePopup.xaml.cs">
 	    <DependentUpon>DeletePopup.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="View\ModifyItemPopup.xaml.cs">
+	  <Compile Update="Views\Popups\ModifyItemPopup.xaml.cs">
 	    <DependentUpon>ModifyItemPopup.xaml</DependentUpon>
 	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Tests\" />
+	  <Folder Include="Views\Pages\" />
 	</ItemGroup>
 
 	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionhotstuffHideInfoBar="True" XamarinHotReloadUnhandledDeviceExceptionhotstuffHideInfoBar="True" /></VisualStudio></ProjectExtensions>

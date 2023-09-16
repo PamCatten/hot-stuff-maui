@@ -20,7 +20,7 @@
     </mopups:PopupPage.BindingContext>
 
     <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">
-        <VerticalStackLayout Spacing="10" Padding="25,30" HorizontalOptions="Center" MinimumWidthRequest="400">
+        <VerticalStackLayout Spacing="10" Margin="10" HorizontalOptions="Center" MinimumWidthRequest="400">
             <ImageButton Command="{Binding ClosePopupCommand}" HorizontalOptions="Start">
                 <ImageButton.Source>
                     <FontImageSource 
@@ -30,32 +30,7 @@
                     />
                 </ImageButton.Source>
             </ImageButton>
-            <!-- <material:ButtonView BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}" Margin="5,0,5,0"> -->
-            <!-- <StackLayout> -->
-            <!-- StackLayout.GestureRecognizers> -->
-            <!-- <TapGestureRecognizer Command="{Binding OpenBuildingSettingsPopupCommand}" /> -->
-            <!-- </StackLayout.GestureRecognizers> -->
-            <!-- <Label -->
-            <!-- Text="Personal Info" -->
-            <!-- TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}" -->
-            <!-- FontSize="Medium" -->
-            <!-- FontAttributes="Bold" -->
-            <!-- VerticalOptions="Center" -->
-            <!-- HorizontalOptions="Start" -->
-            <!-- Margin="0, 5, 0, 5" -->
-            <!-- /> -->
-            <!-- <Label -->
-            <!-- Text="Name, email, phone number, ..." -->
-            <!-- TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}" -->
-            <!-- FontSize="Small" -->
-            <!-- VerticalOptions="Center" -->
-            <!-- HorizontalOptions="Start" -->
-            <!-- Margin="0, 5, 0, 5" -->
-            <!-- /> -->
-            <!-- </StackLayout> -->
-            <!-- </material:ButtonView> -->
-            <!-- <BoxView StyleClass="Divider" /> -->
-            <material:ButtonView BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}" Margin="5,0,5,0">
+            <material:ButtonView BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}">
                 <StackLayout>
                     <StackLayout.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding OpenBuildingSettingsPopupCommand}" />
@@ -67,7 +42,6 @@
                         FontAttributes="Bold"
                         VerticalOptions="Center" 
                         HorizontalOptions="Start"
-                        Margin="0, 5, 0, 5"
                     />
                     <Label 
                         Text="Name, Description, Type, ..."
@@ -75,12 +49,11 @@
                         FontSize="Small"
                         VerticalOptions="Center" 
                         HorizontalOptions="Start"
-                        Margin="0, 5, 0, 5"
                     />
                 </StackLayout>
             </material:ButtonView>
             <BoxView StyleClass="Divider" />
-            <material:ButtonView BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}" Margin="5,0,5,0">
+            <material:ButtonView BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}">
                 <StackLayout>
                     <StackLayout.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding OpenBuildingSettingsPopupCommand}" />
@@ -92,7 +65,6 @@
                         FontAttributes="Bold"
                         VerticalOptions="Center" 
                         HorizontalOptions="Start"
-                        Margin="0, 5, 0, 5"
                     />
                     <Label 
                         Text="Notifications, App Theme"
@@ -100,12 +72,11 @@
                         FontSize="Small"
                         VerticalOptions="Center" 
                         HorizontalOptions="Start"
-                        Margin="0, 5, 0, 5"
                     />
                 </StackLayout>
             </material:ButtonView>
             <BoxView StyleClass="Divider" />
-            <material:ButtonView BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}" Margin="5,0,5,0">
+            <material:ButtonView BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}">
                 <StackLayout>
                     <StackLayout.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding OpenLegalPopupCommand}" />
@@ -117,7 +88,6 @@
                         FontAttributes="Bold"
                         VerticalOptions="Center" 
                         HorizontalOptions="Start"
-                        Margin="0, 5, 0, 5"
                     />
                     <Label 
                         Text="Terms of Use"
@@ -125,12 +95,11 @@
                         FontSize="Small"
                         VerticalOptions="Center" 
                         HorizontalOptions="Start"
-                        Margin="0, 5, 0, 5"
                     />
                 </StackLayout>
             </material:ButtonView>
             <BoxView StyleClass="Divider" />
-            <StackLayout>
+            <StackLayout Margin="10">
                 <StackLayout.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding ClosePopupCommand}" />
                 </StackLayout.GestureRecognizers>
@@ -141,7 +110,6 @@
                     FontAttributes="Bold"
                     VerticalOptions="Center" 
                     HorizontalOptions="Start"
-                    Margin="15, 10, 15, 5"
                 />
             </StackLayout>
         </VerticalStackLayout>

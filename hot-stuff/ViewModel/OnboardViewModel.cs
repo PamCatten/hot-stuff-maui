@@ -15,7 +15,10 @@ public partial class OnboardViewModel : BaseViewModel
     public ICommand OnboardPositionCommand => new Command(async () =>
     {
         if (Position >= OnboardScreens.Count - 1)
-        { await MopupService.Instance.PopAllAsync(); }
+        { 
+            await MopupService.Instance.PopAllAsync();
+            await MopupService.Instance.PushAsync(new AddBuildingPopup(buildingService));
+        }
         else
         { position += 1; }
     });
@@ -30,7 +33,7 @@ public partial class OnboardViewModel : BaseViewModel
         OnboardScreens.Add(new OnboardScreen
         {
             OnboardTitle = "Organized, secure",
-            OnboardDescription = "Welcome to Hot Stuff, your trusted companion in making proof-of-loss claims quick and easy. Add photos, descriptions, and values to ensure you're prepared for the unexpected.",
+            OnboardDescription = "Welcome to Hot Stuff! Your trusted companion in making proof-of-loss fire claims quick and easy. Add photos, descriptions, and values to ensure you're prepared for the unexpected.",
             OnboardImage = "onboard1"
         });
 

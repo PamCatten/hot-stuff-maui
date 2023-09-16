@@ -21,7 +21,7 @@
             VerticalOptions="FillAndExpand" 
         >
             <Grid.RowDefinitions>
-                <RowDefinition Height="8*" />
+                <RowDefinition Height="12*" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
@@ -43,6 +43,7 @@
                         >
                             <Image 
                                 Source="{Binding OnboardImage}"
+                                MaximumHeightRequest="500"
                                 Aspect="AspectFit"
                                 Margin="0"
                                 Grid.Row="1"
@@ -50,16 +51,16 @@
                             <Label 
                                 Text="{Binding OnboardTitle}" 
                                 FontSize="28"
-                                Margin="30,20,30,10"
+                                Margin="30,20,30,5"
                                 FontAttributes="Bold"
                                 HorizontalTextAlignment="Center"
                                 FontFamily="OpenSansRegular"
                                 TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}" 
                             />
-                            <Label 
-                                Text="{Binding OnboardDescription}" 
+                            <Label
+                                Text="{Binding OnboardDescription}"
                                 FontSize="18"
-                                Margin="30,10,30,10"
+                                Margin="30,5,30,10"
                                 HorizontalTextAlignment="Center"
                                 HorizontalOptions="Center"
                                 TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}" 
@@ -73,7 +74,7 @@
                 Grid.Row="1"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
-                IndicatorSize="10"
+                IndicatorSize="12"
                 IndicatorColor="{AppThemeBinding Light={StaticResource DarkBackground}, Dark={StaticResource LightBackground}}"  
                 SelectedIndicatorColor="{x:StaticResource Primary}"
             />
@@ -85,9 +86,9 @@
                 FontFamily="OpenSansRegular"
                 FontAttributes="Bold"
                 HorizontalOptions="Center"
-                VerticalOptions="EndAndExpand"
+                VerticalOptions="End"
                 MinimumWidthRequest="300"
-                Margin="40"
+                Margin="30,20,30,20"
                 TextColor="{AppThemeBinding Light={StaticResource WhiteText}, Dark={StaticResource BlackText}}"
                 BackgroundColor="{StaticResource Primary}" 
             />

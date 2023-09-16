@@ -28,7 +28,6 @@
                         <validation:RequiredValidation />
                     </material:TextField.Validations>
                 </material:TextField>
-
                 <material:PickerField
                     Title="Building Type (Required)"
                     ItemsSource="{x:Static models:Building.AvailableCategories}"
@@ -41,7 +40,6 @@
                         <validation:RequiredValidation />
                     </material:PickerField.Validations>
                 </material:PickerField>
-
                 <material:TextField 
                     Title="Building Description (Optional)"
                     Text="{Binding NewBuilding.BuildingDescription}"
@@ -49,7 +47,6 @@
                     AccentColor="{StaticResource Primary}"
                     Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Pen}}"
                 />
-
                 <Button 
                     Command="{Binding AddBuildingCommand}" 
                     Text="Add"

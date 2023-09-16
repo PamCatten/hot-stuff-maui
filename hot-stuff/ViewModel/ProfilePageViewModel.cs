@@ -1,4 +1,5 @@
-﻿using HotStuff.Services;
+﻿using HotStuff.Model;
+using HotStuff.Services;
 using Mopups.Services;
 using System.Windows.Input;
 
@@ -42,7 +43,7 @@ public partial class ProfilePageViewModel : BaseViewModel
     public ProfilePageViewModel(BuildingService buildingService)
     {
         this.buildingService = buildingService;
-        AddBuildingCommand = new Command(() => AddBuildingAsync(NewBuilding));
+        AddBuildingCommand = new Command(() => AddBuildingAsync());
         GetBuildingsCommand = new Command(() => GetBuildingsAsync());
         UpdateBuildingCommand = new Command(() => UpdateBuildingAsync(NewBuilding));
         OpenAddBuildingPopupCommand = new Command(async () => await MopupService.Instance.PushAsync(new AddBuildingPopup(buildingService)));
@@ -50,9 +51,9 @@ public partial class ProfilePageViewModel : BaseViewModel
         OpenLegalPopupCommand = new Command(async () => await MopupService.Instance.PushAsync(new LegalPopup(buildingService)));
         ClosePopupCommand = new Command(() => ClosePopup());
 
-        async void AddBuildingAsync(Building building)
+        async void AddBuildingAsync()
         {
-            await buildingService.AddBuilding(building);
+            await buildingService.AddBuilding(NewBuilding);
             NewBuilding = new();
             ClosePopup();
         }
@@ -65,9 +66,9 @@ public partial class ProfilePageViewModel : BaseViewModel
                 IsBusy = true;
                 IsRefreshing = true;
                 ObservableCollection<Building> tempList = await buildingService.GetBuildings();
+                // TODO: When free, look into a better way to do this
                 // Some concern about Big O here, but I can't imagine it being a problem for a small app like this
                 // because realistically we're talking about a handful of buildings per user at most
-                // TODO: When free, look into a better way to do this
                 if (tempList is not null)
                 {
                     foreach (var item in tempList)

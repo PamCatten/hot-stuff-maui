@@ -40,7 +40,7 @@
                 HorizontalOptions="Center"
                 VerticalOptions="EndAndExpand"
                 MinimumWidthRequest="300"
-                Margin="40,40,40,10"
+                Margin="40,40,40,5"
                 TextColor="{AppThemeBinding Light={StaticResource WhiteText}, Dark={StaticResource BlackText}}"
                 BackgroundColor="{StaticResource Primary}" 
             />
@@ -51,7 +51,7 @@
                 FontSize="Subtitle"
                 HorizontalOptions="CenterAndExpand"
                 VerticalOptions="CenterAndExpand"
-                Margin="40,10,40,20"
+                Margin="40,5,40,20"
                 TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
             >
                 <Label.GestureRecognizers>

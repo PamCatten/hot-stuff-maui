@@ -32,12 +32,12 @@
                         />
                     </ImageButton.Source>
                 </ImageButton>
-                    <Label 
-                        Text="Are you sure? All selected items will be permanently deleted." 
-                        FontSize="Medium" 
-                        Margin="0,40,0,40"
-                        HorizontalOptions="Center" 
-                    />
+                <Label 
+                    Text="Are you sure? All selected items will be permanently deleted." 
+                    FontSize="Medium" 
+                    Margin="0,40,0,40"
+                    HorizontalOptions="Center" 
+                />
                 <Button 
                     Command="{Binding DeleteItemCommand}" 
                     Text="Delete"
@@ -46,7 +46,6 @@
                     HorizontalOptions="CenterAndExpand"
                     TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
                     BackgroundColor="{StaticResource Primary}" 
-                    input:FormView.IsSubmitButton="True"
                 />
             </VerticalStackLayout>
         </Border>

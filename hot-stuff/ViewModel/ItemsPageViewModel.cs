@@ -58,13 +58,13 @@ public partial class ItemsPageViewModel : BaseViewModel
     {
         this.itemService = itemService;
         ModifyItem = new Item();
-        //Items = new ObservableCollection<Item>(itemService.GetItems());
         GetItemsAsync();
 
         AddItemCommand = new Command(() => CreateItem(NewItem));
         DeleteItemCommand = new Command(() => DeleteAsync(SelectedItems));
         GetItemsCommand = new Command(() => GetItemsAsync());
         ModifyItemCommand = new Command(() => ModifyItemAsync(SelectedItems[0]));
+        CopyItemCommand = new Command(() => CopyItemAsync(SelectedItems));
         ClosePopupCommand = new Command(() => ClosePopup());
         TransferItemCommand = new Command(() => TransferAsync(SelectedItems));
         DownloadItemCommand = new Command(() => DownloadItemsAsync(ItemManifest));
@@ -200,19 +200,29 @@ public partial class ItemsPageViewModel : BaseViewModel
                 IsRefreshing = false;
             }
         }
-        async void DeleteAsync(ObservableCollection<Item> selectedItems)
+        async void DeleteAsync(ObservableCollection<Item> items)
         {
-            foreach (var item in selectedItems)
-                ItemManifest.Remove(item);
-            await App.ItemService.DeleteItems(selectedItems);
+            foreach (var item in items) ItemManifest.Remove(item);
+            Debug.WriteLine($"SelectedItem Count: {items.Count}");
+            await App.ItemService.DeleteItems(items);
+            //RefreshItemsAsync();
             ClosePopup();
         }
         async void ModifyItemAsync(Item item)
         {
             await App.ItemService.ModifyItem(item);
             if (SelectedItems[0] != item) ItemManifest[ItemManifest.IndexOf(SelectedItems[0])] = item;
+            RefreshItemsAsync();
             ClosePopup();
         }
+
+        async void CopyItemAsync(ObservableCollection<Item> copySelected)
+        {
+            await App.ItemService.CopyItem(copySelected);
+            RefreshItemsAsync();
+            ClosePopup();
+        }
+
         // FIXME: Emulator filepath dumps out in a weird spot, not sure how to proceed
         async void DownloadItemsAsync(ObservableCollection<Item> items) 
         {
@@ -240,6 +250,7 @@ public partial class ItemsPageViewModel : BaseViewModel
                 item.BuildingID = TransferBuilding.BuildingID;
                 await App.ItemService.ModifyItem(item);
             }
+            RefreshItemsAsync();
             ClosePopup();
         }
         async void ClosePopup() { await MopupService.Instance.PopAsync(); }

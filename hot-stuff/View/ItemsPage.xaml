@@ -121,33 +121,46 @@
             <ScrollView Orientation="Both" HorizontalScrollBarVisibility="Always" VerticalScrollBarVisibility="Always" Grid.Row="4" Grid.ColumnSpan="3">
 
                 <material:DataGrid 
-                    ItemsSource="{Binding ItemManifest}" SelectedItems="{Binding SelectedItems}" SelectionColor="{StaticResource Primary}"
-                    HorizontalOptions="Center" VerticalOptions="StartAndExpand" x:Name="UraniumGrid"
+                    ItemsSource="{Binding ItemManifest}" 
+                    SelectedItems="{Binding SelectedItems}" 
+                    SelectionColor="{StaticResource Primary}"
+                    HorizontalOptions="Center" 
+                    VerticalOptions="StartAndExpand" 
+                    x:Name="UraniumGrid"
                     BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}"
                 >
                     <material:DataGrid.EmptyView>
                         <StackLayout Padding="100">
-                            <Image HorizontalOptions="Center" VerticalOptions="Center" Source="noitems.png" HeightRequest="160" WidthRequest="160" />
-                            <Label Text="No items found" HorizontalOptions="Center" VerticalOptions="Center" Padding="10"/>
+                            <Image 
+                                HorizontalOptions="Center" 
+                                VerticalOptions="Center" 
+                                Source="noitems.png" 
+                                HeightRequest="160" 
+                                WidthRequest="160" 
+                            />
+                            <Label 
+                                Text="No items found" 
+                                HorizontalOptions="Center" 
+                                VerticalOptions="Center" 
+                                Padding="10"
+                            />
                         </StackLayout>
                     </material:DataGrid.EmptyView>
-
                     <material:DataGrid.Columns>
                         <material:DataGridSelectionColumn/>
-                        <material:DataGridColumn Binding="{Binding ItemName}" Title="Name" Width="Auto"/>
-                        <material:DataGridColumn Binding="{Binding Category}" Title="Category" Width="Auto"/>
-                        <material:DataGridColumn Binding="{Binding BrandManufacturer}" Title="Brand / Manufacturer" Width="Auto"/>
-                        <material:DataGridColumn Binding="{Binding Room}" Title="Room" Width="Auto"/>
-                        <material:DataGridColumn Binding="{Binding Color}" Title="Color" Width="Auto"/>
-                        <material:DataGridColumn Binding="{Binding DateAcquired}" Title = "Date Acquired" Width="Auto"/>
-                        <material:DataGridColumn Binding="{Binding ItemPrice}" Title = "Price" Width="Auto"/>
-                        <material:DataGridColumn Binding="{Binding ItemQuantity}" Title = "Quantity" Width="Auto" />
-                        <material:DataGridColumn Binding="{Binding ItemDescription}" Title="Description" Width="Auto"/>
-                        <material:DataGridColumn Binding="{Binding PurchaseProof}" Title="Purchase Proof" Width="Auto"/>
+                        <material:DataGridColumn Binding="{Binding ItemName}" Title="Name"/>
+                        <material:DataGridColumn Binding="{Binding Category}" Title="Category"/>
+                        <material:DataGridColumn Binding="{Binding BrandManufacturer}" Title="Brand / Manufacturer"/>
+                        <material:DataGridColumn Binding="{Binding Room}" Title="Room"/>
+                        <material:DataGridColumn Binding="{Binding Color}" Title="Color"/>
+                        <material:DataGridColumn Binding="{Binding DateAcquired}" Title = "Date Acquired"/>
+                        <material:DataGridColumn Binding="{Binding ItemPrice}" Title = "Price"/>
+                        <material:DataGridColumn Binding="{Binding ItemQuantity}" Title = "Quantity"/>
+                        <material:DataGridColumn Binding="{Binding ItemDescription}" Title="Description"/>
+                        <material:DataGridColumn Binding="{Binding PurchaseProof}" Title="Purchase Proof"/>
                     </material:DataGrid.Columns>
                 </material:DataGrid>
             </ScrollView>
-
         </Grid>
     </RefreshView>
 

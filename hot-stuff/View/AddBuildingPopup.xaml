@@ -49,7 +49,7 @@
                 />
                 <Button 
                     Command="{Binding AddBuildingCommand}" 
-                    Text="Add"
+                    Text="Create building"
                     TextColor="{AppThemeBinding Light={StaticResource WhiteText}, Dark={StaticResource BlackText}}"
                     FontSize="Medium"
                     FontAttributes="Bold"

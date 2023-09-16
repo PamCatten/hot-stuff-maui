@@ -16,34 +16,31 @@
     BackgroundColor="{StaticResource Dim90}"
 >
     <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">
-        <Frame BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}">
-            <VerticalStackLayout Spacing="10" Padding="25,30" HorizontalOptions="Center" VerticalOptions="Center">
-                <ImageButton Command="{Binding ClosePopupCommand}" HorizontalOptions="Start">
-                    <ImageButton.Source>
-                        <FontImageSource 
-                            FontFamily="FontAwesome" 
-                            Glyph="{x:Static local:IconFont.ArrowLeft}" 
-                            Color="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
-                        />
-                    </ImageButton.Source>
-                </ImageButton>
-                <Label 
-                    Text="Are you sure? Items will be moved to the selected building." 
-                    FontSize="Medium" 
-                    Margin="0,40,0,40"
-                    HorizontalOptions="Center" 
-                />
-                <Button 
-                    Command="{Binding TransferItemCommand}" 
-                    Text="Transfer"
-                    FontSize="Medium"
-                    FontAttributes="Bold"
-                    HorizontalOptions="Center"
-                    TextColor="{AppThemeBinding Light={StaticResource WhiteText}, Dark={StaticResource BlackText}}"
-                    BackgroundColor="{StaticResource Primary}" 
-                    input:FormView.IsSubmitButton="True"
-                />
-            </VerticalStackLayout>
-        </Frame>
+        <VerticalStackLayout Spacing="10" Padding="25,30" HorizontalOptions="Center" VerticalOptions="Center">
+            <ImageButton Command="{Binding ClosePopupCommand}" HorizontalOptions="Start">
+                <ImageButton.Source>
+                    <FontImageSource 
+                        FontFamily="FontAwesome" 
+                        Glyph="{x:Static local:IconFont.ArrowLeft}" 
+                        Color="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                    />
+                </ImageButton.Source>
+            </ImageButton>
+            <Label 
+                Text="Are you sure? Items will be moved to the selected building." 
+                FontSize="Medium" 
+                Margin="0,40,0,40"
+                HorizontalOptions="Center" 
+            />
+            <Button 
+                Command="{Binding TransferItemCommand}" 
+                Text="Transfer"
+                FontSize="Medium"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                BackgroundColor="{StaticResource Primary}" 
+            />
+        </VerticalStackLayout>
     </ScrollView>
 </mopups:PopupPage>

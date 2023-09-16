@@ -58,13 +58,12 @@ public class ItemService : IItemService
             return new ObservableCollection<Item>();
         }
     }
-
-    public async Task DeleteItems(ObservableCollection<Item> SelectedItems)
+    public async Task DeleteItems(ObservableCollection<Item> items)
     {
         try
         {
             await Init();
-            foreach (var item in SelectedItems) 
+            foreach (var item in items) 
                 await Database.DeleteAsync<Item>(item.ItemID);
         }
         catch (Exception ex)
@@ -72,7 +71,6 @@ public class ItemService : IItemService
             Debug.WriteLine($"Failed to delete item data. Error: {ex.Message}");
         }
     }
-
     public async Task ModifyItem(Item item)
     {
         try
@@ -83,6 +81,18 @@ public class ItemService : IItemService
         catch (Exception ex)
         {
             Debug.WriteLine($"Failed to modify item {item.ItemID}, {item.ItemName} data. Error: {ex.Message}");
+        }
+    }
+    public async Task CopyItem(ObservableCollection<Item> items)
+    {
+        try
+        {
+            await Init();
+            await Database.InsertAsync(items);
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine($"Failed to copy item data. Error: {ex.Message}");
         }
     }
 

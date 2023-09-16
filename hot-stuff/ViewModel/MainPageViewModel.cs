@@ -42,7 +42,7 @@ public partial class MainPageViewModel : BaseViewModel
 
     public MainPageViewModel()
     {
-        OnboardAsync();
+        //OnboardAsync();
         GetBuildingAsync();
 
         ChartType = new List<string>

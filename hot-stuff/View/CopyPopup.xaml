@@ -33,11 +33,11 @@
                     </ImageButton.Source>
                 </ImageButton>
                 <Label 
-                        Text="Are you sure? This will make duplicates of all selected items." 
-                        FontSize="Medium" 
-                        Margin="0,40,0,40"
-                        HorizontalOptions="Center" 
-                    />
+                    Text="Are you sure? This will make duplicates of all selected items." 
+                    FontSize="Medium" 
+                    Margin="0,40,0,40"
+                    HorizontalOptions="Center" 
+                />
                 <Button 
                     Command="{Binding CopyItemCommand}" 
                     Text="Copy"
@@ -46,7 +46,6 @@
                     HorizontalOptions="Center"
                     TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
                     BackgroundColor="{StaticResource Primary}" 
-                    input:FormView.IsSubmitButton="True"
                 />
             </VerticalStackLayout>
         </Border>

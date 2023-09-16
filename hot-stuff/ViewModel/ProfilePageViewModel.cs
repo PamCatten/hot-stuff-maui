@@ -5,18 +5,17 @@ using System.Windows.Input;
 
 namespace HotStuff.ViewModel;
 
-public partial class ProfilePageViewModel : BaseViewModel
+public partial class ProfilePageViewModel : ObservableObject
 {
+    [ObservableProperty]
+    [NotifyPropertyChangedFor(nameof(IsNotBusy))]
+    public bool isBusy;
+    public bool IsNotBusy => !IsBusy;
+    [ObservableProperty]
+    bool isRefreshing;
     readonly BuildingService buildingService;
     private Building newBuilding = new();
     public Building NewBuilding { get => newBuilding; set { newBuilding = value; OnPropertyChanged(); } }
-
-    [ObservableProperty]
-    [NotifyPropertyChangedFor(nameof(IsNotBusy))]
-    bool isBusy;
-
-    [ObservableProperty]
-    bool isRefreshing;
 
     private ObservableCollection<Building> buildingList = new();
     public ObservableCollection<Building> BuildingList
@@ -39,6 +38,7 @@ public partial class ProfilePageViewModel : BaseViewModel
     public ICommand OpenAddBuildingPopupCommand { get; protected set; }
     public ICommand OpenLegalPopupCommand { get; protected set; }
     public ICommand ClosePopupCommand { get; protected set; }
+    public ICommand CloseMenusCommand { get; protected set; }
 
     public ProfilePageViewModel(BuildingService buildingService)
     {
@@ -50,6 +50,7 @@ public partial class ProfilePageViewModel : BaseViewModel
         OpenBuildingSettingsPopupCommand = new Command(async () => await MopupService.Instance.PushAsync(new BuildingSettingsPopup(buildingService)));
         OpenLegalPopupCommand = new Command(async () => await MopupService.Instance.PushAsync(new LegalPopup(buildingService)));
         ClosePopupCommand = new Command(() => ClosePopup());
+        CloseMenusCommand = new Command(() => CloseMenus());
 
         async void AddBuildingAsync()
         {
@@ -95,5 +96,6 @@ public partial class ProfilePageViewModel : BaseViewModel
         }
 
         async void ClosePopup() { await MopupService.Instance.PopAsync(); }
+        async void CloseMenus() { await MopupService.Instance.PopAllAsync(); }
     }
 }

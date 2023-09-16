@@ -119,7 +119,6 @@
             </StackLayout>
 
             <ScrollView Orientation="Both" HorizontalScrollBarVisibility="Always" VerticalScrollBarVisibility="Always" Grid.Row="4" Grid.ColumnSpan="3">
-
                 <material:DataGrid 
                     ItemsSource="{Binding ItemManifest}" 
                     SelectedItems="{Binding SelectedItems}" 

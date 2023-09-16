@@ -1,5 +1,4 @@
-﻿using CommunityToolkit.Mvvm.Messaging;
-using CsvHelper;
+﻿using CsvHelper;
 using HotStuff.Services;
 using Mopups.Services;
 using Plugin.Media.Abstractions;
@@ -8,8 +7,12 @@ using System.Globalization;
 using System.Windows.Input;
 
 namespace HotStuff.ViewModel;
-public partial class ItemsPageViewModel : BaseViewModel 
+public partial class ItemsPageViewModel : ObservableObject
 {
+    [ObservableProperty]
+    bool isBusy;
+    [ObservableProperty]
+    bool isRefreshing;
     readonly ItemService itemService;
     readonly BuildingService buildingService;
     public ObservableCollection<Item> Items { get; set; }
@@ -18,13 +21,6 @@ public partial class ItemsPageViewModel : BaseViewModel
     public Item NewItem { get => newItem; set { newItem = value; OnPropertyChanged(); } }
     private Item modifyItem = new();
     public Item ModifyItem { get => modifyItem; set { modifyItem = value; OnPropertyChanged(); } }
-    [ObservableProperty]
-    [NotifyPropertyChangedFor(nameof(IsNotBusy))]
-    bool isBusy;
-
-    [ObservableProperty]
-    bool isRefreshing;
-    public bool IsNotBusy => !IsBusy;
     public ICommand AddItemCommand { get; protected set; }
     public ICommand OpenAddItemPopupCommand { get; protected set; }
     public ICommand OpenDeletePopupCommand { get; protected set; }
@@ -139,11 +135,11 @@ public partial class ItemsPageViewModel : BaseViewModel
 
         async void RefreshItemsAsync()
         {
-            if (IsBusy | IsRefreshing) return;
+            if (IsBusy | isRefreshing) return;
             try
             {
                 IsBusy = true; 
-                IsRefreshing = true;
+                isRefreshing = true;
                 ObservableCollection<Item> itemList = await itemService.RefreshItems(ActiveBuilding.BuildingID);
                 if (itemList is not null)
                 {
@@ -164,18 +160,18 @@ public partial class ItemsPageViewModel : BaseViewModel
             finally
             {
                 IsBusy = false;
-                IsRefreshing = false;
+                isRefreshing = false;
             }
         }
 
         async void GetItemsAsync()
         {
-            if (IsBusy | IsRefreshing)
+            if (IsBusy | isRefreshing)
                 return;
             try
             {
                 IsBusy = true;
-                IsRefreshing = true;
+                isRefreshing = true;
                 ObservableCollection<Item> itemList = await itemService.GetItems();
                 Debug.WriteLine($"There are: {itemList.Count} items currently saved in database.");
                 if (itemList is not null)
@@ -197,7 +193,7 @@ public partial class ItemsPageViewModel : BaseViewModel
             finally
             {
                 IsBusy = false;
-                IsRefreshing = false;
+                isRefreshing = false;
             }
         }
         async void DeleteAsync(ObservableCollection<Item> items)

@@ -3,7 +3,7 @@ using Mopups.Services;
 using System.Windows.Input;
 
 namespace HotStuff.ViewModel;
-public partial class OnboardViewModel : BaseViewModel
+public partial class OnboardViewModel : ObservableObject
 {
     readonly BuildingService buildingService;
     private int position = 0;

@@ -99,7 +99,7 @@
                 </StackLayout>
             </material:ButtonView>
             <BoxView StyleClass="Divider" />
-            <StackLayout Margin="10">
+            <StackLayout>
                 <StackLayout.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding ClosePopupCommand}" />
                 </StackLayout.GestureRecognizers>

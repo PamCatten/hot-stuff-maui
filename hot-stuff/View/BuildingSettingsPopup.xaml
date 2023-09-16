@@ -16,9 +16,24 @@
     x:DataType="viewmodel:ProfilePageViewModel"
 >
     <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">
-        <input:FormView SubmitCommand="{Binding AddBuildingCommand}">
-            <VerticalStackLayout Spacing="10" Padding="25,30" HorizontalOptions="Center" MinimumWidthRequest="400">
-                <ImageButton Command="{Binding ClosePopupCommand}" HorizontalOptions="Start">
+        <VerticalStackLayout Margin="10,0,10,0">
+            <Grid RowSpacing="10" ColumnSpacing="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="30"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <ImageButton 
+                    Command="{Binding ClosePopupCommand}" 
+                    HorizontalOptions="Center" 
+                    Grid.Row="0" 
+                    Grid.Column="0"
+                >
                     <ImageButton.Source>
                         <FontImageSource 
                             FontFamily="FontAwesome" 
@@ -27,57 +42,56 @@
                         />
                     </ImageButton.Source>
                 </ImageButton>
-                <material:DataGrid 
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    HorizontalOptions="Start"
+                    Text="Manage buildings" 
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    VerticalOptions="Center"
+                    TextColor="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                />
+                <ImageButton 
+                    Command="{Binding CloseMenusCommand}" 
+                    HorizontalOptions="Center"
+                    Grid.Row="0"
+                    Grid.Column="2"
+                >
+                    <ImageButton.Source>
+                        <FontImageSource 
+                        FontFamily="FontAwesome" 
+                        Glyph="{x:Static local:IconFont.Xmark}" 
+                        Color="{AppThemeBinding Light={StaticResource BlackText}, Dark={StaticResource WhiteText}}"
+                    />
+                    </ImageButton.Source>
+                </ImageButton>
+                <material:DataGrid
                     ItemsSource="{Binding BuildingList}"
-                    HorizontalOptions="Center" VerticalOptions="StartAndExpand"
+                    HorizontalOptions="Center" 
+                    VerticalOptions="StartAndExpand" 
                     BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}"
                 >
                     <material:DataGrid.Columns>
-                        <material:DataGridSelectionColumn/>
-                        <material:DataGridColumn Binding="{Binding BuildingID}" Title="ID" Width="Auto" />
-                        <material:DataGridColumn Binding="{Binding BuildingName}" Title="Name" Width="Auto" />
-                        <material:DataGridColumn Binding="{Binding BuildingType}" Title="Type" Width="Auto"/>
-                        <material:DataGridColumn Binding="{Binding BuildingDescription}" Title="Description" Width="Auto"/>
+                        <!--<material:DataGridColumn Binding="{x:Static local:IconFont.House}"/>-->
+                        <material:DataGridColumn Binding="{Binding ActiveBuilding.BuildingName}"/>
+                        <!--<material:DataGridColumn Binding="{x:Static local:IconFont.ChevronRight}"/>-->
                     </material:DataGrid.Columns>
                 </material:DataGrid>
-                <material:TextField 
-                    Title="Building Name (Required)"
-                    Text="{Binding NewBuilding.BuildingName}"
-                    AccentColor="{StaticResource Primary}"
-                    Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Pen}}"
+                
+                <material:DataGrid 
+                    ItemsSource="{Binding BuildingList}" 
+                    HorizontalOptions="Center" 
+                    VerticalOptions="StartAndExpand" 
+                    BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}"
                 >
-                    <material:TextField.Validations>
-                        <validation:RequiredValidation />
-                    </material:TextField.Validations>
-                </material:TextField>
-                <material:PickerField
-                    Title="Building Type (Required)"
-                    ItemsSource="{x:Static models:Building.AvailableCategories}"
-                    SelectedItem="{Binding NewBuilding.BuildingType}"
-                    AllowClear="True"
-                    AccentColor="{StaticResource Primary}"
-                    Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.CircleChevronDown}}"
-                >
-                    <material:PickerField.Validations>
-                        <validation:RequiredValidation />
-                    </material:PickerField.Validations>
-                </material:PickerField>
-                <material:TextField 
-                    Title="Building Description (Optional)"
-                    Text="{Binding NewBuilding.BuildingDescription}"
-                    AllowClear="True"
-                    AccentColor="{StaticResource Primary}"
-                    Icon="{FontImageSource FontFamily=FontAwesome, Glyph={x:Static local:IconFont.Pen}}"
-                />
-                <Button 
-                    Text="Save"
-                    TextColor="{AppThemeBinding Light={StaticResource WhiteText}, Dark={StaticResource BlackText}}"
-                    FontSize="Medium"
-                    FontAttributes="Bold"
-                    BackgroundColor="{StaticResource Primary}"
-                    input:FormView.IsSubmitButton="True"
-                />
-            </VerticalStackLayout>
-        </input:FormView>
+                    <material:DataGrid.Columns>
+                        <!--<material:DataGridColumn Binding="{x:Static local:IconFont.House}"/>-->
+                        <material:DataGridColumn Binding="{Binding BuildingName}"/>
+                        <!--<material:DataGridColumn Binding="{x:Static local:IconFont.ChevronRight}"/>-->
+                    </material:DataGrid.Columns>
+                </material:DataGrid>
+            </Grid>
+        </VerticalStackLayout>
     </ScrollView>
 </mopups:PopupPage>

@@ -4,7 +4,7 @@ using System.Windows.Input;
 
 namespace HotStuff.ViewModel;
 
-public partial class LearnViewModel : BaseViewModel
+public partial class LearnViewModel : ObservableObject
 {
     readonly BuildingService buildingService;
     public ICommand ClosePopupCommand { get; protected set; }

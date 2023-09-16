@@ -15,11 +15,13 @@ using System.Windows.Input;
 using UraniumUI;
 
 namespace HotStuff.ViewModel;
-public partial class MainPageViewModel : BaseViewModel
+public partial class MainPageViewModel : ObservableObject
 {
     readonly BuildingService buildingService;
     public ICommand GetBuildingCommand { get; protected set; }
     public ICommand OpenProfilePopupCommand { get; protected set; }
+    [ObservableProperty]
+    public bool isBusy;
 
     [ObservableProperty]
     bool isRefreshing;
@@ -124,9 +126,9 @@ public partial class MainPageViewModel : BaseViewModel
     }
     async void GetBuildingAsync()
     {
-        if (IsBusy | IsRefreshing) return;
+        if (IsBusy | isRefreshing) return;
         IsBusy = true;
-        IsRefreshing = true;
+        isRefreshing = true;
         try
         {
             if (ActiveBuilding is not null && ActiveBuilding.BuildingID == 0)
@@ -195,7 +197,7 @@ public partial class MainPageViewModel : BaseViewModel
         finally
         {
             IsBusy = false;
-            IsRefreshing = false;
+            isRefreshing = false;
         }
     }
 }

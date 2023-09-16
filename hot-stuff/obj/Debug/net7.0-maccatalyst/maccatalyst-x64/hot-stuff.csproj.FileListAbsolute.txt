@@ -314,3 +314,9 @@ C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\onboardlight.png
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\hotstuffdark.png
 C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\hotstufflight.png
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\hotstuff.png
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\noitems.png
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\onboard1.png
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\onboard2.png
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\onboard3.png
+C:\Users\campa\hot-stuff\hot-stuff\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\onboard4.png

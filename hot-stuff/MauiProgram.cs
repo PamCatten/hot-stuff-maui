@@ -52,7 +52,6 @@ public static class MauiProgram
             builder.Services.AddSingleton<ProfilePopup>();
             builder.Services.AddSingleton<TransferPopup>();
             // ViewModels
-            builder.Services.AddTransient<BaseViewModel>();
             builder.Services.AddTransient<MainPageViewModel>();
             builder.Services.AddTransient<ItemsPageViewModel>();
             builder.Services.AddTransient<LearnViewModel>();

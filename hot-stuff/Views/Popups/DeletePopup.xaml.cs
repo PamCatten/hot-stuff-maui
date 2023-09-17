@@ -12,6 +12,6 @@ public partial class DeletePopup : PopupPage
 	public DeletePopup(ItemService itemService)
 	{
 		InitializeComponent();
-        BindingContext = new ItemsPageViewModel(itemService);
+		BindingContext = new ItemsPageViewModel(itemService);
 	}
 }

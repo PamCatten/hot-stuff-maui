@@ -116,10 +116,10 @@
 	  <MauiXaml Update="Views\Popups\AddItemPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\ItemsPage.xaml">
+	  <MauiXaml Update="Views\Pages\ItemsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\LearnPage.xaml">
+	  <MauiXaml Update="Views\Pages\LearnPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
@@ -162,7 +162,6 @@
 
 	<ItemGroup>
 	  <Folder Include="Tests\" />
-	  <Folder Include="Views\Pages\" />
 	</ItemGroup>
 
 	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionhotstuffHideInfoBar="True" XamarinHotReloadUnhandledDeviceExceptionhotstuffHideInfoBar="True" /></VisualStudio></ProjectExtensions>

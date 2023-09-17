@@ -5,6 +5,7 @@ using Plugin.Media.Abstractions;
 using Plugin.Media;
 using System.Globalization;
 using System.Windows.Input;
+using System.Runtime.CompilerServices;
 
 namespace HotStuff.ViewModel;
 public partial class ItemsPageViewModel : ObservableObject
@@ -14,6 +15,7 @@ public partial class ItemsPageViewModel : ObservableObject
     [ObservableProperty]
     bool isRefreshing;
     readonly ItemService itemService;
+    public ItemsPageViewModel ItemsPageVM;
     readonly BuildingService buildingService;
     public ObservableCollection<Item> Items { get; set; }
     public ObservableCollection<Item> SelectedItems { get; set; } = new ObservableCollection<Item>();
@@ -82,7 +84,10 @@ public partial class ItemsPageViewModel : ObservableObject
         OpenDeletePopupCommand = new Command(async () =>
         {
             if (SelectedItems.Count > 0)
-                await MopupService.Instance.PushAsync(new DeletePopup(itemService));
+            {
+                Debug.WriteLine($"SelectedItems: {SelectedItems.Count}");
+            await MopupService.Instance.PushAsync(new DeletePopup(itemService));
+            }
             else
                 await Application.Current.MainPage.DisplayAlert("Selection Error", "No items selected. Please select the items you wish to delete.", "OK");
         });
@@ -198,9 +203,9 @@ public partial class ItemsPageViewModel : ObservableObject
         }
         async void DeleteAsync(ObservableCollection<Item> items)
         {
-            foreach (var item in items) ItemManifest.Remove(item);
             Debug.WriteLine($"SelectedItem Count: {items.Count}");
             await App.ItemService.DeleteItems(items);
+            foreach (var item in items) ItemManifest.Remove(item);
             //RefreshItemsAsync();
             ClosePopup();
         }

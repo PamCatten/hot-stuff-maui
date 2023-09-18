@@ -4,15 +4,6 @@
         <name>hot-stuff</name>
     </assembly>
     <members>
-        <member name="T:HotStuff.ViewModel.ItemsPageViewModel">
-            <inheritdoc/>
-        </member>
-        <member name="P:HotStuff.ViewModel.ItemsPageViewModel.IsBusy">
-            <inheritdoc cref="F:HotStuff.ViewModel.ItemsPageViewModel.isBusy"/>
-        </member>
-        <member name="P:HotStuff.ViewModel.ItemsPageViewModel.IsRefreshing">
-            <inheritdoc cref="F:HotStuff.ViewModel.ItemsPageViewModel.isRefreshing"/>
-        </member>
         <member name="T:HotStuff.ViewModel.BaseViewModel">
             <inheritdoc/>
         </member>
@@ -21,6 +12,15 @@
         </member>
         <member name="P:HotStuff.ViewModel.BaseViewModel.IsRefreshing">
             <inheritdoc cref="F:HotStuff.ViewModel.BaseViewModel.isRefreshing"/>
+        </member>
+        <member name="T:HotStuff.ViewModel.ItemsPageViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:HotStuff.ViewModel.ItemsPageViewModel.IsBusy">
+            <inheritdoc cref="F:HotStuff.ViewModel.ItemsPageViewModel.isBusy"/>
+        </member>
+        <member name="P:HotStuff.ViewModel.ItemsPageViewModel.IsRefreshing">
+            <inheritdoc cref="F:HotStuff.ViewModel.ItemsPageViewModel.isRefreshing"/>
         </member>
         <member name="T:HotStuff.ViewModel.ProfilePageViewModel">
             <inheritdoc/>

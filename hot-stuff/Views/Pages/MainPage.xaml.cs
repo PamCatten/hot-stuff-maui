@@ -4,9 +4,10 @@ using UraniumUI.Pages;
 namespace HotStuff;
 public partial class MainPage : UraniumContentPage
 {
-    public MainPage()
+    public MainPage(BaseViewModel vm)
     {
         SelectionView.GlobalSetting.CornerRadius = 0;
         InitializeComponent();
+        BindingContext = vm;
     }
 }

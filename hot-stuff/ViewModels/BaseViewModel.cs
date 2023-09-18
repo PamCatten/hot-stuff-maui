@@ -38,6 +38,7 @@ public partial class BaseViewModel : ObservableObject
     public List<Axis> BarChartYAxis { get; set; }
     public List<string> ChartType { get; set;  }
     // Main page pie chart controls & data
+    public IEnumerable<ISeries> CategoryPieChart { get; set; }
     public IEnumerable<ISeries> CategoryCountPieChart { get; set; }
     public List<string> PieChartKeys = new();
     public ObservableCollection<ObservableValue> PieChartValues = new();
@@ -103,7 +104,7 @@ public partial class BaseViewModel : ObservableObject
         CategoryCountPieChart = PieChartValues.AsPieSeries((value, series) =>
         {
             series.InnerRadius = 0;
-            series.Name = "Items";
+            series.Name = "Category";
             series.DataLabelsFormatter = point =>
             {
                 var pv = point.Coordinate.PrimaryValue;
@@ -116,7 +117,7 @@ public partial class BaseViewModel : ObservableObject
         });
         GetBuildingCommand = new Command(() => GetBuildingAsync());
         OpenProfilePopupCommand = new Command(async () => await MopupService.Instance.PushAsync(new ProfilePopup(buildingService)));
-    }
+        }
     async void OnboardAsync()
     {
         if (ActiveBuilding is not null && ActiveBuilding.BuildingID == 0)
@@ -126,9 +127,9 @@ public partial class BaseViewModel : ObservableObject
     }
     async void GetBuildingAsync()
     {
-        if (IsBusy | isRefreshing) return;
+        if (IsBusy | IsRefreshing) return;
         IsBusy = true;
-        isRefreshing = true;
+        IsRefreshing = true;
         try
         {
             if (ActiveBuilding is not null && ActiveBuilding.BuildingID == 0)

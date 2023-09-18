@@ -4,9 +4,9 @@ using UraniumUI.Pages;
 namespace HotStuff.View;
 public partial class LearnPage : UraniumContentPage
 {
-	public LearnPage()
+	public LearnPage(BaseViewModel vm)
 	{
 		InitializeComponent();
-		BindingContext = new LearnViewModel();
+		BindingContext = vm;
 	}
 }

@@ -5,7 +5,7 @@ Built using C# 11, .NET 7, and .NET MAUI, the app aims to provide a user-friendl
 
 ## Getting Started
 
-To get started with this project, ensure you have the .NET 8 SDK and with the .NET MAUI workload.
+To get started with this project, ensure you have the .NET 7 SDK and with the .NET MAUI workload.
 
 1. Clone this repository to your local machine.
 
